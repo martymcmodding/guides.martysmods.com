@@ -1,0 +1,14 @@
+{
+    "position": 3,
+    "label": "GUI",
+    "collapsible": true,
+    "collapsed": true,
+    "className": "red",
+    "link": {
+      "type": "generated-index",
+      "title": "GUI"
+    },
+    "customProps": {
+      "description": "Documentation on different GUI elements of ReShade"
+    }
+  }

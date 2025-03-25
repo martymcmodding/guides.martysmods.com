@@ -1,0 +1,29 @@
+/* Specific changes to index.js (homepage)                            */
+/* Took me a considerable amount of time to figure this out. - Jordan */
+
+.heroSection {
+  background-image: url('/img/mmhomepagebanner.webp');
+  background-size: cover;
+  width: auto;
+  max-width: auto;
+  height: 620px;
+  background-position: center !important;
+  text-align: left;
+}
+
+.hero__title {
+  font-size: 4.5rem !important;
+}
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+}

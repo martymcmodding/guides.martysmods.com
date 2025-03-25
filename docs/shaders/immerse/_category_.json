@@ -1,0 +1,14 @@
+{
+    "position": 1,
+    "label": "iMMERSE",
+    "collapsible": true,
+    "collapsed": false,
+    "className": "red",
+    "link": {
+      "type": "generated-index",
+      "title": "iMMERSE"
+    },
+    "customProps": {
+      "description": "Documentation on iMMERSE shader repository."
+    }
+  }

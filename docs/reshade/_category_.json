@@ -1,0 +1,14 @@
+{
+    "position": 1,
+    "label": "ReShade",
+    "collapsible": true,
+    "collapsed": true,
+    "className": "red",
+    "link": {
+      "type": "generated-index",
+      "title": "ReShade Overview"
+    },
+    "customProps": {
+      "description": "Documentation on ReShade"
+    }
+  }

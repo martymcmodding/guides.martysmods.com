@@ -1,0 +1,14 @@
+{
+    "position": 3,
+    "label": "Additional Guides",
+    "collapsible": true,
+    "collapsed": true,
+    "className": "red",
+    "link": {
+      "type": "generated-index",
+      "title": "Additional Guides"
+    },
+    "customProps": {
+      "description": "Documentation on processes close to ReShade."
+    }
+  }

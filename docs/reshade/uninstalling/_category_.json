@@ -1,0 +1,14 @@
+{
+    "position": 7,
+    "label": "Uninstalling",
+    "collapsible": true,
+    "collapsed": true,
+    "className": "red",
+    "link": {
+      "type": "generated-index",
+      "title": "Uninstalling ReShade"
+    },
+    "customProps": {
+      "description": "Different procedures for uninstalling ReShade"
+    }
+  }

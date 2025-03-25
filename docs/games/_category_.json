@@ -1,0 +1,14 @@
+{
+    "position": 4,
+    "label": "Games",
+    "collapsible": true,
+    "collapsed": true,
+    "className": "red",
+    "link": {
+      "type": "generated-index",
+      "title": "Games"
+    },
+    "customProps": {
+      "description": "Documentation on installing ReShade to games that cause problems."
+    }
+  }
