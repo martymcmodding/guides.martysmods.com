@@ -2,7 +2,7 @@
 title: ReGrade
 sidebar_label: "ReGrade"
 description: "A powerful real-time color grading suite within ReShade"
-image: "https://zarith.us/jordan%5C2024_ZARITH-DESKTOP/regradeheader.webp"
+image: "https://www.martysmods.com/media/ReGrade.webp"
 slug: /shaders/immersepro/regrade
 sidebar_position: 4
 hide_title: true

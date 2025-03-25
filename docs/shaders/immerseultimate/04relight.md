@@ -2,7 +2,7 @@
 title: ReLight
 sidebar_title: "ReLight"
 description: "A path-traced point light shader that allows you to place a point of light arbitrarily within the screenspace."
-image: "https://zarith.us/jordan%5C2025_ZARITH-DESKTOP/ReLightHeader.webp"
+image: "https://www.martysmods.com/media/ReLight.webp"
 slug: /shaders/immerseultimate/relight
 sidebar_position: 4
 hide_title: True

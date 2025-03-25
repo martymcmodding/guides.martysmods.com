@@ -2,7 +2,7 @@
 title: SMAA
 sidebar_label: "Anti Aliasing (SMAA)"
 description: "ReShade’s fastest SMAA shader available."
-image: "https://zarith.us/jordan%5C2024_ZARITH-DESKTOP/smaaheader.webp"
+image: "https://www.martysmods.com/media/SMAA-1.webp"
 slug: /shaders/immerse/smaa
 sidebar_position: 4
 hide_title: true

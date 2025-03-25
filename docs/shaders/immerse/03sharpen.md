@@ -2,7 +2,7 @@
 title: Sharpen
 sidebar_label: "Sharpen"
 description: "'It sharpens.'"
-image: "https://zarith.us/jordan%5C2024_ZARITH-DESKTOP/sharpenheader.webp"
+image: "https://www.martysmods.com/media/Sharpen-1.webp"
 slug: /shaders/immerse/sharpen
 sidebar_position: 3
 hide_title: true

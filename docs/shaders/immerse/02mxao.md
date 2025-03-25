@@ -2,7 +2,7 @@
 title: MXAO
 sidebar_label: "MXAO"
 description: "Simulates the diffuse shadowing caused by the occlusion of ambient lighting."
-image: "https://zarith.us/jordan%5C2024_ZARITH-DESKTOP/mxaoheader.webp"
+image: "https://www.martysmods.com/media/MXAO.webp"
 slug: /shaders/immerse/mxao
 sidebar_position: 2
 hide_title: true

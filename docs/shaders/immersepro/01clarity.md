@@ -2,7 +2,7 @@
 title: Clarity
 sidebar_label: "Clarity"
 description: "Enhances texture and image details, by adjusting local contrast. simular to Photoshop's Clarity."
-image: "https://zarith.us/jordan%5C2024_ZARITH-DESKTOP/clarityheader.webp"
+image: "https://www.martysmods.com/media/Clarity.webp"
 slug: /shaders/immersepro/clarity
 sidebar_position: 1
 hide_title: true

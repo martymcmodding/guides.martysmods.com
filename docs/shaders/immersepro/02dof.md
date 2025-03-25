@@ -2,7 +2,7 @@
 title: Depth of Field
 sidebar_label: "Depth of Field"
 description: "Designed to emulate how physical cameras work in the real world."
-image: "https://zarith.us/jordan%5C2024_ZARITH-DESKTOP/dofheader.webp"
+image: "https://www.martysmods.com/media/DOF.webp"
 slug: /shaders/immersepro/depthoffield
 sidebar_position: 2
 hide_title: true

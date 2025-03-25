@@ -2,7 +2,7 @@
 title: Convolution Bloom
 sidebar_title: "Convolution Bloom"
 description: "FFT based bloom that can provide diffraction spikes in real-time."
-image: "https://zarith.us/jordan%5C2025_ZARITH-DESKTOP/ConvolutionBloomHeader.webp"
+image: "https://www.martysmods.com/media/Conv-Bloom.webp"
 slug: /shaders/immerseultimate/convolutionbloom
 sidebar_position: 1
 hide_title: True

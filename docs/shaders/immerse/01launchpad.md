@@ -2,7 +2,7 @@
 title: Launchpad
 sidebar_label: "Launchpad"
 description: "Processes depth and motion vectors for shaders like RTGI, MXAO, and ReLight."
-image: "https://zarith.us/jordan%5C2024_ZARITH-DESKTOP/launchpadheader.webp"
+image: "https://www.martysmods.com/media/Launchpad-2.webp"
 slug: /shaders/immerse/launchpad
 sidebar_position: 1
 hide_title: true

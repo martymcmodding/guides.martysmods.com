@@ -2,7 +2,7 @@
 title: Solaris
 sidebar_title: "Solaris"
 description: "A physically based exposure and bloom solution."
-image: "https://zarith.us/jordan%5C2024_ZARITH-DESKTOP/solarisheader.webp"
+image: "https://www.martysmods.com/media/Solaris.webp"
 slug: /shaders/immersepro/solaris
 sidebar_position: 6
 hide_title: true

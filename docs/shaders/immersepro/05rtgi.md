@@ -2,7 +2,7 @@
 title: RTGI
 sidebar_label: "RTGI"
 description: "State of the art ray traced global illumination for ReShade."
-image: "https://zarith.us/jordan%5C2024_ZARITH-DESKTOP/rtgiheader.webp"
+image: "https://www.martysmods.com/media/RTGI.webp"
 slug: /shaders/immersepro/rtgi
 sidebar_position: 5
 hide_title: true

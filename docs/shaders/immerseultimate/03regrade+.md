@@ -2,7 +2,7 @@
 title: ReGrade + (Addon)
 sidebar_title: "ReGrade + (Addon)"
 description: "Provides a real-time huristic of the image and color grading GUI native to ReShade."
-image: "https://zarith.us/jordan%5C2025_ZARITH-DESKTOP/ReGradePlusHeader.webp"
+image: "https://www.martysmods.com/media/ReGradePlus.webp"
 slug: /shaders/immerseultimate/regradeplus
 sidebar_position: 3
 hide_title: True
