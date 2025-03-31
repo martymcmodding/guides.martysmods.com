@@ -11,7 +11,6 @@ keywords:
 tags:
  - Additional Guide
  - Rendering API
-
 ---
 
 ## Use Case

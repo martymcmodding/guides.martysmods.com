@@ -1,5 +1,6 @@
 ---
-title: dgVoodoo2
+title: "dgVoodoo2"
+sidebar_label: "dgVoodoo2"
 description: "dgVoodoo2 is a rendering API wrapper used to translate games that use older DirectX rendering APIs to newer DirectX Rendering APIs. This is highly useful for adapting older DirectX 8, 9, and 10 games so that they can benifit from ReShade's compute shaders."
 slug: /additionalguides/apiwrappers/dgvoodoo2
 sidebar_position: 2
