@@ -1,9 +1,18 @@
 ---
-title: DXVK
-description: "DXVK is a rendering API wrapper used to translate games that use the DirectX rendering API to Vulkan. This is primarily used in the Linux community to run Windows games on Linux, however, DXVK is highly useful for adapting older DirectX 8, 9, and 10 games so that they can benifit from ReShade's compute shaders."
----
+title: "DXVK"
+sidebar_label: "DXVK"
+description: "DXVK is a rendering API wrapper used to translate games that use the DirectX rendering API to Vulkan. DXVK is highly useful for adapting older DirectX 8, 9, and 10 games so that they can benifit from ReShade's compute shaders."
+slug: /additionalguides/apiwrappers/dxvk
+sidebar_position: 1
+hide_title: true
+keywords: 
+ - Rendering API
+ - DXVK
+tags:
+ - Additional Guide
+ - Rendering API
 
-# DXVK
+---
 
 ## Use Case
 DXVK is a rendering API wrapper used to translate games that use the DirectX rendering API to Vulkan. This is primarily used in the Linux community to run Windows games on Linux, however, DXVK is highly useful for adapting older DirectX 8, 9, and 10 games so that they can benifit from ReShade's compute shaders.
