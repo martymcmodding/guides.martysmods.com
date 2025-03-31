@@ -19,6 +19,7 @@
     "@img-comparison-slider/react": "^8.0.2",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
+    "docusaurus": "^1.14.7",
     "img-comparison-slider": "^8.0.6",
     "juxtaposejs": "^1.1.6",
     "prism-react-renderer": "^2.3.0",

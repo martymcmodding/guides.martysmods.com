@@ -1,0 +1,14 @@
+{
+    "position": 5,
+    "label": "Patreon Specific Guides",
+    "collapsible": true,
+    "collapsed": true,
+    "className": "red",
+    "link": {
+      "type": "generated-index",
+      "title": "Patreon Specific Guides"
+    },
+    "customProps": {
+      "description": "Patreon Specific Guides"
+    }
+  }
