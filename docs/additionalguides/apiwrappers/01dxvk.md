@@ -24,7 +24,7 @@ Download the latest DXVK version from [their GitHub releases](https://github.com
 ![DXVK Releases](./images/dxvkreleases.webp)
 
 ## Navigate to Game Directory
-Refer to [our guide on locating your game's directory](https://guides.martysmods.com/docs/additional-guides/finding-your-game-executable-and-directory/).
+Refer to [our guide on locating your game's directory](../03findgameexecutable).
 
 ## Find Game Archtexture and Rendering API
 Refer to [PCGamingWiki](https://pcgamingwiki.com/) to determine your game's rendering API and architecture.
