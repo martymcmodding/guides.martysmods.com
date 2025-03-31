@@ -19,4 +19,4 @@ The "About" tab serves to acknowledge and recognize the authors of ReShade and i
 
 ---
 
-![ReShadeAboutTabScreenshot](./images/rsui_about_tab.webp)
+![ReShadeAboutTabScreenshot](https://assets.martysmods.com/additionalguides/reshade/rsuiabouttab.webp)

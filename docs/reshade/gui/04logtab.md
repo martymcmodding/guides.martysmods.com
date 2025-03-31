@@ -20,4 +20,4 @@ If you encounter an issue, it's helpful to share the error messages or the entir
 
 ---
 
-![ReShadeLogTabScreenshot](./images/rsui_log_tab.webp)
+![ReShadeLogTabScreenshot](https://assets.martysmods.com/additionalguides/reshade/rsuilogtab.webp)

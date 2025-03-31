@@ -19,4 +19,4 @@ The "Statistics" tab, shown in the image, is a great tool for tracking and impro
 
 ---
 
-![Statistics Tab](./images/rsui_stats_tab.webp)
+![Statistics Tab](https://assets.martysmods.com/additionalguides/reshade/rsuistatstab.webp)

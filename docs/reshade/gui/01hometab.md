@@ -35,16 +35,16 @@ The shader list provides you with all shaders installed for ReShade. Disabled sh
 
 Below the shader list is the "Edit preprocessor definitions" section. Clicking this allows you to adjust global settings that can influence how shaders function.
 
-![Global Preprocessor Definitions](./images/rsui_globalpreprocessors.webp)
+![Global Preprocessor Definitions](https://assets.martysmods.com/additionalguides/reshade/rsuiglobalpreprocessors.webp)
 
 Clicking on "Edit global preprocessor definitions" opens another window that allows you to modify specific preprocessor values used by shaders:
 
-![Global Preprocessor Definitions](./images/rsui_globalpreprocessors_definitions.webp) 
+![Global Preprocessor Definitions](https://assets.martysmods.com/additionalguides/reshade/rsuiglobalpreprocessorsdefinitions.webp) 
 
 ## Shader Parameters
 
 The area below the shader list and preprocessor definitions section is the shader parameters list. Here you can configure the individual parameters for each shader you've enabled.
 
-![Effect Parameters](./images/rsui_effect_params.webp)
+![Effect Parameters](https://assets.martysmods.com/additionalguides/reshade/rsuieffectparams.webp)
 
 Each shader has unique settings; enabling a shader will display adjustable parameters here. Changes made are reflected in real-time, allowing for fine-tuning the appearance of your game.

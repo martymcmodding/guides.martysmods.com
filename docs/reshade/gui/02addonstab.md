@@ -19,4 +19,4 @@ Each add-on is different, typically providing large enhancements to ReShade that
 
 ---
 
-![Add-ons Tab](./images/rsui_addons_tab.webp)
+![Add-ons Tab](https://assets.martysmods.com/additionalguides/reshade/rsuiaddonstab.webp)

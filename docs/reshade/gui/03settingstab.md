@@ -19,4 +19,4 @@ The "Settings" tab lets you tweak ReShade settings like shader directories, menu
 
 ---
 
-![Settings Tab](./images/rsui_settings_tab.webp)
+![Settings Tab](https://assets.martysmods.com/additionalguides/reshade/rsuisettingstab.webp)
