@@ -1,6 +1,6 @@
 ---
 title: Manually Uninstalling ReShade
-sidebar_label: "ReShade Setup Tool"
+sidebar_label: "Manually Uninstalling ReShade"
 description: "Sometimes the ReShade Setup Tool isn't able to fully uninstall ReShade for whatever reason. This guide will walk you through the steps to fully uninstall manually ReShade."
 slug: /reshade/uninstalling/manualuninstall
 sidebar_position: 2
