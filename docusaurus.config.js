@@ -79,7 +79,7 @@ const config = {
               },
               {
                 label: 'Additional Guides',
-                to: '/additionalguides/01enablefileextensions',
+                to: '/category/rendering-api-wrappers',
               },
             ],
           },
