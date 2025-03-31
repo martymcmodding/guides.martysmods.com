@@ -29,18 +29,18 @@ Go to the [official ReShade website](https://reshade.me) and download the latest
 ## Download and Install 7-Zip
 To extract the ReShade installer, download 7-Zip from [7-Zip's official website](https://www.7-zip.org/download.html) and install it. 7-Zip is a free tool that handles many file types, making it ideal for this task.
 
-![7-Zip download page](./images/7zipdownloadpage.webp)
+![7-Zip download page](https://assets.martysmods.com/additionalguides/reshade/7zipdownloadpage.webp)
 
 Once 7-Zip is installed, you can use it to open the ReShade installer and access the files.
 
 ## Extract the ReShade DLL
 Locate the ReShade installer file `ReShade_Setup_x.x.x.exe`. Right-click on it, hover over 7-Zip, and choose “Open archive.” This will open a new window showing the installer’s contents.
 
-![Open with 7-Zip](./images/setupopenwith7zip.webp)
+![Open with 7-Zip](https://assets.martysmods.com/additionalguides/reshade/setupopenwith7zip.webp)
 
 Inside, you’ll find two DLL files. These are the main binaries needed for manual installation. Drag the DLL that matches your game’s architecture (32-bit or 64-bit) to your desktop.
 
-![Extract DLL](./images/setup7zipbinaries.webp)
+![Extract DLL](https://assets.martysmods.com/additionalguides/reshade/setup7zipbinaries.webp)
 
 | Game Architecture       | DLL Name      |
 |-------------------------|---------------|
@@ -65,7 +65,7 @@ If you’re not sure which API your game uses, check the game’s settings or lo
 ## Move the DLL File to Your Game’s Folder
 Now, move the renamed DLL file to your game’s main directory. This is the folder where the game’s executable file (.exe) is located. To find this folder, right-click your game’s shortcut and select “Open file location,” or follow [our guide on finding your game’s executable](/additionalguides/03findgameexecutable).
 
-![Place in Game Folder](./images/extractedbinaryingamedirectory.webp)
+![Place in Game Folder](https://assets.martysmods.com/additionalguides/reshade/extractedbinaryingamedirectory.webp)
 
 Ensure the renamed DLL is in the same folder as the game’s executable. This placement is crucial for ReShade to inject properly when the game starts.
 

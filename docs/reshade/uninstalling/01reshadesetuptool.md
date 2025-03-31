@@ -24,7 +24,7 @@ When you open the ReShade Setup Tool, you’ll need to choose the game or applic
 
 If your game isn’t listed, click the "Browse..." button at the bottom-right corner of the setup tool. This will open a File Explorer window where you can manually find your game or application's executable file.
 
-![Select Game List](../installing/images/setupgamelist.webp)
+![Select Game List](https://assets.martysmods.com/additionalguides/reshade/setupgamelist.webp)
 
 Executable files usually have the ".exe" extension and are often located in the main folder of the game’s installation directory.
 
@@ -33,14 +33,14 @@ If you’re unsure where to find your game or application's executable, you can 
 ## Selecting the Rendering API
 If ReShade is installed, the Rendering API that had been previously selected will be ticked for you. If ReShade is not installed, or you've selected the wrong executable for your game/application, this will be blank.
 
-![Select Rendering API](../installing/images/setuprenderingapi.webp)
+![Select Rendering API](https://assets.martysmods.com/additionalguides/reshade/setuprenderingapi.webp)
 
 ## Select "Uninstall ReShade and effects"
 After you've selected the Rendering API, you'll be given three options. To uninstall ReShade, select the option "Uninstall ReShade and effects".
 
-![Uninstall ReShade and Effects](./images/setuptooluninstalleffects.webp)
+![Uninstall ReShade and Effects](https://assets.martysmods.com/additionalguides/reshade/setuptooluninstalleffects.webp)
 
 ## Finishing Up
 When the ReShade Setup Tool completes the uninstallation process, a confirmation screen will appear. Click the "Finish" button at the bottom-right, then start your game to ensure ReShade is properly uninstalled.
 
-![Successful Uninstall](./images/setuptoolsuccessuninstall.webp)
+![Successful Uninstall](https://assets.martysmods.com/additionalguides/reshade/setuptoolsuccessuninstall.webp)

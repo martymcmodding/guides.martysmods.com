@@ -34,18 +34,18 @@ It's also worth noting that not all shader repositories are hosted the same way.
 
 First, click the "Code" button on GitHub, located toward the top-right area of the repository page.
 
-![Code Button](./images/github_shader_repo_code_button_highlight.webp)
+![Code Button](https://assets.martysmods.com/additionalguides/reshade/githubshaderrepocodebuttonhighlight.webp)
 
 Once you've clicked the "Code" button, a dropdown menu will appear. Click the "Download ZIP" button from this menu to start downloading your shader repository.
 
-![Download Zip Button](./images/github_download_zip_button_highlight.webp)
+![Download Zip Button](https://assets.martysmods.com/additionalguides/reshade/githubdownloadzipbuttonhighlight.webp)
 
 ## Installing the Shader Repository(s)
 
 Once the shader repository download is complete, open the ZIP file you downloaded. Extract the contents—typically the "Shaders" and "Textures" folders—directly into your game's "ReShade-Shaders" directory. If Windows warns you about files already existing, simply click "Replace the files in the destination."
 
 <ReactPlayer
-  url="https://zarith.us/jordan%5C2025_ZARITH-DESKTOP/c_and_paste_shaders_and_textures_folder.webm"
+  url="https://assets.martysmods.com/additionalguides/reshade/candpasteshadersandtexturesfolder.webm"
   playing={true}
   muted={true}
   controls={false}
