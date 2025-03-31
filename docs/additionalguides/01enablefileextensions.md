@@ -1,9 +1,17 @@
 ---
-title: Enabling Windows File Extensions
+title: "Enabling Windows File Extensions"
+sidebar_label: "Enabling Windows File Extensions"
 description: "By default, Windows hides the file extensions for known file types. This means that common file types like `.txt`, `.ini`, or `.exe` will not display their extensions in the file names."
+slug: /additionalguides/fileextensions
+sidebar_position: 2
+hide_title: false
+keywords: 
+ - Windows
+ - File Extensions
+tags:
+ - Additional Guide
+ - Windows
 ---
-
-# Enabling Windows File Extensions
 
 ## Use Case
 By default, Windows hides the file extensions for known file types. This means that common file types like `.txt`, `.ini`, or `.exe` will not display their extensions in the file names. While this might seem convenient, it can cause confusion when you need to identify specific files or change file types. This guide will walk you through the steps to show file extensions, so you can always see them.

@@ -1,6 +1,17 @@
 ---
-title: Finding your Game's Executable
+title: "Finding your Game's Executable"
+sidebar_label: "Finding your Game's Exectuable"
 description: "Each user, platform, and game all require different needs for installing video games. In so, each game is typically installed in a different location, so it can be tedious finding the running location of the game's executables and game directory. This guide will simplify the process for finding your game's exectuable and directory."
+slug: /additionalguides/findexecutable
+sidebar_position: 4
+hide_title: false
+keywords: 
+ - Windows
+ - Find Exectuable
+tags:
+ - Additional Guide
+ - Windows
+
 ---
 
 # Finding your Game's Executable
