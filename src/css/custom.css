@@ -111,3 +111,9 @@ code
   display: flex;
   justify-content: center;
 }
+
+/* Fixes Logo Being Slightly Askew */
+.navbar__brand {
+  padding: 0.25rem 0.75rem 0.50rem 0.75rem !important;
+  margin-right: 0 !important
+}
