@@ -2,12 +2,13 @@
 /* Took me a considerable amount of time to figure this out. - Jordan */
 
 .heroSection {
-  background-image: url('/img/mmhomepagebanner.webp');
+  background-image: url('https://assets.martysmods.com/headers/herobanner.webp');
   background-size: cover;
+  background-color: #1b1b1d;
+  background-position: center !important;
   width: auto;
   max-width: auto;
   height: 620px;
-  background-position: center !important;
   text-align: left;
 }
 
