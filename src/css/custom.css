@@ -105,3 +105,9 @@ code
 .card {
   min-height: 150px !important;
 }
+
+/* Centers Footer on Mobile */
+.footer__item {
+  display: flex;
+  justify-content: center;
+}
