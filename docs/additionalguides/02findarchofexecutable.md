@@ -12,8 +12,6 @@ tags:
  - Additional Guide
  - Windows
 ---
-
-## Use Case
 When modding with graphics injections, accurately identifying the architecture type of your game's executable is crucial. Whether you're an experienced modder or new to the scene, knowing whether your game uses a 32-bit or 64-bit executable is essential for ensuring compatibility and the proper functioning of tools like ReShade and other graphics mods.
 
 ---
@@ -30,8 +28,8 @@ In Task Manager, go to the "Processes" tab and find your game's executable. The 
 ## Identify the Architecture
    * 32-Bit Architecture: If the game is running in 32-bit mode, the process name will have a tag that says "(32 Bits)" next to it.
      
-     ![Showing Task Manager with Highlight on 32-Bit](./images/hl2-32bit.webp)
+     ![Showing Task Manager with Highlight on 32-Bit](https://assets.martysmods.com/additionalguides/hl2-32bit.webp)
 
    * 64-Bit Architecture: If there is no "(32 Bits)" tag, the game is using a 64-bit architecture.
      
-     ![Showing Task Manager with Highlight on No Architecture](./images/ultrakill-32bit.webp)
+     ![Showing Task Manager with Highlight on No Architecture](https://assets.martysmods.com/additionalguides/ultrakill-32bit.webp)
