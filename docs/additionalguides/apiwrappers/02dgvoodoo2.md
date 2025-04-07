@@ -20,7 +20,7 @@ dgVoodoo2 is a rendering API wrapper used to translate games that use older Dire
 ## Download dgVoodoo2
 Download the latest version of dgVoodoo2 from [the developer's website](https://dege.freeweb.hu/dgVoodoo2/dgVoodoo2/#latest-stable-version).
 
-![dgVodooo2 Releases](./images/dgvoodooreleases.webp)
+![dgVodooo2 Releases](https://assets.martysmods.com/additionalguides/apiwrappers/dgvoodooreleases.webp)
 
 ## Find Rendering API and Architecture
 Refer to [PCGamingWiki](https://pcgamingwiki.com/) to determine your game's rendering API and architecture.
@@ -33,7 +33,7 @@ Open your downloaded copy of the dgVoodoo2 Archive using the latest version of [
 
 Inside, you'll find several directories along with three additional files. Navigate into the  the `MS` folder.
 
-![dgVoodoo2 Archive](./images/dgvoodooarchive.webp)
+![dgVoodoo2 Archive](https://assets.martysmods.com/additionalguides/apiwrappers/dgvoodooarchive.webp)
 
 After you're in the `MS` folder, you'll find several folders relating to the architecture type of the game's executable. The only two that you'd ever need to go into are `x64`(64 Bit) and `x86` (32 Bit).
 
