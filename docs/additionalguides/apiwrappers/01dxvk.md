@@ -20,7 +20,7 @@ DXVK is a rendering API wrapper used to translate games that use the DirectX ren
 ## Download DXVK
 Download the latest DXVK version from [their GitHub releases](https://github.com/doitsujin/dxvk/releases).
 
-![DXVK Releases](./images/dxvkreleases.webp)
+![DXVK Releases](https://assets.martysmods.com/additionalguides/apiwrappers/dxvkreleases.webp)
 
 ## Find Rendering API and Architecture
 Refer to [PCGamingWiki](https://pcgamingwiki.com/) to determine your game's rendering API and architecture.
@@ -33,7 +33,7 @@ Open the downloaded DXVK Archive. (If you're on Windows 10, use [7Zip](https://w
 
 Inside, you'll find `x64` and `x32` directories. Navigate to the appropriate folder based on your game's architecture.
 
-![DXVK Archive Arch](./images/dxvkarchivearch.webp)
+![DXVK Archive Arch](https://assets.martysmods.com/additionalguides/apiwrappers/dxvkarchivearch.webp)
 
 ## Transfer the Proper DLL
 Inside the chosen architecture directory, you'll find files corresponding to different rendering APIs:
