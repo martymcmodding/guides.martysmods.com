@@ -26,7 +26,7 @@ Download the latest version of dgVoodoo2 from [the developer's website](https://
 Refer to [PCGamingWiki](https://pcgamingwiki.com/) to determine your game's rendering API and architecture.
 
 ## Navigate to Game Directory
-Refer to [our guide on locating your game's directory](./additionalguides/findexecutable).
+Refer to [our guide on locating your game's directory](/additionalguides/findexecutable).
 
 ## Open dgVoodoo2 Archive
 Open your downloaded copy of the dgVoodoo2 Archive using the latest version of [7zip](https://www.7-zip.org/).
