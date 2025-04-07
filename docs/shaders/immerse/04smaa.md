@@ -32,10 +32,10 @@ By default the shader is already configured to get rid of most stair stepping (a
 
 ### Edge Detection Type
 Specifies the method used for detecting edges in SMAA. The available options include:
- - **Luminance Edge Detection:** Detects edges based on brightness differences.
- - **Color Edge Detection (Max):** Detects edges by identifying the maximum color difference.
- - **Color Edge Detection (Weighted):** Detects edges using a weighted color difference approach.
- - **Depth Edge Detection:** Detects edges based on depth information, useful for distinguishing objects in 3D space.
+ * **Luminance Edge Detection:** Detects edges based on brightness differences.
+ * **Color Edge Detection (Max):** Detects edges by identifying the maximum color difference.
+ * **Color Edge Detection (Weighted):** Detects edges using a weighted color difference approach.
+ * **Depth Edge Detection:** Detects edges based on depth information, useful for distinguishing objects in 3D space.
 
 ### Edge Detection Threshold
 Determines the sensitivity of edge detection based on the chosen edge detection type. Lower values detect more edges, while higher values detect fewer, focusing on more prominent edges.
