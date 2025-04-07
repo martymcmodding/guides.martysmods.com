@@ -13,23 +13,25 @@ tags:
  - Discord
 ---
 
-## Use Case
 Unfortunately, the Patreon and Discord intergration for larger servers and Patreon communities is slow. In order to force Patreon to provide you the benefits that you've paid for on our Discord (for downloading our shaders and being a part of our community) you can follow the steps provided below:
 
 ---
 
-If you are already a member of our Discord server, it's best to leave the server manually. You can do this by going to the top of Discord on the left hand side, clicking "PGHub" and then clicking "Leave Server".
+## Leave the Discord Server
+If you are already a member of the Discord server you'll need to leave the server manually. You can do this by going to the top of Discord on the left hand side, clicking "PGHub" and then clicking "Leave Server".
 
 ![PGHub Leave](https://assets.martysmods.com/additionalguides/patreon/pghub_leave.webp)
 
-First, click the hyperlink here in order to navigate to [Patreon's 'Connected Apps' Settings.](https://www.patreon.com/settings/apps/) Once there, you will be greeted with a host of applications that you can connect to your Patreon account.
+## Open Patreon's "Connected Apps" Settings
+First, click the hyperlink here in order to navigate to [Patreon's 'Connected Apps' Settings.](https://www.patreon.com/settings/apps/) Once there, you'll see the "**Discord**" button. Click it and continue.
 
 ![Patreon Connected Apps](https://assets.martysmods.com/additionalguides/patreon/patreon-connected-apps.webp)
 
-Once there, click the "**Discord**" button.
+:::warning
+If you do not have a Discord account linked, you will need to do so in order to progress to the next step.
+:::
 
-![Patreon Discord Connected Apps Button](https://assets.martysmods.com/additionalguides/patreon/discord-connect-button.webp)
-
-Now that you're at the connected application page for Discord, click "Join Server" for the Patreon server for "Pascal Gilcher".
+## Join the Discord Server through Patreon
+Now that you're at the connected application page for Discord, click "Join Server" for the Discord Server.
 
 ![Patreon Pascal Gilcher Join Button](https://assets.martysmods.com/additionalguides/patreon/patreon_join_server.webp)
