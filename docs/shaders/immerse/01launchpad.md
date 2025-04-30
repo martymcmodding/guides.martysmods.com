@@ -33,7 +33,7 @@ Launchpad is REQUIRED to be at the top of the shader load order in order to func
 
 ## Video Breakdown:
 
-<ReactPlayer
+<!---- <ReactPlayer
   url="https://www.youtube.com/watch?v=RhT4MFRQ5jo"
   playing={false}
   muted={false}
@@ -47,7 +47,7 @@ Launchpad is REQUIRED to be at the top of the shader load order in order to func
     aspectRatio: "16/9",
     margin: "0 auto"
   }}
-/>
+/> --->
 
 ## Arguments:
 
