@@ -15,14 +15,13 @@ tags:
 
 # Manually Installing Add-ons
 
-## Use Case
-Not all add-ons are available through the ReShade Setup Tool. This guide will walk you through the process of manually installing add-ons so ReShade can use them.
-
 :::info
 This guide assumes that the Add-on Support Build of ReShade is already installed and functioning in your game.
 :::
 
----
+:::warning
+If the addons you are attempting to install were not obtained from GitHub (instead downloaded through Patreon, Discord, or via Direct Download), you can skip the GitHub download steps below and instead use the addon files provided to you (usually in a ZIP or folder format).
+:::
 
 ## Downloading the Add-on
 

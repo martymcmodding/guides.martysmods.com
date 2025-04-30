@@ -17,32 +17,33 @@ import ReactPlayer from 'react-player'
 
 # Manually Installing Shaders
 
-## Use Case
-Sometimes the shader repository that you want to use isn't available with the ReShade Setup Tool. This guide will walk you through the process of installing shaders manually!
-
 :::info
 This guide assumes that you already have ReShade installed and working in your game.
 :::
 
----
+:::warning
+If the shaders you are attempting to install were not obtained from GitHub (instead downloaded through Patreon, Discord, or via Direct Download), you can skip the GitHub download steps below and instead use the shader files provided to you directly (usually in a ZIP or folder format).
+:::
 
 ## Downloading the Shader Repository(s)
 
-This guide will be utilizing the iMMERSE repository on GitHub; however, you can utilize any shader repository for this guide. It's also worth noting that not all shader repositories are hosted the same way. So, it's worth noting that not all shader repositories are hosted the same way. Once you've selected your repository, follow these steps:
+This guide uses the iMMERSE repository on GitHub as an example, but you can follow the same general steps for any shader repository, regardless of where it’s hosted.
 
-It's also worth noting that not all shader repositories are hosted the same way. So your repository might look slightly different.
+:::info
+Not all shader repositories are structured or hosted the same way. If your shaders came from somewhere other than GitHub (like Patreon, Discord, or a direct download), skip the GitHub steps below and use the files you received instead.
+:::
 
-First, click the "Code" button on GitHub, located toward the top-right area of the repository page.
+First, go to the respository of the shaders that you want to download. Afterwards, click the "Code" button near the top-right of the GitHub page.
 
 ![Code Button](https://assets.martysmods.com/additionalguides/reshade/githubshaderrepocodebuttonhighlight.webp)
 
-Once you've clicked the "Code" button, a dropdown menu will appear. Click the "Download ZIP" button from this menu to start downloading your shader repository.
+Now, in the dropdown that appears, click "Download ZIP" to download the repository.
 
 ![Download Zip Button](https://assets.martysmods.com/additionalguides/reshade/githubdownloadzipbuttonhighlight.webp)
 
 ## Installing the Shader Repository(s)
 
-Once the shader repository download is complete, open the ZIP file you downloaded. Extract the contents—typically the "Shaders" and "Textures" folders—directly into your game's "ReShade-Shaders" directory. If Windows warns you about files already existing, simply click "Replace the files in the destination."
+Once your shader ZIP file has finished downloading, open it and extract the contents into your game’s `ReShade-Shaders` directory. If you're prompted by Windows about file conflicts, just choose **“Replace the files in the destination.”**
 
 <ReactPlayer
   url="https://assets.martysmods.com/additionalguides/reshade/candpasteshadersandtexturesfolder.webm"
@@ -57,13 +58,11 @@ Once the shader repository download is complete, open the ZIP file you downloade
 
 ## Setting the Effect and Texture Search Paths
 
-If your ReShade install doesn't detect any new shaders installed, it's best to check the settings tab and verify that your shaders' and textures' paths are set up correctly. These specific options are called "Effect Search Path" and "Texture Search Path."  
+If ReShade isn't detecting your shaders, it’s likely due to incorrect folder paths. Open the **Settings** tab in ReShade and check the following:
 
-These paths should point exactly to the folders you just extracted to. Typically, they should look like this:
-
-| Setting               | Correct Path                     |
-|----------------------- | -------------------------------|
+| Setting                 | Correct Path                    |
+| ----------------------- | ------------------------------- |
 | Effect Search Path      | `.\ReShade-Shaders\Shaders\**`  |
 | Texture Search Path     | `.\ReShade-Shaders\Textures\**` |
 
-Ensure your paths match these formats precisely to ensure ReShade correctly loads your manually installed shaders.
+Make sure both paths point to the exact folders you extracted earlier. The `**` wildcard ensures that ReShade looks through all subfolders, so copying these paths exactly will avoid most issues.
