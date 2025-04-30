@@ -19,6 +19,10 @@ import ReactPlayer from 'react-player'
 
 :::info
 This guide assumes that you already have ReShade installed and working in your game.
+
+This guide uses the iMMERSE repository on GitHub as an example, but you can follow the same general steps for any shader repository, regardless of where it’s hosted.
+
+Not all shader repositories are structured or hosted the same way. If your shaders came from somewhere other than GitHub (like Patreon, Discord, or a direct download), skip the GitHub steps below and use the files you received instead.
 :::
 
 :::warning
@@ -27,13 +31,7 @@ If the shaders you are attempting to install were not obtained from GitHub (inst
 
 ## Downloading the Shader Repository(s)
 
-This guide uses the iMMERSE repository on GitHub as an example, but you can follow the same general steps for any shader repository, regardless of where it’s hosted.
-
-:::info
-Not all shader repositories are structured or hosted the same way. If your shaders came from somewhere other than GitHub (like Patreon, Discord, or a direct download), skip the GitHub steps below and use the files you received instead.
-:::
-
-First, go to the respository of the shaders that you want to download. Afterwards, click the "Code" button near the top-right of the GitHub page.
+First, go to the respository of the shaders that you want to download. Then, click the "Code" button near the top-right of the GitHub page.
 
 ![Code Button](https://assets.martysmods.com/additionalguides/reshade/githubshaderrepocodebuttonhighlight.webp)
 
