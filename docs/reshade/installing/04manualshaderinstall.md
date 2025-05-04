@@ -22,7 +22,7 @@ This guide assumes that you already have ReShade installed and working in your g
 
 This guide uses the iMMERSE repository on GitHub as an example, but you can follow the same general steps for any shader repository, regardless of where it’s hosted.
 
-Not all shader repositories are structured or hosted the same way. If your shaders came from somewhere other than GitHub (like Patreon, Discord, or a direct download), skip the GitHub steps below and use the files you received instead.
+Not all shader repositories are structured or hosted the same way.
 :::
 
 :::warning

@@ -36,7 +36,7 @@ If the add-on you are installing does not have a "Releases" section, check the r
 Once you've downloaded the add-on, extract the contents directly into your game’s root directory (the same location as your game's main executable file).
 
 :::important
-Keep in mind that it's important not to create a separate folder for the add-on files. The add-on files need to be in the root directory themselves, alongside your game’s main executable.
+Do not create a separate folder for add-ons. Add-ons need to be in the root directory alongside your game’s main executable.
 :::
 
 If you need help finding the root directory, use our [guide on identifying your game's executable](/additionalguides/03findgameexecutable).
