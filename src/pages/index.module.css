@@ -5,10 +5,10 @@
   background-image: url('https://assets.martysmods.com/headers/herobanner.webp');
   background-size: cover;
   background-color: #1b1b1d;
-  background-position: center !important;
+  background-position: center 80% !important;
   width: auto;
   max-width: auto;
-  height: 620px;
+  height: 450px;
   text-align: left;
 }
 

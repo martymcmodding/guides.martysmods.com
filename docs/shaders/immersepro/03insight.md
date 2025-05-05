@@ -14,45 +14,44 @@ tags:
 
 # Insight
 
-## Use Case
 iMMERSE Pro: Insight is an image analysis shader designed to help users better understand what is happening on screen. It includes features such as a magnifying glass, image histograms, and tools for checking the RGB values of individual pixels.
 
 ---
 
 ## Color Parameters:
 
-![Color Parameters](./images/insightcolorparameters.webp)
+![Color Parameters](https://assets.martysmods.com/shaders/insight/insightcolorparameters.webp)
 
 ### **Color Clipping Overlay**
  * **Disabled:** Shows no color based inspection tools on the screen.
  * **Black/White Clipping:** Configures the clipping function to detect black and white values. When enabled, black pixels that are clipping will be displayed as white, and white pixels that are clipping will be displayed as black.
 
-    ![B/W Clipping](./images/insight_clippingbw.webp)
+    ![B/W Clipping](https://assets.martysmods.com/shaders/insight/InsightLumaClip.webp)
  * **RGB Clipping:** Configures the clipping function to check for red, green, and blue values individually. This allows for precise identification of clipping within each color channel.
 
-    ![RGB Clipping](./images/insight_clippingrgb.webp)
+    ![RGB Clipping](https://assets.martysmods.com/shaders/insight/InsightColorClip.webp)
 
 ### **Histogram Mode**
  * **Disabled:** Shows no color based inspection tools on the screen.
  * **Luminance Histogram:** The Luminance Histogram displays the brightness levels of the image, allowing you to see the distribution of light and dark areas. This can assist in adjusting exposure and contrast.
 
-    ![LUMA HISTOGRAM](./images/insight_scope_lumahistogram.webp)
+    ![LUMA HISTOGRAM](https://assets.martysmods.com/shaders/insight/InsightLumaHistogram.webp)
  * **RGB Histogram:** The RGB Histogram shows the distribution of red, green, and blue color channels across the image. It is essential for identifying color imbalances and ensuring accurate color representation.
 
-    ![RGB HISTOGRAM](./images/insight_scope_rgbhistogram.webp)
+    ![RGB HISTOGRAM](https://assets.martysmods.com/shaders/insight/InsightRGBHistogram.webp)
  * **Luminance Waveform:** The Luminance Waveform represents the brightness levels of the image over time or across the horizontal axis. This is particularly useful for video work, ensuring consistent exposure throughout the image.
 
-    ![LUMA WAVEFORM](./images/insight_scope_lumawaveform.webp)
+    ![LUMA WAVEFORM](https://assets.martysmods.com/shaders/insight/InsightLumaWaveform.webp)
  * **RGB Waveform:** The RGB Waveform breaks down the image into its red, green, and blue components, showing their respective brightness levels. This is crucial for balancing color across the image and ensuring no channel is dominant.
 
-    ![RGB WAVEFORM](./images/insight_scope_rgbawaveform.webp)
+    ![RGB WAVEFORM](https://assets.martysmods.com/shaders/insight/InsightRGBWaveform.webp)
  * **RGB Waveform Parade:** The RGB Waveform Parade displays the red, green, and blue channels separately, side by side. This allows for easy comparison of the individual channels, making it easier to correct color balance issues.
 
-    ![RGB PARADE WAVEFORM](./images/insight_scope_waveformparade.webp)
+    ![RGB PARADE WAVEFORM](https://assets.martysmods.com/shaders/insight/InsightParadeWaveform.webp)
 
 ## Inspector Parameters:
 
-![insightparameters](./images/insightinspectorparameters.webp)
+![insightparameters](https://assets.martysmods.com/shaders/insight/InsightInspectorParameters.webp)
 
 ### Inspector Types
  * **RGB:** Displays the red, green, and blue values for the selected pixel. This is useful for analyzing the exact color composition at a specific point.

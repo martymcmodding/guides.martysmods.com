@@ -2,7 +2,7 @@
 title: Depth of Field
 sidebar_label: "Depth of Field"
 description: "Designed to emulate how physical cameras work in the real world."
-image: "https://www.martysmods.com/media/DOF.webp"
+image: "https://assets.martysmods.com/headers/dofheader.webp"
 slug: /shaders/immersepro/depthoffield
 sidebar_position: 2
 hide_title: true
@@ -13,9 +13,13 @@ tags:
  - iMMERSE Pro
 ---
 
-![dofheader](./images/dofheader.webp)
+![dofheader](https://assets.martysmods.com/headers/dofheader.webp)
 
-## Use Case:
+# WORK IN PROGRESS.
+
+Check back later.
+
+<!-- ## Use Case:
 
 iMMERSE Pro: Depth of Field is a shader that adds depth of field to a scene. It emulates real-life camera parameters and features, allowing you to focus on specific points or objects, whether macro or micro, to meet your virtual photography needs.
 
@@ -49,4 +53,4 @@ Expands or narrows the range of focusing. This is useful for precisely targeting
 Determines how responsive the lens/camera is to focus changes. A higher value makes the camera react faster to changes. For gameplay requiring fast movement, it's recommended to keep this at the highest value to avoid distraction from the action.
 
 ### `DOF_FULL_RESOLUTION`
-Toggles iMMERSE Pro: Depth of Field to use the full screen resolution.
+Toggles iMMERSE Pro: Depth of Field to use the full screen resolution. !-->

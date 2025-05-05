@@ -2,7 +2,7 @@
 title: Clarity
 sidebar_label: "Clarity"
 description: "Enhances texture and image details, by adjusting local contrast. simular to Photoshop's Clarity."
-image: "https://www.martysmods.com/media/Clarity.webp"
+image: "https://assets.martysmods.com/headers/clarityheader.webp"
 slug: /shaders/immersepro/clarity
 sidebar_position: 1
 hide_title: true
@@ -19,35 +19,33 @@ import ImageComparisonSlider from '@site/src/components/ImageComparisonSlider';
 
 <!------------------------------------------------------------>
 
-![ClarityHeader](./images/clarityheader.webp)
+![ClarityHeader](https://assets.martysmods.com/headers/clarityheader.webp)
 
-## Use Case:
-
-iMMERSE Pro: Clarity is inspired by Photoshop’s Clarity tool, designed to enhance and restore details in your visuals. It’s particularly useful for bringing out texture and depth in flat or hazy scenes, making it ideal for landscapes, architectural shots, or games with low-contrast lighting. Whether you want to sharpen details in shadows, add definition to mid-tones, or simply make your visuals pop, Clarity provides a versatile way to fine-tune your image without over-sharpening or introducing artifacts.
+iMMERSE Pro: Clarity is based on Photoshop’s Clarity tool. It helps bring out detail and depth in flat or hazy scenes—great for landscapes, architecture, or low-contrast games. Use it to sharpen shadows, define mid-tones, and make visuals stand out without over-sharpening or adding artifacts.
 
 ---
 
 ## Blending Arguments:
 
-### Texture Intensity 
-Adjusts how much sharpening and detail enhancement is applied. Higher values make textures and details stand out more, but too much can look harsh. Start low and increase gradually until you find the right balance for your scene.
+### Texture Intensity  
+Controls how much sharpening and detail enhancement is applied. Higher values make textures and fine details more prominent, but too much can create a harsh appearance. Start with a low setting and increase gradually to find the right balance for your scene.
 
- <ImageComparisonSlider 
-  beforeImage="/img/shaders/immersepro/images/clarityoriginal.webp" 
-  afterImage="/img/shaders/immersepro/images/claritytexturesharpen.webp"
-  beforeLabel="0.000 Texture Sharpen"
-  afterLabel="1.000 Texture Sharpen"
- />
+<ImageComparisonSlider  
+  beforeImage="https://assets.martysmods.com/shaders/clarity/ClarityOriginal-1.webp"  
+  afterImage="https://assets.martysmods.com/shaders/clarity/ClarityTextureIntensity1.000-1.webp"  
+  beforeLabel="0.000 Texture Sharpen"  
+  afterLabel="1.000 Texture Sharpen"  
+/>
 
-### Local Contrast Intensity
-Adjusts the contrast between nearby pixels, making details and textures stand out more clearly. Higher values enhance the sharpness and neutralize the lighting of the image. Too much can look harsh, so, start low and increase gradually until you find the right balance for your scene.
+### Local Contrast Intensity  
+Adjusts the contrast between neighboring pixels, which helps reveal textures and subtle details. Higher settings enhance perceived sharpness and reduce flat lighting, but too much may look unnatural. It's best to start low and adjust upwards until it suits your scene.
 
- <ImageComparisonSlider 
-  beforeImage="/img/shaders/immersepro/images/clarityoriginal.webp" 
-  afterImage="/img/shaders/immersepro/images/claritylocalcontrast.webp"
-  beforeLabel="0.000 Local Contrast"
-  afterLabel="1.000 Local Contrast"
- />
+<ImageComparisonSlider  
+  beforeImage="https://assets.martysmods.com/shaders/clarity/ClarityOriginal-1.webp"  
+  afterImage="https://assets.martysmods.com/shaders/clarity/ClarityLocalContrast1.000-1.webp"  
+  beforeLabel="0.000 Local Contrast"  
+  afterLabel="1.000 Local Contrast"  
+/>
 
-### Effect Radius
-Determines how far iMMERSE Pro: Clarity searches around each pixel to apply texture sharpening and local contrast. Higher values emphasize details over a larger area but can create faint halos if pushed too far. Lower values keep the effect subtle and focused but might not stand out as much. If you're unsure, the default value of `0.500` is a safe and balanced starting point.
+### Effect Radius  
+Defines how far Clarity looks around each pixel to apply sharpening and contrast enhancements. Larger values affect a wider area and make details stand out more—but may introduce faint halos if set too high. Smaller values keep the enhancement localized and subtle.

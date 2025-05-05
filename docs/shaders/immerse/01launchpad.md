@@ -31,9 +31,9 @@ Launchpad is REQUIRED to be at the top of the shader load order in order to func
 
 ---
 
-## Video Breakdown:
+<!---- ## Video Breakdown:
 
-<!---- <ReactPlayer
+<ReactPlayer
   url="https://www.youtube.com/watch?v=RhT4MFRQ5jo"
   playing={false}
   muted={false}
