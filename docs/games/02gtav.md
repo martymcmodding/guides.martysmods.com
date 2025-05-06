@@ -5,7 +5,6 @@ description: "Getting ReShade properly installed for Grand Theft Auto V can be c
 
 # Grand Theft Auto V
 
-## Use Case
 Getting ReShade properly installed for Grand Theft Auto V can be challenging. A recent update from the developers introduced measures that block certain graphics injections, which has led to issues with ReShade and other similar tools not working as expected. This guide provides you with the instructions in order to install ReShade alongside ENB to the game.
 
 ---

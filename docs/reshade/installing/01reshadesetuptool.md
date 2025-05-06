@@ -15,7 +15,6 @@ tags:
 
 # ReShade Setup Tool 
 
-## Use Case
 The ReShade Setup Tool makes installing ReShade easy. While easy to use, it also offers powerful features, allowing you to download a variety of shaders and add-ons, making it a valuable tool for both new and returning users.
 
 If you require help choosing the correct version of ReShade, visit [our guide for downloading ReShade](../downloading) for more information between the standard and add-on support versions.

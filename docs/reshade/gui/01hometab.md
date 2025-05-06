@@ -14,7 +14,6 @@ tags:
 
 # Home
 
-## Use Case
 The "Home" tab contains the main functions of ReShade where users can enable, disable, and configure shaders they have installed. This section of the guide aims to break down the "Home" tab and provide more insight into what each button or section does.
 
 ---

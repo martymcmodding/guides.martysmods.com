@@ -14,7 +14,6 @@ tags:
 
 # Manually Uninstalling ReShade
 
-## Use Case
 Sometimes the ReShade Setup Tool isn't able to fully uninstall ReShade for whatever reason. This guide will walk you through the steps to fully uninstall manually ReShade.
 
 ---

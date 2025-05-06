@@ -15,7 +15,6 @@ tags:
 
 # Manually Installing ReShade 
 
-## Use Case
 Sometimes, the ReShade Setup Tool doesn’t provide everything you need or may not work with certain games. This guide will show you how to manually install ReShade, giving you full control over the process.
 
 ---

@@ -14,7 +14,6 @@ tags:
 
 # ReShade Setup Tool
 
-## Use Case
 The ReShade Setup Tool makes uninstalling ReShade easy, ensuring you don't delete any game-critical files.
 
 ---

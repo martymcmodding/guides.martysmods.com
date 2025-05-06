@@ -14,7 +14,6 @@ tags:
 
 # About
 
-## Use Case
 The "About" tab serves to acknowledge and recognize the authors of ReShade and its dependencies, as well as display the current version that you are running.
 
 ---

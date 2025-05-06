@@ -14,7 +14,6 @@ tags:
 
 # Settings
 
-## Use Case
 The "Settings" tab lets you tweak ReShade settings like shader directories, menu access keys, FPS meter configurations, or theme settings:
 
 ---

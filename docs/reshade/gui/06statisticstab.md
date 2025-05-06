@@ -14,7 +14,6 @@ tags:
 
 # Statistics
 
-## Use Case
 The "Statistics" tab, shown in the image, is a great tool for tracking and improving ReShade's performance. It provides detailed information on various aspects of ReShade's operation. All the data provided is invaluable for shader developers and those aiming to optimize performance.
 
 ---

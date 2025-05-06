@@ -15,7 +15,6 @@ tags:
 
 # Manually Injecting ReShade
 
-## Use Case
 Certain games do not support automatic ReShade injection during runtime. This is especially common for UWP (Microsoft Store) games, which often disallow automatic injection. Thankfully, Crosire has developed a tool for manual DLL injection into games.
 
 :::info

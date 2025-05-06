@@ -5,7 +5,6 @@ description: "The Source engine, developed by Valve, is a foundational platform 
 
 # Source Games
 
-## Use Case
 The Source engine, developed by Valve, is a foundational platform for numerous games within the industry. However, some games built on the Source engine present challenges when integrating ReShade due to the engine's specific requirements for .dll file placement. While the ReShade installer typically manages these details seamlessly, there are instances when manual intervention may be necessary or when the installer fails to place the files in the correct directory. 
 
 ---
