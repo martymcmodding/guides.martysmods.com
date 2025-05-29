@@ -9,7 +9,6 @@ const config = {
   baseUrl: '/',
   organizationName: 'MartysMods',
   projectName: 'guides.martysmods.com',
-
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'ignore',
   i18n: {
@@ -110,6 +109,10 @@ const config = {
               {
                 label: 'YouTube',
                 href: 'https://www.youtube.com/@martysmods/videos',
+              },
+              {
+                label: 'Privacy Policy',
+                href: 'https://www.martysmods.com/privacy-policy/',
               },
             ],
           },

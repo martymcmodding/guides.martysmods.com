@@ -13,10 +13,10 @@ tags:
  - iMMERSE
 ---
 
-<!------------------------IMPORTS ---------------------------->
+<!----------------------- IMPORTS ---------------------------->
 
 import ImageComparisonSlider from '@site/src/components/ImageComparisonSlider';
-import ReactPlayer from 'react-player'
+import YTConsentRhT4MFRQ5jo from '@site/src/components/YTConsent';
 
 <!----------------------------------------------------------->
 
@@ -26,28 +26,13 @@ iMMERSE: Launchpad is Marty's helper shader designed to import high-quality norm
 
 :::warning
 Launchpad is REQUIRED to be at the top of the shader load order in order to function properly.
-![LaunchpadLoadOrder](https://assets.martysmods.com/shaders/launchpad/launchpadloadorder.webp)
+![LaunchpadLoadOrder](https://assets.martysmods.com/shaders/launchpad/launchpadloadorder2.webp)
 :::
 
 ---
 
-<!---- ## Video Breakdown:
-
-<ReactPlayer
-  url="https://www.youtube.com/watch?v=RhT4MFRQ5jo"
-  playing={false}
-  muted={false}
-  volume="0.20"
-  controls={true}
-  loop={false}
-  width="100%"
-  height="100%"
-  style={{ 
-    display: "block",
-    aspectRatio: "16/9",
-    margin: "0 auto"
-  }}
-/> --->
+## Video Breakdown:
+<YTConsentRhT4MFRQ5jo />
 
 ## Arguments:
 
