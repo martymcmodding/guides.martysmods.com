@@ -1,7 +1,7 @@
 ---
 title: "dgVoodoo2"
 sidebar_label: "dgVoodoo2"
-description: "dgVoodoo2 is a rendering API wrapper used to translate games that use older DirectX rendering APIs to newer DirectX Rendering APIs. This is highly useful for adapting older DirectX 8, 9, and 10 games so that they can benifit from ReShade's compute shaders."
+description: "A concise guide to using dgVoodoo2 to wrap legacy DirectX games for ReShade compute shader compatibility."
 slug: /additionalguides/apiwrappers/dgvoodoo2
 sidebar_position: 2
 hide_title: false
@@ -18,25 +18,37 @@ dgVoodoo2 is a rendering API wrapper used to translate games that use older Dire
 ---
 
 ## Download dgVoodoo2
-Download the latest version of dgVoodoo2 from [the developer's website](https://dege.freeweb.hu/dgVoodoo2/dgVoodoo2/#latest-stable-version).
+Download the latest version of dgVoodoo2 by visiting [the developer's website](https://dege.freeweb.hu/dgVoodoo2/dgVoodoo2/#latest-stable-version) and downloading the "Latest stable version" of dgVoodoo2.
 
 ![dgVodooo2 Releases](https://assets.martysmods.com/additionalguides/apiwrappers/dgvoodooreleases.webp)
 
-## Find Rendering API and Architecture
-Refer to [PCGamingWiki](https://pcgamingwiki.com/) to determine your game's rendering API and architecture.
+## Find Your Game’s DirectX Version & Architecture
+Afterwards, go to [PCGamingWiki](https://pcgamingwiki.com/) and search for your game. You'll need to take note of:
+   - Which DirectX version it uses (e.g., DirectX 9, DirectX 10).
+   - Whether the game executable is 32‑bit or 64‑bit.
 
-## Navigate to Game Directory
-Refer to [our guide on locating your game's directory](/additionalguides/findexecutable).
-
-## Open dgVoodoo2 Archive
-Open your downloaded copy of the dgVoodoo2 Archive using the latest version of [7zip](https://www.7-zip.org/).
-
-Inside, you'll find several directories along with three additional files. Navigate into the  the `MS` folder.
+## Navigate Through the dgVoodoo2 Archive
+Once you've found the architecture and and version of DirectX, open the dgVoodo2 ZIP file you downloaded using [7-Zip](https://www.7-zip.org/) or [WinRAR](https://www.win-rar.com/). Inside the archive, you’ll see several files and folders. Navigate into the `MS` folder.
 
 ![dgVoodoo2 Archive](https://assets.martysmods.com/additionalguides/apiwrappers/dgvoodooarchive.webp)
 
-After you're in the `MS` folder, you'll find several folders relating to the architecture type of the game's executable. The only two that you'd ever need to go into are `x64`(64 Bit) and `x86` (32 Bit).
+Within `MS`, you'll find several subfolders, however, the only two that matter to you are `x64` (64‑bit) and `x86` (32‑bit). You'll want to open the folder that matches your game’s architecture.
 
-## Transfer the Proper DLL
+Once you're inside the right architecture folder, locate the DLL that matches your game’s DirectX version:
 
-Inside there is likely to be several files, but you only need `D3D9.dll` (DirectX 9) or `D3D8.dll` (DirectX 8). Once you've spotted the right DLL for your rendering API drop it in the same location as the game's executable.
+| **DLL Name**    | **DirectX Version**  |
+| --------------- | -------------------- |
+| `d3dim.dll`     | DirectX 6            |
+| `ddraw.dll`     | DirectX 7            |
+| `d3dim700.dll`  | DirectX 7            |
+| `d3d8.dll`      | DirectX 8            |
+| `d3d9.dll`      | DirectX 9            |
+
+
+Copy the appropriate DLL into the same directory as your game’s main executable (e.g., placing `D3D9.dll` alongside `GameExecutable.exe`).
+
+If you’re not sure where your game is installed, refer to [our guide on finding a game’s executable](/additionalguides/findexecutable) for more details.
+
+---
+
+# REST WIP
