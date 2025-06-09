@@ -14,8 +14,6 @@ tags:
 
 # LUT Manager
 
-## Use Case:
-
 LUT Manager combines a Look-Up-Table addon and shader in ReShade manage LUT textures on the fly. It allows for users to easily switch between different LUTs and mark commonly used LUTs all without having to create or utilize a shader for each individual LUT image.
 
 :::warning

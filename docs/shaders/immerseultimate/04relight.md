@@ -15,10 +15,7 @@ tags:
 
 ![ReGradePlusHeader](./images/ReLightHeader.webp)
 
-## Use Case
-
 ReLight is a point-lighting solution for ReShade. Similar to studio lights in photography, ReLight allows you to change the lighting, and adjust for more granular changes in the mood and details of the scenes. While you can use ReLight for any sort of scene, use-cases prove that close-ups or photos of humanoid models are the best cases for using ReLight. However, you're allowed to see as you fit.
-
 
 :::warning
 Launchpad is REQUIRED to be at the top of the shader load order in order for ReLight to function properly.

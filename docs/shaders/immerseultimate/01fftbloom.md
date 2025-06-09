@@ -15,8 +15,6 @@ tags:
 
 ![FFTBloomHeader](./images/ConvolutionBloomHeader.webp)
 
-## Use Case
-
 Convolution Bloom is a high-end bloom effect based on a solution called Fast-Fourier Transform. This technique allows for the bloom to produce unique diffraction spikes in real-time.
 
 ---

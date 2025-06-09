@@ -21,8 +21,6 @@ import ReactPlayer from 'react-player'
 
 ![rtgiheader](./images/rtgiheader.webp)
 
-## Use Case:
-
 iMMERSE Pro: RTGI is a shader that brings realistic lighting to your games. By using ray tracing, RTGI is able to physically simulate how light interacts with objects in order to enhance details and provide more accurate screen spaced bounce lighting through the means of global illumination and ambient occlusion.
 
 :::warning

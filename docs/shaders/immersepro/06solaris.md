@@ -15,8 +15,6 @@ tags:
 
 ![solarisheader](./images/solarisheader.webp)
 
-## Use Case:
-
 iMMERSE Pro: Solaris is a physically based exposure and bloom shader that replicates the light that travels to the camera sensor. Solaris was built to generate a bloom that is comparable to real-world photography within your games through HDR reverse-tonemapping in order to create realistic glowing around bright light sources.
 
 ---

@@ -16,10 +16,7 @@ tags:
 
 ![ReGradePlusHeader](./images/ReGradePlusHeader.webp)
 
-## Use Case
-
 ReGrade + is a commercial-level color-correction suite for ReShade, inspired by industry-standard tools. It eliminates the need to leave the game for detailed adjustments, allowing real-time color correction with an intuitive UI. This makes it a seamless experience for users, especially those knowledgeable in Color Theory, Photography, and Image Post-Processing.
-
 
 :::warning
 ReGrade + requires the Addon Support build of ReShade in order to function properly, otherwise the screen will be black when the shader is enabled.
