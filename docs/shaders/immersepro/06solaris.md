@@ -2,7 +2,7 @@
 title: Solaris
 sidebar_title: "Solaris"
 description: "A physically based exposure and bloom solution."
-image: "https://www.martysmods.com/media/Solaris.webp"
+image: "https://assets.martysmods.com/headers/solarisheader.webp"
 slug: /shaders/immersepro/solaris
 sidebar_position: 6
 hide_title: true
@@ -13,7 +13,7 @@ tags:
  - iMMERSE Pro
 ---
 
-![solarisheader](./images/solarisheader.webp)
+![solarisheader](https://assets.martysmods.com/headers/solarisheader.webp)
 
 iMMERSE Pro: Solaris is a physically based exposure and bloom shader that replicates the light that travels to the camera sensor. Solaris was built to generate a bloom that is comparable to real-world photography within your games through HDR reverse-tonemapping in order to create realistic glowing around bright light sources.
 

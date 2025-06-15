@@ -56,17 +56,17 @@ iMMERSE Pro: Insight is an image analysis shader designed to help users better u
 ### Inspector Types
  * **RGB:** Displays the red, green, and blue values for the selected pixel. This is useful for analyzing the exact color composition at a specific point.
 
-   ![RGB INSPECTOR](./images/insight_inspector_rgb.webp)
+   ![RGB INSPECTOR](https://assets.martysmods.com/shaders/insight/InsightInspectorRGB.webp)
 * **Hue Map:** Shows a map of the hue, color, and luminance values for the selected pixel. This helps in understanding the color relationships within that area.
 
-   ![HUEMAP INSPECTOR](./images/insight_inspector_huemaps.webp)
+   ![HUEMAP INSPECTOR](https://assets.martysmods.com/shaders/insight/InsightInspectorHUEMaps.webp)
 * **Magnifying Glass:**
 Provides a zoomed-in view of the selected pixel and its surrounding area, allowing for detailed inspection of image elements.
 
-   ![MAGNIFYING INSPECTOR](./images/insight_inspector_magnifying.webp)
+   ![MAGNIFYING INSPECTOR](https://assets.martysmods.com/shaders/insight/InsightInspectorMagnifying.webp)
 * **FFT:** Performs a Fast Fourier Transform on the selected pixel and its surroundings, offering insights into the frequency components of that area.
 
-   ![FFT INSPECTOR](./images/insight_inspector_fft.webp)
+   ![FFT INSPECTOR](https://assets.martysmods.com/shaders/insight/InsightInspectorFFT.webp)
 
 ### Inspector Size
 Changes the size of the chosen inspector.

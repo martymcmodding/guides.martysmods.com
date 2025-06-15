@@ -2,7 +2,7 @@
 title: ReGrade
 sidebar_label: "ReGrade"
 description: "A powerful real-time color grading suite within ReShade"
-image: "https://www.martysmods.com/media/ReGrade.webp"
+image: "https://assets.martysmods.com/headers/regradeheader.webp"
 slug: /shaders/immersepro/regrade
 sidebar_position: 4
 hide_title: true
@@ -13,7 +13,7 @@ tags:
  - iMMERSE Pro
 ---
 
-![regradeheader](./images/regradeheader.webp)
+![regradeheader](https://assets.martysmods.com/headers/regradeheader.webp)
 
 iMMERSE Pro: ReGrade is a color-correction suite designed to be on par with standard professional tools, effectively removing the step of toggling between a color-correction software and the game to finish editing, making it all real-time and hassle-free.
 

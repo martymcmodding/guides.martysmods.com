@@ -2,7 +2,7 @@
 title: RTGI
 sidebar_label: "RTGI"
 description: "State of the art ray traced global illumination for ReShade."
-image: "https://www.martysmods.com/media/RTGI.webp"
+image: "https://assets.martysmods.com/headers/rtgiheader.webp"
 slug: /shaders/immersepro/rtgi
 sidebar_position: 5
 hide_title: true
@@ -19,13 +19,13 @@ import ReactPlayer from 'react-player'
 
 <!----------------------------------------------------------->
 
-![rtgiheader](./images/rtgiheader.webp)
+![rtgiheader](https://assets.martysmods.com/headers/rtgiheader.webp)
 
 iMMERSE Pro: RTGI is a shader that brings realistic lighting to your games. By using ray tracing, RTGI is able to physically simulate how light interacts with objects in order to enhance details and provide more accurate screen spaced bounce lighting through the means of global illumination and ambient occlusion.
 
 :::warning
 Launchpad is REQUIRED to be at the top of the shader load order in order for RTGI to function properly.
-![shaderloadorder](./images/rtgiloadorder.webp)
+![shaderloadorder](https://assets.martysmods.com/shaders/rtgi/rtgiloadorder.webp)
 :::
 
 ---
@@ -40,7 +40,7 @@ A straightforward way to adjust Z-Thickness is to use RTGI’s "Lighting Only" d
 With the "Lighting Only" debug view enabled, adjust the Z-Thickness parameter by dragging it up and down, and carefully observe the changes in shadows and ambient occlusion. Keep in mind that it’s easy to overshoot the optimal value. A setting that is too high can cause over-occlusion or haloing, while one that is too low may leave some areas insufficiently occluded.
 
 <ReactPlayer
-  url="https://zarith.us/jordan%5C2025_ZARITH-DESKTOP/2025-02-23%2014-41-10%201.webm"
+  url="https://assets.martysmods.com/shaders/rtgi/RTGIZThickness.webm"
   playing={false}
   muted={true}
   controls={true}
@@ -112,7 +112,7 @@ Provides the user with two debug views.
 ### _MARTYSMODS_TAAU_SCALE
 `_MARTYSMODS_TAAU_SCALE` is a **global** preprocessor definition that needs to be added manually. This preprocessor is best used when depth buffer jitter is applied from game scaling techniques such as DLSS, FSR, or TAAU. To make the preprocessor easier, Marty has defined specific modes for users:
 
-![TAAUSCALEPreprocessor](./images/taauscalepreprocessor.webp)
+![TAAUSCALEPreprocessor](https://assets.martysmods.com/shaders/rtgi/taauscalepreprocessor.webp)
  
 | Scaling Mode Mode | DLSS                     | FSR                     |
 | ----------------- | ------------------------ | ----------------------- |
