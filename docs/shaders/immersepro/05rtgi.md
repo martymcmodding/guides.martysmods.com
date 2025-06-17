@@ -32,12 +32,13 @@ Launchpad is REQUIRED to be at the top of the shader load order in order for RTG
 
 ## Configuring RTGI
 
-### Setting up Z-Thickness  
-The first step in configuring RTGI is setting a parameter called Z-Thickness. RTGI can only see the faces of objects that are currently facing the camera, and in order to give a seemless effect has to effectivly guess how far the objects extend on the backside that isn't visable to the camera; Z-Thickness is the adjustment of the bias. By default, Z-Thickness is set to `0.250`,however, depending on the game and the relative thickness of objects within its world, this setting might be too high or too low.
+### Setting up Z-Thickness
+The first step in configuring RTGI is setting a parameter called Z-Thickness. RTGI can only see the surfaces of objects that are currently facing the camera. To create a seamless effect, it must effectively estimate how far objects extend on the side not visible to the camera. Z-Thickness adjusts this bias. By default, Z-Thickness is set to `0.250`. However, depending on the game and the relative thickness of objects in its world, this setting might be too high or too low.
 
-A straightforward way to adjust Z-Thickness is to use RTGI’s "Diffuse RTGI" debug view. This view provides an unfiltered look at the lighting, shadows, and ambient occlusion applied to the game world.
+A straightforward way to adjust Z-Thickness is by using RTGI’s "Diffuse RTGI" debug view. This view provides an unfiltered look at the lighting, shadows, and ambient occlusion applied to the game world.
 
-With the "Diffuse RTGI" debug view enabled, adjust the Z-Thickness parameter by dragging it left and right, and carefully observe the changes in shadows and Ambient Occlusion. Keep in mind that it’s easy to overshoot the optimal value. A setting that is too high can cause over-occlusion or haloing, while one that is too low may leave some areas insufficiently occluded.
+With the "Diffuse RTGI" debug view enabled, adjust the Z-Thickness parameter by dragging it left or right, and carefully observe the changes in shadows and ambient occlusion. Keep in mind that it’s easy to overshoot the optimal value: a setting that is too high can cause over-occlusion or haloing, while one that is too low may leave some areas insufficiently occluded.
+
 
 <ReactPlayer
   url="https://assets.martysmods.com/shaders/rtgi/RTGIZThickness.webm"
