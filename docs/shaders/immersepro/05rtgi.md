@@ -25,7 +25,7 @@ iMMERSE Pro: RTGI is a shader that brings realistic lighting to your games. By u
 
 :::warning
 Launchpad is REQUIRED to be at the top of the shader load order in order for RTGI to function properly.
-![shaderloadorder](https://assets.martysmods.com/shaders/rtgi/rtgiloadorder.webp)
+![shaderloadorder](https://assets.martysmods.com/shaders/rtgi/rtgiloadorder2.webp)
 :::
 
 ---
