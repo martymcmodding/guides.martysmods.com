@@ -33,11 +33,11 @@ Launchpad is REQUIRED to be at the top of the shader load order in order for RTG
 ## Configuring RTGI
 
 ### Setting up Z-Thickness  
-The first step in configuring RTGI is setting a parameter called Z-Thickness. By default, this value is set to 0.250; however, depending on the game and the relative thickness of objects within its world, this setting might be too high or too low.
+The first step in configuring RTGI is setting a parameter called Z-Thickness. By default, this value is set to `0.250`; however, depending on the game and the relative thickness of objects within its world, this setting might be too high or too low.
 
-A straightforward way to adjust Z-Thickness is to use RTGI’s "Lighting Only" debug view. This view provides an unfiltered look at the lighting, shadows, and ambient occlusion applied to the game world.
+A straightforward way to adjust Z-Thickness is to use RTGI’s "Diffuse RTGI" debug view. This view provides an unfiltered look at the lighting, shadows, and ambient occlusion applied to the game world.
 
-With the "Lighting Only" debug view enabled, adjust the Z-Thickness parameter by dragging it up and down, and carefully observe the changes in shadows and ambient occlusion. Keep in mind that it’s easy to overshoot the optimal value. A setting that is too high can cause over-occlusion or haloing, while one that is too low may leave some areas insufficiently occluded.
+With the "Diffuse RTGI" debug view enabled, adjust the Z-Thickness parameter by dragging it left and right, and carefully observe the changes in shadows and Ambient Occlusion. Keep in mind that it’s easy to overshoot the optimal value. A setting that is too high can cause over-occlusion or haloing, while one that is too low may leave some areas insufficiently occluded.
 
 <ReactPlayer
   url="https://assets.martysmods.com/shaders/rtgi/RTGIZThickness.webm"
@@ -52,7 +52,7 @@ With the "Lighting Only" debug view enabled, adjust the Z-Thickness parameter by
 
 ### Setting Up Intensities
 
-Once your Z-Thickness is dialed in, the next step is configuring the Ambient Occlusion and Bounce Lighting intensities. For best results, disable the "Lighting Only" debug view and set "Ambient Light" to `1.00`. This ensures you’re seeing how RTGI blends with the full scene.
+Once your Z-Thickness is dialed in, the next step is configuring the Ambient Occlusion and Bounce Lighting intensities. For best results, disable the "Diffuse RTGI" debug view and set "Ambient Light" to `1.00`. This ensures you’re seeing how RTGI blends with the full scene.
 
 These intensity values are largely based on personal preference. The goal is to enhance realism by blending them naturally into the scene—without looking too flat or overly exaggerated.
 
