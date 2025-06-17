@@ -50,67 +50,64 @@ With the "Lighting Only" debug view enabled, adjust the Z-Thickness parameter by
   style={{ width: "100%", margin: "0 auto" }}
 />
 
-### Setting up Intensities
+### Setting Up Intensities
 
-Now that you have your Z-Thickness dialed in where you want it, the next step is to configure your Ambient Occlusion and Bounce Lighting intensities. It's best to do this with the "Lighting Only" debug view disabled, so you can see how RTGI integrates with the scene.
+Once your Z-Thickness is dialed in, the next step is configuring the Ambient Occlusion and Bounce Lighting intensities. For best results, disable the "Lighting Only" debug view and set "Ambient Light" to `1.00`. This ensures you’re seeing how RTGI blends with the full scene.
 
-These settings are largely a matter of personal preference, but the goal is to blend them naturally with the environment without making them overbearing.
+These intensity values are largely based on personal preference. The goal is to enhance realism by blending them naturally into the scene—without looking too flat or overly exaggerated.
 
-If you find the scene too dark or not bright enough, try reducing the Ambient Occlusion intensity and increasing the Bounce Lighting intensity. Conversely, if the scene appears overly bright and lacks depth, increase the Ambient Occlusion intensity and decrease the Bounce Lighting intensity.
+#### Bounce Lighting Intensity
 
+Bounce Lighting Intensity controls the strength of the indirect lighting produced by RTGI. This simulates how light bounces off surfaces in the environment. Aim to balance this setting so the lighting looks natural—avoiding areas that feel blown out or unnaturally dim.
 
-## Diffuse RTGI:
+<ReactPlayer  
+  url="https://assets.martysmods.com/shaders/rtgi/RTGIbounceintensity.webm"  
+  playing={false}  
+  muted={true}  
+  controls={true}  
+  loop={true}  
+  width="100%"  
+  height="100%"  
+  style={{ width: "100%", margin: "0 auto" }}  
+/>
 
-### Quality
-Configures the quality of RTGI's diffuse global illumination. Higher settings cast more rays per pixel and provide more samples per ray, resulting in more stable and detailed lighting. 
+#### Ambient Occlusion Intensity
 
-## Specular RTGI:
+Ambient Occlusion Intensity affects the shadowing between nearby surfaces. If your scene looks too dark or harsh, try lowering this setting. If the scene appears too flat or lacks depth, increase the intensity slightly to bring back subtle contact shadows. The goal is to achieve a good balance between soft shadowing and clear visual detail without overpowering the base lighting.
 
-### Quality
-Adjusts the quality of RTGI's specular global illumination. Higher settings increase the number of rays cast per pixel and the samples per ray, enhancing light reflections and stability. Having higher surface roughness values will often require higher quality modes in order to remove noise from the image.
+### Enabling Smoothed and Textured Normals
 
-### Surface Roughness
-Adjusts the roughness value for materials in the scene, with rougher surfaces diffusing more light based reflections while smoother surfaces will reflect more sharper lighting based reflections.
+The Smoothed Normals and Textured Normals options are available through the [iMMERSE Launchpad shader](../immerse/01launchpad.md). These options help correct common visual issues that arise when using ReShade's generic depth buffer, such as overly polygonal or blocky geometry, and instead provide smoother surfaces with added detail and depth.
 
-### Specular Lighting Intensity
-Sets the strength of the specular global illumination, impacting clarity of reflected light on shiny surfaces.
+#### Smoothed Normals
 
-## Denoiser:
+Smoothed Normals reduce the appearance of sharp, low-poly edges by averaging the surface normals across adjacent geometry. This results in softer transitions and more natural lighting behavior.
 
-### Quality
-Controls the quality of the denoiser. Higher quality denoisers will end up being more performance intense, but will also provide a much more coherent and stable image.
+![Smoothed Normal Comparison](https://assets.martysmods.com/shaders/rtgi/RTGINormalsComparisonSmoothed.webp)
 
-### Smoothness
-Controls the smoothness of the denoiser. Lower typically means a more grainy image with higher quality shadows and global illumination, while higher values typically reduce the sharpness of the shading and global illumination in order to provide a much more coherent image. 
+#### Textured Normals
 
-## Blending Arguments:
+Textured Normals add fine surface detail by using the game’s textures to generate extra geometric relief for RTGI. This gives the illusion of more complex surfaces, improving light interaction and visual depth without having to reverse engineer the game to port its texture's normals into RTGI.
 
-### Ambient Level
-Modifies the overall amount of ambient light in the scene, influencing the general brightness and visibility of details. However, this will allow RTGI to increasingly add more raytraced global illumination back into the scene.
+![Textured Normal Comparison](https://assets.martysmods.com/shaders/rtgi/RTGINormalsComparisonTextured.webp)
 
-### Ambient Sky Intensity
-Regulates the intensity of ambient light coming from the sky, contributing to the natural illumination of the scene.
+### Configuring RTGI's Fadeout
 
-### Fade Out Range
-Determines the distance over which RTGI propagates light, affecting how far lighting effects extend within the scene.
+The Fadeout setting controls how far RTGI's ambient occlusion and bounce lighting can extend into the scene. It's especially useful for minimizing visual artifacts like fog bleeding or unwanted lighting interactions in the distance. By adjusting the Fadeout setting, you can strike a balance where most of your scene benefits from RTGI lighting, without causing unrealistic lighting to appear through fog or atmospheric effects.
 
-## Experimental Arguments:
+<ReactPlayer  
+  url="https://assets.martysmods.com/shaders/rtgi/RTGIFadeout.webm"  
+  playing={false}  
+  muted={true}  
+  controls={true}  
+  loop={true}  
+  width="100%"  
+  height="100%"  
+  style={{ width: "100%", margin: "0 auto" }}  
+/>
 
-### Assume sRGB Input
-Specifies whether the input to RTGI is in sRGB color space. This setting is particularly useful when playing a game in HDR or providing RTGI with HDR buffers, ensuring accurate color representation and lighting effects.
-
-## Debug Arguments:
-
-### Enable Debug View
-Provides the user with two debug views.
-* **Disabled:** Standard RTGI output.
-* **Validation Layer:** Debug providing visual output of Depth, Lighting, Normal Vectors, and Optical Flow
-* **Lighting only:** Standard Lighting Channel Debug
-
-## DLSS, FSR, and TAAU Compatability
-
-### _MARTYSMODS_TAAU_SCALE
-`_MARTYSMODS_TAAU_SCALE` is a **global** preprocessor definition that needs to be added manually. This preprocessor is best used when depth buffer jitter is applied from game scaling techniques such as DLSS, FSR, or TAAU. To make the preprocessor easier, Marty has defined specific modes for users:
+### Setting up DLSS/FSR/TAAU Compatability 
+`_MARTYSMODS_TAAU_SCALE` is a global preprocessor definition that needs to be added manually. This preprocessor is best used when depth buffer jitter is applied from game scaling techniques such as DLSS, FSR, or TAAU. To make the preprocessor easier, Marty has defined specific modes for users:
 
 ![TAAUSCALEPreprocessor](https://assets.martysmods.com/shaders/rtgi/taauscalepreprocessor.webp)
  
@@ -121,3 +118,13 @@ Provides the user with two debug views.
 | Balanced          | `DLSS_BALANCED`          | `FSR_BALANCED`          |
 | Performance       | `DLSS_PERFORMANCE`       | `FSR_PERFORMANCE`       |
 | Ultra Performance | `DLSS_ULTRA_PERFORMANCE` | `FSR_ULTRA_PERFORMANCE` |
+
+## Debug Arguments:
+
+### Enable Debug View
+Provides the user with two debug views.
+* Disabled: Standard RTGI output.
+* Diffuse RTGI: Shows just the Diffuse Lighting debug.
+* Specular RTGI: Shows just the Specular Lighting debug.
+* Validation Layer: Debug providing visual output of Depth, Diffuse, Normal Vectors, Optical Flow, and Albedo.
+
