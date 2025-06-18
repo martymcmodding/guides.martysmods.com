@@ -108,10 +108,7 @@ Controls the detail level of textured normals from 1 (low) to 3 (high). Level 3 
 ### Debug Output Modes
 Provides you with five different visual outputs in order to show you what information Launchpad is passing to other shaders.
 - **All**: Displays a 2x2 grid showing normals, optical flow, depth, and the original image.
-    ![LaunchpadDebugAll](https://assets.martysmods.com/shaders/launchpad/launchpaddebugall3.webp)
 - **Optical Flow**: Visualizes the motion data captured by Launchpad for use by other shaders.
 - **Optical Flow Vectors**: Shows the directional flow of motion in greater detail.
 - **Normals**: Displays the enhanced normals provided by Launchpad.
-    ![LaunchpadDebugNormals](https://assets.martysmods.com/shaders/launchpad/launchpadtexturednormals2.webp)
 - **Depth**: Shows the depth map calculated by Launchpad.
-    ![LaunchpadDebugDepth](https://assets.martysmods.com/shaders/launchpad/launchpaddepth.webp)
