@@ -21,31 +21,31 @@ import ImageComparisonSlider from '@site/src/components/ImageComparisonSlider';
 
 ![ClarityHeader](https://assets.martysmods.com/headers/clarityheader.webp)
 
-iMMERSE Pro: Clarity is based on Photoshop’s Clarity tool. It helps bring out detail and depth in flat or hazy scenes—great for landscapes, architecture, or low-contrast games. Use it to sharpen shadows, define mid-tones, and make visuals stand out without over-sharpening or adding artifacts.
+iMMERSE Pro: Clarity is a real-time image-enhancement shader inspired by Photoshop’s Clarity tool. It boosts midtone contrast and local detail in flat or hazy scenes—ideal for landscapes, architecture, or any low-contrast content. By tweaking Effect Radius, Texture Intensity, and Local Contrast, you can sharpen shadows, refine contours, and elevate texture depth without introducing halos or artifacts.
 
 ---
 
-## Blending Arguments:
+## Blending
+
+### Effect Radius  
+Determines how far around each pixel Clarity samples when applying sharpening and contrast. Larger values bring out broader features and make details more pronounced but risk faint halos if overused. Smaller values keep the effect tight and subtle.
 
 ### Texture Intensity  
-Controls how much sharpening and detail enhancement is applied. Higher values make textures and fine details more prominent, but too much can create a harsh appearance. Start with a low setting and increase gradually to find the right balance for your scene.
+Controls the amount of sharpening and detail enhancement. Higher values emphasize textures and fine elements, while lower values maintain a softer look. Start low and gradually increase until you achieve a natural, crisp result.
 
 <ImageComparisonSlider  
-  beforeImage="https://assets.martysmods.com/shaders/clarity/ClarityOriginal-1.webp"  
-  afterImage="https://assets.martysmods.com/shaders/clarity/ClarityTextureIntensity1.000-1.webp"  
+  beforeImage="https://assets.martysmods.com/shaders/clarity/ClarityOriginal2.webp"  
+  afterImage="https://assets.martysmods.com/shaders/clarity/ClarityTextureSharpen2.webp"  
   beforeLabel="0.000 Texture Sharpen"  
   afterLabel="1.000 Texture Sharpen"  
 />
 
 ### Local Contrast Intensity  
-Adjusts the contrast between neighboring pixels, which helps reveal textures and subtle details. Higher settings enhance perceived sharpness and reduce flat lighting, but too much may look unnatural. It's best to start low and adjust upwards until it suits your scene.
+Adjusts contrast between neighboring pixels to reveal subtle textures and depth. Increasing this value enhances perceived sharpness and counteracts flat lighting, but excessive use can look artificial.
 
 <ImageComparisonSlider  
-  beforeImage="https://assets.martysmods.com/shaders/clarity/ClarityOriginal-1.webp"  
-  afterImage="https://assets.martysmods.com/shaders/clarity/ClarityLocalContrast1.000-1.webp"  
+  beforeImage="https://assets.martysmods.com/shaders/clarity/ClarityOriginal2.webp"  
+  afterImage="https://assets.martysmods.com/shaders/clarity/ClarityLocalContrast2.webp"  
   beforeLabel="0.000 Local Contrast"  
   afterLabel="1.000 Local Contrast"  
 />
-
-### Effect Radius  
-Defines how far Clarity looks around each pixel to apply sharpening and contrast enhancements. Larger values affect a wider area and make details stand out more—but may introduce faint halos if set too high. Smaller values keep the enhancement localized and subtle.
