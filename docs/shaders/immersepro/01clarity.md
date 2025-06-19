@@ -21,7 +21,7 @@ import ImageComparisonSlider from '@site/src/components/ImageComparisonSlider';
 
 ![ClarityHeader](https://assets.martysmods.com/headers/clarityheader.webp)
 
-iMMERSE Pro: Clarity is a real-time image-enhancement shader inspired by Photoshop’s Clarity tool. It boosts midtone contrast and local detail in flat or hazy scenes—ideal for landscapes, architecture, or any low-contrast content. By tweaking Effect Radius, Texture Intensity, and Local Contrast, you can sharpen shadows, refine contours, and elevate texture depth without introducing halos or artifacts.
+iMMERSE Pro: Clarity is a real-time image-enhancement shader inspired by Photoshop’s Clarity tool. It boosts midtone contrast and local detail in flat or hazy scenes and is ideal for landscapes, architecture, or any low-contrast content. By tweaking Effect Radius, Texture Intensity, and Local Contrast, you can sharpen shadows, refine contours, and elevate texture depth without introducing halos or artifacts.
 
 ---
 
