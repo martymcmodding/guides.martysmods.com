@@ -26,6 +26,25 @@ html, body, h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea {
   font-family: 'Glober', sans-serif !important;
 }
 
+:root {
+  --ff-base: 'Glober', sans-serif;
+
+  --fs-h1: 3rem;      /* ~48px */
+  --lh-h1: 1.1;
+
+  --fs-h2: 2.25rem;   /* ~36px */
+  --lh-h2: 1.2;
+
+  --fs-body: 1rem;    /* 16px */
+  --lh-body: 1.6;
+
+  --fs-small: 0.875rem; /* 14px */
+  --lh-small: 1.4;
+  
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+}
 
 /* Other Bullshit */
 :root {
@@ -84,13 +103,9 @@ code
 .button
 {
   background: linear-gradient(90deg, #0099fa, #f900cb) !important;
+  color: white !important;
+  border-color: #FFFFFFDD !important;
 }
-
-.button.button--secondary
-{
-  color: #FFFFFFDD !important;
-}
-
 
 /* Setting up line count for document pages */
 .text--truncate {

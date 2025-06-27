@@ -1,0 +1,62 @@
+:global(.hero.hero--primary) {
+  background: none !important;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--space-lg) 0;
+  min-height: 600px;
+  color: var(--ifm-font-color-base);
+
+  background-image:
+    url('https://assets.martysmods.com/headers/herobanner.webp');
+  background-size: cover;
+  background-position: center center;
+}
+
+.hero .container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.content {
+  max-width: 40%;
+}
+
+.title {
+  font-family: var(--ff-base);
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  line-height: var(--lh-h1);
+  margin-bottom: var(--space-md);
+}
+
+.subtitle {
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  margin-bottom: var(--space-lg);
+}
+
+.buttons {
+  display: flex;
+  gap: var(--space-md);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: var(--space-md) 0;
+    min-height: auto;
+    text-align: center;
+  }
+  .hero .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .content {
+    max-width: 100%;
+  }
+}

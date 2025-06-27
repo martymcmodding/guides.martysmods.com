@@ -28,3 +28,15 @@
     padding: 2rem;
   }
 }
+
+.heroTitle {
+  font-family: var(--ff-base);
+  font-size: var(--fs-h1);
+  line-height: var(--lh-h1);
+  margin-bottom: var(--space-md);
+}
+
+.heroSubtitle {
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+}
