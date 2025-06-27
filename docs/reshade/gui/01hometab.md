@@ -26,7 +26,7 @@ At the top of the Home tab is the Preset Selection Bar. Use this to load, save, 
 
 ## Shader Search and Sorting
 
-Just below the preset bar, the Shader Search field lets you quickly filter your shaders by name. To the right, sorting buttons help you organize shaders alphabetically, by type, or by their load order.
+Just below the preset bar, the Shader Search field lets you quickly filter your shaders by name. To the right, sorting buttons help you bring all of the active shaders to the top of the Shader List.
 
 ![ShaderSearch](https://assets.martysmods.com/reshade/gui/GUIShaderSearch.webp)
 
