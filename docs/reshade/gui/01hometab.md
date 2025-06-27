@@ -14,36 +14,48 @@ tags:
 
 # Home
 
-The "Home" tab contains the main functions of ReShade where users can enable, disable, and configure shaders they have installed. This section of the guide aims to break down the "Home" tab and provide more insight into what each button or section does.
+The Home tab is the hub of ReShade’s interface, where you enable, disable, and tweak the shaders you’ve installed. This section walks you through each area of the Home tab, explaining what every button and panel does.
 
 ---
 
 ## Preset Selection Bar
 
-At the top of the ReShade "Home" tab is the preset selection bar. Here you can select, save, create, and manage your presets. By default, ReShade saves presets as `ReShadePreset.ini`.
+At the top of the Home tab is the Preset Selection Bar. Use this to load, save, create, and rename your presets. Presets store your shader configurations in an INI file—for example, the default file is `ReShadePreset.ini`. Click the dropdown to pick a preset, hit the save icon to overwrite it, or click the plus icon to make a new one.
+
+![PresetSelection](https://assets.martysmods.com/reshade/gui/GUIPresetSelector.webp)
 
 ## Shader Search and Sorting
 
-Below the preset selection bar is the shader search function. It allows you to search through all shaders currently installed and visible to ReShade. To the right of the shader search are sorting buttons to organize your shaders.
+Just below the preset bar, the Shader Search field lets you quickly filter your shaders by name. To the right, sorting buttons help you organize shaders alphabetically, by type, or by their load order.
+
+![ShaderSearch](https://assets.martysmods.com/reshade/gui/GUIShaderSearch.webp)
 
 ## Shader List
 
-The shader list provides you with all shaders installed for ReShade. Disabled shaders will have an empty square to the left of their name, while enabled shaders will have a checkmark.
+The Shader List shows every shader that ReShade detects. An empty square next to a shader means it’s disabled; a checkmark means it’s active. Click the box to toggle a shader on or off.
 
-## Edit Preprocessor Definitions
+![ShaderList](https://assets.martysmods.com/reshade/gui/GUIShaderList.webp)
 
-Below the shader list is the "Edit preprocessor definitions" section. Clicking this allows you to adjust global settings that can influence how shaders function.
+## Global Preprocessor Definitions
 
-![Global Preprocessor Definitions](https://assets.martysmods.com/additionalguides/reshade/rsuiglobalpreprocessors.webp)
+Below the shader list is the “Edit Preprocessor Definitions” button. Click it to open a panel where you can adjust global defines and settings that affect how shaders compile and run. You can use this to enable advanced features or resolve compatibility issues.
 
-Clicking on "Edit global preprocessor definitions" opens another window that allows you to modify specific preprocessor values used by shaders:
+![GPDButton](https://assets.martysmods.com/reshade/gui/GUIGlobalPreprocessorDefinitions.webp)
 
-![Global Preprocessor Definitions](https://assets.martysmods.com/additionalguides/reshade/rsuiglobalpreprocessorsdefinitions.webp) 
+Clicking this button opens the Global Preprocessor Definitions editor, where you can modify individual values used by all shaders:
+
+![GPDEdit](https://assets.martysmods.com/reshade/gui/GUIGlobalPreprocessorDefinitionsEditPanel.webp)
 
 ## Shader Parameters
 
-The area below the shader list and preprocessor definitions section is the shader parameters list. Here you can configure the individual parameters for each shader you've enabled.
+The Shader Parameters panel appears below the preprocessor definitions. When you enable a shader, its adjustable parameters—sliders, checkboxes, color pickers—show up here. Adjust these controls to fine-tune each effect in real time; changes are instantly visible in your game.
 
-![Effect Parameters](https://assets.martysmods.com/additionalguides/reshade/rsuieffectparams.webp)
+![ShaderParameters](https://assets.martysmods.com/reshade/gui/GUIShaderParameters.webp)
 
-Each shader has unique settings; enabling a shader will display adjustable parameters here. Changes made are reflected in real-time, allowing for fine-tuning the appearance of your game.
+## Reload and Performance Mode
+
+When you add or remove effects, click the Reload button to recompile shaders and apply your changes. Reloading can also fix compile errors and restore shader functionality.
+
+To the right of Reload is the Performance Mode toggle. Turning on Performance Mode skips compiling shaders that are disabled and applies compiler optimizations. This can yield a small performance boost, though some shaders may not work correctly under these optimizations.
+
+![ReloadButton](https://assets.martysmods.com/reshade/gui/GUIReloadButton.webp)
