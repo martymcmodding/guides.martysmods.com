@@ -13,6 +13,12 @@ tags:
  - Discord
 ---
 
+<!----------------------- IMPORTS ---------------------------->
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+<!----------------------------------------------------------->
+
 # Force Patreon to Provide Discord Roles
 Patreon’s integration with Discord can sometimes be delayed for large servers or communities. To ensure you receive the roles and benefits you’ve paid for, follow these steps:
 
