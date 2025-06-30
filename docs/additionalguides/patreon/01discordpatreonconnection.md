@@ -13,6 +13,12 @@ tags:
  - Discord
 ---
 
+<!----------------------- IMPORTS ---------------------------->
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+<!----------------------------------------------------------->
+
 # Connecting Discord and Patreon
 To download the latest versions of Marty’s shaders included with the iMMERSE Pro and iMMERSE Ultimate packages, you need to link your Discord and Patreon accounts.
 
@@ -21,20 +27,36 @@ To download the latest versions of Marty’s shaders included with the iMMERSE P
 ## Patreon's "Connected Apps"
 Visit [https://www.patreon.com/settings/apps](https://www.patreon.com/settings/apps), then click the "Discord" option.
 
-![Patreon Connected Apps](https://assets.martysmods.com/additionalguides/patreon/ConnectPatreonDiscordConnectedApp.webp)
+<img
+  src="https://assets.martysmods.com/additionalguides/patreon/ConnectPatreonDiscordConnectedApp.webp"
+  alt="Patreon Connected Apps"
+  width="600"
+/>
 
 ## Connect Your Discord Account
 Click "Connect". If you’re not already logged in, you’ll be prompted to sign in to Discord.
 
-![Patreon Discord Connect](https://assets.martysmods.com/additionalguides/patreon/ConnectPatreonDiscordConnectButton.webp)
+<img
+  src="https://assets.martysmods.com/additionalguides/patreon/ConnectPatreonDiscordConnectButton.webp"
+  alt="Patreon Discord Connect"
+  width="600"
+/>
 
 Sign in with the account you want to link.
 
-![Discord Log In](https://assets.martysmods.com/additionalguides/patreon/ConnectPatreonDiscordLogin.webp)
+<img
+  src="https://assets.martysmods.com/additionalguides/patreon/ConnectPatreonDiscordLogin.webp"
+  alt="Discord Log In"
+  width="500"
+/>
 
 ## Authorize Patreon
 Click "Authorize" to grant Patreon access to your Discord account.
 
-![Patreon Discord Authorization](https://assets.martysmods.com/additionalguides/patreon/ConnectPatreonDiscordAuthorize.webp)
+<img
+  src="https://assets.martysmods.com/additionalguides/patreon/ConnectPatreonDiscordAuthorize.webp"
+  alt="Patreon Discord Authorization"
+  width="500"
+/>
 
 After authorizing, you’ll see Discord listed under "Connected Apps" on Patreon. Return to Discord and your subscriber role should update automatically.
