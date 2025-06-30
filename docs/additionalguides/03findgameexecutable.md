@@ -1,10 +1,10 @@
 ---
 title: "Finding your Game's Executable"
 sidebar_label: "Finding your Game's Exectuable"
-description: "Each user, platform, and game all require different needs for installing video games. In so, each game is typically installed in a different location, so it can be tedious finding the running location of the game's executables and game directory. This guide will simplify the process for finding your game's exectuable and directory."
+description: "Installation requirements vary by user, platform, and game. As a result, games can be installed in different locations, making it tedious to locate the executable and game directory."
 slug: /additionalguides/findexecutable
 sidebar_position: 4
-hide_title: false
+hide_title: True
 keywords: 
  - Windows
  - Find Exectuable
@@ -13,21 +13,20 @@ tags:
  - Windows
 ---
 
-Each user, platform, and game all require different needs for installing video games. In so, each game is typically installed in a different location, so it can be tedious finding the running location of the game's executables and game directory. This guide will simplify the process for finding your game's exectuable and directory.
+# Finding your Game's Executable
+
+Installation requirements vary by user, platform, and game. As a result, games can be installed in different locations, making it tedious to locate the executable and game directory.
 
 ---
 
-## Open Your Game
-In order to find the location of your game, the game executable needs to be open!
-
 ## Open Task Manager
-Once your game is open, then right-click the Windows Taskbar and select "Task Manager".
+Right-click the Windows taskbar and select Task Manager, or press Ctrl + Shift + Esc.
 
 ## Finding your Game in Task Manager.
-Now that "Task Manager" is open, navigate to the "Processes" tab and locate your game. Then, right-click your game and click "Open file location."
+Switch to the "Processes" tab, locate your game, then right-click it and choose "Open file location."
 
-   ![Find Game](https://assets.martysmods.com/additionalguides/taskmanageropenfilelocation.webp)
+![Task Manager](https://assets.martysmods.com/additionalguides/FindGameTaskManager.webp)
 
-If you've done this properly, a "File Explorer" window will open and highlight your game's application file.
+A "File Explorer" window will open, highlighting your game's executable file.
 
-   ![Find Game](https://assets.martysmods.com/additionalguides/fileexplorergamehighlighted.webp)
+![File Explorer](https://assets.martysmods.com/additionalguides/FindGameFileExplorer.webp)
