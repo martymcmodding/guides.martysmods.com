@@ -4,7 +4,7 @@ sidebar_label: "Connecting Discord and Patreon"
 description: "Patreon and Discord require a connection together in order to work properly. This guide covers how to connect the two."
 slug: /additionalguides/patreon/connectdiscpatr
 sidebar_position: 1
-hide_title: false
+hide_title: true
 keywords: 
  - Patreon
  - Discord
@@ -13,30 +13,28 @@ tags:
  - Discord
 ---
 
-Downloading any premium Marty's Mods repository requires access to Discord and Patreon. These two have to be linked in order to work in tandom as well. Without a link, you will not be able to access to the locations provided previously! This guide will go over how to set up a Discord and Patreon link.
+# Connecting Discord and Patreon
+To download the latest versions of Marty’s shaders included with the iMMERSE Pro and iMMERSE Ultimate packages, you need to link your Discord and Patreon accounts.
 
 ---
 
-## Open Patreon's "Connected Apps" Settings
+## Patreon's "Connected Apps"
+Visit [https://www.patreon.com/settings/apps](https://www.patreon.com/settings/apps), then click the "Discord" option.
 
-Click the hyperlink here in order to navigate to [Patreon's 'Connected Apps' Settings.](https://www.patreon.com/settings/apps/) Once there, you will be greeted with a host of applications that you can connect to your Patreon account.
-
-![Patreon Connected Apps](https://assets.martysmods.com/additionalguides/patreon/patreon-connected-apps.webp)
+![Patreon Connected Apps](https://assets.martysmods.com/additionalguides/patreon/ConnectPatreonDiscordConnectedApp.webp)
 
 ## Connect Your Discord Account
+Click "Connect". If you’re not already logged in, you’ll be prompted to sign in to Discord.
 
-Once there, click the "**Discord**" button
+![Patreon Discord Connect](https://assets.martysmods.com/additionalguides/patreon/ConnectPatreonDiscordConnectButton.webp)
 
-Afterwards, you'll be taken to a new portion of the settings menu where you can "**Connect**" a Discord account. Click the "**Connect**" button.
+Sign in with the account you want to link.
 
-![Patreon Discord Connected Apps Connect Button](https://assets.martysmods.com/additionalguides/patreon/discord-connect-button.webp)
+![Discord Log In](https://assets.martysmods.com/additionalguides/patreon/ConnectPatreonDiscordLogin.webp)
 
-A new window should appear asking you to log into Discord.
+## Authorize Patreon
+Click "Authorize" to grant Patreon access to your Discord account.
 
-![Patreon Discord Login](https://assets.martysmods.com/additionalguides/patreon/patreon-discord-login.webp)
+![Patreon Discord Authorization](https://assets.martysmods.com/additionalguides/patreon/ConnectPatreonDiscordAuthorize.webp)
 
-## Finalization
-
-Now that you are logged in, Discord will tell you about Patreon's connection to your Discord account, as well as ask you to authorize the connection. Click "**Authorize**" in the bottom right hand corner.
-
-![Patreon Discord Authorization](https://assets.martysmods.com/additionalguides/patreon/discord-authorize.webp)
+After authorizing, you’ll see Discord listed under "Connected Apps" on Patreon. Return to Discord and your subscriber role should update automatically.
