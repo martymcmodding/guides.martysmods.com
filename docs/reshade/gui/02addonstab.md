@@ -13,9 +13,8 @@ tags:
 ---
 
 # Add-ons
-
-Each add-on is different, typically providing large enhancements to ReShade that typical shaders cannot perform. By default, "Generic Depth" comes with every installation of ReShade, but you can add many more during the installation process through the ReShade Setup Tool. The "Add-ons" tab helps manage and configure these add-ons after installation.
+Add-ons for ReShade are extensions designed to integrate with your game and ReShade shaders. They simplify configuration and enable modifications beyond the default capabilities. By default, every ReShade installation includes the "Generic Depth" add-on. This component lets ReShade calculate depth and normal buffers for shaders that require them.
 
 ---
 
-![Add-ons Tab](https://assets.martysmods.com/additionalguides/reshade/rsuiaddonstab.webp)
+![Add-ons Tab](https://assets.martysmods.com/reshade/gui/GUIAddonsTab.webp)
