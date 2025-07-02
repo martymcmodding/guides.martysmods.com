@@ -13,9 +13,8 @@ tags:
 ---
 
 # Settings
-
-The "Settings" tab lets you tweak ReShade settings like shader directories, menu access keys, FPS meter configurations, or theme settings:
+The "Settings" tab allows you to configure ReShade options such as shader directories, menu access keys, FPS meter display, and theme preferences.
 
 ---
 
-![Settings Tab](https://assets.martysmods.com/additionalguides/reshade/rsuisettingstab.webp)
+![Settings Tab](https://assets.martysmods.com/reshade/gui/GUISettingsTab2.webp)
