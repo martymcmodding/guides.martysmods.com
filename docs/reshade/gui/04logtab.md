@@ -12,11 +12,8 @@ tags:
 ---
 
 # Log Tab
-
-The "Log" tab contains important information about ReShade’s runtime behavior. It displays errors, warnings, and other messages that may occur during shader loading or runtime.  
-
-If you encounter an issue, it's helpful to share the error messages or the entire log file. Logs are saved in your game's root directory as `ReShade.log`. However, logs are reset each time the game restarts, so make sure to share or save logs before restarting the game.
+The "Log" tab records ReShade’s runtime messages, including errors, warnings, and informational events. Reviewing these entries is essential for diagnosing shader-loading problems or other issues. Logs are saved as "ReShade.log" in your game’s root directory. Since the file is overwritten each time the game starts, copy or back up the log before exiting if you need to review or share it.
 
 ---
 
-![ReShadeLogTabScreenshot](https://assets.martysmods.com/additionalguides/reshade/rsuilogtab.webp)
+![ReShade Log Tab](https://assets.martysmods.com/reshade/gui/GUILogTab.webp)
