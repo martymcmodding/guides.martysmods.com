@@ -3,6 +3,7 @@ title: "Log"
 sidebar_label: "Log"
 description: "The Log tab is a key tool for monitoring ReShade's operations and troubleshooting issues. It provides a detailed log of ReShade's activities to help you identify where your issues are."
 slug: /reshade/gui/log
+sidebar_position: 4
 hide_tittle: true
 keywords:
  - Log
