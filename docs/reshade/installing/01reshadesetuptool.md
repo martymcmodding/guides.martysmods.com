@@ -13,56 +13,53 @@ tags:
  - Installing
 ---
 
-# ReShade Setup Tool 
+# ReShade Setup Tool
+The ReShade Setup Tool simplifies installation and offers powerful features for downloading shaders and add-ons, making it a valuable resource for both new and experienced users.
 
-The ReShade Setup Tool makes installing ReShade easy. While easy to use, it also offers powerful features, allowing you to download a variety of shaders and add-ons, making it a valuable tool for both new and returning users.
-
-If you require help choosing the correct version of ReShade, visit [our guide for downloading ReShade](../downloading) for more information between the standard and add-on support versions.
+If you require help choosing the correct version of ReShade, see [our guide for downloading ReShade](../downloading) for details on the standard and add-on support versions.
 
 ---
 
 ## Selecting Your Game
-When you open the ReShade Setup Tool, you’ll need to choose the game or application where you want to install ReShade. This step is essential, as picking the wrong app or file will prevent ReShade from properly injecting when your game starts. 
+When you open the ReShade Setup Tool, select the game or application where you want to install ReShade. Choosing the wrong executable will prevent ReShade from injecting correctly when your game starts.
 
-The tool displays a list of recent games and applications, making it easier to find what you need:
+The tool displays a list of recent games and applications:
 
-![Game List](https://assets.martysmods.com/additionalguides/reshade/setupgamelist.webp)
+![GameSelect](https://assets.martysmods.com/reshade/installing/SetupToolGameSelect.webp)
 
-If your game isn’t listed, click the "Browse..." button at the bottom right corner of the setup tool. This will open a File Explorer window where you can manually find your game’s executable file. Executable files usually have the ".exe" extension and are often located in the main folder of the game’s installation directory.
+If your game is not listed, click the "Browse..." button at the bottom right. In the File Explorer window, locate your game’s executable (.exe), typically found in the game’s main installation folder.
 
-If you’re unsure where to find your game's executable, you can check [our guide on finding your game’s executable and directory](/additionalguides/03findgameexecutable) for a step-by-step walkthrough.
+If you’re unsure where to find the executable, refer to [our guide on finding your game’s executable and directory](/additionalguides/03findgameexecutable) for a step-by-step walkthrough.
 
 ## Selecting the Rendering API
-Each game uses a different Rendering API, such as DirectX 9, DirectX 10/11/12, OpenGL, or Vulkan. In order to install ReShade properly, the setup tool needs to know which of the APIs your game uses. This choice is vital, as selecting the wrong API will prevent ReShade from injecting into your game.
+ReShade must know which rendering API your game uses—DirectX 9, DirectX 10/11/12, OpenGL, or Vulkan—to install correctly. Select the appropriate API in the setup tool:
 
-![ReShade Rendering API Selection](https://assets.martysmods.com/additionalguides/reshade/setuprenderingapi.webp)
+![APISelect](https://assets.martysmods.com/reshade/installing/SetupToolAPISelect.webp)
 
-If you don’t know which Rendering API your game uses, you can check [PCGamingWiki](https://pcgamingwiki.com), which often provides detailed information about the rendering methods.
+If you don’t know which API your game uses, consult [PCGamingWiki](https://pcgamingwiki.com) for reliable information.
 
 ## Installing Shaders
-Shaders add effects like depth of field, ambient occlusion, bloom, and color grading, allowing you to customize the appearance of your game. 
+Shaders add visual effects like depth of field, ambient occlusion, bloom, and color grading.
 
-Shaders in the ReShade Setup Tool are organized into groups called repositories. Each repository contains different shaders created by developers. To install shaders, select the repositories you want and click "Next." For more information about each repository, click the highlighted blue text that links to its description.
+In the Setup Tool, shaders are organized into repositories. Select the repositories you want and click "Next." Click any highlighted link to learn more about a repository.
 
-![Shader Repositories Selection](https://assets.martysmods.com/additionalguides/reshade/setupshaderselect.webp)
+![ShaderSelect](https://assets.martysmods.com/reshade/installing/SetupToolShaderSelect.webp)
 
-You can select as many repositories as you like in the Setup Tool, and if you’re unsure which repositories to pick, starting with repositories like SweetFX, qUINT, or iMMERSE is a good idea since it includes popular effects.
+If you’re unsure where to start, popular choices include SweetFX, qUINT, and iMMERSE.
 
 ## Installing Presets
-Presets can make your game look more cinematic, realistic, or stylized without needing to tweak each shader individually.
-
-ReShade presets are stored in `.ini` files and let you use someone else’s visual settings. To install a preset, click "Browse" at the bottom of the shader installation screen and select your `.ini` file. The ReShade Setup Tool will identify and install all shaders used in that preset.
+Presets apply predefined `.ini` configurations to achieve cinematic, realistic, or stylized visuals without adjusting individual shaders. To install a preset, click "Browse..." on the shader installation screen and select your `.ini` file. The Setup Tool will then install all required shaders automatically.
 
 ## Installing Add-ons (Add-on Support Only)
-Add-ons are a new feature in ReShade that provide more options using the ReShade Add-on API. These add-ons are mainly for users who want to explore advanced features, such as special input controls or compatibility enhancements.
+Add-ons extend ReShade’s capabilities via the Add-on API, offering advanced or experimental features—such as custom input controls or compatibility enhancements:
 
-![Selecting Add-ons](https://assets.martysmods.com/additionalguides/reshade/setupaddons.webp)
+![AddonSelect](https://assets.martysmods.com/reshade/installing/SetupToolAddonSelect.webp)
 
-Add-ons may include experimental features that haven’t been fully tested, so be cautious when adding them. Make sure to read the provided descriptions or check the creator’s notes to understand what each add-on does. If an add-on causes problems, you can disable or remove it later from the ReShade settings.
+Review each add-on’s description before enabling it. If an add-on causes issues, you can disable or remove it later in the ReShade settings.
 
 ## Finishing Up
-When the ReShade Setup Tool completes the installation, a confirmation screen will appear. Click the "Finish" button at the bottom right, then start your game to ensure ReShade is installed properly. You should see a message at the top of the screen that says “ReShade is now installed successfully.”
+After installation completes, click the "Finish" button. Launch your game and look for the “ReShade is now installed successfully” banner:
 
-![ReShade In-Game Banner](https://assets.martysmods.com/additionalguides/reshade/reshadeinstalled.webp)
+![ReShade In-Game Banner](https://assets.martysmods.com/reshade/installing/ReShadeInstalled.webp)
 
-Once in the game, press the default key (usually `Home`) to open the ReShade overlay. This overlay lets you choose and customize shaders, load presets, and adjust settings as needed. If everything is working correctly, you’ll see the changes in real-time. Spend some time exploring the available shaders and fine-tuning them to match your preferences. This hands-on experience is the best way to see how ReShade can transform your game’s visuals.
+Press the default overlay key (usually "Home") to open the ReShade interface, where you can customize shaders, load presets, and adjust settings in real time. Enjoy exploring ReShade’s possibilities!
