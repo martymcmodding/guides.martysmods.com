@@ -13,9 +13,8 @@ tags:
 ---
 
 # About
-
-The "About" tab serves to acknowledge and recognize the authors of ReShade and its dependencies, as well as display the current version that you are running.
+The About tab acknowledges the creator of ReShade (Crosire) and its dependencies, and displays the version you have installed.
 
 ---
 
-![ReShadeAboutTabScreenshot](https://assets.martysmods.com/additionalguides/reshade/rsuiabouttab.webp)
+![ReShade About Tab](https://assets.martysmods.com/reshade/gui/GUIAboutTab.webp)
