@@ -25,7 +25,7 @@ To see ReShade's depth buffer, enable the shader "DisplayDepth". This shader is 
 
 The image below shows what the output should look like. The depth buffer is on the right side, and the normal buffer (generated from depth) is on the left side.
 
-![Depth Buffer Correct](https://assets.martysmods.com/additionalguides/reshade/correct.webp)
+![Depth Buffer Correct](https://assets.martysmods.com/reshade/depth/DepthCorrect.webp)
 
 ## Finding the Right Depth Buffer:
 
@@ -33,11 +33,11 @@ Since games often use multiple depth buffers (for shadows, post-processing, etc.
 
 Open up ReShade's "Add-ons" tab and focus on the "Generic Depth" add-on.
 
-![ReShade Generic Depth](https://assets.martysmods.com/additionalguides/reshade/genericdepth.webp)
+![ReShade Generic Depth](https://assets.martysmods.com/reshade/depth/DepthAddon.webp)
 
 Here, you will find settings for automatic depth buffer selection and the depth buffers that are available to you.
 
-![ReShade Generic Depth Settings](https://assets.martysmods.com/additionalguides/reshade/genericdepthsettings.webp)
+![ReShade Generic Depth Settings](https://assets.martysmods.com/reshade/depth/DepthSettings.webp)
 
 With the shader "DisplayDepth" enabled, click through each depth buffer in your Add-ons tab and find the one that most closely resembles what is in your game.
 
@@ -48,26 +48,26 @@ The depth buffer you are looking for is likely to be the same resolution as your
 :::warning
 When configuring depth, do not toggle on or use any of the controls provided to you in the `displaydepth.fx` shader. Instead, use the "Edit Global Preprocessor Definitions" button in the middle of ReShade's Home tab.
 <p align="center">
-![Edit Global Preprocessor Defintions Location](https://assets.martysmods.com/additionalguides/reshade/EditGlobalPreprocessorDefinitionsButton.webp)
+![Edit Global Preprocessor Defintions Location](https://assets.martysmods.com/reshade/depth/EditGlobalPreprocessorDefinitionsButton.webp)
 </p>
 :::
 
 ### Upside Down Depth Buffer
 The image shows an upside down depth buffer. You can solve this issue by simply inverting the `RESHADE_DEPTH_INPUT_IS_UPSIDE_DOWN` preprocessor setting within the "Global Preprocessor Definitions" under the "Home" tab of ReShade. If it is set to 1, set it to 0 and vice versa.
 
-![Depth Buffer Upside Down](https://assets.martysmods.com/additionalguides/reshade/upsidedown.webp)
+![Depth Buffer Upside Down](https://assets.martysmods.com/reshade/depth/DepthUpsideDown.webp)
 
 ### Reversed Depth Buffer
 The image shows a reversed depth buffer. You can solve this by inverting the `RESHADE_DEPTH_INPUT_IS_REVERSED` preprocessor setting within the "Global Preprocessor Definitions" under the "Home" tab of ReShade. If it is set to 1, set it to 0 and vice versa.
 
-![Depth Buffer Reversed](https://assets.martysmods.com/additionalguides/reshade/reversed.webp)
+![Depth Buffer Reversed](https://assets.martysmods.com/reshade/depth/DepthReversed.webp)
 
 ### Empty Depth Buffer
 The images show a depth buffer that is empty. This could be the result of choosing the wrong depth buffer, or a setting in-game that is blocking ReShade from accessing it. The issue is typically resolved by ensuring that MSAA is not enabled or by choosing the proper depth buffer.
 
-![Depth Buffer No Data](https://assets.martysmods.com/additionalguides/reshade/depthbuffernodataexample.webp)
+![Depth Buffer No Data](https://assets.martysmods.com/reshade/depth/DepthNoData.webp)
 
-![Depth Buffer No Data - Reversed](https://assets.martysmods.com/additionalguides/reshade/depthbuffernodatareversedexample.webp)
+![Depth Buffer No Data - Reversed](https://assets.martysmods.com/reshade/depth/DepthNoDataReversed.webp)
 
 #### Basic troubleshooting steps to find a depth buffer with data:
   - Toggle on and off "Copy depth buffer before clear operations" and "Copy depth buffer before fullscreen draw calls".

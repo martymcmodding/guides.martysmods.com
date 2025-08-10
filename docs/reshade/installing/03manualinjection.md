@@ -18,7 +18,7 @@ tags:
 Certain games do not support automatic ReShade injection during runtime. This is especially common for UWP (Microsoft Store) games, which often disallow automatic injection. Thankfully, Crosire has developed a tool for manual DLL injection into games.
 
 :::info
-When manually injecting ReShade using Crosire's Inject Tool, you have to manually install shaders as well.
+When manually injecting ReShade using Crosire's Inject Tool, you have to [manually install shaders](./reshademanualshaderinstall) as well.
 :::
 
 ---
@@ -46,11 +46,9 @@ This guide uses 7-Zip in order to extract the ReShade binaries from the ReShade 
 
 Once 7-Zip is installed, right-click the ReShade Installer `ReShade_Setup_x.x.x.exe`, hover over 7-Zip, and select the "Open archive" option.
 
-![Open with 7-Zip](https://assets.martysmods.com/additionalguides/reshade/setupopenwith7zip.webp)
+![7ZipOpen](https://assets.martysmods.com/reshade/installing/Manual7ZipOpen.webp)
 
 Upon clicking "Open archive," a new window will appear that holds the two ReShade binaries. You can extract the DLL that relates to your game's architecture by dragging the file out of the 7-Zip window to your desktop.
-
-![Extract DLL](https://assets.martysmods.com/additionalguides/reshade/setup7zipbinaries.webp)
 
 | ReShade Binary Architecture | DLL Name      |
 |-----------------------------|---------------|
@@ -59,18 +57,16 @@ Upon clicking "Open archive," a new window will appear that holds the two ReShad
 
 ## Move the ReShade and Inject Binary
 
-You will need to move the ReShade DLL and Inject EXE into the root folder of your game, the same directory where the game's executable is located. If you're unsure of your game's executable location, follow [our guide on identifying your game's executable](/additionalguides/03findgameexecutable).
+You will need to move the ReShade DLL and Inject EXE into the root folder of your game, the same directory where the game's executable is located. If you're unsure of your game's executable location, follow [our guide on identifying your game's executable](../../additionalguides/findexecutable).
 
-![Place in Game Folder](https://assets.martysmods.com/additionalguides/reshade/extractedbinaryingamedirectoryreshade32.dll.webp)
+![InGameFolder](https://assets.martysmods.com/reshade/installing/injectioninstall/reshade32InGameFolder.webp)
 
 ## Manually Inject ReShade
 
 The last step for using the ReShade injector is quite simple, but you may need to follow closely. Make sure to close your game, and then navigate to your game's directory. Then, open a command prompt terminal by typing `CMD` into your File Explorer's address bar.
 
-![Open CMD](https://assets.martysmods.com/additionalguides/reshade/extractedbinaryingamedirectorycmdaddressbar.webp)
+![CMDAddressBar](https://assets.martysmods.com/reshade/installing/injectioninstall/GameDirectoryCMDAddressBar.webp)
 
 Once CMD has opened, make sure to type: `inject[32/64].exe "name_of_the_process.exe"` and hit Enter.
 
-![Inject Command](https://assets.martysmods.com/additionalguides/reshade/terminalinjectionparametersinject32.exe.webp)
-
-After you've hit Enter, you will need to launch your game. If successful, ReShade will be injected on the launch of your game!
+![InjectionParameters](https://assets.martysmods.com/reshade/installing/injectioninstall/InjectionParametersInject32.webp)

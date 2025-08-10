@@ -29,7 +29,7 @@ The tool displays a list of recent games and applications:
 
 If your game is not listed, click the "Browse..." button at the bottom right. In the File Explorer window, locate your game’s executable (.exe), typically found in the game’s main installation folder.
 
-If you’re unsure where to find the executable, refer to [our guide on finding your game’s executable and directory](/additionalguides/03findgameexecutable) for a step-by-step walkthrough.
+If you’re unsure where to find the executable, refer to [our guide on finding your game’s executable and directory](../../additionalguides/findexecutable) for a step-by-step walkthrough.
 
 ## Selecting the Rendering API
 ReShade must know which rendering API your game uses—DirectX 9, DirectX 10/11/12, OpenGL, or Vulkan—to install correctly. Select the appropriate API in the setup tool:

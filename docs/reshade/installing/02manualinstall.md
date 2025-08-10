@@ -14,32 +14,42 @@ tags:
 ---
 
 # Manually Installing ReShade
+
 Sometimes the ReShade Setup Tool doesn’t include everything you need or may not work with certain games. This guide shows how to install ReShade manually, giving you full control over the process.
+
+:::info
+When manually installing ReShade, you have to [manually install shaders](./reshademanualshaderinstall) as well.
+:::
 
 ---
 
 ## Identify Your Game’s Architecture and Rendering API
-Determine whether your game is 32-bit or 64-bit and which rendering API it uses (DirectX 9, 10, 11, 12, or OpenGL). If you’re unsure, check [PCGamingWiki](https://www.pcgamingwiki.com/wiki/Home) for detailed information on your game’s requirements.
 
-## Download the ReShade Installer
-Go to the [official ReShade website](https://reshade.me) and download the latest installer. You won't run the application, instead, you’ll extract its contents.
+If you already know your game's architecture and Rendering API, you're more than welcome to skip this part of the guide. However, if you are unsure, make sure to navigate to the [PCGamingWiki website](https://www.pcgamingwiki.com/wiki/Home). This website is home to many wiki pages with just about every game that exists on PC.
 
-## Install 7-Zip
-Download and install 7-Zip from [7-Zip’s official site](https://www.7-zip.org/download.html). This free utility lets you open the ReShade installer archive.
+## Download the ReShade Setup Tool
 
-![7-Zip download page](https://assets.martysmods.com/reshade/installing/Manual7ZipDownload.webp)
+The next step will be to download the latest ReShade installer from the [official ReShade website](https://reshade.me). The installer holds the ReShade binaries required in order to manually install ReShade.
+
+## Download and Install 7-Zip
+
+This guide uses 7-Zip in order to extract the ReShade binaries from the ReShade Installer. You can download and install the latest `.msi` version from [7-Zip's official website](https://www.7-zip.org/download.html). Keep in mind that WinRAR can serve as an alternative, but this guide utilizes 7-Zip for convenience.
 
 ## Extract the ReShade DLL
-Right-click the downloaded `ReShade_Setup_x.x.x.exe` file, hover over "7Zip" and then click "Open archive", then locate and drag the DLL matching your game’s architecture to your desktop.
 
-| Game Architecture | DLL Name        |
-|-------------------|-----------------|
-| 32-bit            | `ReShade32.dll` |
-| 64-bit            | `ReShade64.dll` |
+Once 7-Zip is installed, right-click the ReShade Installer `ReShade_Setup_x.x.x.exe`, hover over 7-Zip, and select the "Open archive" option.
 
 ![Open with 7-Zip](https://assets.martysmods.com/reshade/installing/Manual7ZipOpen.webp)
 
+Upon clicking "Open archive," a new window will appear that holds the two ReShade binaries. You can extract the DLL that relates to your game's architecture by dragging the file out of the 7-Zip window to your desktop.
+
+| ReShade Binary Architecture | DLL Name      |
+|-----------------------------|---------------|
+| ReShade's 64-Bit Binary     | ReShade64.dll |
+| ReShade's 32-Bit Binary     | ReShade32.dll |
+
 ## Rename the DLL File
+
 Change the DLL’s name to match your game’s rendering API so the game will load ReShade at startup:
 
 | Rendering API     | New DLL Name  |
@@ -51,12 +61,7 @@ Change the DLL’s name to match your game’s rendering API so the game will lo
 | OpenGL            | `opengl32.dll`|
 
 ## Move the DLL to Your Game Folder
-Copy the renamed DLL into the folder containing your game’s executable (`.exe`). If you need help finding this folder, follow [our guide on finding your game’s executable and directory](/additionalguides/03findgameexecutable).
+
+Copy the renamed DLL into the folder containing your game’s executable (`.exe`). If you need help finding this folder, follow [our guide on finding your game’s executable and directory](../../additionalguides/findexecutable).
 
 ![Place in Game Folder](https://assets.martysmods.com/reshade/installing/ManualReShadeDLLGameFolder.webp)
-
-## Final Checks and Launch
-
-Confirm the DLL is correctly named and placed alongside the game’s executable. Launch the game—if ReShade installed successfully, you’ll see its overlay on startup. Press the default key (usually "Home") to open the ReShade menu and begin customizing shaders and settings.
-
-![ReShade In-Game Banner](https://assets.martysmods.com/reshade/installing/ReShadeInstalled.webp)
