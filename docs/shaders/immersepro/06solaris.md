@@ -95,7 +95,7 @@ Adjusts the intensity of depth masking. Higher values apply more depth masking, 
 ## Preprocessor Definitions:
 
 ### `ENABLE_SOLARIS_REGRADE_PARITY`
-When enabled and ReGrade is active, 
+WIP
 
 ### `SOLARIS_ARTISTIC_MODE`
 Allows for different blending mode presets that defer from the standard physically accurate bloom.
