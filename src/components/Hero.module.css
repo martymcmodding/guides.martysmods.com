@@ -52,7 +52,7 @@
   gap: var(--space-md);
 }
 
-@media (max-width: 768px) 
+@media (max-width: 996px) 
 {
   .hero 
   {
