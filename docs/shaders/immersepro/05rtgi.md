@@ -59,7 +59,7 @@ These intensity values are largely based on personal preference, however, a good
 
 #### Bounce Lighting Intensity
 
-Bounce Lighting Intensity controls the strength of the indirect lighting produced by RTGI. This simulates how light bounces off surfaces in the environment. Aim to balance this setting so the lighting looks natural—avoiding areas that feel blown out or unnaturally dim.
+Bounce Lighting Intensity controls the strength of the indirect lighting produced by RTGI. This simulates how light bounces off surfaces in the environment. Aim to balance this setting so the lighting looks natural while avoiding areas that feel blown out or unnaturally dim.
 
 <ReactPlayer  
   url="https://assets.martysmods.com/shaders/rtgi/RTGIbounceintensity.webm"  

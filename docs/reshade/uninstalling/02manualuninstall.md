@@ -1,7 +1,7 @@
 ---
 title: Manually Uninstalling ReShade
 sidebar_label: "Manually Uninstalling ReShade"
-description: "Sometimes the ReShade Setup Tool isn't able to fully uninstall ReShade for whatever reason. This guide will walk you through the steps to fully uninstall manually ReShade."
+description: "Sometimes the ReShade Setup Tool isn't able to fully uninstall ReShade - This guide will walk users through the steps to fully uninstall ReShade manually."
 slug: /reshade/uninstalling/manualuninstall
 sidebar_position: 2
 hide_title: true
@@ -14,16 +14,12 @@ tags:
 
 # Manually Uninstalling ReShade
 
-Sometimes the ReShade Setup Tool isn't able to fully uninstall ReShade for whatever reason. This guide will walk you through the steps to fully uninstall manually ReShade.
-
----
-
 ## Navigate to your Application Folder
-Navigate your game or application's root folder where the primary executable is. To find this you can follow [our guide on finding your game or application's executable](/additionalguides/03findgameexecutable).
+Navigate your game or application's root folder where the primary executable is. To find this you can follow [our guide on finding your game or application's executable](../../additionalguides/findexecutable).
 
 ## Delete The Following Files (If Applicable)
 :::important
-if you are not able to find `.dll`, `.ini`, or `.log` files, make sure that you have [Windows File Extenions enabled](/additionalguides/01enablefileextensions).
+if you are not able to find `.dll`, `.ini`, or `.log` files, make sure that you have [Windows File Extenions enabled](../../additionalguides/fileextensions).
 :::
 
 | File Name       | Description                               |
