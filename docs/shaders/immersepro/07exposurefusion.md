@@ -1,7 +1,7 @@
 ---
 title: Exposure Fusion
 sidebar_title: "Exposure Fusion"
-description: "WRITE SOMETHIN GHERE BOZO"
+description: "Exposure Fusion improves visibility by selectively adjusting brightness across the frame."
 slug: /shaders/immersepro/exposurefusion
 sidebar_position: 7
 hide_title: true
