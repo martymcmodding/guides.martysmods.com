@@ -25,6 +25,8 @@ To follow along with this guide, ReShade **must** already be installed and worki
 If the shaders you are attempting to install were not obtained from GitHub (instead downloaded through Patreon, Discord, or via Direct Download), you can skip the GitHub download steps below and instead use the shader files provided to you directly (usually in a ZIP or folder format).
 :::
 
+---
+
 ## Downloading the Shader Repository(s)
 
 Most ReShade shader repositores are located on GitHub. So, you'll need to navigate to their repository - then click on the green "Code" button near the top right of the GitHub page.
