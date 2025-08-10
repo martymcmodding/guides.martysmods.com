@@ -20,7 +20,7 @@ dgVoodoo2 is a rendering API wrapper used to translate games that use older Dire
 ## Download dgVoodoo2
 Download the latest version of dgVoodoo2 by visiting [the developer's website](https://dege.freeweb.hu/dgVoodoo2/dgVoodoo2/#latest-stable-version) and downloading the "Latest stable version" of dgVoodoo2.
 
-![dgVodooo2 Releases](https://assets.martysmods.com/additionalguides/apiwrappers/dgvoodooreleases.webp)
+![dgVodooo2 Releases](https://assets.martysmods.com/additionalguides/apiwrapper/dgvoodoo2/dgVoodoo2Releases.webp)
 
 ## Find Your Game’s DirectX Version & Architecture
 Afterwards, go to [PCGamingWiki](https://pcgamingwiki.com/) and search for your game. You'll need to take note of:
@@ -30,7 +30,7 @@ Afterwards, go to [PCGamingWiki](https://pcgamingwiki.com/) and search for your 
 ## Navigate Through the dgVoodoo2 Archive
 Once you've found the architecture and and version of DirectX, open the dgVoodo2 ZIP file you downloaded using [7-Zip](https://www.7-zip.org/) or [WinRAR](https://www.win-rar.com/). Inside the archive, you’ll see several files and folders. Navigate into the `MS` folder.
 
-![dgVoodoo2 Archive](https://assets.martysmods.com/additionalguides/apiwrappers/dgvoodooarchive.webp)
+![dgVoodoo2 Archive](https://assets.martysmods.com/additionalguides/apiwrapper/dgvoodoo2/dgVoodoo2Archive.webp)
 
 Within `MS`, you'll find several subfolders, however, the only two that matter to you are `x64` (64‑bit) and `x86` (32‑bit). You'll want to open the folder that matches your game’s architecture.
 
@@ -47,7 +47,7 @@ Once you're inside the right architecture folder, locate the DLL that matches yo
 
 Copy the appropriate DLL into the same directory as your game’s main executable (e.g., placing `D3D9.dll` alongside `GameExecutable.exe`).
 
-If you’re not sure where your game is installed, refer to [our guide on finding a game’s executable](/additionalguides/findexecutable) for more details.
+If you’re not sure where your game is installed, refer to [our guide on finding a game’s executable](../findexecutable) for more details.
 
 ---
 

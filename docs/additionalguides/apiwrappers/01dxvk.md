@@ -20,7 +20,7 @@ DXVK is an API wrapper that translates DirectX calls into Vulkan. While it’s c
 ## Download DXVK
 Download the latest version of DXVK by visiting the [DXVK GitHub releases page](https://github.com/doitsujin/dxvk/releases).
 
-![DXVK Releases](https://assets.martysmods.com/additionalguides/apiwrappers/dxvkreleases.webp)
+![DXVK Releases](https://assets.martysmods.com/additionalguides/apiwrapper/dxvk/DXVKGitHubRelease.webp)
 
 ## Find Your Game’s DirectX Version & Architecture
 Afterwards, go to [PCGamingWiki](https://pcgamingwiki.com/) and search for your game. You'll need to take note of:
@@ -30,7 +30,7 @@ Afterwards, go to [PCGamingWiki](https://pcgamingwiki.com/) and search for your 
 ## Navigate Through the DXVK Archive
 Once, you've found the architecture and version of DirectX, open the DXVK ZIP file you downloaded using [7-Zip](https://www.7-zip.org/) or [WinRAR](https://www.win-rar.com/). Inside the archive, you’ll see two folders: `x64` (for 64‑bit) and `x32` (for 32‑bit). You'll need to open the folder that matches your game’s architecture:
 
-   ![DXVK Archive Structure](https://assets.martysmods.com/additionalguides/apiwrappers/dxvkarchivearch.webp)
+   ![DXVK Archive Structure](https://assets.martysmods.com/additionalguides/apiwrapper/dxvk/DXVKArch.webp)
 
 Within the chosen architecture folder, you’ll find several `.dll` files. Each one corresponds to a DirectX version:
 
@@ -44,7 +44,7 @@ Within the chosen architecture folder, you’ll find several `.dll` files. Each 
 
 You'll need to Identify which DLL matches your game’s DirectX version, and then copy that DLL file into the same folder as the game’s main executable (e.g., alongside `GameExecutable.exe`). 
 
-If you’re not sure where your game is installed, refer to [our guide on finding a game’s executable](/additionalguides/findexecutable) for more details.
+If you’re not sure where your game is installed, refer to [our guide on finding a game’s executable](../fileextensions) for more details.
 
 ## Install ReShade (using Vulkan)
 Once DXVK is installed to your game, download and run the latest ReShade installer from [ReShade.me](https://reshade.me/). Then, when you are prompted to select your game's Rendering API, choose Vulkan.
@@ -56,9 +56,3 @@ If ReShade does **not** appear:
    - Double‑check that you copied the correct DXVK DLL (matching your DirectX version and system architecture).
    - Make sure you chose the Vulkan API during the ReShade installation step.
    - Confirm you placed ReShade’s `.dll` files in the same folder as the game executable.
-
----
-
-### Troubleshooting Tips
-- **Game crashes on startup**: Remove all DXVK and ReShade DLLs, then reinstall step by step.
-- **No ReShade overlay**: Try deleting any leftover `dxgi.dll`, `d3d8/9/10/11/12.dll`, or ReShade files and reinstalling carefully.

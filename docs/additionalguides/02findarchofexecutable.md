@@ -29,8 +29,8 @@ In Task Manager, go to the "Processes" tab and find your game's executable. The 
 ## Identify the Architecture
    * 32-Bit Architecture: If the game is running in 32-bit mode, the process name will have a tag that says "(32 Bits)" next to it.
      
-     ![Showing Task Manager with Highlight on 32-Bit](https://assets.martysmods.com/additionalguides/hl2-32bit.webp)
+     ![Showing Task Manager with Highlight on 32-Bit](https://assets.martysmods.com/additionalguides/gamearch/GameArch32BitHighlight.webp)
 
    * 64-Bit Architecture: If there is no "(32 Bits)" tag, the game is using a 64-bit architecture.
      
-     ![Showing Task Manager with Highlight on No Architecture](https://assets.martysmods.com/additionalguides/ultrakill-32bit.webp)
+     ![Showing Task Manager with Highlight on No Architecture](https://assets.martysmods.com/additionalguides/gamearch/GameArch64Bit.webp)

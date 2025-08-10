@@ -27,7 +27,7 @@ Opening "File Explorer Options" can be done quickly by using the search function
 
 3. Once you see it, click on **"File Explorer Options"** to open the settings menu.
 
-   ![Start Menu Search Image](https://assets.martysmods.com/additionalguides/windowssearchfileexploreroptions.webp)
+   ![Start Menu Search Image](https://assets.martysmods.com/additionalguides/fileextension/SearchFileExplorerOptions.webp)
 
 ## Make File Extensions Visible
 
@@ -35,13 +35,13 @@ Now that the "File Explorer Options" window is open, you’ll see three tabs at 
 
 1. Click on the **View** tab. This is where you can control how files and folders are displayed.
    
-    ![File Options View Tab Image](https://assets.martysmods.com/additionalguides/fileexploreroptionsviewtabhighlight.webp)
+    ![File Options View Tab Image](https://assets.martysmods.com/additionalguides/fileextension/FileExplorerOptionsViewTabHighlight.webp)
 
 2. Under the **Advanced settings** section, scroll through the list until you find an option labeled **"Hide extensions for known file types"**. By default, this box is checked, which means file extensions are hidden.
    
 3. To show file extensions, **uncheck** the "Hide extensions for known file types" box by clicking on it.
 
-   ![File Options Untick Option Image](https://assets.martysmods.com/additionalguides/fileexploreroptionshideextensionsforknownfiletypeshighlight.webp)
+   ![File Options Untick Option Image](https://assets.martysmods.com/additionalguides/fileextension/FileExplorerOptionsKnownFileTypesHighlight.webp)
 
 ## Save Your Changes
 

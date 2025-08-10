@@ -25,8 +25,8 @@ Right-click the Windows taskbar and select Task Manager, or press Ctrl + Shift +
 ## Finding your Game in Task Manager.
 Switch to the "Processes" tab, locate your game, then right-click it and choose "Open file location."
 
-![Task Manager](https://assets.martysmods.com/additionalguides/FindGameTaskManager.webp)
+![Task Manager](https://assets.martysmods.com/additionalguides/gamelocation/FindGameTaskManager.webp)
 
 A "File Explorer" window will open, highlighting your game's executable file.
 
-![File Explorer](https://assets.martysmods.com/additionalguides/FindGameFileExplorer.webp)
+![File Explorer](https://assets.martysmods.com/additionalguides/gamelocation/FindGameFileExplorer.webp)
