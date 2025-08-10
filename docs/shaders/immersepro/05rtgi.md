@@ -17,7 +17,7 @@ tags:
 
 import ReactPlayer from 'react-player'
 
-<!----------------------------------------------------------->
+<!------------------------IMPORTS ---------------------------->
 
 ![rtgiheader](https://assets.martysmods.com/headers/rtgiheader.webp)
 
@@ -38,7 +38,6 @@ The first step in configuring RTGI is setting a parameter called Z-Thickness. RT
 A straightforward way to adjust Z-Thickness is by using RTGI’s "Diffuse RTGI" debug view. This view provides an unfiltered look at the lighting, shadows, and ambient occlusion applied to the game world.
 
 With the "Diffuse RTGI" debug view enabled, adjust the Z-Thickness parameter by dragging it left or right, and carefully observe the changes in shadows and ambient occlusion. Keep in mind that it’s easy to overshoot the optimal value: a setting that is too high can cause over-occlusion or haloing, while one that is too low may leave some areas insufficiently occluded.
-
 
 <ReactPlayer
   url="https://assets.martysmods.com/shaders/rtgi/RTGIZThickness.webm"
