@@ -1,20 +1,23 @@
 /* Font Bullshit */
 
-@font-face {
+@font-face 
+{
   font-family: 'Glober';
   src: url('/fonts/glober-regular-webfont.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
-@font-face {
+@font-face 
+{
   font-family: 'Glober';
   src: url('/fonts/glober-semibold-webfont.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
 }
 
-@font-face {
+@font-face 
+{
   font-family: 'Glober';
   src: url('/fonts/glober-regularitalic-webfont.woff2') format('woff2');
   font-weight: normal;
@@ -22,11 +25,13 @@
 }
 
 /* Applying font everwhere */
-html, body, h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea {
+html, body, h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea 
+{
   font-family: 'Glober', sans-serif !important;
 }
 
-:root {
+:root 
+{
   --ff-base: 'Glober', sans-serif;
 
   --fs-h1: 3rem;      /* ~48px */
@@ -47,7 +52,8 @@ html, body, h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea {
 }
 
 /* Other Bullshit */
-:root {
+:root 
+{
   --ifm-color-scheme: light;
   --ifm-color-primary: #0099fa; /* set to Marty's Mods primary "gotcha" color */
   --ifm-color-secondary: #ebedf0;
@@ -94,21 +100,9 @@ code
   color: #FFFFFFDD !important; /* "hero" font color */
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.button
-{
-  background: linear-gradient(90deg, #0099fa, #f900cb) !important;
-  color: white !important;
-  border-color: #FFFFFFDD !important;
-}
-
 /* Setting up line count for document pages */
-.text--truncate {
+.text--truncate 
+{
   white-space: normal !important;
   overflow: hidden;
   display: -webkit-box;
@@ -117,18 +111,30 @@ code
   text-overflow: ellipsis;
 }
 
-.card {
+.card 
+{
   min-height: 150px !important;
 }
 
 /* Centers Footer on Mobile */
-.footer__item {
+.footer__item 
+{
   display: flex;
   justify-content: center;
 }
 
 /* Fixes Logo Being Slightly Askew */
-.navbar__brand {
+.navbar__brand 
+{
   padding: 0.25rem 0.75rem 0.50rem 0.75rem !important;
-  margin-right: 0 !important
+  margin-right: 0 !important;
+}
+
+/* Button Style Formatting */
+.button
+{
+  background: linear-gradient(90deg, #0099fa, #f900cb) !important;
+  color: white !important;
+  border-color: #FFFFFFDD !important;
+  border-width: 3px;
 }

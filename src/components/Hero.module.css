@@ -1,8 +1,10 @@
-:global(.hero.hero--primary) {
+:global(.hero.hero--primary) 
+{
   background: none !important;
 }
 
-.hero {
+.hero 
+{
   position: relative;
   display: flex;
   align-items: center;
@@ -17,46 +19,54 @@
   background-position: center center;
 }
 
-.hero .container {
+.hero .container 
+{
   display: flex;
   align-items: center;
   width: 100%;
 }
 
-.content {
+.content 
+{
   max-width: 40%;
 }
 
-.title {
+.title 
+{
   font-family: var(--ff-base);
   font-size: clamp(3rem, 6vw, 4.5rem);
   line-height: var(--lh-h1);
   margin-bottom: var(--space-md);
 }
 
-.subtitle {
+.subtitle 
+{
   font-size: var(--fs-body);
   line-height: var(--lh-body);
   margin-bottom: var(--space-lg);
 }
 
-.buttons {
-  display: flex;
+.buttons 
+{
+  display: inline-flex !important; /* fixes buttons being uncentered on mobile */
   gap: var(--space-md);
 }
 
-@media (max-width: 768px) {
-  .hero {
+@media (max-width: 768px) 
+{
+  .hero 
+  {
     flex-direction: column;
     padding: var(--space-md) 0;
     min-height: auto;
     text-align: center;
   }
-  .hero .container {
-    flex-direction: column;
+  .hero .container 
+  {
     align-items: center;
   }
-  .content {
+  .content 
+  {
     max-width: 100%;
   }
 }

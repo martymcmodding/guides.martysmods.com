@@ -1,4 +1,5 @@
-.image-comparison-slider {
+.image-comparison-slider 
+{
     position: relative;
     width: 100%;
     max-width: 100%;
@@ -7,7 +8,8 @@
     user-select: none;
   }
   
-  .image-comparison-slider img {
+  .image-comparison-slider img 
+  {
     position: absolute;
     top: 0;
     left: 0;
@@ -16,16 +18,19 @@
     object-fit: cover;
   }
   
-  .image-before {
+  .image-before 
+  {
     z-index: 1;
   }
   
-  .image-after {
+  .image-after 
+  {
     z-index: 2;
     pointer-events: none;
   }
   
-  .slider-handle {
+  .slider-handle 
+  {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -39,7 +44,8 @@
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
   }
   
-  .image-comparison-header {
+  .image-comparison-header 
+  {
     position: absolute;
     top: 10px;
     padding: 5px 10px;
@@ -50,10 +56,12 @@
     z-index: 4;
   }
   
-  .before-label {
+  .before-label 
+  {
     left: 10px;
   }
   
-  .after-label {
+  .after-label 
+  {
     right: 10px;
   }  

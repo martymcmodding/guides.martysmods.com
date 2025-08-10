@@ -3,7 +3,8 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './Hero.module.css';
 
-export default function Hero() {
+export default function Hero() 
+{
   const { siteConfig } = useDocusaurusContext();
   const bannerUrl = 'https://assets.martysmods.com/headers/herobanner.webp';
 
@@ -11,11 +12,14 @@ export default function Hero() {
     <section
       className={styles.hero}
       aria-label="MartysModsHeroBanner"
-      style={{
+      style=
+      {
+        {
         backgroundImage: `linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.0)), url(${bannerUrl})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center center',
-      }}
+      }
+    }
     >
       <div className="container">
         <div className={styles.content}>

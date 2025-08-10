@@ -4,7 +4,8 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Hero from '../components/Hero';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
-export default function Home() {
+export default function Home() 
+{
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
