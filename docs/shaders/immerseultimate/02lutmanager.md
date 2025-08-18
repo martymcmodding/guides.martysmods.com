@@ -5,11 +5,6 @@ description: "Addon and Shader combo designed to organize and display your LUTs 
 slug: /shaders/immerseultimate/lutmanager
 sidebar_position: 2
 hide_title: True
-keywords: 
- - LUT Manager
-tags:
- - Addon Guide
- - iMMERSE Ultimate
 ---
 
 # LUT Manager

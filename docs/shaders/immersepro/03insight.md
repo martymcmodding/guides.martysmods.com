@@ -5,11 +5,6 @@ description: "Displays a histogram, chroma/luma clipping map, and magnification 
 slug: /shaders/immersepro/insight
 sidebar_position: 3
 hide_title: true
-keywords: 
- - Insight
-tags:
- - Shader Guide
- - iMMERSE Pro
 ---
 
 # Insight

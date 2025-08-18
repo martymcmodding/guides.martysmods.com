@@ -5,12 +5,6 @@ description: "When modding with graphics injections, accurately identifying the 
 slug: /additionalguides/exearchitecture
 sidebar_position: 3
 hide_title: false
-keywords: 
- - Windows
- - Executable Architecture
-tags:
- - Additional Guide
- - Windows
 ---
 
 When modding with graphics injections, accurately identifying the architecture type of your game's executable is crucial. Whether you're an experienced modder or new to the scene, knowing whether your game uses a 32-bit or 64-bit executable is essential for ensuring compatibility and the proper functioning of tools like ReShade and other graphics mods.

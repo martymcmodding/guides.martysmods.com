@@ -5,12 +5,6 @@ description: "Installation requirements vary by user, platform, and game. As a r
 slug: /additionalguides/findexecutable
 sidebar_position: 4
 hide_title: True
-keywords: 
- - Windows
- - Find Exectuable
-tags:
- - Additional Guide
- - Windows
 ---
 
 # Finding your Game's Executable

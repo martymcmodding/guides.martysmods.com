@@ -6,11 +6,6 @@ image: "https://assets.martysmods.com/headers/clarityheader.webp"
 slug: /shaders/immersepro/clarity
 sidebar_position: 1
 hide_title: true
-keywords: 
- - Clarity
-tags:
- - Shader Guide
- - iMMERSE Pro
 ---
 
 <!------------------------IMPORTS ---------------------------->

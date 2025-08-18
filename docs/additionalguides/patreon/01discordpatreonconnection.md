@@ -5,12 +5,6 @@ description: "Patreon and Discord require a connection together in order to work
 slug: /additionalguides/patreon/connectdiscpatr
 sidebar_position: 1
 hide_title: true
-keywords: 
- - Patreon
- - Discord
-tags:
- - Patreon
- - Discord
 ---
 
 <!----------------------- IMPORTS ---------------------------->

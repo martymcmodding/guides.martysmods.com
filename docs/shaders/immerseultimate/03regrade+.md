@@ -6,12 +6,6 @@ image: "https://www.martysmods.com/media/ReGradePlus.webp"
 slug: /shaders/immerseultimate/regradeplus
 sidebar_position: 3
 hide_title: True
-keywords: 
- - ReGrade +
- - ReGrade Plus
-tags:
- - Addon Guide
- - iMMERSE Ultimate
 ---
 
 ![ReGradePlusHeader](./images/ReGradePlusHeader.webp)

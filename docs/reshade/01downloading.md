@@ -5,12 +5,6 @@ description: "The definitive guide for downloading ReShade."
 slug: /reshade/downloading
 sidebar_position: 1
 hide_title: true
-keywords: 
- - Downloading ReShade
- - ReShade
-tags:
- - ReShade Guide
- - Downloading
 ---
 
 # Downloading ReShade

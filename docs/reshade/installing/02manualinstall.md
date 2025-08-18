@@ -5,12 +5,6 @@ description: "Sometimes, the ReShade Setup Tool doesn’t provide everything you
 slug: /reshade/installing/reshademanualinstall
 sidebar_position: 2
 hide_title: true
-keywords: 
- - Manual ReShade Install
- - ReShade Install
-tags:
- - ReShade Guide
- - Installing
 ---
 
 # Manually Installing ReShade

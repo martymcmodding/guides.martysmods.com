@@ -5,11 +5,6 @@ description: "The Add-ons tab is meant to help users disable, enable, or configu
 slug: /reshade/gui/addons
 sidebar_position: 2
 hide_title: true
-keywords: 
- - Addons
-tags:
- - ReShade Guide
- - GUI
 ---
 
 # Add-ons

@@ -5,11 +5,6 @@ description: "Exposure Fusion improves visibility by selectively adjusting brigh
 slug: /shaders/immersepro/exposurefusion
 sidebar_position: 7
 hide_title: true
-keywords: 
- - Exposure Fusion
-tags:
- - Shader Guide
- - iMMERSE Pro
 ---
 
 # Exposure Fusion

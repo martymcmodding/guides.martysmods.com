@@ -6,11 +6,6 @@ image: "https://assets.martysmods.com/headers/dofheader.webp"
 slug: /shaders/immersepro/depthoffield
 sidebar_position: 2
 hide_title: true
-keywords: 
- - Depth of Field
-tags:
- - Shader Guide
- - iMMERSE Pro
 ---
 
 ![dofheader](https://assets.martysmods.com/headers/dofheader.webp)

@@ -5,12 +5,6 @@ description: "The depth buffer is a crucial part of any 3D game. This guide goes
 slug: /reshade/depth
 sidebar_position: 4
 hide_title: true
-keywords: 
- - Depth
- - Configuring Depth
-tags:
- - ReShade Guide
- - Depth
 ---
 
 # Depth

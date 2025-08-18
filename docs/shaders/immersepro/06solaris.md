@@ -6,11 +6,6 @@ image: "https://assets.martysmods.com/headers/solarisheader.webp"
 slug: /shaders/immersepro/solaris
 sidebar_position: 6
 hide_title: true
-keywords: 
- - Solaris
-tags:
- - Shader Guide
- - iMMERSE Pro
 ---
 
 <!------------------------IMPORTS ---------------------------->

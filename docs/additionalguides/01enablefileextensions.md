@@ -5,12 +5,6 @@ description: "By default, Windows hides the file extensions for known file types
 slug: /additionalguides/fileextensions
 sidebar_position: 2
 hide_title: false
-keywords: 
- - Windows
- - File Extensions
-tags:
- - Additional Guide
- - Windows
 ---
 
 By default, Windows hides the file extensions for known file types. This means that common file types like `.txt`, `.ini`, or `.exe` will not display their extensions in the file names. While this might seem convenient, it can cause confusion when you need to identify specific files or change file types. This guide will walk you through the steps to show file extensions, so you can always see them.

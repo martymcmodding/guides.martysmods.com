@@ -5,11 +5,6 @@ description: "The Log tab is a key tool for monitoring ReShade's operations and 
 slug: /reshade/gui/log
 sidebar_position: 4
 hide_tittle: true
-keywords:
- - Log
-tags:
- - ReShade Guide
- - GUI
 ---
 
 # Log Tab

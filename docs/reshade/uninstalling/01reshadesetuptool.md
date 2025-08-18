@@ -5,11 +5,6 @@ description: "The ReShade Setup Tool makes uninstalling ReShade easy, making sur
 slug: /reshade/uninstalling/reshadesetuptool
 sidebar_position: 1
 hide_title: true
-keywords: 
- - Uninstalling ReShade With Setup Tool
-tags:
- - ReShade Guide
- - Uninstalling
 ---
 
 # ReShade Setup Tool

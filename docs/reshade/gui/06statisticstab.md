@@ -5,11 +5,6 @@ description: "The Statistics Tab, shown in the image, is a great tool for tracki
 slug: /reshade/gui/statistics
 sidebar_position: 6
 hide_title: true
-keywords: 
- - Statistics
-tags:
- - ReShade Guide
- - GUI
 ---
 
 # Statistics

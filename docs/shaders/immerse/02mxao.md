@@ -6,11 +6,6 @@ image: "https://assets.martysmods.com/headers/mxaoheader.webp"
 slug: /shaders/immerse/mxao
 sidebar_position: 2
 hide_title: true
-keywords: 
- - MXAO
-tags:
- - Shader Guide
- - iMMERSE
 ---
 
 <!------------------------IMPORTS ---------------------------->

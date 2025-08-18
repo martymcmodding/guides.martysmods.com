@@ -5,11 +5,6 @@ description: "The Settings tab lets you tweak ReShade settings like shader direc
 slug: /reshade/gui/settings
 sidebar_position: 3
 hide_title: true
-keywords:
- - Settings
-tags:
- - ReShade Guide
- - GUI
 ---
 
 # Settings

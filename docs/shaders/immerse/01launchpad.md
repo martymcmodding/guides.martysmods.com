@@ -6,11 +6,6 @@ image: "https://assets.martysmods.com/headers/launchpadheader.webp"
 slug: /shaders/immerse/launchpad
 sidebar_position: 1
 hide_title: true
-keywords: 
- - Launchpad
-tags:
- - Shader Guide
- - iMMERSE
 ---
 
 <!----------------------- IMPORTS ---------------------------->

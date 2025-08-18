@@ -5,12 +5,6 @@ description: "Certain games do not support automatic ReShade injection during ru
 slug: /reshade/installing/reshademanualinjection
 sidebar_position: 3
 hide_title: true
-keywords: 
- - Manual ReShade Injection
- - ReShade Injection
-tags:
- - ReShade Guide
- - Installing
 ---
 
 # Manually Injecting ReShade

@@ -5,12 +5,6 @@ description: "A step-by-step guide to wrapping DirectX 8/9/10 games with DXVK f
 slug: /additionalguides/apiwrappers/dxvk
 sidebar_position: 1
 hide_title: false
-keywords: 
- - Rendering API
- - DXVK
-tags:
- - Additional Guide
- - Rendering API
 ---
 
 DXVK is an API wrapper that translates DirectX calls into Vulkan. While it’s commonly used on Linux to run Windows games, it can also help older DirectX 8/9/10 titles leverage ReShade’s compute shaders by presenting them as Vulkan applications.

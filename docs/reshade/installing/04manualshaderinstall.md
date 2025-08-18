@@ -5,12 +5,6 @@ description: "Not every shader repository is avalible through the ReShade Setup 
 slug: /reshade/installing/reshademanualshaderinstall
 sidebar_position: 4
 hide_title: true
-keywords: 
- - Manual ReShade Shader Install
- - ReShade Shader Install
-tags:
- - ReShade Guide
- - Installing
 ---
 
 import ReactPlayer from 'react-player'

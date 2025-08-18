@@ -6,11 +6,6 @@ image: "https://assets.martysmods.com/headers/sharpenheader.webp"
 slug: /shaders/immerse/sharpen
 sidebar_position: 3
 hide_title: true
-keywords: 
- - Sharpen
-tags:
- - Shader Guide
- - iMMERSE
 ---
 
 <!------------------------IMPORTS ---------------------------->

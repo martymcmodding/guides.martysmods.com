@@ -5,12 +5,6 @@ description: "Not all addons are available through the ReShade Setup Tool - This
 slug: /reshade/installing/reshademanualaddoninstall
 sidebar_position: 5
 hide_title: true
-keywords: 
- - Manual ReShade Addon Install
- - ReShade Addon Install
-tags:
- - ReShade Guide
- - Installing
 ---
 
 # Manually Installing Add-ons

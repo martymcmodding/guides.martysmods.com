@@ -6,11 +6,6 @@ image: "https://assets.martysmods.com/headers/smaaheader.webp"
 slug: /shaders/immerse/smaa
 sidebar_position: 4
 hide_title: true
-keywords: 
- - SMAA
-tags:
- - Shader Guide
- - iMMERSE
 ---
 
 ![SMAAHeader](https://assets.martysmods.com/headers/smaaheader.webp)

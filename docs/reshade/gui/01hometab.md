@@ -5,11 +5,6 @@ description: This guide breaks down the "Home" tab and provides more insight as 
 slug: /reshade/gui/home
 sidebar_position: 1
 hide_title: true
-keywords: 
- - Home
-tags:
- - ReShade Guide
- - GUI
 ---
 
 # Home

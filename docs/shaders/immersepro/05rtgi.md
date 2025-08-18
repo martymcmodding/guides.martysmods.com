@@ -6,11 +6,6 @@ image: "https://assets.martysmods.com/headers/rtgiheader.webp"
 slug: /shaders/immersepro/rtgi
 sidebar_position: 5
 hide_title: true
-keywords: 
- - RTGI
-tags:
- - Shader Guide
- - iMMERSE Pro
 ---
 
 <!------------------------IMPORTS ---------------------------->

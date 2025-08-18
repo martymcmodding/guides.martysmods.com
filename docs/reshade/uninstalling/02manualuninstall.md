@@ -5,11 +5,6 @@ description: "Sometimes the ReShade Setup Tool isn't able to fully uninstall ReS
 slug: /reshade/uninstalling/manualuninstall
 sidebar_position: 2
 hide_title: true
-keywords: 
- - Manually Uninstalling ReShade
-tags:
- - ReShade Guide
- - Uninstalling
 ---
 
 # Manually Uninstalling ReShade

@@ -5,12 +5,6 @@ description: "The ReShade Setup Tool allows users to go through a step-by-step i
 slug: /reshade/installing/setuptool
 sidebar_position: 1
 hide_title: true
-keywords: 
- - ReShade Setup Tool
- - Setup Tool
-tags:
- - ReShade Guide
- - Installing
 ---
 
 # ReShade Setup Tool

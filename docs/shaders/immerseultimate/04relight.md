@@ -6,11 +6,6 @@ image: "https://www.martysmods.com/media/ReLight.webp"
 slug: /shaders/immerseultimate/relight
 sidebar_position: 4
 hide_title: True
-keywords: 
- - ReLight
-tags:
- - Shader Guide
- - iMMERSE Ultimate
 ---
 
 ![ReGradePlusHeader](./images/ReLightHeader.webp)

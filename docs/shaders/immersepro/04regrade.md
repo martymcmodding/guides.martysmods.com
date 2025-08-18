@@ -6,11 +6,6 @@ image: "https://assets.martysmods.com/headers/regradeheader.webp"
 slug: /shaders/immersepro/regrade
 sidebar_position: 4
 hide_title: true
-keywords: 
- - ReGrade
-tags:
- - Shader Guide
- - iMMERSE Pro
 ---
 
 ![regradeheader](https://assets.martysmods.com/headers/regradeheader.webp)

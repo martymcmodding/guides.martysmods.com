@@ -6,11 +6,6 @@ image: "https://www.martysmods.com/media/Conv-Bloom.webp"
 slug: /shaders/immerseultimate/convolutionbloom
 sidebar_position: 1
 hide_title: True
-keywords: 
- - Convolution Bloom
-tags:
- - Shader Guide
- - iMMERSE Ultimate
 ---
 
 ![FFTBloomHeader](./images/ConvolutionBloomHeader.webp)

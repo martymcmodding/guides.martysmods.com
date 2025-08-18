@@ -4,11 +4,6 @@ sidebar_label: "FiveM"
 slug: /games/fivem
 sidebar_position: 1
 hide_title: false
-keywords: 
- - Games
- - FiveM
-tags:
- - Games
 ---
 
 FiveM is a platform that lets you play on custom servers for Grand Theft Auto V (GTAV). To get ReShade working with FiveM, you need to follow specific steps. This guide will show you exactly what to do and provide all the details you need.

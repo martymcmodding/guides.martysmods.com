@@ -5,12 +5,6 @@ description: "Patreon is typically slow to provide roles to users who have conne
 slug: /additionalguides/patreon/forcepatreon
 sidebar_position: 2
 hide_title: true
-keywords: 
- - Patreon
- - Discord
-tags:
- - Patreon
- - Discord
 ---
 
 <!----------------------- IMPORTS ---------------------------->
