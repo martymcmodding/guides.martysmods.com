@@ -19,23 +19,6 @@ const config =
     defaultLocale: 'en',
     locales: ['en'],
   },
-
-  plugins: 
-  [
-    [
-      clientRedirects,
-      {
-        fromExtensions: ['html', 'htm'],
-        toExtensions: ['html'],
-        redirects: 
-        [
-          { from: ['/docs/reshade/', '/docs/reshade/', '/docs/reshade.html',], to: '/reshade/downloading', },
-          { from: ['/mmpatreonfaq'], to: '/category/immerse', },
-        ],
-      },
-    ],
-  ],
-
   presets: 
   [
     [
@@ -55,7 +38,6 @@ const config =
       }),
     ],
   ],
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -84,8 +66,8 @@ const config =
             items: 
             [
               { label: 'ReShade', to: '/reshade/downloading' },
-              { label: 'Shaders', to: '/category/immerse' },
-              { label: 'Additional Guides', to: '/category/rendering-api-wrappers' },
+              { label: 'Shaders', to: '/shaders/immerse/launchpad' },
+              { label: 'Additional Guides', to: '/additionalguides/apiwrappers/dxvk' },
             ],
           },
           {

@@ -4,10 +4,6 @@
     "collapsible": true,
     "collapsed": false,
     "className": "red",
-    "link": {
-      "type": "generated-index",
-      "title": "iMMERSE Ultimate"
-    },
     "customProps": {
       "description": "Documentation on iMMERSE Ultimate shader and addon repository."
     }

@@ -4,10 +4,6 @@
     "collapsible": true,
     "collapsed": true,
     "className": "red",
-    "link": {
-      "type": "generated-index",
-      "title": "Rendering API Wrappers"
-    },
     "customProps": {
       "description": "Rendering API Wrappers"
     }

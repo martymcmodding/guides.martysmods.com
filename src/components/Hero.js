@@ -29,7 +29,7 @@ export default function Hero()
             <Link className="button button--primary button--lg" to="/reshade/downloading">
               Get Started
             </Link>
-            <Link className="button button--secondary button--lg" to="category/immerse">
+            <Link className="button button--secondary button--lg" to="/shaders/immerse/launchpad">
               Our Shaders
             </Link>
           </div>

@@ -4,10 +4,6 @@
     "collapsible": true,
     "collapsed": false,
     "className": "red",
-    "link": {
-      "type": "generated-index",
-      "title": "iMMERSE Pro"
-    },
     "customProps": {
       "description": "Documentation on iMMERSE Pro shader repository."
     }
