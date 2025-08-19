@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import styles from './Hero.module.css';
+import styles from './hero.module.css';
 
 export default function Hero() 
 {
