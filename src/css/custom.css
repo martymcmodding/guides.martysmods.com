@@ -1,5 +1,3 @@
-/* Font Bullshit */
-
 @font-face 
 {
   font-family: 'Glober';
@@ -49,38 +47,31 @@ html, body, h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea
   --space-sm: 0.5rem;
   --space-md: 1rem;
   --space-lg: 2rem;
-}
 
-/* Other Bullshit */
-:root 
-{
   --ifm-color-scheme: light;
-  --ifm-color-primary: #0099fa; /* set to Marty's Mods primary "gotcha" color */
+  --ifm-color-primary: #0099fa;
   --ifm-color-secondary: #ebedf0;
-  --ifm-background-color: #202329; /* set to Marty's Mods slightly lighter background color */
+  --ifm-background-color: #202329;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
   --ifm-color-primary-darkest: #1a8870;
   --ifm-color-primary-light: #29d5b0;
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
-  --ifm-font-color-base: #FFFFFFDD !important; /* regular font color background */
-  --ifm-code-background: #191c20 !important; /* code background color */
+  --ifm-font-color-base: #FFFFFFDD !important;
+  --ifm-code-background: #191c20 !important;
   --ifm-code-font-size: 95%;
   --ifm-button-color: #FFFFFFDD !important;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-.navbar
-{
-  background-color: #191c20 !important;
-}
+.navbar { background-color: #191c20 !important; }
 
 .footer
 {
-  background-color: #191c20 !important; /* set to Marty's Mods slightly darker background color */
-  --ifm-footer-color: #FFFFFFDD; /* footer text color */
-  --ifm-footer-link-color: #FFFFFFDD; /* footer "link" text color */
+  background-color: #191c20 !important;
+  --ifm-footer-color: #FFFFFFDD;
+  --ifm-footer-link-color: #FFFFFFDD;
   width: 100%;
   margin: 0 auto;
   padding: 20px;
@@ -90,15 +81,11 @@ html, body, h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea
   justify-content: space-between;
 }
 
-code
-{
-  border: 0.1rem solid #FFFFFFDD; /* code block border color & size */
-}
+/* code block border color & size */
+code { border: 0.1rem solid #FFFFFFDD; } 
 
-.hero
-{
-  color: #FFFFFFDD !important; /* "hero" font color */
-}
+ /* "hero" font color */
+.hero { color: #FFFFFFDD !important; }
 
 /* Setting up line count for document pages */
 .text--truncate 
@@ -111,10 +98,7 @@ code
   text-overflow: ellipsis;
 }
 
-.card 
-{
-  min-height: 150px !important;
-}
+.card { min-height: 150px !important; }
 
 /* Centers Footer on Mobile */
 .footer__item 
@@ -137,4 +121,10 @@ code
   color: white !important;
   border-color: #FFFFFFDD !important;
   border-width: 3px;
+}
+
+@media (min-width: 997px ) {
+    .container {
+      max-width: var(--ifm-container-width-xl) !important;
+    }
 }

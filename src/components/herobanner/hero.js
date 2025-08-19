@@ -13,8 +13,8 @@ export default function Hero()
       className={styles.hero}
       aria-label="MartysModsHeroBanner"
       style=
+    {
       {
-        {
         backgroundImage: `linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.0)), url(${bannerUrl})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center center',

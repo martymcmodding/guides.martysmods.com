@@ -1,7 +1,4 @@
-:global(.hero.hero--primary) 
-{
-  background: none !important;
-}
+:global(.hero.hero--primary) { background: none !important; }
 
 .hero 
 {
@@ -12,9 +9,6 @@
   padding: var(--space-lg) 0;
   min-height: 600px;
   color: var(--ifm-font-color-base);
-
-  background-image:
-    url('https://assets.martysmods.com/headers/herobanner.webp');
   background-size: cover;
   background-position: center center;
 }
@@ -26,10 +20,7 @@
   width: 100%;
 }
 
-.content 
-{
-  max-width: 40%;
-}
+.content { max-width: 40%; }
 
 .title 
 {
@@ -48,7 +39,7 @@
 
 .buttons 
 {
-  display: inline-flex !important; /* fixes buttons being uncentered on mobile */
+  display: inline-flex !important;
   gap: var(--space-md);
 }
 
@@ -61,12 +52,6 @@
     min-height: auto;
     text-align: center;
   }
-  .hero .container 
-  {
-    align-items: center;
-  }
-  .content 
-  {
-    max-width: 100%;
-  }
+  .hero .container { align-items: center; }
+  .content { max-width: 100%; }
 }
