@@ -9,11 +9,8 @@ export default function Home()
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Your extensive guide site for all things ReShade."
-    >
+      description="Your extensive guide site for all things ReShade.">
       <Hero/>
-      <main>
-      </main>
     </Layout>
   );
 }
