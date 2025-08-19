@@ -27,10 +27,10 @@ export default function Hero()
           <p className={styles.subtitle}>{siteConfig.tagline}</p>
           <div className={styles.buttons}>
             <Link className="button button--primary button--lg" to="/reshade/downloading">
-              Get Started
+              ReShade
             </Link>
             <Link className="button button--secondary button--lg" to="/shaders/immerse/launchpad">
-              Our Shaders
+              Shaders
             </Link>
           </div>
         </div>
