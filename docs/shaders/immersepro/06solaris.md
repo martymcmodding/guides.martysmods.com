@@ -24,7 +24,7 @@ iMMERSE Pro: Solaris is a physically based exposure and bloom shader that replic
 ## Basic Arguments:
 
 ### Log Exposure Bias
-Adjusts the reversed-tonemaped exposure using a logarithmic based forumla. This allows for details to remain in extreme white/black points & and more realistic exposure control.
+Adjusts the reversed-tonemapped exposure using a logarithmic based formula. This allows for details to remain in extreme white/black points and more realistic exposure control.
 
 <ReactPlayer
   url="https://assets.martysmods.com/shaders/solaris/LogExposureBiasControl.webm"
@@ -68,7 +68,7 @@ Sets the width of the bloom effect. A larger radius spreads the bloom over a wid
   style={{ width: "100%", margin: "0 auto" }}
 />
 
-### Bloom Hazyness
+### Bloom Haziness
 Controls the amount of haze in the bloom effect. Lower values maintain more detail where the bloom appears, while higher values increase haze and reduce clarity.
 
 ### High Resolution Input
@@ -93,7 +93,7 @@ Adjusts the intensity of depth masking. Higher values apply more depth masking, 
 WIP
 
 ### `SOLARIS_ARTISTIC_MODE`
-Allows for different blending mode presets that defer from the standard physically accurate bloom.
+Allows for different blending mode presets that differ from the standard physically accurate bloom.
 
 1. Energy Conserving (physically accurate)
 2. HDR Drama

@@ -30,9 +30,9 @@ Launchpad is REQUIRED to be at the top of the shader load order in order for RTG
 ### Setting up Z-Thickness
 The first step in configuring RTGI is setting a parameter called Z-Thickness. RTGI can only see the surfaces of objects that are currently facing the camera. To create a seamless effect, it must effectively estimate how far objects extend on the side not visible to the camera. Z-Thickness adjusts this bias. By default, Z-Thickness is set to `0.250`. However, depending on the game and the relative thickness of objects in its world, this setting might be too high or too low.
 
-A straightforward way to adjust Z-Thickness is by using RTGI’s "Diffuse RTGI" debug view. This view provides an unfiltered look at the lighting, shadows, and ambient occlusion applied to the game world.
+A straightforward way to adjust Z-Thickness is by using RTGI's "Diffuse RTGI" debug view. This view provides an unfiltered look at the lighting, shadows, and ambient occlusion applied to the game world.
 
-With the "Diffuse RTGI" debug view enabled, adjust the Z-Thickness parameter by dragging it left or right, and carefully observe the changes in shadows and ambient occlusion. Keep in mind that it’s easy to overshoot the optimal value: a setting that is too high can cause over-occlusion or haloing, while one that is too low may leave some areas insufficiently occluded.
+With the "Diffuse RTGI" debug view enabled, adjust the Z-Thickness parameter by dragging it left or right, and carefully observe the changes in shadows and ambient occlusion. Keep in mind that it's easy to overshoot the optimal value: a setting that is too high can cause over-occlusion or haloing, while one that is too low may leave some areas insufficiently occluded.
 
 <ReactPlayer
   url="https://assets.martysmods.com/shaders/rtgi/RTGIZThickness.webm"
@@ -47,9 +47,9 @@ With the "Diffuse RTGI" debug view enabled, adjust the Z-Thickness parameter by 
 
 ### Setting Up Intensities
 
-Once your Z-Thickness is dialed in, the next step is configuring the Ambient Occlusion and Bounce Lighting intensities. For best results, disable the "Diffuse RTGI" debug view and set "Ambient Light" to `1.00`. This ensures you’re seeing how RTGI blends with the full scene.
+Once your Z-Thickness is dialed in, the next step is configuring the Ambient Occlusion and Bounce Lighting intensities. For best results, disable the "Diffuse RTGI" debug view and set "Ambient Light" to `1.00`. This ensures you're seeing how RTGI blends with the full scene.
 
-These intensity values are largely based on personal preference, however, a good rule of thumb is that no lighting that's propigated from an object should be brighter than the original object itself.
+These intensity values are largely based on personal preference, however, a good rule of thumb is that no lighting that's propagated from an object should be brighter than the original object itself.
 
 #### Bounce Lighting Intensity
 
@@ -82,7 +82,7 @@ Smoothed Normals reduce the appearance of sharp, low-poly edges by averaging the
 
 #### Textured Normals
 
-Textured Normals add fine surface detail by using the game’s textures to generate extra geometric relief for RTGI. This gives the illusion of more complex surfaces, improving light interaction and visual depth without having to reverse engineer the game to port its texture's normals into RTGI.
+Textured Normals add fine surface detail by using the game's textures to generate extra geometric relief for RTGI. This gives the illusion of more complex surfaces, improving light interaction and visual depth without having to reverse engineer the game to port its texture's normals into RTGI.
 
 ![Textured Normal Comparison](https://assets.martysmods.com/shaders/rtgi/RTGINormalsComparisonTextured.webp)
 
@@ -101,7 +101,7 @@ The Fadeout setting controls how far RTGI's ambient occlusion and bounce lightin
   style={{ width: "100%", margin: "0 auto" }}  
 />
 
-### Setting up DLSS/FSR/TAAU Compatability 
+### Setting up DLSS/FSR/TAAU Compatibility 
 `_MARTYSMODS_TAAU_SCALE` is a global preprocessor definition that needs to be added manually. This preprocessor is best used when depth buffer jitter is applied from game scaling techniques such as DLSS, FSR, or TAAU. To make the preprocessor easier, Marty has defined specific modes for users:
 
 :::warning
@@ -110,7 +110,7 @@ Take note of the beginning underscore `_MARTYSMODS_TAAU_SCALE`. It's a requireme
 
 ![TAAUSCALEPreprocessor](https://assets.martysmods.com/shaders/rtgi/taauscalepreprocessor2.webp)
  
-| Scaling Mode Mode | DLSS                     | FSR                     |
+| Scaling Mode      | DLSS                     | FSR                     |
 | ----------------- | ------------------------ | ----------------------- |
 | AA / Native       | `1.0`                    | `1.0`                   |
 | Quality           | `DLSS_QUALITY`           | `FSR_QUALITY`           |
@@ -122,7 +122,7 @@ Take note of the beginning underscore `_MARTYSMODS_TAAU_SCALE`. It's a requireme
 
 ### Enable Debug View
 Provides the user with two debug views.
-* Disabled: Standard RTGI output.
-* Diffuse RTGI: Shows just the Diffuse Lighting debug.
-* Specular RTGI: Shows just the Specular Lighting debug.
-* Validation Layer: Debug providing visual output of Depth, Diffuse, Normal Vectors, Optical Flow, and Albedo.
+- **Disabled**: Standard RTGI output.
+- **Diffuse RTGI**: Shows just the Diffuse Lighting debug.
+- **Specular RTGI**: Shows just the Specular Lighting debug.
+- **Validation Layer**: Debug providing visual output of Depth, Diffuse, Normal Vectors, Optical Flow, and Albedo.

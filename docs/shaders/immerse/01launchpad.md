@@ -38,13 +38,13 @@ Controls the quality settings of the generated Optical Flow. Higher quality sett
 
 ### Flow Optimizer
 Launchpad uses a novel, stochastic gradient descent-based algorithm for calculating optical flow. The optimizer you choose determines how that descent behaves:
-- **Sophia**: Common optimizer in AI based language models. It converges more slowly but delivers higher quality results that are more ideal for complex motion.
+- **Sophia**: Common optimizer in AI-based language models. It converges more slowly but delivers higher quality results that are more ideal for complex motion.
 - **Newton**: Fast and efficient when flow is smooth and predictable. However, it can fail around fine or irregular details, such as thin geometry.
 
 ## Normal Maps
-Due to the way ReShade handles normal maps, we can only access the normals that the game actually sends to the GPU. These “raw” normals are often very polygonal or blocky and can look jarring when used with shaders like RTGI and ReLight.
+Due to the way ReShade handles normal maps, we can only access the normals that the game actually sends to the GPU. These "raw" normals are often very polygonal or blocky and can look jarring when used with shaders like RTGI and ReLight.
 
-To address this, Launchpad’s normal processing generates Smoothed and Textured Normals to first soften the blocky input normals and then reintroduce high-frequency detail in order to create more accurate lighting relief and a more detailed appearance.
+To address this, Launchpad's normal processing generates Smoothed and Textured Normals to first soften the blocky input normals and then reintroduce high-frequency detail in order to create more accurate lighting relief and a more detailed appearance.
 
 ### Smoothed Normals
  <ImageComparisonSlider 
@@ -63,7 +63,7 @@ To address this, Launchpad’s normal processing generates Smoothed and Textured
  />
 
 ### Textured Normals Sample Radius
-The Textured Normals Sample Radius setting controls how far around each pixel Launchpad samples to capture high-frequency detail from your game’s textures. Because texture quality and art style vary between titles, this radius isn’t fixed in the shader and requires the user to configure. Lower values will preserve sharp detail, while higher values can smooth noise but soften fine features.
+The Textured Normals Sample Radius setting controls how far around each pixel Launchpad samples to capture high-frequency detail from your game's textures. Because texture quality and art style vary between titles, this radius isn't fixed in the shader and requires the user to configure. Lower values will preserve sharp detail, while higher values can smooth noise but soften fine features.
 
 <ReactPlayer
   url="https://assets.martysmods.com/shaders/launchpad/LaunchpadTexturedNormalsRadius.webm"

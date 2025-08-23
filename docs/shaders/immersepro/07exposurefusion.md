@@ -9,13 +9,13 @@ hide_title: true
 
 # Exposure Fusion
 
-Exposure Fusion improves visibility by selectively adjusting brightness across the frame. Most games rely on a single global tonemapper, which can leave shadows crushed or highlights blown. This shader adds a localized response, effectively lifting dark areas and taming bright ones without wrecking overall contrast.
+iMMERSE Pro: Exposure Fusion improves visibility by selectively adjusting brightness across the frame. Most games rely on a single global tonemapper, which can leave shadows crushed or highlights blown. This shader adds a localized response, effectively lifting dark areas and taming bright ones without wrecking overall contrast.
 
 ---
 
 ## Target Brightness
 
-Sets the mid-gray “setpoint” the image is steered toward. Defaults should work relatively well for most games. However, if a game looks dim or murky, raise Target Brightness to bring midtones and shadows up. If highlights feel hot or the scene already looks bright, lower it to preserve headroom.
+Sets the mid-gray "setpoint" the image is steered toward. Defaults should work relatively well for most games. However, if a game looks dim or murky, raise Target Brightness to bring midtones and shadows up. If highlights feel hot or the scene already looks bright, lower it to preserve headroom.
 
 ## Intensity
 

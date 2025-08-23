@@ -12,7 +12,7 @@ hide_title: true
 
 iMMERSE Pro: ReGrade is a color-correction suite designed to be on par with standard professional tools, effectively removing the step of toggling between a color-correction software and the game to finish editing, making it all real-time and hassle-free.
 
-While there is no correct values and usage of this shader, people familiarized with Photography, color theory and related areas will make the best usage. However, even people with no experience can get great results by looking at the changes made being shown instantly.
+While there are no correct values and usage of this shader, people familiarized with photography, color theory and related areas will make the best usage. However, even people with no experience can get great results by looking at the changes made being shown instantly.
 
 ---
 
@@ -94,8 +94,8 @@ Disables the changes made in that layer.
 
 ### Lift Gamma Gain Mode
 Changes the way the calculations for Lift, Gamma, and Gain work, with 2 standards available: 
-* **American Society of Cinematographers (ACES)**
-* **DaVinci Resolve**
+- **American Society of Cinematographers (ACES)**
+- **DaVinci Resolve**
 
 ### Lift
 Changes the black levels of the image. If set to non-grey values, it will also change the color.
@@ -122,11 +122,12 @@ Changes the orange/blue balance of the image colors.
 
 ### R G B Primary Mode
 Changes how the color changing behavior works, with 3 methods available:
-* **ReGrade Legacy:** Mimics the old ReGrade shader version.
-* **Barycentric:** Uses a method based on barycentric coordinates to adjust the color balance, providing unique and precise control over color blending.
-* **Hue Based:** Adjusts colors based on their hue, allowing for intuitive and natural color changes
-* **R G B Primary Hue:** Changes the hue offset of each color channel (red, green, and blue).
-* **R G B Primary Saturation:** Changes the hue saturation value of each color channel (red, green, and blue).
+- **ReGrade Legacy:** Mimics the old ReGrade shader version.
+- **Barycentric:** Uses a method based on barycentric coordinates to adjust the color balance, providing unique and precise control over color blending.
+- **Hue Based:** Adjusts colors based on their hue, allowing for intuitive and natural color changes
+
+- **R G B Primary Hue:** Changes the hue offset of each color channel (red, green, and blue).
+- **R G B Primary Saturation:** Changes the hue saturation value of each color channel (red, green, and blue).
 
 ## Color Remapping:
 
@@ -199,5 +200,5 @@ Changes how much of the vignette is visible on the image.
 
 ### Vignette Blending Mode
 Changes how the vignette will be blended on the image. 
-* **HDR simulation:** Focuses on the brightness and color levels, blending with those to preserve tones. 
-* **Standard:** Places the vignette over the image.
+- **HDR simulation:** Focuses on the brightness and color levels, blending with those to preserve tones. 
+- **Standard:** Places the vignette over the image.

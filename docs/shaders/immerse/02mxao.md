@@ -16,7 +16,7 @@ import ImageComparisonSlider from '@site/src/components/ImageComparisonSlider';
 
 ![MXAOHeader](https://assets.martysmods.com/headers/mxaoheader.webp)
 
-iMMERSE: MXAO is Marty’s latest take on ambient occlusion, built using GTAO and Irradiance Bitfields for accurate and realistic occlusion-based shading. It’s designed to give you great performance and high-quality visuals without overcomplicating things.
+iMMERSE: MXAO is Marty's latest take on ambient occlusion, built using GTAO and Irradiance Bitfields for accurate and realistic occlusion-based shading. It's designed to give you great performance and high-quality visuals without overcomplicating things.
 
 ---
 
