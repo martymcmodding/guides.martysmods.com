@@ -1,53 +1,41 @@
-@font-face 
-{
+@font-face {
   font-family: 'Glober';
   src: url('/fonts/glober-regular-webfont.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
-@font-face 
-{
+@font-face {
   font-family: 'Glober';
   src: url('/fonts/glober-semibold-webfont.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
 }
 
-@font-face 
-{
+@font-face {
   font-family: 'Glober';
   src: url('/fonts/glober-regularitalic-webfont.woff2') format('woff2');
   font-weight: normal;
   font-style: italic;
 }
 
-/* Applying font everwhere */
-html, body, h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea 
-{
+html, body, h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea {
   font-family: 'Glober', sans-serif !important;
 }
 
-:root 
-{
+:root {
   --ff-base: 'Glober', sans-serif;
-
-  --fs-h1: 3rem;      /* ~48px */
+  --fs-h1: 3rem;
   --lh-h1: 1.1;
-
-  --fs-h2: 2.25rem;   /* ~36px */
+  --fs-h2: 2.25rem;
   --lh-h2: 1.2;
-
-  --fs-body: 1rem;    /* 16px */
+  --fs-body: 1rem;
   --lh-body: 1.6;
-
-  --fs-small: 0.875rem; /* 14px */
+  --fs-small: 0.875rem;
   --lh-small: 1.4;
-  
   --space-sm: 0.5rem;
   --space-md: 1rem;
   --space-lg: 2rem;
-
   --ifm-color-scheme: light;
   --ifm-color-primary: #0099fa;
   --ifm-color-secondary: #ebedf0;
@@ -65,31 +53,32 @@ html, body, h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-.navbar { background-color: #191c20 !important; }
+.navbar { 
+  background-color: #191c20 !important; 
+}
 
-.footer
-{
+.footer {
   background-color: #191c20 !important;
   --ifm-footer-color: #FFFFFFDD;
   --ifm-footer-link-color: #FFFFFFDD;
   width: 100%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 12px;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-/* code block border color & size */
-code { border: 0.1rem solid #FFFFFFDD; } 
+code { 
+  border: 0.1rem solid #FFFFFFDD; 
+}
 
- /* "hero" font color */
-.hero { color: #FFFFFFDD !important; }
+.hero { 
+  color: #FFFFFFDD !important; 
+}
 
-/* Setting up line count for document pages */
-.text--truncate 
-{
+.text--truncate {
   white-space: normal !important;
   overflow: hidden;
   display: -webkit-box;
@@ -98,33 +87,41 @@ code { border: 0.1rem solid #FFFFFFDD; }
   text-overflow: ellipsis;
 }
 
-.card { min-height: 150px !important; }
+.card { 
+  min-height: 150px !important; 
+}
 
-/* Centers Footer on Mobile */
-.footer__item 
-{
+.footer__item {
   display: flex;
   justify-content: center;
 }
 
-/* Fixes Logo Being Slightly Askew */
-.navbar__brand 
-{
+.navbar__brand {
   padding: 0.25rem 0.75rem 0.50rem 0.75rem !important;
   margin-right: 0 !important;
 }
 
-/* Button Style Formatting */
-.button
-{
+.button {
   background: linear-gradient(90deg, #0099fa, #f900cb) !important;
   color: white !important;
   border-color: #FFFFFFDD !important;
   border-width: 3px;
 }
 
-@media (min-width: 997px ) {
-    .container {
-      max-width: var(--ifm-container-width-xl) !important;
-    }
+@media (min-width: 997px) {
+  .container {
+    max-width: var(--ifm-container-width-xl) !important;
+  }
+}
+
+.lazy-image-placeholder {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.05) 75%);
+  background-size: 200% 100%;
+  animation: loading-shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+@keyframes loading-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
 }

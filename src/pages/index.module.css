@@ -1,0 +1,251 @@
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 35vh;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  color: var(--ifm-font-color-base);
+  overflow: hidden;
+}
+
+.shaderCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.heroContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.heroContent {
+  max-width: 800px;
+  position: relative;
+  z-index: 3;
+}
+
+.heroTitle {
+  font-family: var(--ff-base);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.heroSubtitle {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  line-height: 1.4;
+  margin-bottom: 3rem;
+  color: #e0e0e0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  text-decoration: none;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.primaryButton:hover,
+.secondaryButton:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+  text-decoration: none;
+  color: white;
+}
+
+.buttonLogo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.featureSection {
+  width: 100%;
+  padding: 6rem 0;
+  background: #191c20;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.featureContainer {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  gap: 4rem;
+}
+
+.featureText {
+  flex: 1;
+  max-width: 500px;
+}
+
+.featureTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+  color: white;
+  line-height: 1.1;
+}
+
+.featureDescription {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #e2e8f0;
+  margin: 0 0 1.5rem 0;
+}
+
+.featureButton {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.featureButton:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  text-decoration: none;
+  color: white;
+}
+
+.featureVisual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.visualPanel {
+  background: #2d3748;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.visualHeader {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.visualTitle {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.visualSubtitle {
+  display: block;
+  font-size: 0.9rem;
+  color: #e2e8f0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.visualContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.visualItem {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  color: white;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 1024px) {
+  .featureContainer {
+    flex-direction: column;
+    gap: 3rem;
+    text-align: center;
+  }
+  
+  .featureText {
+    max-width: 100%;
+  }
+  
+  .visualPanel {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .featureSection {
+    padding: 4rem 0;
+  }
+  
+  .featureContainer {
+    padding: 0 1rem;
+    gap: 2rem;
+  }
+  
+  .featureTitle {
+    font-size: 2.5rem;
+  }
+  
+  .visualPanel {
+    padding: 1.5rem;
+  }
+}

@@ -2,6 +2,8 @@
 {
     position: relative;
     width: 100%;
+    height: auto;
+    min-height: 300px;
     max-width: 100%;
     overflow: hidden;
     cursor: ew-resize;
@@ -35,13 +37,12 @@
     top: 0;
     bottom: 0;
     width: 8px;
-    background: #ffffff;
+    background: white;
+    border: 1px solid black;
     z-index: 3;
     cursor: ew-resize;
     transform: translateX(-50%);
-    border: 2px solid #ffffff;
     border-radius: 4px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
   }
   
   .image-comparison-header 
@@ -64,4 +65,4 @@
   .after-label 
   {
     right: 10px;
-  }  
+  }

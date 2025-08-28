@@ -1,28 +1,81 @@
 import React, { useRef, useState, useEffect } from 'react';
-import './ImageComparisonSlider.css';
+import './imagecomparisonslider.css';
 
 export default function ImageComparisonSlider({
   beforeImage,
   afterImage,
   beforeLabel = "Before",
-  afterLabel = "After"
+  afterLabel = "After",
+  showLabels = true
 }) {
   const sliderRef = useRef(null);
-  const [sliderPosition, setSliderPosition] = useState(50); // Start at 50% for centered
+  const [sliderPosition, setSliderPosition] = useState(50);
   const [containerHeight, setContainerHeight] = useState('auto');
   const [isDragging, setIsDragging] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+  const [imageDimensions, setImageDimensions] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
-    const beforeImg = new Image();
-    beforeImg.src = beforeImage;
-    beforeImg.onload = () => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setIsInView(true);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        rootMargin: '50px',
+        threshold: 0.1
+      }
+    );
+
+    if (sliderRef.current) {
+      observer.observe(sliderRef.current);
+    }
+
+    return () => {
       if (sliderRef.current) {
-        setContainerHeight(beforeImg.naturalHeight * (sliderRef.current.offsetWidth / beforeImg.naturalWidth));
+        observer.unobserve(sliderRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isInView) return;
+
+    const beforeImg = new Image();
+    const afterImg = new Image();
+    
+    let loadedCount = 0;
+    const checkAllLoaded = () => {
+      loadedCount++;
+      if (loadedCount === 2) {
+        setImagesLoaded(true);
+        if (sliderRef.current) {
+          const calculatedHeight = beforeImg.naturalHeight * (sliderRef.current.offsetWidth / beforeImg.naturalWidth);
+          const minHeight = 300;
+          const finalHeight = Math.max(calculatedHeight, minHeight);
+          setContainerHeight(finalHeight);
+          setImageDimensions({
+            width: beforeImg.naturalWidth,
+            height: beforeImg.naturalHeight
+          });
+        }
       }
     };
 
+    beforeImg.onload = checkAllLoaded;
+    afterImg.onload = checkAllLoaded;
+    
+    beforeImg.src = beforeImage;
+    afterImg.src = afterImage;
+
     const handleMouseUp = () => setIsDragging(false);
     const handleTouchEnd = () => setIsDragging(false);
+    
     window.addEventListener('mouseup', handleMouseUp);
     window.addEventListener('touchend', handleTouchEnd);
 
@@ -30,7 +83,7 @@ export default function ImageComparisonSlider({
       window.removeEventListener('mouseup', handleMouseUp);
       window.removeEventListener('touchend', handleTouchEnd);
     };
-  }, [beforeImage]);
+  }, [beforeImage, afterImage, isInView]);
 
   const moveSlider = (position) => {
     const boundedPosition = Math.max(0, Math.min(position, 100));
@@ -56,6 +109,52 @@ export default function ImageComparisonSlider({
     moveSlider(position);
   };
 
+  const getLoadingStyle = () => {
+    if (imageDimensions.width && imageDimensions.height) {
+      const aspectRatio = imageDimensions.height / imageDimensions.width;
+      const containerWidth = sliderRef.current ? sliderRef.current.offsetWidth : window.innerWidth;
+      const calculatedHeight = containerWidth * aspectRatio;
+      const minHeight = 300;
+      const finalHeight = Math.max(calculatedHeight, minHeight);
+      
+      return {
+        height: `${finalHeight}px`,
+        maxWidth: '100%',
+        backgroundColor: 'rgba(0, 0, 0, 0.1)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        color: '#666',
+        fontSize: '14px',
+        position: 'relative'
+      };
+    }
+    
+    return {
+      height: '300px',
+      maxWidth: '100%',
+      backgroundColor: 'rgba(0, 0, 0, 0.1)',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      color: '#666',
+      fontSize: '14px',
+      position: 'relative'
+    };
+  };
+
+  if (!isInView || !imagesLoaded) {
+    return (
+      <div
+        className="image-comparison-slider"
+        ref={sliderRef}
+        style={getLoadingStyle()}
+      >
+        {!isInView ? 'Loading...' : 'Preparing images...'}
+      </div>
+    );
+  }
+
   return (
     <div
       className="image-comparison-slider"
@@ -66,11 +165,17 @@ export default function ImageComparisonSlider({
       onTouchMove={handleDrag}
       style={{ height: containerHeight || 'auto', maxWidth: '100%' }}
     >
-      {/* Before and After labels */}
-      <div className="image-comparison-header before-label">{beforeLabel}</div>
-      <div className="image-comparison-header after-label">{afterLabel}</div>
+      {showLabels && (
+        <>
+          <div className="image-comparison-header before-label">
+            {beforeLabel || 'Before'}
+          </div>
+          <div className="image-comparison-header after-label">
+            {afterLabel || 'After'}
+          </div>
+        </>
+      )}
 
-      {/* "After" image is now on top with clipping */}
       <img src={beforeImage} alt="Before" className="image-before" />
       <img
         src={afterImage}
@@ -78,10 +183,11 @@ export default function ImageComparisonSlider({
         className="image-after"
         style={{ clipPath: `inset(0 0 0 ${sliderPosition}%)` }}
       />
+      
       <div
         className="slider-handle"
         style={{ left: `${sliderPosition}%` }}
-      ></div>
+      />
     </div>
   );
 }

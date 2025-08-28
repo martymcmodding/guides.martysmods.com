@@ -1,0 +1,10 @@
+{
+    "position": 4,
+    "label": "METEOR",
+    "collapsible": true,
+    "collapsed": false,
+    "className": "red",
+    "customProps": {
+      "description": "Documentation on METEOR shader repository."
+    }
+  }
