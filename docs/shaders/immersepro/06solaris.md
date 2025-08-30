@@ -17,14 +17,14 @@ import ImageComparisonSlider from '@site/src/components/ImageComparisonSlider';
 
 ![solarisheader](https://assets.martysmods.com/headers/solarisheader.webp)
 
-iMMERSE Pro: Solaris is a physically based exposure and bloom shader that replicates the light that travels to the camera sensor. Solaris was built to generate a bloom that is comparable to real-world photography within your games through reverse-tonemapping.
+iMMERSE Pro: Solaris is a physically based exposure and bloom shader that replicates real-world light behavior as it travels to a camera sensor. Built around reverse-tonemapping technology, Solaris generates bloom effects that closely match authentic photography results, providing realistic light diffusion and exposure control within your games.
 
 ---
 
-## Basic Arguments:
+## Core Parameters:
 
 ### Log Exposure Bias
-Adjusts the reversed-tonemapped exposure using a logarithmic based formula. This allows for details to remain in extreme white/black points and more realistic exposure control.
+Adjusts the reversed-tonemapped exposure using a logarithmic formula that preserves detail in extreme highlights and shadows. This parameter provides more realistic exposure control compared to linear adjustments, maintaining visual information in areas that would otherwise be clipped or lost.
 
 <ReactPlayer
   url="https://assets.martysmods.com/shaders/solaris/LogExposureBiasControl.webm"
@@ -38,7 +38,9 @@ Adjusts the reversed-tonemapped exposure using a logarithmic based formula. This
 />
 
 ### Log HDR Whitepoint
-Sets the highest whitepoint Solaris will consider for bloom. Lower values cause more bloom in darker areas, while higher values shift bloom towards brighter areas.
+Sets the highest brightness threshold that Solaris will consider for bloom generation. This parameter controls the distribution of bloom effects across the brightness range:
+- **Lower Values**: Create bloom in darker areas, producing atmospheric lighting effects
+- **Higher Values**: Shift bloom towards brighter areas, emphasizing highlight diffusion
 
 <ReactPlayer
   url="https://assets.martysmods.com/shaders/solaris/LogHDRWhitepointControl.webm"
@@ -52,10 +54,14 @@ Sets the highest whitepoint Solaris will consider for bloom. Lower values cause 
 />
 
 ### Bloom Intensity
-Adjusts the overall strength of the bloom effect. Higher values result in a more pronounced bloom, while lower values produce a subtler effect.
+Controls the overall strength of the bloom effect. This parameter should be balanced to achieve natural-looking light diffusion without overwhelming the original image:
+- **Lower Values**: Provide subtle bloom that enhances atmosphere
+- **Higher Values**: Create dramatic bloom effects for artistic purposes
 
 ### Bloom Radius
-Sets the width of the bloom effect. A larger radius spreads the bloom over a wider area, creating a softer bloom. While a smaller radius spreads the bloom over a more defined area, creating a sharper bloom.
+Determines the spatial extent of the bloom effect, controlling how light spreads from bright sources:
+- **Larger Radius**: Creates soft, atmospheric bloom that spreads over wider areas
+- **Smaller Radius**: Produces sharp, defined bloom with more concentrated light diffusion
 
 <ReactPlayer
   url="https://assets.martysmods.com/shaders/solaris/BloomRadiusControl.webm"
@@ -69,38 +75,42 @@ Sets the width of the bloom effect. A larger radius spreads the bloom over a wid
 />
 
 ### Bloom Haziness
-Controls the amount of haze in the bloom effect. Lower values maintain more detail where the bloom appears, while higher values increase haze and reduce clarity.
+Controls the atmospheric quality of the bloom effect, affecting detail preservation and visual clarity:
+- **Lower Values**: Maintain sharp detail within bloom areas, suitable for crisp, technical applications
+- **Higher Values**: Increase atmospheric haze, creating dreamy, cinematic effects
 
 ### High Resolution Input
-Enables high-resolution sampling. This is useful for capturing detailed or small objects that need to glow.
+Enables high-resolution sampling for bloom calculations, essential for capturing fine details in small objects or intricate light sources. This feature is particularly useful when working with high-resolution textures or when precise bloom control is required.
 
- <ImageComparisonSlider 
+<ImageComparisonSlider 
   beforeImage="https://assets.martysmods.com/shaders/solaris/HighResolutionInputDisabled.webp" 
   afterImage="https://assets.martysmods.com/shaders/solaris/HighResolutionInputEnabled.webp"
   beforeLabel="Disabled"
   afterLabel="Enabled"
- />
+/>
 
 ### Mask by Depth
-Enables depth-based masking in Solaris, allowing the bloom effect to be influenced by the scene's depth information.
+Enables depth-based masking in Solaris, allowing the bloom effect to be influenced by the scene's depth information. This feature prevents bloom from appearing inappropriately in distant areas, creating more realistic atmospheric effects.
 
 ### Depth Mask Strength
-Adjusts the intensity of depth masking. Higher values apply more depth masking, reducing bloom in distant areas. Lower values apply less depth masking, allowing more bloom throughout the scene.
+Controls the intensity of depth-based masking, determining how strongly distance affects bloom visibility:
+- **Higher Values**: Apply stronger depth masking, reducing bloom in distant areas for realistic atmospheric perspective
+- **Lower Values**: Apply minimal depth masking, allowing bloom to appear more uniformly across the scene
 
 ## Preprocessor Definitions:
 
 ### `ENABLE_SOLARIS_REGRADE_PARITY`
-WIP
+Enables integration with the ReGrade shader, allowing ReGrade to receive HDR input from Solaris as a color buffer. This feature enables non-destructive HDR exposure, bloom, and color grading workflows by maintaining the full dynamic range throughout the processing pipeline.
 
 ### `SOLARIS_ARTISTIC_MODE`
-Allows for different blending mode presets that differ from the standard physically accurate bloom.
+Activates artistic blending mode presets that deviate from physically accurate bloom for creative applications:
 
-1. Energy Conserving (physically accurate)
-2. HDR Drama
-3. Orton
-4. Dreamy
-5. Depth Blend
-6. Screen
+1. **Energy Conserving**: Physically accurate bloom that maintains light energy conservation
+2. **HDR Drama**: Enhanced contrast and saturation for dramatic visual impact
+3. **Orton**: Soft, dreamy bloom effect inspired by traditional photography techniques
+4. **Dreamy**: Ethereal, atmospheric bloom with enhanced light diffusion
+5. **Depth Blend**: Bloom that interacts with scene depth for enhanced atmospheric effects
+6. **Screen**: Classic screen blending for bright, vibrant bloom effects
 
-### SOLARIS_PERF_MODE
-Activates a performance optimized mode for Solaris, reducing GPU load.
+### `SOLARIS_PERF_MODE`
+Activates performance optimization mode for Solaris, reducing GPU load at the cost of some visual quality. This mode is useful for maintaining performance on lower-end systems or when working with complex scenes.
