@@ -10,195 +10,124 @@ hide_title: true
 
 ![regradeheader](https://assets.martysmods.com/headers/regradeheader.webp)
 
-iMMERSE Pro: ReGrade is a color-correction suite designed to be on par with standard professional tools, effectively removing the step of toggling between a color-correction software and the game to finish editing, making it all real-time and hassle-free.
+iMMERSE Pro: ReGrade is a comprehensive color correction suite designed to match the capabilities of professional color grading software. It eliminates the need to switch between external color correction tools and your game, providing real-time, non-destructive color grading directly within ReShade.
 
-While there are no correct values and usage of this shader, people familiarized with photography, color theory and related areas will make the best usage. However, even people with no experience can get great results by looking at the changes made being shown instantly.
+While there are no universally "correct" values for color grading, users familiar with photography, color theory, and related disciplines will achieve the best results. However, even those without prior experience can produce excellent results through real-time visual feedback and instant parameter updates.
 
 ---
 
-## Color Operations and Slots:
+## Color Operations and Workflow:
 
-At first, you should notice lots of drop-down boxes in the section "Color Operations." This tells the shader what color operation is applied at each step. Think of it like building blocks, with the first being the bottom layer and the last being the top layer. You have 9 slots available, and the following options can be applied in any order as the user desires or needs:
+ReGrade operates as a modular color grading platform with nine available slots in the "Color Operations" section. These slots function like building blocks, where the first slot represents the bottom layer and the last slot represents the top layer. You can apply any of the following operations in any order to achieve your desired color grading result:
 
 ### Levels
-Adjusts the black and white points of the image, effectively controlling the contrast and brightness range.
+Adjusts the black and white points of the image, effectively controlling the contrast and brightness range. This operation allows precise control over the tonal distribution and dynamic range of your image.
 
 ### Adjustments
-Provides general color and overall image changes, useful for broad adjustments.
+Provides general color and overall image modifications, useful for broad adjustments across the entire image. This includes basic controls for contrast, exposure, gamma, saturation, and vibrance.
 
 ### Lift Gamma Gain
-Allows you to tweak the "Lift" (shadows), "Gamma" (midtones), and "Gain" (highlights) levels of the image, offering detailed control over different brightness ranges.
+Allows you to adjust the "Lift" (shadows), "Gamma" (midtones), and "Gain" (highlights) levels of the image independently. This operation offers detailed control over different brightness ranges, with support for both ACES and DaVinci Resolve calculation methods.
 
 ### Calibration
-Allows you to modify the default values for color hues and layers, ensuring accurate color representation.
+Enables modification of default values for color hues and layers, ensuring accurate color representation. This includes color temperature adjustments, Lab color space offsets, and RGB primary color modifications.
 
 ### Color Remapping
-Enables direct changes to the colors of the image, often used for creative color effects.
+Enables direct changes to specific colors within the image, often used for creative color effects and selective color correction. This operation provides control over individual color ranges including red, orange, yellow, green, aqua, blue, and magenta.
 
 ### Tone Curves
-Adjusts the tones of the exposed (bright) and unexposed (dark) parts of the image, providing precise control over the tonal range.
+Adjusts the tones of the exposed (bright) and unexposed (dark) parts of the image, providing precise control over the tonal range. This includes controls for shadows, darks, lights, highlights, and specialized dark wash effects.
 
 ### Split Toning
-Allows you to change the colors of the tones in the exposed (highlights) and unexposed (shadows) parts of the image separately.
+Allows you to change the colors of tones in the exposed (highlights) and unexposed (shadows) parts of the image separately. This operation provides creative control over color temperature in different tonal ranges.
 
 ### Color Balance
-Adjusts the colors in the shadows, midtones, and highlights of the image, providing detailed color correction beyond just exposure adjustments.
+Adjusts the colors in the shadows, midtones, and highlights of the image independently, providing detailed color correction beyond basic exposure adjustments. This enables precise color grading for different brightness ranges.
 
 ### Special Transforms
-Offers more "artistic" changes to the scene's brightness and light levels, allowing for creative and unconventional effects.
+Offers artistic modifications to the scene's brightness and light levels, allowing for creative and unconventional effects. This includes bleach bypass effects and specialized gamma controls for luminance and chroma.
 
-## Levels:
+## Core Operations:
 
-### Bypass Levels
-Effectively disables the changes made in that layer.
+### Levels Control
+- **Bypass Levels**: Disables the levels operation for that specific slot.
+- **Black Level In**: Controls where the input black levels begin, affecting the darkest areas of the image.
+- **White Level In**: Controls where the input white levels begin, affecting the brightest areas of the image.
+- **Black Level Out**: Controls where the output black levels end, determining the final black point.
+- **White Level Out**: Controls where the output white levels end, determining the final white point.
 
-### Black Level In
-Changes where the black levels start.
+### Basic Adjustments
+- **Bypass Adjustments**: Disables the adjustments operation for that specific slot.
+- **Contrast**: Modifies the entire image's contrast, affecting the difference between light and dark areas.
+- **Exposure**: Controls the overall image brightness, simulating how much light the virtual lens absorbs.
+- **Gamma**: Adjusts the brightness of the image's midtones without affecting the extreme highlights and shadows.
+- **Filmic Gamma**: Specifically controls the brightness of dark areas, useful for cinematic looks.
+- **Saturation**: Controls the intensity of colors throughout the image.
+- **Vibrance**: Selectively increases the saturation of less saturated colors while preserving already vibrant colors.
 
-### White Level In
-Changes where the white levels start.
+### Lift Gamma Gain
+- **Bypass Lift Gamma Gain**: Disables the lift gamma gain operation for that specific slot.
+- **Lift Gamma Gain Mode**: Selects between two calculation standards:
+  - **American Society of Cinematographers (ACES)**: Industry-standard color management system
+  - **DaVinci Resolve**: Professional color grading software standard
+- **Lift**: Controls the black levels of the image. Non-grey values will also affect color temperature.
+- **Gamma**: Controls the midtones of the image. Non-grey values will change the overall color temperature.
+- **Gain**: Controls the white levels of the image. Non-grey values will affect the color of bright areas.
 
-### Black Level Out
-Changes where the black levels end.
+### Color Calibration
+- **Bypass Calibration**: Disables the calibration operation for that specific slot.
+- **Color Temperature**: Adjusts the white balance/temperature of the entire image, ranging from 1700K to 40000K.
+- **Lab A Offset**: Controls the magenta/green balance of image colors using the Lab color space.
+- **Lab B Offset**: Controls the orange/blue balance of image colors using the Lab color space.
+- **RGB Primary Mode**: Selects the color adjustment behavior:
+  - **ReGrade Legacy**: Mimics the behavior of previous ReGrade versions
+  - **Barycentric**: Uses barycentric coordinates for precise color balance control
+  - **Hue Based**: Adjusts colors based on their hue for intuitive color modifications
+- **RGB Primary Hue**: Controls the hue offset for each color channel (red, green, and blue).
+- **RGB Primary Saturation**: Controls the saturation value for each color channel.
 
-### White Level Out
-Changes where the white levels end.
+## Advanced Color Operations:
 
-## Adjustments:
+### Color Remapping
+Color remapping provides control over individual color ranges by adjusting Hue, Saturation, and Value for each of the seven primary colors (red, orange, yellow, green, aqua, blue, and magenta). This enables precise color correction and creative color effects.
 
-### Bypass Adjustments
-Disables the changes made in that layer.
+### Tone Curve Control
+- **Shadows**: Adjusts the brightness of the darkest areas of the image.
+- **Darks**: Controls the brightness of dark midtones.
+- **Lights**: Adjusts the brightness of light midtones.
+- **Highlights**: Controls the brightness of the brightest areas.
+- **Dark Wash Range**: Determines how much of the dark areas will be affected by the wash effect.
+- **Dark Wash Intensity**: Controls the strength of the dark wash/bleach effect.
 
-### Contrast
-Changes the entire image's contrast.
+### Split Toning
+- **Split Mode**: Selects which parts of the image curve will be adjusted:
+  - **Shadows/Highlights**: Separates adjustments for dark and bright areas
+  - **Greys/Saturated Colors**: Separates adjustments for neutral and colorful areas
+- **Tint A**: Controls the tint/grey value for the first parameter.
+- **Tint B**: Controls the tint/grey value for the second parameter.
+- **Balance**: Determines which side will be more intense, with lower values prioritizing the first parameter.
+- **Blend Mode**: Selects how adjustments are mixed into the image:
+  - **Soft Light**: Subtle blending that preserves image detail
+  - **Overlay**: Stronger blending for more dramatic effects
 
-### Exposure
-Changes the entire image exposure. Exposure is how much light the lens is absorbing, with higher values making the image brighter and lower values making the image darker.
+### Color Balance
+Color balance operations modify the color brightness and saturation of the image's lighting, separated into Dark, Midtones, and Highlights. Each range can be adjusted independently for precise color grading control.
 
-### Gamma
-Changes the brightness of the image.
-
-### Filmic Gamma
-Changes the brightness of the dark points of the image.
-
-### Saturation
-Changes how much the colors are saturated in the image.
-
-### Vibrance
-Changes how vibrant and colorful the colors are in the image.
-
-## Lift, Gamma and Gain:
-
-### Bypass Lift Gamma Gain
-Disables the changes made in that layer.
-
-### Lift Gamma Gain Mode
-Changes the way the calculations for Lift, Gamma, and Gain work, with 2 standards available: 
-- **American Society of Cinematographers (ACES)**
-- **DaVinci Resolve**
-
-### Lift
-Changes the black levels of the image. If set to non-grey values, it will also change the color.
-
-### Gamma
-Changes the midtones of the image. If set to non-grey values, it will change the overall temperature of the image.
-
-### Gain
-Changes the white levels of the image. If set to non-grey values, it will change the color of the bright parts of the image.
-
-## Calibration:
-
-### Bypass Calibration
-Disables the changes made in that layer.
-
-### Color Temperature
-Changes the white balance/temperature of the entire image.
-
-### Lab A Offset
-Changes the magenta/green balance of the image colors.
-
-### Lab B Offset
-Changes the orange/blue balance of the image colors.
-
-### R G B Primary Mode
-Changes how the color changing behavior works, with 3 methods available:
-- **ReGrade Legacy:** Mimics the old ReGrade shader version.
-- **Barycentric:** Uses a method based on barycentric coordinates to adjust the color balance, providing unique and precise control over color blending.
-- **Hue Based:** Adjusts colors based on their hue, allowing for intuitive and natural color changes
-
-- **R G B Primary Hue:** Changes the hue offset of each color channel (red, green, and blue).
-- **R G B Primary Saturation:** Changes the hue saturation value of each color channel (red, green, and blue).
-
-## Color Remapping:
-
-Color remapping allows the user to change the color values of each of the colors in the image, giving more control over the overall color scheme.
-
-The parameters dictate changes to each of the colors (red, orange, yellow, green, aqua, blue, and magenta), separating it by Hue (first value), Saturation (second value), and Color Value (third value).
-
-## Tone Curve:
-
-### Shadows
-Changes the image's shadow brightness.
-
-### Darks
-Changes the image's dark points brightness.
-
-### Lights
-Changes the image's bright points brightness.
-
-### Highlights
-Changes the image's highlight points brightness.
-
-### Dark Wash Range
-Changes how much the dark points wash/bleach the colors.
-
-### Dark Wash Intensity
-Changes how intense the bleaching of the colors is.
-
-## Split Toning:
-
-### Split Mode
-Changes which parts of the image's curve will be adjusted, allowing you to pick between shadows/highlights and grey/saturated colors.
-
-### Tint A
-Changes the tint/grey value of the first parameter.
-
-### Tint B
-Changes the tint/grey value of the second parameter.
-
-### Balance
-Changes which side will be more intense/prevalent. A lower value prioritizes the first value, while a higher value prioritizes the second value.
-
-### Blend Mode
-Changes how these adjustments are mixed into the image, with options being "Soft Light" and "Overlay."
-
-## Color Balance:
-
-Color balance changes the color brightness and saturation of the image's lighting. They are split into Dark, Highlights, and Midtones.
-
-## Special Transforms:
-
-### Bleach Bypass (Gamma Corrected)
-Controls the bleaching effect while taking gamma into consideration.
-
-### Gamma on Luma - Chroma
-Controls the gamma level on the colors and luminosity.
+### Special Effects
+- **Bleach Bypass (Gamma Corrected)**: Controls the bleaching effect while maintaining proper gamma correction.
+- **Gamma on Luma | Chroma**: Provides separate gamma control for luminance and chroma components.
 
 ## Vignette and Utility:
 
-### Mechanical Vignette: Radius
-Changes the vignette radius on the image.
+### Mechanical Vignette
+- **Radius**: Controls the size of the vignette effect on the image.
+- **Blurriness**: Determines how out-of-focus the outer edges of the vignette appear.
+- **Shape**: Controls the vignette shape, with 0 being circular and higher values creating more anamorphic-looking shapes.
 
-### Mechanical Vignette: Blurriness
-Changes how out-of-focus the outer part of the vignette is on the image.
+### Sensor Vignette
+- **Scale**: Controls how much of the sensor vignette effect is visible on the image.
 
-### Mechanical Vignette: Shape
-Changes the shape of the vignette, with 0 being circular and higher values creating more anamorphic-looking shapes.
-
-### Sensor Vignette: Scale
-Changes how much of the vignette is visible on the image.
-
-### Vignette Blending Mode
-Changes how the vignette will be blended on the image. 
-- **HDR simulation:** Focuses on the brightness and color levels, blending with those to preserve tones. 
-- **Standard:** Places the vignette over the image.
+### Vignette Blending
+- **Standard**: Places the vignette over the image using traditional blending.
+- **HDR Simulation**: Focuses on brightness and color levels, blending with those to preserve tones.
+- **HDR Simulation (Protect Tones)**: Enhanced HDR simulation with additional tone protection.
