@@ -120,7 +120,7 @@ export default function Home() {
         "Get ReShade up and running in minutes with our comprehensive step-by-step installation guides. From the ReShade Setup Tool to manual installation, we cover all methods.",
         "Whether you're a beginner or advanced user, our guides walk you through every step of the installation process with detailed screenshots and troubleshooting tips."
       ],
-      buttonLink: "/reshade/installing/reshadesetuptool",
+      buttonLink: "/reshade/installing/setuptool",
       buttonText: "Learn more",
       visualTitle: "Installation",
       visualSubtitle: "Setup Guide",
