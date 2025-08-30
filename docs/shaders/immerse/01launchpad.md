@@ -63,7 +63,7 @@ To address this, Launchpad's normal processing generates Smoothed and Textured N
  />
 
 ### Textured Normals Sample Radius
-The Textured Normals Sample Radius setting controls how far around each pixel Launchpad samples to capture high-frequency detail from your game's textures. Because texture quality and art style vary between titles, this radius isn't fixed in the shader and requires the user to configure. Lower values will preserve sharp detail, while higher values can smooth noise but soften fine features.
+Controls how far around each pixel Launchpad samples to capture high-frequency detail from your game's textures. Because texture quality and art style vary between titles, this radius isn't fixed in the shader and requires the user to configure. Lower values will preserve sharp detail, while higher values can smooth noise but soften fine features.
 
 <ReactPlayer
   url="https://assets.martysmods.com/shaders/launchpad/LaunchpadTexturedNormalsRadius.webm"
@@ -77,7 +77,7 @@ The Textured Normals Sample Radius setting controls how far around each pixel La
 />
 
 ### Textured Normals Intensity
-The Textured Normals Intensity setting controls how strongly the sampled texture details are applied to the smoothed normals. Lower values give a subtle bump effect, while higher values emphasize fine surface detail.
+Controls how strongly the sampled texture details are applied to the smoothed normals. Lower values give a subtle bump effect, while higher values emphasize fine surface detail.
 
 <ReactPlayer
   url="https://assets.martysmods.com/shaders/launchpad/LaunchpadTexturedNormalsIntensitiy%20-%20CUT%20ENCODED.webm"
@@ -93,15 +93,13 @@ The Textured Normals Intensity setting controls how strongly the sampled texture
 ### Textured Normals Quality
 Controls the detail level of textured normals from 1 (low) to 3 (high). Level 3 delivers the best visuals but may impact performance, so lower it if you need extra speed.
 
-## Debugging:
+## Debug:
 
 ### LAUNCHPAD_DEBUG_OUTPUT
-`LAUNCHPAD_DEBUG_OUTPUT` is a preprocessor definition for Launchpad that provides you with 5 different debug views to see what Launchpad is providing to other shaders. When set to `1`, you will be given a new option in your settings called "Debug Output Modes".
+`LAUNCHPAD_DEBUG_OUTPUT` provides you with 5 different debug views to see what Launchpad is providing to other shaders. When set to `1`, you will be given a new option in your settings called "Debug Output Modes".
 
 ![LaunchpadDebugPreprocessor](https://assets.martysmods.com/shaders/launchpad/launchpaddebugpreprocessor.webp)
 
-### Debug Output Modes
-Provides you with five different visual outputs in order to show you what information Launchpad is passing to other shaders.
 - **All**: Displays a 2x2 grid showing normals, optical flow, depth, and the original image.
 - **Optical Flow**: Visualizes the motion data captured by Launchpad for use by other shaders.
 - **Optical Flow Vectors**: Shows the directional flow of motion in greater detail.
