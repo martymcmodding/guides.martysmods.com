@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import './imagecomparisonslider.css';
+import './ImageComparisonSlider.css';
 
 export default function ImageComparisonSlider({
   beforeImage,

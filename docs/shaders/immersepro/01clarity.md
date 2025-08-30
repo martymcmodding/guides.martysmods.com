@@ -10,7 +10,7 @@ hide_title: true
 
 <!------------------------IMPORTS ---------------------------->
 
-import ImageComparisonSlider from '@site/src/components/imagecomparisonslider';
+import ImageComparisonSlider from '@site/src/components/ImageComparisonSlider';
 
 <!------------------------------------------------------------>
 

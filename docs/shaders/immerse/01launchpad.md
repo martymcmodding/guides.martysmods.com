@@ -10,7 +10,7 @@ hide_title: true
 
 <!----------------------- IMPORTS ---------------------------->
 
-import ImageComparisonSlider from '@site/src/components/imagecomparisonslider';
+import ImageComparisonSlider from '@site/src/components/ImageComparisonSlider';
 import YTConsentRhT4MFRQ5jo from '@site/src/components/YTConsent';
 import ReactPlayer from 'react-player'
 

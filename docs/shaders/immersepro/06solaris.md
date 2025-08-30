@@ -11,7 +11,7 @@ hide_title: true
 <!------------------------IMPORTS ---------------------------->
 
 import ReactPlayer from 'react-player'
-import ImageComparisonSlider from '@site/src/components/imagecomparisonslider';
+import ImageComparisonSlider from '@site/src/components/ImageComparisonSlider';
 
 <!------------------------IMPORTS ---------------------------->
 
