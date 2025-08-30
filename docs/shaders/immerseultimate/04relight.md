@@ -8,7 +8,7 @@ sidebar_position: 4
 hide_title: True
 ---
 
-![ReGradePlusHeader](https://assets.martysmods.com/headers/ReLightHeader.webp)
+![ReLightHeader](https://assets.martysmods.com/headers/ReLightHeader.webp)
 
 iMMERSE Ultimate: ReLight is a point-lighting solution for ReShade. Similar to studio lights in photography, ReLight allows you to change the lighting and adjust for more granular changes in the mood and details of the scenes. While you can use ReLight for any sort of scene, use-cases prove that close-ups or photos of humanoid models are the best cases for using ReLight. However, you're allowed to see as you fit.
 
@@ -19,70 +19,125 @@ Launchpad is REQUIRED to be at the top of the shader load order in order for ReL
 
 ---
 
-## ReLight's Debug
+## Preprocessor Definitions
 
-In order to better visualize what ReLight is providing to the scene, it is best to use ReLight's debug functions. You can find these debug functions at the bottom of the shader arguments.
+### **AMOUNT_OF_LIGHTS**
+Controls the number of available light sources (2-4). Default: 2 lights
+
+## Core Parameters:
+
+### **Ambient Intensity**
+Controls how much original scene lighting is preserved.
+  - `1.0`: Keeps all ambient light from the scene
+  - `0.0`: Removes all ambient light from the scene
+
+### **Shadow Tracing**
+Controls shadow casting behavior
+  - **Off**: No shadows cast by ReLight sources
+  - **Visibility Test**: Basic shadow casting with performance optimization
+  - **Recursive Path Tracing**: Advanced shadow casting with realistic light bounces
+
+### **Shadow Trace Quality**
+Defines shadow sharpness and quality
+  - **Low**: Basic shadow quality, fastest performance
+  - **Medium**: Balanced quality and performance
+  - **High**: Sharp shadows with moderate performance impact
+  - **Ultra**: Very sharp shadows with higher performance cost
+  - **Maximum**: Highest quality shadows, maximum performance impact
+
+### **Object Thickness**
+Controls how thick objects appear for shadow calculations
+  - Higher values create darker, more prominent shadows
+  - Lower values create lighter, less prominent shadows
+
+## Light Sources:
+
+### **Active**
+Enables/disables the light source
+
+### **Type**
+Light source type selection
+  - **Sphere**: Point light with defined position in 3D space
+  - **Infinite**: Directional light from a specific angle
+
+### **Temp / Tint**
+Color temperature and tint control for the light that adjusts the color characteristics of the emitted light
+
+### **Intensity**
+Controls brightness and light strength where higher values will result in brighter or more intense lighting
+
+### **Shadow Penumbra**
+Controls shadow softness and edge blurring
+  - Higher values create softer, more diffused shadows
+  - Lower values create sharper, more defined shadows
+
+### Light Positioning
+
+**Sphere Light (Point Light)**
+- **Position X Y Z**: 3D coordinates for light placement
+  - X: Horizontal position (left/right)
+  - Y: Vertical position (up/down)
+  - Z: Depth position (front/back)
+
+**Infinite Light (Directional)**
+- **Azimuth**: Horizontal angle of light direction (0.0 to 1.0)
+- **Elevation**: Vertical angle of light direction (0.0 to 1.0)
+
+## Sub-Surface Scattering (SSS):
+
+### **Enable Sub-Surface Scattering**
+Toggles the SSS effect on/off
+
+### **Subsurface Scattering Quality** 
+Controls the quality of the SSS simulation
+  - **Very Low**: Basic simulation, fastest performance
+  - **Low**: Improved quality with minimal performance impact
+  - **Medium**: Balanced quality and performance
+  - **High**: Best quality with higher performance cost
+
+### **SSS Translucency Radius** 
+Controls how deep light penetrates into surfaces
+  - Higher values create brighter, more colorful subsurface lighting
+  - Lower values create subtle, less pronounced effects
+
+### **SSS Saturation**
+Controls color intensity in subsurface areas
+  - Higher values create more vibrant subsurface colors
+  - Lower values create more muted, natural effects
+
+### **SSS Diffusion Radius**
+Controls how far subsurface lighting spreads
+  - Higher values create wider, more diffused subsurface effects
+  - Lower values create more localized, focused effects
+
+### **SSS Skin Hue**
+Defines the target color for skin detection thats used to identify areas where SSS should be applied
+
+### **SSS Skin Hue Tolerance**
+Controls how strict the skin color matching is
+  - Higher values require closer color matches
+  - Lower values allow more variation in detected skin tones
+
+## Debug
 
 ![Debug menu preview](https://assets.martysmods.com/shaders/relight/relight-debug-menu.webp)
 
-- **Debug Outputs:** Shows the different debug modes that ReLight provides. These are: "None," "Validation Layer (all)," "Lighting," "SSS Skin Mask," and "SSS Translucency." Each of which is self explanatory.
+### Debug Outputs
+Various visualization modes to help understand ReLight's effects:
+- **None**: Standard rendering without debug information
+- **Validation Layer (all)**: Shows all debug information simultaneously
+- **Lighting**: Displays lighting calculations and light distribution
+- **SSS Skin Mask**: Shows which areas are detected as skin for SSS
+- **SSS Translucency**: Visualizes subsurface scattering effects
 
-- **Light Overlay:** Controls when the ReLight spheres appear on screen. The options to the user are: "Disabled," "Show while GUI is open," "Show while GUI is open and on screenshots," and "Show always." Each of which is self explanatory.
+### Light Overlay
+Controls when and how light source indicators appear on screen:
+- **Disabled**: No light indicators shown
+- **Show while GUI is open**: Indicators only visible when ReShade menu is open
+- **Show while GUI is open and on screenshots**: Indicators visible in menu and screenshots
+- **Show always**: Indicators always visible
 
-- **Light Overlay Opacity:** Controls the opacity of the ReLight spheres on screen. The value can be controlled from `0.100` to `1.000`. `1.00` being as opaque as possible, while `0.100` being as transparent/translucent as possible.
-
-![Debug output preview](https://assets.martysmods.com/shaders/relight/relight-debug.webp)
-
-## General Shader Arguments
-
-Similar to RTGI, in the "Global" section of ReLight, you can tweak how much light from the original scene is kept and the overall parameters for the lighting and shadows.
-
-The options for you to configure are:
-
-- **Ambient Intensity:** How much of the original scene lighting is kept. `1` being all of the ambient light from the scene, `0` being no ambient light from the scene.
-
-- **Shadow Tracing:** This argument will control if and how the lights placed in ReLight will end up casting shadows. The options to choose from are "Off," "Visibility Test," and "Recursive Path Tracing."
-
-- **Shadow Trace Quality:** Shadow Trace Quality will define the quality of the shadows that are being traced. The higher the quality, the more samples per ray are being accounted for, and therefore the sharper the shadows end up being.
-
-- **Object Thickness:** Will define how thick or thin the objects are within the scene. Thicker objects will cast darker and more prominent shadows, while thinner ones will often cast lighter and less prominent shadows.
-
-## Light Sources and Parameters
-
-Each light source will have its category identified as "Light #." The number of light sources can be changed by going to the bottom of the shader's parameter list and selecting the `AMOUNT_OF_LIGHTS` preprocessor definition. By default, it comes with 2 lights and at most can go up to 4.
-
-- **Active:** If the light source is active or not.
-
-- **Type:** This will control what type of light that you are using for the specific light source you're configuring. You can choose between Point or Infinite.
-
-- **Temp / Tint:** This argument allows the user to set the tint and tint control of the particular light source.
-
-- **Intensity:** How bright and large the light source is within the screen space.
-
-- **Shadow Penumbra:** Penumbra is the effect of the shadow when it's leaking outside from being partially hit by light. Changing the argument for "Shadow Penumbra" will allow you to adjust how soft the shading cast from your ReLight probes will be in the final image.
-
-- **Infinite Light: Azimuth/Elevation:** This will end up controlling how the Infinite Light mode will end up casting light into the scene based on Azimuth and Elevation.
-
-- **Point Light: Position:** This argument will control where the light source is positioned within the screen space. First is horizontal (X), second is vertical (Y), and the third is the depth (Z).
-
-## Humans and Sub-Surface Scattering
-
-Sub-Surface Scattering (SSS) is the term for the light which bounces from inside the skin or from inside translucent surfaces. It is very common with humans and other organic matter, such as plants.
-
-The shader also has a quite good simulation for that effect, despite not knowing what is organic and what isn't.
-
-Below are the parameters related to that:
-
-- **Enable Sub-Surface Scattering:** Enables the SSS function in the shader. Not all scenes require it, so having a toggle is very helpful and saves on performance.
-
-- **Subsurface Scattering Quality:** Changes the quality of the effect. Higher quality will have better light traversal on those areas, however, with a bigger performance hit.
-
-- **SSS Translucency Radius:** Defines how deep or thick the "translucent" surfaces are. With higher values bringing more brighter and colorful light inside those areas.
-
-- **SSS Saturation:** How saturated the colors in those areas are.
-
-- **SSS Diffusion Radius:** How farther the sub-surface lighting will bleed onto the nearby surfaces.
-
-- **SSS Skin Hue:** In the color wheel, defines what color / hue should be used to detect what is a fitting area for the Subsurface Scattering to consider as a skin.
-
-- **SSS Skin Hue Tolerance:** Defines how strict the color has to be to be considered as a skin part. The higher the value, the closer to that absolute color.
+### Light Overlay Opacity
+Controls the transparency of light source indicators:
+- `1.0`: Fully opaque indicators
+- `0.1`: Very transparent indicators
