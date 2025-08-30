@@ -9,32 +9,51 @@ hide_title: True
 
 # LUT Manager
 
-iMMERSE Ultimate: LUT Manager combines a Look-Up-Table addon and shader in ReShade to manage LUT textures on the fly. It allows users to easily switch between different LUTs and mark commonly used LUTs all without having to create or utilize a shader for each individual LUT image.
+iMMERSE Ultimate: LUT Manager combines a Look-Up-Table addon and shader in ReShade to manage LUT textures dynamically. It allows users to easily switch between different LUTs and mark commonly used LUTs without creating individual shaders for each LUT image.
 
 :::warning
-LUT Manager requires the Addon Support build of ReShade in order to function properly.
+LUT Manager requires the Addon Support build of ReShade to function properly.
 :::
 
 ---
 
-## Downloading and Installing LUTs
+## Setup:
 
-LUTs are a format of predefined color grades. In ReShade, they're often in the format of your standard PNG file. You can browse common LUT repositories [such as MLUT](https://github.com/TheGordinho/MLUT) in order to view, find, and download LUTs at your pleasure to be used in LUT Manager.
+### Downloading LUTs
+LUTs are predefined color grading files, typically in PNG format. You can browse common LUT repositories such as [MLUT](https://github.com/TheGordinho/MLUT) to find and download LUTs for use with LUT Manager.
 
-Once you have the LUTs that you desire, create a folder in the root of your game folder named "LUTs" in the game directory and place the LUT textures that you've acquired inside. If you are struggling to find the location of your root game folder, please see our guide on [how to locate your game's executable](../../additionalguides/findexecutable) for assistance!
+### Installing LUTs
+1. Create a folder named "LUTs" in your game's root directory
+2. Place downloaded LUT textures inside this folder
+3. For help locating your game folder, see our guide on [how to locate your game's executable](../../additionalguides/findexecutable)
 
-## Using LUT Manager
+## Usage:
 
-Go to the "Add-Ons" tab within ReShade and you will see MartysMods LUT Manager. Once there, you'll see the names of all the LUTs you have installed and you can click the files to open the LUT list. After that, select a LUT from the list and the colors will change in real-time.
+### Accessing LUT Manager
+1. Go to the "Add-Ons" tab within ReShade
+2. Locate "MartysMods LUT Manager"
+3. Click on the addon to open the LUT list
+4. Select a LUT to apply color changes in real-time
 
-![Pic of the LUT manager Window](https://assets.martysmods.com/shaders/lutmanager/lutmanager_window.webp)
+![LUT Manager Window](https://assets.martysmods.com/shaders/lutmanager/lutmanager_window.webp)
 
-You can also right-click any of the LUTs you like the most and add them to a favorites list for easy-finding later.
+### Favorites System
+Right-click any LUT to add it to your favorites list for quick access later.
 
 ![LUT Manager Favorites Window](https://assets.martysmods.com/shaders/lutmanager/lutmanager_fav.webp)
 
-## Shader Arguments
+## Shader Parameters:
 
-- **Enhanced LUT Quality:** Upsamples the LUTs in order to provide a higher quality color grading application to the current screen.
-- **Show all LUTs in its current atlas side-by-side:** Provides a grid view of all the LUTs that are provided in the currently enabled atlas
- ![LUTATLAS](https://assets.martysmods.com/shaders/lutmanager/lutmanager_atlas.webp)
+### Enhanced LUT Quality
+Upsamples LUTs to provide higher quality color grading. This feature is particularly effective for LUTs with resolutions below 32x32x32, dramatically improving precision through high-quality upsampling.
+
+### Show LUT Atlas Preview
+Displays a grid view of all LUTs in the currently enabled atlas for easy comparison and selection.
+
+![LUT Atlas](https://assets.martysmods.com/shaders/lutmanager/lutmanager_atlas.webp)
+
+### Blend Intensity (Chroma)
+Controls the strength of color grading applied to chroma (color) components. Range: 0.0 to 1.0. Higher values apply stronger color effects.
+
+### Blend Intensity (Luma)
+Controls the strength of color grading applied to luma (brightness) components. Range: 0.0 to 1.0. Higher values apply stronger brightness effects.
