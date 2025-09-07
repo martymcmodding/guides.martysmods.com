@@ -9,7 +9,7 @@ hide_title: true
 
 # Downloading ReShade
 
-ReShade is an open-sourced, generic, post-processing tool that allows users to currate the looks that they want in their game of choice. In order to reduce abuse from ReShade in online/multiplayer games, there are two builds that you can download. The latest version of ReShade will always be available at [ReShade's Homepage](https://reshade.me/#download).
+ReShade is an open-sourced, generic, post-processing tool that allows users to currate the looks that they want in their game of choice. In order to reduce abuse from ReShade in online/multiplayer games, there are two builds that you can download at [ReShade's webpage](https://reshade.me/#download).
 
 ---
 
