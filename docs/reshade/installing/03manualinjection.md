@@ -1,7 +1,7 @@
 ---
 title: "Manually Injecting ReShade"
 sidebar_label: "Manually Injecting ReShade"
-description: "Certain games do not support automatic ReShade injection during runtime. This is especially common for UWP (Microsoft Store) games, which often disallow automatic injection."
+description: "When all else fails, force it."
 slug: /reshade/installing/reshademanualinjection
 sidebar_position: 3
 hide_title: true
@@ -9,17 +9,15 @@ hide_title: true
 
 # Manually Injecting ReShade
 
-Certain games do not support automatic ReShade injection during runtime. This is especially common for UWP (Microsoft Store) games, which often disallow automatic injection. Thankfully, Crosire has developed a tool for manual DLL injection into games.
-
-:::info
-When manually injecting ReShade using Crosire's Inject Tool, you have to [manually install shaders](./reshademanualshaderinstall) as well.
-:::
+Certain games do not support automatic ReShade injection during runtime. This is especially common for UWP (Microsoft Store) games, which often disallow automatic injection. Thankfully, Crosire has developed a tool for manual DLL injection into games. This guide will walk you through each step of the manual injection process, so you can get ReShade working in any supported game.
 
 ---
 
-## Identify Your Game’s Architecture and Rendering API
+## Determine Game Architecture and Rendering API
 
-If you already know your game's architecture and Rendering API, you're more than welcome to skip this part of the guide. However, if you are unsure, make sure to navigate to the [PCGamingWiki website](https://www.pcgamingwiki.com/wiki/Home). This website is home to many wiki pages with just about every game that exists on PC.
+Before manually installing ReShade, you need to identify two key details about your game: its bit architecture (32-bit or 64-bit) and the Rendering API it uses (such as DirectX 9, DirectX 10, DirectX 11, DirectX 12, or OpenGL). This information is essential for selecting the correct ReShade binary and renaming it properly so your game can load it.
+
+You can usually find your game's architecture and Rendering API on the [PCGamingWiki website](https://www.pcgamingwiki.com/wiki/Home).
 
 ## Download the ReShade Injector
 
@@ -30,37 +28,57 @@ Choose the injector based on your game's architecture:
 
 ## Download the ReShade Setup Tool
 
-The next step will be to download the latest ReShade installer from the [official ReShade website](https://reshade.me). The installer holds the ReShade binaries required in order to manually install ReShade.
+Now that you have the bit arcitechture and Rendering API, you'll need to grab the latest ReShade Setup Tool to continue. This can be found at the bottom of the [ReShade website](https://reshade.me/#download).
 
-## Download and Install 7-Zip
+## Extract the ReShade Binary
 
-This guide uses 7-Zip in order to extract the ReShade binaries from the ReShade Installer. You can download and install the latest `.msi` version from [7-Zip's official website](https://www.7-zip.org/download.html). Keep in mind that WinRAR can serve as an alternative, but this guide utilizes 7-Zip for convenience.
+After downloading the latest ReShade Setup Tool, you need to extract the ReShade binary files from the installer. The ReShade Setup Tool is distributed as an executable file, but you can open it with an archive manager like 7-Zip or WinRAR to access its contents. This guide will use 7-Zip for clarity.
 
-## Extract the ReShade DLL
+Right-click the ReShade Setup Tool file and choose "Open archive" with 7-Zip. A new window will open, showing the files inside the installer.
 
-Once 7-Zip is installed, right-click the ReShade Installer `ReShade_Setup_x.x.x.exe`, hover over 7-Zip, and select the "Open archive" option.
+![Open with 7-Zip](https://assets.martysmods.com/reshade/installing/Manual7ZipOpen.webp)
 
-![7ZipOpen](https://assets.martysmods.com/reshade/installing/Manual7ZipOpen.webp)
-
-Upon clicking "Open archive," a new window will appear that holds the two ReShade binaries. You can extract the DLL that relates to your game's architecture by dragging the file out of the 7-Zip window to your desktop.
+Inside the archive, you will find two DLL files. These are the ReShade binaries, and you need to choose the one that matches your game's architecture:
 
 | ReShade Binary Architecture | DLL Name      |
-|-----------------------------|---------------|
-| ReShade's 64-Bit Binary     | ReShade64.dll |
-| ReShade's 32-Bit Binary     | ReShade32.dll |
+| --------------------------- | ------------- |
+| 64-bit                      | ReShade64.dll |
+| 32-bit                      | ReShade32.dll |
 
-## Move the ReShade and Inject Binary
+To extract the correct DLL, simply drag it from the 7-Zip window to your desktop or another folder. Make sure you select the DLL that matches whether your game is 32-bit or 64-bit. If you are unsure about your game's architecture, you can usually find this information on PCGamingWiki or by checking the properties of your game's executable file.
 
-You will need to move the ReShade DLL and Inject EXE into the root folder of your game, the same directory where the game's executable is located. If you're unsure of your game's executable location, follow [our guide on identifying your game's executable](../../additionalguides/findexecutable).
+## Rename the DLL File
 
-![InGameFolder](https://assets.martysmods.com/reshade/installing/injectioninstall/reshade32InGameFolder.webp)
+After extracting the correct ReShade binary, you need to rename the DLL file so that your game recognizes and loads it. The name you choose depends on the rendering API your game uses. Use the table below to determine the correct name for your DLL file:
+
+| Rendering API      | DLL Name       |
+| ------------------ | -------------- |
+| DirectX 9          | `d3d9.dll`     |
+| DirectX 10         | `d3d10.dll`    |
+| DirectX 11         | `d3d11.dll`    |
+| DirectX 12         | `d3d12.dll`    |
+| OpenGL             | `opengl32.dll` |
+
+## Place the DLL in Your Game Directory
+
+After renaming the DLL file according to your game's rendering API, move the DLL into your game's main directory. This is the same folder where your game's executable file is located. 
+
+If you are unsure where this is, you can usually find it by right-clicking your game in your game launcher (such as Steam or GOG Galaxy), selecting "Manage" or "Browse local files," and looking for the folder that contains the executable. Alternatively, you can follow [our guide for finding your game's executable](../../additionalguides/findexecutable)
+
+## Install Shader Repositories and Add-ons
+
+After injecting ReShade, you'll need to add shader repositories for it to have any visual effect in your games. Without shaders, ReShade will not change your game's appearance. To go through this process, you can take a look at our guide for [manually installing shaders](./reshademanualshaderinstall). This guide will walk you through downloading shader repositories, extracting them, and placing them in the correct folder so ReShade can detect and use them.
+
+If you want to add additional functionality to ReShade, you can install Add-ons here as well. For step-by-step instructions, see our guide for [manually installing Add-ons](./reshademanualaddoninstall).
 
 ## Manually Inject ReShade
 
 The last step for using the ReShade injector is quite simple, but you may need to follow closely. Make sure to close your game, and then navigate to your game's directory. Then, open a command prompt terminal by typing `CMD` into your File Explorer's address bar.
 
-![CMDAddressBar](https://assets.martysmods.com/reshade/installing/injectioninstall/GameDirectoryCMDAddressBar.webp)
+![CMD Address Bar](https://assets.martysmods.com/reshade/installing/injectioninstall/GameDirectoryCMDAddressBar.webp)
 
-Once CMD has opened, make sure to type: `inject[32/64].exe "name_of_the_process.exe"` and hit Enter.
+Once CMD has opened, make sure to type: `inject[32/64].exe "name_of_the_process.exe"` and hit Enter. Replace `[32/64]` with the appropriate architecture and `name_of_the_process.exe` with your game's actual executable name.
 
-![InjectionParameters](https://assets.martysmods.com/reshade/installing/injectioninstall/InjectionParametersInject32.webp)
+![Injection Parameters](https://assets.martysmods.com/reshade/installing/injectioninstall/InjectionParametersInject32.webp)
+
+After running the injection command, launch your game. You should see the "ReShade is now installed successfully" banner at the top of your screen when the injection is successful.
