@@ -63,7 +63,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea {
   --ifm-footer-link-color: #FFFFFFDD;
   width: 100%;
   margin: 0 auto;
-  padding: 12px;
+  padding: 1.85rem;
   text-align: center;
   display: flex;
   flex-wrap: wrap;

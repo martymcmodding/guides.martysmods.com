@@ -53,7 +53,7 @@
   justify-content: center;
   width: 100%;
   max-width: 1200px;
-  padding: 0 2rem;
+  padding: 2rem 2rem;
   text-align: center;
   position: relative;
   z-index: 3;
@@ -125,7 +125,7 @@
 /* Feature Sections */
 .featureSection {
   width: 100%;
-  padding: 4rem 0;
+  padding: 1.85rem 0;
   background: #191c20;
   color: white;
   position: relative;
@@ -135,10 +135,10 @@
 .featureContainer {
   display: flex;
   align-items: center;
-  max-width: 1200px;
+  max-width: var(--ifm-container-width-xl) !important;
   margin: 0 auto;
   padding: 0 2rem;
-  gap: 4rem;
+  gap: 0rem;
 }
 
 .featureText {
@@ -187,7 +187,7 @@
 .featureVisual {
   flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
 }
 
@@ -265,8 +265,8 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
-  min-height: 200px;
+  max-width: 400px;
+  height: auto;
   background: transparent;
   border: none;
   padding: 0;
@@ -293,7 +293,8 @@
   }
   
   .visualPanel {
-    max-width: 500px;
+    max-width: none;
+    width: 400px;
   }
 }
 
