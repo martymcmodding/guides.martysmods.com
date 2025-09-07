@@ -2,5 +2,5 @@ import React from 'react';
 import styles from '../pages/index.module.css';
 
 export default function HeroShader() {
-  return <div className={styles.shaderCanvas} style={{ backgroundColor: 'rgb(5, 20, 31)' }} />;
+  return <div className={styles.shaderCanvas} />;
 }

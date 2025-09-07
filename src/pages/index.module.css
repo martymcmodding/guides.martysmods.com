@@ -6,9 +6,35 @@
   justify-content: center;
   width: 100%;
   min-height: 35vh;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.8) 0%, rgba(22, 33, 62, 0.8) 50%, rgba(15, 52, 96, 0.8) 100%);
   color: var(--ifm-font-color-base);
   overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://assets.martysmods.com/landingpage/HeroBanner.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(2px);
+  z-index: 0;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 153, 250, 0.2);
+  z-index: 1;
 }
 
 .shaderCanvas {
@@ -17,7 +43,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 2;
   pointer-events: none;
 }
 
@@ -30,13 +56,13 @@
   padding: 0 2rem;
   text-align: center;
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 .heroContent {
   max-width: 800px;
   position: relative;
-  z-index: 3;
+  z-index: 4;
 }
 
 .heroTitle {
