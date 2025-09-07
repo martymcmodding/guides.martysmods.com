@@ -29,7 +29,7 @@ When using **Vulkan**, add-on files need to be in the same location as the game'
 
 ---
 
-## Installing for DirectX and OpenGL
+## Install for DirectX and OpenGL
 
 1. Locate the ReShade binary location. Typically this is in the same location as the game's executable, however there are cases where the ReShade binary exists in an external folder (FiveM/Source Games). If you cannot find the location of your ReShade binary you can:
      1. Open your game.
@@ -39,7 +39,7 @@ When using **Vulkan**, add-on files need to be in the same location as the game'
 2. Loosely place your add-on files (denoted with extenions addon.32 or addon.64) into the folder where your ReShade binary exists. Make sure to not leave your add-ons in a folder, otherwise they will not load.
 3. Restart/Start your game.
 
-## Installing for Vulkan
+## Install for Vulkan
 
 1. Locate your game's executable location. Typically this is in the root folder of your game's installation, however, there are cases where the game's executable is outside of the root folder (All Unreal Engine Games). If you cannot find the location of your game executable, follow through our [guide on finding your game executable](../../additionalguides/findexecutable).
 2. Loosely place your add-on files (denoted with extenions addon.32 or addon.64) into the folder where your game executable exists. Make sure to not leave your add-ons in a folder, otherwise they will not load.
