@@ -31,7 +31,7 @@ Once you've found your game folder, navigate to the parent directory (the folder
 
 3. Click "Advanced" button in the bottom right corner
 
-     ![PropertiesSecurityAdvanced](https://assets.martysmods.com/additionalguides/permissions/SecurityAdvancedButton.webp)
+     ![PropertiesSecurityAdvanced](https://assets.martysmods.com/additionalguides/permissions/SecurityAdvancedButton2.webp)
 
 This opens the Advanced Security Settings window where we'll make all our changes.
 
@@ -41,7 +41,7 @@ Windows normally inherits permissions from parent folders, which can cause probl
 
 1. In the Advanced Security Settings window, click "Disable inheritance" at the bottom left
 
-     ![DisableInheritanceButton](https://assets.martysmods.com/additionalguides/permissions/DisableInheritanceButton.webp)
+     ![DisableInheritanceButton](https://assets.martysmods.com/additionalguides/permissions/DisableInheritanceButton2.webp)
 
 2. A popup will appear asking "What would you like to do with current inherited permissions?", so, click "Remove all inherited permissions from this object"
 
@@ -57,7 +57,7 @@ Now we need to make you the owner of the folder. This gives you the right to cha
 
 1. At the top of the Advanced Security Settings window, look for "Owner:" and click the blue "Change" link next to it (it usually has a shield icon)
 
-     ![Owner](https://assets.martysmods.com/additionalguides/permissions/OwnerSettingChange.webp)
+     ![Owner](https://assets.martysmods.com/additionalguides/permissions/OwnerSettingChange2.webp)
 
 2. A "Select User or Group" window will appear
 
@@ -82,7 +82,7 @@ Now we need to make you the owner of the folder. This gives you the right to cha
 7. Click "OK" again to close the "Select User or Group" window
 
 You should now see your username in the Owner field.
-![ShowOwnership](https://assets.martysmods.com/additionalguides/permissions/OwnerSettingShowUser.webp)
+![ShowOwnership](https://assets.martysmods.com/additionalguides/permissions/OwnerSettingShowUser2.webp)
 
 ## Apply Ownership to All Subfolders
 
@@ -90,11 +90,11 @@ We need to make sure you own not just the main folder, but everything inside it 
 
 1. Check the box labeled "Replace owner on subcontainers and objects"
 
-     ![ReplaceOwnerSubcontainer](https://assets.martysmods.com/additionalguides/permissions/ReplaceSubContainer.webp)
+     ![ReplaceOwnerSubcontainer](https://assets.martysmods.com/additionalguides/permissions/ReplaceSubContainer2.webp)
 
 2. Check the box labeled "Replace all child object permission entries with inheritable permission entries from this object"
 
-     ![ReplaceChildObject](https://assets.martysmods.com/additionalguides/permissions/ReplaceChildObject.webp)
+     ![ReplaceChildObject](https://assets.martysmods.com/additionalguides/permissions/ReplaceChildObject2.webp)
 
 3. Click "Apply" at the bottom right
 
@@ -110,7 +110,7 @@ Now we'll give yourself permission to read, write, and modify everything in the 
 
 1. In the Advanced Security Settings window, click "Add" at the bottom left
 
-     ![AddPrincipalButton](https://assets.martysmods.com/additionalguides/permissions/AddPrincipalButton.webp)
+     ![AddPrincipalButton](https://assets.martysmods.com/additionalguides/permissions/AddPrincipalButton2.webp)
 
 2. A "Permission Entry" window will open
 
@@ -136,17 +136,17 @@ Now we'll give yourself permission to read, write, and modify everything in the 
 
    - Type: "Allow" and Applies to: "This folder, subfolders, and files"
 
-         ![TypeAndAppliesTo](https://assets.martysmods.com/additionalguides/permissions/TypeandAppliesTo.webp)
+         ![TypeAndAppliesTo](https://assets.martysmods.com/additionalguides/permissions/TypeandAppliesTo2.webp)
 
 6. Check the "Full Control" box (this should automatically check all the other boxes)
 
-     ![FullControlSelect](https://assets.martysmods.com/additionalguides/permissions/FullControlSelection.webp)
+     ![FullControlSelect](https://assets.martysmods.com/additionalguides/permissions/FullControlSelection2.webp)
 
 7. Click "OK"
 
 You should now see your username listed in the permissions list.
 
-![UserListedPrinciple](https://assets.martysmods.com/additionalguides/permissions/UserListedPrincipal.webp)
+![UserListedPrinciple](https://assets.martysmods.com/additionalguides/permissions/UserListedPrincipal2.webp)
 
 ## Give Applications Full Control
 
@@ -154,7 +154,7 @@ Finally, we need to give all applications (including ReShade) permission to acce
 
 1. Click "Add" again in the Advanced Security Settings window
 
-     ![AddPrincipalButton](https://assets.martysmods.com/additionalguides/permissions/AddPrincipalButton.webp)
+     ![AddPrincipalButton](https://assets.martysmods.com/additionalguides/permissions/AddPrincipalButton2.webp)
 
 2. Click "Select a principal" in the new Permission Entry window
 
