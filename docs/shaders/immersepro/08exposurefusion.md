@@ -3,7 +3,7 @@ title: Exposure Fusion
 sidebar_title: "Exposure Fusion"
 description: "Exposure Fusion improves visibility by selectively adjusting brightness across the frame."
 slug: /shaders/immersepro/exposurefusion
-sidebar_position: 7
+sidebar_position: 8
 hide_title: true
 ---
 
