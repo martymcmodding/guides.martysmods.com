@@ -2,9 +2,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import clientRedirects from '@docusaurus/plugin-client-redirects';
 
 /** @type {import('@docusaurus/types').Config} */
-
-const config = 
-{
+const config = {
   title: "Marty's Mods Guides",
   tagline: 'Your extensive guide site for all things ReShade.',
   favicon: 'img/favicon.ico',
@@ -13,58 +11,54 @@ const config =
   organizationName: 'MartysMods',
   projectName: 'guides.martysmods.com',
   onBrokenLinks: 'ignore',
-  onBrokenMarkdownLinks: 'ignore',
-  i18n: 
-  {
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'ignore',
+    },
+  },
+
+  i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
-  presets: 
-  [
+
+  presets: [
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
-      (
-        {
-        docs: 
-        {
+      ({
+        docs: {
           routeBasePath: '/',
           sidebarPath: './sidebars.js',
         },
-        theme: 
-        {
+        theme: {
           customCss: './src/css/custom.css',
         },
       }),
     ],
   ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      navbar: 
-      {
+      navbar: {
         title: "",
-        logo: 
-        {
+        logo: {
           alt: "Marty's Mods Logo",
           src: 'img/mmlogo.webp',
         },
-        items: 
-        [
+        items: [
           { type: 'docSidebar', sidebarId: 'ReShade', position: 'left', label: 'ReShade' },
           { type: 'docSidebar', sidebarId: 'Shaders', position: 'left', label: 'Shaders' },
           { type: 'docSidebar', sidebarId: 'Additional Guides', position: 'left', label: 'Additional Guides' },
         ],
       },
-      footer: 
-      {
+      footer: {
         style: 'dark',
-        links: 
-        [
+        links: [
           {
             title: 'Documentation',
-            items: 
-            [
+            items: [
               { label: 'ReShade', to: '/reshade/downloading' },
               { label: 'Shaders', to: '/shaders/immerse/launchpad' },
               { label: 'Additional Guides', to: '/additionalguides/apiwrappers/dxvk' },
@@ -72,16 +66,14 @@ const config =
           },
           {
             title: 'Community',
-            items: 
-            [
+            items: [
               { label: "Marty's Mods Discord", href: 'https://discord.gg/wY49KMxjHT' },
               { label: "ReShade's Discord", href: 'https://discord.gg/PrwndfH' },
             ],
           },
           {
             title: 'More',
-            items: 
-            [
+            items: [
               { label: 'Main Website', href: 'https://martysmods.com' },
               { label: 'Patreon', href: 'https://www.patreon.com/c/mcflypg/' },
               { label: 'YouTube', href: 'https://www.youtube.com/@martysmods/videos' },
@@ -90,12 +82,10 @@ const config =
           },
         ],
       },
-      prism: 
-      {
+      prism: {
         theme: prismThemes.dracula,
       },
-      colorMode: 
-      {
+      colorMode: {
         defaultMode: 'dark',
         disableSwitch: true,
         respectPrefersColorScheme: false,

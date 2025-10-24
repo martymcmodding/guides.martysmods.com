@@ -20,7 +20,7 @@ iMMERSE Pro: RTGI is a state-of-the-art ray traced global illumination shader th
 
 :::warning
 Launchpad is REQUIRED to be at the top of the shader load order for RTGI to function properly.
-![shaderloadorder](./images/RTGILoadOrder3.webp)
+![shaderloadorder](https://assets.martysmods.com/shaders/rtgi/RTGIDiffuseLoadOrder3.webp)
 :::
 
 ---
@@ -30,7 +30,7 @@ Launchpad is REQUIRED to be at the top of the shader load order for RTGI to func
 ### Thickness
 The first step in configuring RTGI is setting the **Object Thickness** parameter. 
 
-![shaderloadorder](./images/RTGIObjectThicknessHighlight.webp)
+![shaderloadorder](https://assets.martysmods.com/shaders/rtgi/RTGIDiffuseObjectThicknessHighlight.webp)
 
 RTGI can only directly observe surfaces currently facing the camera, so it must estimate how far objects extend on their occluded sides. 
 
@@ -43,7 +43,7 @@ Be cautious of overshooting the optimal value:
 - **Too Low**: Results in insufficient occlusion, leaving areas without proper depth definition
 
 <ReactPlayer
-  url="https://zarith.us/jordan%5C2025_JORDAN-ZARITHDE/RTGIObjectThickness.webm"
+  url="https://assets.martysmods.com/shaders/rtgi/RTGIDiffuseObjectThickness2.webm"
   playing={false}
   muted={true}
   controls={true}
@@ -64,7 +64,7 @@ In order to see the light being blended into your scene, it's best to disable th
 These intensity values are largely based on personal preference and artistic intent, but a fundamental rule is that no propagated lighting should exceed the brightness of the original light source.
 
 <ReactPlayer  
-  url="https://zarith.us/jordan%5C2025_JORDAN-ZARITHDE/RTGIIntensity.webm"  
+  url="https://assets.martysmods.com/shaders/rtgi/RTGIDiffuseIntensity2.webm"  
   playing={false}  
   muted={true}  
   controls={true}  
@@ -91,7 +91,7 @@ The **Smoothed Normals** and **Textured Normals** options, available through the
 The **Fadeout** controls allow you to set the maximum distance that RTGI will cast its ambient occlusion and bounce lighting. This is useful to avoid interference with distant fog or to gain back a small amount of performance.
 
 <ReactPlayer  
-  url="https://zarith.us/jordan%5C2025_JORDAN-ZARITHDE/RTGIFadeout.webm"  
+  url="https://assets.martysmods.com/shaders/rtgi/RTGIDiffuseFadeout2.webm"  
   playing={false}  
   muted={true}  
   controls={true}  
@@ -122,8 +122,8 @@ The beginning underscore in `_MARTYSMODS_TAAU_SCALE` is mandatory. Without it, T
 RTGI provides several debug visualization modes to assist with parameter tuning and understanding the shader's behavior:
 
 - **Disabled**: Standard RTGI output with all effects applied
-   ![Disabled](./images/RTGIDebugOff.webp)
+   ![Disabled](https://assets.martysmods.com/shaders/rtgi/RTGIDiffuseDebugOff.webp)
 - **Diffuse RTGI**: Shows only the diffuse lighting calculations, useful for `Obeject Thickness` adjustments.
-   ![DiffuseDebug](./images/RTGIDiffuseDebug.webp)
+   ![DiffuseDebug](https://assets.martysmods.com/shaders/rtgi/RTGIDiffuseDebug.webp)
 - **Validation Layer**: Comprehensive debug output showing Depth, Diffuse, Normal Vectors, Optical Flow, and Albedo data
-   ![ValidationLayer](./images/RTGIValidationLayer.webp)
+   ![ValidationLayer](https://assets.martysmods.com/shaders/rtgi/RTGIDiffuseValidationLayer.webp)
