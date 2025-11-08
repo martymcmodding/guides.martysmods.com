@@ -47,21 +47,9 @@ Inside the archive, you will find two DLL files. These are the ReShade binaries,
 
 To extract the correct DLL, simply drag it from the 7-Zip window to your desktop or another folder. Make sure you select the DLL that matches whether your game is 32-bit or 64-bit. If you are unsure about your game's architecture, you can usually find this information on PCGamingWiki or by checking the properties of your game's executable file.
 
-## Rename the DLL File
-
-After extracting the correct ReShade binary, you need to rename the DLL file so that your game recognizes and loads it. The name you choose depends on the rendering API your game uses. Use the table below to determine the correct name for your DLL file:
-
-| Rendering API      | DLL Name       |
-| ------------------ | -------------- |
-| DirectX 9          | `d3d9.dll`     |
-| DirectX 10         | `d3d10.dll`    |
-| DirectX 11         | `d3d11.dll`    |
-| DirectX 12         | `d3d12.dll`    |
-| OpenGL             | `opengl32.dll` |
-
 ## Place the DLL in Your Game Directory
 
-After renaming the DLL file according to your game's rendering API, move the DLL into your game's main directory. This is the same folder where your game's executable file is located. 
+Now that you have the right ReShade binary, go ahead and move this into your game's directory. This is the same folder where your game's executable file is located. 
 
 If you are unsure where this is, you can usually find it by right-clicking your game in your game launcher (such as Steam or GOG Galaxy), selecting "Manage" or "Browse local files," and looking for the folder that contains the executable. Alternatively, you can follow [our guide for finding your game's executable](../../additionalguides/findexecutable)
 
