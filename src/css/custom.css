@@ -19,6 +19,10 @@
   font-style: italic;
 }
 
+html, body {
+  background-color: #191c20 !important;
+}
+
 html, body, h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea {
   font-family: 'Glober', sans-serif !important;
 }
@@ -39,13 +43,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea {
   --ifm-color-scheme: light;
   --ifm-color-primary: #0099fa;
   --ifm-color-secondary: #ebedf0;
-  --ifm-background-color: #202329;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-background-color: #191c20;
   --ifm-font-color-base: #FFFFFFDD !important;
   --ifm-code-background: #191c20 !important;
   --ifm-code-font-size: 95%;
@@ -73,10 +71,6 @@ html, body, h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea {
 
 code {
   border: 0.1rem solid #FFFFFFDD;
-}
-
-.hero {
-  color: #FFFFFFDD !important;
 }
 
 .text--truncate {
@@ -125,6 +119,10 @@ code {
   color: white !important;
   border-color: #FFFFFFDD !important;
   border-width: 3px;
+}
+
+.container {
+  max-width: 1200px;
 }
 
 @media (min-width: 997px) {
