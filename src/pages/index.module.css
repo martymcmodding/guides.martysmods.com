@@ -5,9 +5,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 35vh;
-  background: linear-gradient(135deg, rgba(26, 26, 46, 0.8) 0%, rgba(22, 33, 62, 0.8) 50%, rgba(15, 52, 96, 0.8) 100%);
-  color: var(--ifm-font-color-base);
+  min-height: 32vh;
   overflow: hidden;
 }
 
@@ -22,29 +20,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: blur(2px);
-  z-index: 0;
-}
-
-.hero::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 153, 250, 0.2);
-  z-index: 1;
-}
-
-.shaderCanvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  pointer-events: none;
+  filter: blur(4px);
 }
 
 .heroContainer {
@@ -53,16 +29,9 @@
   justify-content: center;
   width: 100%;
   max-width: 1200px;
-  padding: 2rem 2rem;
   text-align: center;
   position: relative;
   z-index: 3;
-}
-
-.heroContent {
-  max-width: 800px;
-  position: relative;
-  z-index: 4;
 }
 
 .heroTitle {
@@ -70,17 +39,15 @@
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 600;
   line-height: 1.1;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .heroSubtitle {
   font-size: clamp(1.1rem, 2vw, 1.5rem);
   line-height: 1.4;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   color: #e0e0e0;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .heroButtons {
@@ -96,7 +63,7 @@
   align-items: center;
   gap: 1rem;
   padding: 1.25rem 2.5rem;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.125);
   color: white;
   text-decoration: none;
   border: 2px solid rgba(255, 255, 255, 0.3);
@@ -104,7 +71,7 @@
   font-weight: 600;
   font-size: 1.25rem;
   transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
 }
 
 .primaryButton:hover,
@@ -120,12 +87,13 @@
   width: 40px;
   height: 40px;
   object-fit: contain;
+  filter: drop-shadow(0 0 10px rgb(0, 0, 0, 0.8));
 }
 
 /* Feature Sections */
 .featureSection {
   width: 100%;
-  padding: 1.85rem 0;
+  padding: 2rem 0;
   background: #191c20;
   color: white;
   position: relative;
@@ -138,7 +106,7 @@
   max-width: var(--ifm-container-width-xl) !important;
   margin: 0 auto;
   padding: 0 2rem;
-  gap: 0rem;
+  gap: 0;
 }
 
 .featureText {
@@ -157,7 +125,7 @@
 .featureDescription {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #e2e8f0;
+  color: #e2e2e2;
   margin: 0 0 1.5rem 0;
 }
 
@@ -305,7 +273,7 @@
   }
   
   .featureSection {
-    padding: 3rem 0;
+    padding: 2rem 0;
   }
   
   .featureContainer {
@@ -314,10 +282,10 @@
   }
   
   .featureTitle {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   
   .visualPanel {
-    padding: 1.5rem;
+    padding: 2rem;
   }
 }

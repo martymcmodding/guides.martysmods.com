@@ -53,29 +53,30 @@ html, body, h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea {
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-.navbar { 
-  background-color: #191c20 !important; 
+.navbar {
+  background-color: #191c20 !important;
+  border-bottom: 2px solid #ffffff40;
 }
 
 .footer {
   background-color: #191c20 !important;
-  --ifm-footer-color: #FFFFFFDD;
-  --ifm-footer-link-color: #FFFFFFDD;
+  --ifm-footer-color: #e2e8f0;
+  --ifm-footer-link-color: #e2e8f0;
   width: 100%;
   margin: 0 auto;
-  padding: 1.85rem;
+  padding: auto;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-code { 
-  border: 0.1rem solid #FFFFFFDD; 
+code {
+  border: 0.1rem solid #FFFFFFDD;
 }
 
-.hero { 
-  color: #FFFFFFDD !important; 
+.hero {
+  color: #FFFFFFDD !important;
 }
 
 .text--truncate {
@@ -87,8 +88,8 @@ code {
   text-overflow: ellipsis;
 }
 
-.card { 
-  min-height: 150px !important; 
+.card {
+  min-height: 150px !important;
 }
 
 .footer__item {
@@ -96,8 +97,26 @@ code {
   justify-content: center;
 }
 
+.footer__title {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.50rem;
+  position: relative;
+}
+
+.footer__title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 65%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #ffffff83, transparent);
+}
+
 .navbar__brand {
-  padding: 0.25rem 0.75rem 0.50rem 0.75rem !important;
+  padding: 0.25rem 0.75rem 0.5rem 0.75rem !important;
   margin-right: 0 !important;
 }
 

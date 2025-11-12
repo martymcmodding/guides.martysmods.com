@@ -2,12 +2,10 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
-import HeroShader from '../components/heroshader';
 import LazyImage from '../components/lazyimage';
 
 const HeroSection = () => (
   <section className={styles.hero}>
-    <HeroShader />
     <div className={styles.heroContainer}>
       <div className={styles.heroContent}>
         <h1 className={styles.heroTitle}>
