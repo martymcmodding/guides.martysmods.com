@@ -11,7 +11,7 @@ hide_title: true
 <!----------------------- IMPORTS ---------------------------->
 
 import ImageComparisonSlider from '@site/src/components/ImageComparisonSlider';
-import YTConsentRhT4MFRQ5jo from '@site/src/components/YTConsent';
+import { YTConsentLaunchpad } from '@site/src/components/YTConsent';
 import ReactPlayer from 'react-player'
 
 <!----------------------------------------------------------->
@@ -28,7 +28,7 @@ Launchpad is REQUIRED to be at the top of the shader load order in order to func
 ---
 
 ## Video Breakdown:
-<YTConsentRhT4MFRQ5jo />
+<YTConsentLaunchpad />
 
 ## Motion Estimation / Optical Flow
 Optical Flow computes per-pixel motion vectors between consecutive frames using depth, normal, and color data in order to temporally reproject, accumulate, and denoise/filter shaders like RTGI and MXAO.

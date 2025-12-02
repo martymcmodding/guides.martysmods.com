@@ -7,10 +7,23 @@ sidebar_position: 3
 hide_title: true
 ---
 
+<!----------------------- IMPORTS ---------------------------->
+
+import ImageComparisonSlider from '@site/src/components/ImageComparisonSlider';
+import { YTConsentInjectReshade } from '@site/src/components/YTConsent';
+import ReactPlayer from 'react-player'
+
+<!----------------------------------------------------------->
+
 # Manually Injecting ReShade
 Some games block the usual graphics API hooks that ReShade uses to load at startup. When this happens, the standard installation method does not work, since ReShade’s DLL cannot attach through the normal renamed file method. This is common with UWP (Microsoft Store) games and titles that use protected launchers. 
 
 To get around this, Crosire created a small injection tool that lets you manually load ReShade into the game while it is running. This guide covers how to inject ReShade using that tool.
+
+---
+
+## Video Breakdown:
+<YTConsentInjectReshade />
 
 ## Determine Game Architecture and Rendering API
 Before manually installing ReShade, identify two key details about your game: its bit architecture (32-bit or 64-bit) and the Rendering API it uses (DirectX 9, 10, 11, 12, or OpenGL).  

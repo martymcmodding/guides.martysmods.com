@@ -7,7 +7,13 @@ sidebar_position: 4
 hide_title: true
 ---
 
+<!----------------------- IMPORTS ---------------------------->
+
+import ImageComparisonSlider from '@site/src/components/ImageComparisonSlider';
+import { YTConsentManualShaderInstall } from '@site/src/components/YTConsent';
 import ReactPlayer from 'react-player'
+
+<!----------------------------------------------------------->
 
 # Manually Installing Shaders
 
@@ -20,6 +26,9 @@ If the shaders you are attempting to install were not obtained from GitHub (inst
 :::
 
 ---
+
+## Video Breakdown:
+<YTConsentManualShaderInstall />
 
 ## Downloading the Shader Repository(s)
 
