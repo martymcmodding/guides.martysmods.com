@@ -142,3 +142,30 @@ code {
   0% { background-position: 200% 0; }
   100% { background-position: -200% 0; }
 }
+
+.depth-buffer-table table,
+.depth-buffer-table table th,
+.depth-buffer-table table td {
+  text-align: center !important;
+}
+
+.image-side-by-side {
+  display: flex;
+  gap: 0.25rem;
+  margin: 1rem 0;
+  align-items: flex-start;
+}
+
+.image-side-by-side p {
+  margin: 0 !important;
+  padding: 0 !important;
+  flex: 1;
+}
+
+.image-side-by-side img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin: 0 !important;
+  padding: 0 !important;
+}
