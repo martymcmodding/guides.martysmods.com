@@ -58,7 +58,7 @@ When enabled, it allows you to see the current selected buffer from "Generic Dep
 ---
 
 ## Depth Orientations
-Every game is wildy different from the next. So, developers often have to use different strategies for how they store and maintain their buffers. This is typically in the manner of orientation. This orientation can wildly effect how depth effects precieve the game world and need to be fixed manually per game, as ReShade isn't able to automatically detect the orientation that the selected depth buffer should be in.
+Every game is wildy different from the next. So, developers often have to use different strategies for how they store and maintain their buffers. This is called orientation, and it can wildly effect how depth effects precieve the game world and need to be fixed manually per game, as ReShade isn't able to automatically detect the orientation that the selected depth buffer should be in.
 
 :::warning
 When configuring depth, do not toggle on or use any of the controls provided to you in the "**DisplayDepth**" shader. Instead, use the "Edit Global Preprocessor Definitions" button in the middle of ReShade's Home tab.
