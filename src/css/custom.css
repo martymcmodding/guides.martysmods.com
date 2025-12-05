@@ -151,21 +151,11 @@ code {
 
 .image-side-by-side {
   display: flex;
-  gap: 0.25rem;
-  margin: 1rem 0;
   align-items: flex-start;
+  gap: 0.25rem;
 }
 
-.image-side-by-side p {
-  margin: 0 !important;
-  padding: 0 !important;
+.image-side-by-side > img {
   flex: 1;
-}
-
-.image-side-by-side img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  margin: 0 !important;
-  padding: 0 !important;
+  max-width: 50%;
 }
