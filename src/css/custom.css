@@ -152,7 +152,6 @@ code {
 .image-side-by-side {
   display: flex;
   align-items: flex-start;
-  gap: 0.25rem;
 }
 
 .image-side-by-side > img {
