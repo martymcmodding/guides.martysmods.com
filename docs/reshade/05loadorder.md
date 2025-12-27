@@ -27,8 +27,6 @@ Each shader's position in relation to the others being used will influence what 
 
 To change a shader's position in the load order, you can drag and drop shaders in the shader list within ReShade's Home tab. Simply click and hold on a shader name, then drag it to the desired position. The shader will be processed in its new position the next time ReShade renders a frame.
 
-![ReShade Shader Reordering](https://assets.martysmods.com/reshade/loadorder/ShaderReordering.webp)
-
 ---
 
 ## Example 1: MXAO & PTVL Fog
