@@ -16,7 +16,7 @@ Download the latest version of dgVoodoo2 by visiting [the developer's website](h
 
 ![dgVodooo2 Releases](https://assets.martysmods.com/additionalguides/apiwrapper/dgvoodoo2/dgVoodoo2Releases.webp)
 
-## Find Your Game’s DirectX Version & Architecture
+### Find Your Game’s DirectX Version & Architecture
 Afterwards, go to [PCGamingWiki](https://pcgamingwiki.com/) and search for your game. You'll need to take note of:
    - Which DirectX version it uses (e.g., DirectX 9, DirectX 10).
    - Whether the game executable is 32‑bit or 64‑bit.
