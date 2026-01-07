@@ -22,7 +22,6 @@ To get around this, Crosire created a small injection tool that lets you manuall
 
 ---
 
-## Video Breakdown:
 <YTConsentInjectReshade />
 
 ## Determine Game Architecture and Rendering API

@@ -7,11 +7,21 @@ sidebar_position: 1
 hide_title: true
 ---
 
+<!----------------------- IMPORTS ---------------------------->
+
+import ImageComparisonSlider from '@site/src/components/ImageComparisonSlider';
+import { YTConsentInstallingReShade } from '@site/src/components/YTConsent';
+import ReactPlayer from 'react-player'
+
+<!----------------------------------------------------------->
+
 # ReShade Setup Tool
 
 The ReShade Setup Tool is a handy application that guides you step-by-step through everything: downloading and installing the latest version of ReShade, picking shader repositories, and adding any Add-ons you might want.
 
 ---
+
+<YTConsentInstallingReShade />
 
 ## Selecting Your Game
 

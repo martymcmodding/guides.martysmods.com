@@ -7,11 +7,21 @@ sidebar_position: 1
 hide_title: true
 ---
 
+<!----------------------- IMPORTS ---------------------------->
+
+import ImageComparisonSlider from '@site/src/components/ImageComparisonSlider';
+import { YTConsentInstallingReShade } from '@site/src/components/YTConsent';
+import ReactPlayer from 'react-player'
+
+<!----------------------------------------------------------->
+
 # Downloading ReShade
 
 ReShade is an open-sourced, generic, post-processing tool that allows users to currate the looks that they want in their game of choice. In order to reduce abuse from ReShade in online/multiplayer games, there are two builds that you can download at [ReShade's webpage](https://reshade.me/#download).
 
 ---
+
+<YTConsentInstallingReShade />
 
 ## Standard ReShade Build (Download ReShade X.X.X)
 

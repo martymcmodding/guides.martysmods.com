@@ -27,7 +27,6 @@ If the shaders you are attempting to install were not obtained from GitHub (inst
 
 ---
 
-## Video Breakdown:
 <YTConsentManualShaderInstall />
 
 ## Downloading the Shader Repository(s)
