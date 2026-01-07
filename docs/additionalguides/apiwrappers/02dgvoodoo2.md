@@ -12,19 +12,19 @@ dgVoodoo2 is a rendering API wrapper used to translate games that use older Dire
 
 ---
 
-## Download dgVoodoo2
+## Downloading dgVoodoo2
 Download the latest version of dgVoodoo2 by visiting [the developer's website](https://dege.freeweb.hu/dgVoodoo2/dgVoodoo2/#latest-stable-version) and downloading the "Latest stable version" of dgVoodoo2.
 
 ![dgVodooo2 Releases](https://assets.martysmods.com/additionalguides/apiwrapper/dgvoodoo2/dgVoodoo2Releases.webp)
 
-### Find Your Game’s DirectX Version & Architecture
+### Finding Your Game’s DirectX Version & Architecture
 Afterwards, go to [PCGamingWiki](https://pcgamingwiki.com/) and search for your game. You'll need to take note of:
    - Which DirectX version it uses (e.g., DirectX 9, DirectX 10).
    - Whether the game executable is 32‑bit or 64‑bit.
 
 ---
 
-## Install dgVoodoo2
+## Installing dgVoodoo2
 Once you've found the architecture and version of DirectX, open the dgVoodoo2 ZIP file you downloaded using [7-Zip](https://www.7-zip.org/) or [WinRAR](https://www.win-rar.com/). Inside the archive, you'll see several files and folders. For the time being, take note of the `dgVoodooCpl.exe` and `dgVoodoo.conf` files in the root of the archive, as you'll need to copy these to your game's directory later.
 
 Then, navigate into the `MS` folder.
@@ -52,7 +52,7 @@ Copy the appropriate DLL, as well as the `dgVoodooCpl.exe` and `dgVoodoo.conf` f
 
 ---
 
-## Configure dgVoodoo2
+## Configuring dgVoodoo2
 
 Navigate to your game's directory and double-click `dgVoodooCpl.exe`. This is the control panel application that allows you to configure dgVoodoo2's settings. You'll see dgVoodoo2's configuration interface with several tabs.
 
@@ -71,7 +71,7 @@ Once you've selected your desired Output API, click the `Apply` button at the bo
 
 ---
 
-## Install ReShade
+## Installing ReShade
 
 Now that dgVoodoo2 is installed and configured to translate your game's DirectX calls to DirectX 11 or 12, you can install ReShade. Since dgVoodoo2 is translating your game to a newer DirectX version, you'll need to install ReShade for **DirectX 10/11/12**, not the original DirectX version your game uses.
 
