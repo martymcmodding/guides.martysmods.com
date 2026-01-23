@@ -3,7 +3,7 @@ title: "Creating and Sharing Presets"
 sidebar_label: "Creating and Sharing Presets"
 description: "How to Create and Share Presets"
 slug: /reshade/creatingandsharingpresets
-sidebar_position: 6
+sidebar_position: 5
 hide_title: true
 ---
 

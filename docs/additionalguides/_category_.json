@@ -3,8 +3,5 @@
     "label": "Additional Guides",
     "collapsible": true,
     "collapsed": true,
-    "className": "red",
-    "customProps": {
-      "description": "Documentation on processes close to ReShade."
-    }
+    "className": "red"
   }

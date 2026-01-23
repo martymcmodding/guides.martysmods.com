@@ -3,8 +3,5 @@
     "label": "ReShade",
     "collapsible": true,
     "collapsed": true,
-    "className": "red",
-    "customProps": {
-      "description": "Documentation on ReShade"
-    }
+    "className": "red"
   }

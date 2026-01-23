@@ -3,8 +3,5 @@
     "label": "iMMERSE Pro",
     "collapsible": true,
     "collapsed": false,
-    "className": "red",
-    "customProps": {
-      "description": "Documentation on iMMERSE Pro shader repository."
-    }
+    "className": "red"
   }

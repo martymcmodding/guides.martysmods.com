@@ -3,7 +3,7 @@ title: Local Laplacian
 sidebar_title: "Local Laplacian"
 description: "Advanced Local Contrast Enhancement Algorithm"
 slug: /shaders/meteor/locallaplacian
-sidebar_position: 5
+sidebar_position: 3
 hide_title: True
 ---
 

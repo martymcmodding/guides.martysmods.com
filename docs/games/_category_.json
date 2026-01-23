@@ -1,10 +1,6 @@
 {
-    "position": 4,
     "label": "Games",
     "collapsible": true,
     "collapsed": true,
-    "className": "red",
-    "customProps": {
-      "description": "Documentation on installing ReShade to games that cause problems."
-    }
+    "className": "red"
   }

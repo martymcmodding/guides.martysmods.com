@@ -10,6 +10,8 @@ hide_title: true
 # Manually Installing ReShade
 Some games and applications are not compatible with the ReShade Setup Tool, or the tool may not work as expected in certain situations. In these cases, you will need to manually install ReShade using the classic method. This guide will walk you through each step of the manual installation process, so you can get ReShade working in any supported game.
 
+---
+
 ## Determine Game Architecture and Rendering API
 Before manually installing ReShade, identify two key details about your game: its bit architecture (32-bit or 64-bit) and the Rendering API it uses (DirectX 9, 10, 11, 12, or OpenGL).  
 If you're not sure about either of these, you can usually find the information on [PCGamingWiki](https://www.pcgamingwiki.com/wiki/Home).

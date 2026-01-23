@@ -3,8 +3,5 @@
     "label": "Rendering API Wrappers",
     "collapsible": true,
     "collapsed": true,
-    "className": "red",
-    "customProps": {
-      "description": "Rendering API Wrappers"
-    }
+    "className": "red"
   }

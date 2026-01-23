@@ -13,7 +13,7 @@ The Home tab is the hub of ReShade’s interface, where you enable, disable, and
 
 ---
 
-## Preset Selection Bar
+## Preset Selection
 
 At the top of the Home tab is the Preset Selection Bar. Use this to load, save, create, and rename your presets. Presets store your shader configurations in an INI file—for example, the default file is `ReShadePreset.ini`. Click the dropdown to pick a preset, hit the save icon to overwrite it, or click the plus icon to make a new one.
 

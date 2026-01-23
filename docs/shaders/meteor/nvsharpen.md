@@ -3,7 +3,7 @@ title: NVSharpen
 sidebar_title: "NVSharpen"
 description: "NVIDIA Image Scaling Sharpening Filter"
 slug: /shaders/meteor/nvsharpen
-sidebar_position: 7
+sidebar_position: 5
 hide_title: True
 ---
 

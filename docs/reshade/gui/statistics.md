@@ -3,7 +3,7 @@ title: "Statistics"
 sidebar_label: "Statistics"
 description: "ReShade's Statistics Tab"
 slug: /reshade/gui/statistics
-sidebar_position: 6
+sidebar_position: 5
 hide_title: true
 ---
 

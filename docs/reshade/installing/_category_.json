@@ -1,10 +1,7 @@
 {
     "position": 2,
-    "label": "Installing",
+    "label": "Installing ReShade",
     "collapsible": true,
     "collapsed": true,
-    "className": "red",
-    "customProps": {
-      "description": "Different procedures for installing ReShade"
-    }
+    "className": "red"
   }

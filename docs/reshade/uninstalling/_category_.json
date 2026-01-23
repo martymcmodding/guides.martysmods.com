@@ -3,8 +3,5 @@
     "label": "Uninstalling",
     "collapsible": true,
     "collapsed": true,
-    "className": "red",
-    "customProps": {
-      "description": "Different procedures for uninstalling ReShade"
-    }
+    "className": "red"
   }

@@ -3,7 +3,7 @@ title: Long Exposure
 sidebar_title: "Long Exposure"
 description: "Temporal Frame Accumulation for Motion Blur Effects"
 slug: /shaders/meteor/longexposure
-sidebar_position: 6
+sidebar_position: 4
 hide_title: True
 ---
 

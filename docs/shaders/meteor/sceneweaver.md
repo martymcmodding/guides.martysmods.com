@@ -3,7 +3,7 @@ title: Sceneweaver
 sidebar_title: "Sceneweaver"
 description: "Advanced Screenshot Composition and Hotsampling Tools"
 slug: /shaders/meteor/sceneweaver
-sidebar_position: 8
+sidebar_position: 6
 hide_title: True
 ---
 

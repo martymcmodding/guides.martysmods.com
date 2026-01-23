@@ -9,23 +9,9 @@ hide_title: true
 
 # Manually Installing Add-ons
 
-Not all add-ons are avaliable for install through the ReShade Setup Tool - as so, users will have to manually install add-ons in order for them to load with ReShade when the game is launched.
+Add-ons are programs built to make use of ReShade's "Add-on API". These can do several things to your game and ReShade install: from providing you a history list (like in Photoshop) to providing you with complete [color grading toolsets](../../../shaders/immerseultimate/regradeplus). However, not all add-ons are avaliable for install through the ReShade Setup Tool, so, users will have to manually install add-ons in order for them to load with ReShade when the game is launched.
 
 To follow along with this guide, the **Add-on Support** build of ReShade **must** already be installed and working in your game. If ReShade is not active or installed to your game, you can follow our [guide for installing ReShade with the ReShade Setup Tool](./setuptool).
-
-:::warning
-The **Add-on Support** build of ReShade is require to load all external ReShade add-ons. Without it, they will refuse to load.
-:::
-
----
-
-## Housekeeping
-
-Add-ons are programs built to make use of ReShade's "Add-on API". These can do several things to your game and ReShade install: from providing you a history list (like in Photoshop) to providing you with complete [color grading toolsets](../../../shaders/immerseultimate/regradeplus).
-
-When using **DirectX or OpenGL**, add-on files need to be in the same location as the ReShade Binary (dxgi.dll d3d11.dll d3d9.dll or opengl32.dll)
-
-When using **Vulkan**, add-on files need to be in the same location as the game's launched executable (GameName.exe).
 
 ---
 
