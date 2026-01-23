@@ -1,7 +1,7 @@
 ---
 title: "Addons"
 sidebar_label: "Addons"
-description: "The Add-ons tab is meant to help users disable, enable, or configure installed Add-ons for ReShade."
+description: "ReShade's Addon's Tab"
 slug: /reshade/gui/addons
 sidebar_position: 2
 hide_title: true

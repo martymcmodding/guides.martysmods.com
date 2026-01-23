@@ -1,7 +1,7 @@
 ---
 title: "Settings"
 sidebar_label: "Settings"
-description: "The Settings tab lets you tweak ReShade settings like shader directories, menu access keys, FPS meter configurations, or theme settings"
+description: "ReShade's Settings Tab"
 slug: /reshade/gui/settings
 sidebar_position: 3
 hide_title: true

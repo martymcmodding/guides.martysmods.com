@@ -1,7 +1,7 @@
 ---
 title: "Home"
 sidebar_label: "Home"
-description: This guide breaks down the "Home" tab and provides more insight as to what each button or section does.
+description: "ReShade's Home Tab"
 slug: /reshade/gui/home
 sidebar_position: 1
 hide_title: true
@@ -9,7 +9,7 @@ hide_title: true
 
 # Home
 
-The Home tab is the hub of ReShade’s interface, where you enable, disable, and tweak the shaders you’ve installed. This section walks you through each area of the Home tab, explaining what every button and panel does.
+The Home tab is the hub of ReShade’s interface, where you enable, disable, and tweak the shaders you’ve installed.
 
 ---
 
@@ -37,13 +37,11 @@ Below the shader list is the “Edit Preprocessor Definitions” button. Click i
 
 ![GPDButton](https://assets.martysmods.com/reshade/gui/GUIGlobalPreprocessorDefinitions.webp)
 
-Clicking this button opens the Global Preprocessor Definitions editor, where you can modify individual values used by all shaders:
-
 ![GPDEdit](https://assets.martysmods.com/reshade/gui/GUIGlobalPreprocessorDefinitionsEditPanel.webp)
 
 ## Shader Parameters
 
-The Shader Parameters panel appears below the preprocessor definitions. When you enable a shader, its adjustable parameters—sliders, checkboxes, color pickers—show up here. Adjust these controls to fine-tune each effect in real time; changes are instantly visible in your game.
+The Shader Parameters panel appears below the preprocessor definitions. When you enable a shader, its adjustable parameters will show up here. You can adjust these controls to tune each effect in real time and see their changes immediately in your game.
 
 ![ShaderParameters](https://assets.martysmods.com/reshade/gui/GUIShaderParameters.webp)
 
@@ -51,6 +49,6 @@ The Shader Parameters panel appears below the preprocessor definitions. When you
 
 When you add or remove effects, click the Reload button to recompile shaders and apply your changes. Reloading can also fix compile errors and restore shader functionality.
 
-To the right of Reload is the Performance Mode toggle. Turning on Performance Mode skips compiling shaders that are disabled and applies compiler optimizations. This can yield a small performance boost, though some shaders may not work correctly under these optimizations.
+To the right of Reload is the Performance Mode toggle. Turning on Performance Mode skips compiling shaders that are disabled and applies compiler optimizations. This can yield a small performance boost, though some shaders may not work correctly when enabled.
 
 ![ReloadButton](https://assets.martysmods.com/reshade/gui/GUIReloadButton.webp)
