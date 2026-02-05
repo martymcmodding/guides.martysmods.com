@@ -85,10 +85,12 @@ In order to follow through with the filmography structure, we'll want to introdu
 
 ### Tier 5: Anti-Aliasing and Sharpening
 
-These effects should come after color grading because color grading operations can introduce additional edges and chroma blur that benefit from smoothing. 
+Shaders that control sharpening and antialiasing should be placed here, as we'll want them after the color grading operations due to the additional edges and color changes that they can create. 
 
-Within this tier, anti-aliasing should come before sharpening, as you don't want to anti-alias the sharpening artifacts you're adding to the image.
+The order within this tier should also be respected, as you'll always want antialiasing before sharpening -- otherwise you're bluring the edges of what you just sharpened.
 
 ### Tier 6: Composition Helpers
 
-Our final tier includes all the shaders you can use to help compose your screenshots, like Sceneweaver. Placing them at the very bottom of our shader list means the other effects won't interfere with any guides that they layer over the top.
+Our final tier includes all the shaders you can use to help compose your screenshots, like Sceneweaver. 
+
+Placing them at the very bottom of our shader list means the other effects won't interfere with any guides that they layer over the top.
