@@ -7,6 +7,14 @@ sidebar_position: 5
 hide_title: true
 ---
 
+<!----------------------- IMPORTS ---------------------------->
+
+import ImageComparisonSlider from '@site/src/components/ImageComparisonSlider';
+import { YTConsentLoadOrder } from '@site/src/components/YTConsent';
+import ReactPlayer from 'react-player'
+
+<!----------------------------------------------------------->
+
 # Load Order
 
 When you download a new ReShade preset or make your own, sometimes things don't always look like you'd expect them to. This is typically due to what is known as a load order.
@@ -14,6 +22,8 @@ When you download a new ReShade preset or make your own, sometimes things don't 
 Like in many mod managers and creative software, ReShade makes use of applying its effects in an ordered manner that is refered to as the shader load order. This system is what allows users to control what effect is rendered first and what comes after it.
 
 ---
+
+<YTConsentLoadOrder />
 
 ## Managing Load Order in ReShade
 
