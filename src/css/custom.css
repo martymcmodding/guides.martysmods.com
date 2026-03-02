@@ -40,6 +40,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea {
   --space-sm: 0.5rem;
   --space-md: 1rem;
   --space-lg: 2rem;
+  --space-block: 10px;
   --ifm-color-scheme: light;
   --ifm-color-primary: #0099fa;
   --ifm-color-secondary: #ebedf0;
@@ -50,6 +51,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea {
   --ifm-button-color: #FFFFFFDD !important;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
 
 .navbar {
   background-color: #191c20 !important;
@@ -157,4 +159,44 @@ code {
 .image-side-by-side > img {
   flex: 1;
   max-width: 50%;
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  margin: var(--space-block) 0;
+}
+
+.markdown > pre,
+.markdown > ul,
+.markdown > p {
+  margin: var(--space-block) 0;
+}
+
+.markdown .theme-admonition,
+.markdown .alert {
+  margin: var(--space-block) 0;
+}
+
+.markdown img,
+.markdown iframe,
+.markdown video {
+  display: block;
+  margin: var(--space-block) auto;
+}
+
+.markdown li {
+  margin-bottom: var(--space-block);
+}
+
+.markdown li > p {
+  margin-top: 0;
+  margin-bottom: var(--space-block);
+}
+
+.img {
+  margin: var(--space-block) auto !important;
 }

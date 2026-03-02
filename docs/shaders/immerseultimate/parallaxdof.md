@@ -49,7 +49,7 @@ Since Parallax DoF differs in its technique from the standard depth-based blur, 
   loop={true}
   width="100%"
   height="100%"
-  style={{ width: "100%", margin: "0 auto" }}
+  style={{ width: "100%", margin: "10px auto 0px auto",}}
 />
 
 Then, by using our **Rangefinder Focus Delta**, we can tune in our focal point while making sure to check that the target that we want to be completely in focus is as clear as it can be (you can use iMMERSE Pro: Insight's magnifying glass to do so).
@@ -62,7 +62,7 @@ Then, by using our **Rangefinder Focus Delta**, we can tune in our focal point w
   loop={true}
   width="100%"
   height="100%"
-  style={{ width: "100%", margin: "0 auto" }}
+  style={{ width: "100%", margin: "10px auto 0px auto",}}
 />
 
 ---
@@ -89,7 +89,7 @@ The process to find the correct value can be summarized as such:
   loop={true}
   width="100%"
   height="100%"
-  style={{ width: "100%", margin: "0 auto" }}
+  style={{ width: "100%", margin: "10px auto 0px auto",}}
 />
 
 - Note that for an Interval of 1 frame, there is only one Delay value that is in sync. For an Interval of 2 frames, there are 2 Delays that are in sync and so on. So if for Interval of 1 frame a Delay of 4 frames worked, then for an Interval of 3 frames, Delay frames 4, 5 and 6 will work with Delay set to 4 frames, being blended as early, and Delay set to 6 frames, meaning being blended as late as possible.
