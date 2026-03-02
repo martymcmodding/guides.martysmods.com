@@ -7,6 +7,12 @@ sidebar_position: 5
 hide_title: True
 ---
 
+<!----------------------- IMPORTS ---------------------------->
+
+import ReactPlayer from 'react-player'
+
+<!----------------------------------------------------------->
+
 # Parallax Depth of Field
 
 iMMERSE Ultimate: Parallax Depth of Field produces depth-of-field blur by computing parallax information through camera rotation and positional shifts across multiple frames. This method yields physically accurate focal plane separation and bokeh characteristics.
@@ -35,11 +41,29 @@ Clicking **Start Session** opens the session control panel and displays a transp
 
 Since Parallax DoF differs in its technique from the standard depth-based blur, each shot needs to have its focal point configured. We'll want to make sure that the game world is paused through IGCS, and we can start to configure the focal point by adjusting the **Blur Radius** to a large enough degree to see a substantial offset in the background.
 
-![ParallaxDoFBlurRadius](https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFBlurRadius.webm)
+<ReactPlayer
+  url="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFBlurRadius.webm"
+  playing={false}
+  muted={true}
+  controls={true}
+  loop={true}
+  width="100%"
+  height="100%"
+  style={{ width: "100%", margin: "0 auto" }}
+/>
 
 Then, by using our **Rangefinder Focus Delta**, we can tune in our focal point while making sure to check that the target that we want to be completely in focus is as clear as it can be (you can use iMMERSE Pro: Insight's magnifying glass to do so).
 
-![ParllaxDoFRangefinder](https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFRangefinderFocusDelta.webm)
+<ReactPlayer
+  url="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFRangefinderFocusDelta.webm"
+  playing={false}
+  muted={true}
+  controls={true}
+  loop={true}
+  width="100%"
+  height="100%"
+  style={{ width: "100%", margin: "0 auto" }}
+/>
 
 ---
 
@@ -57,6 +81,15 @@ The process to find the correct value can be summarized as such:
 
 - Should the render be imperfect with some ghost images, it means that the game's rendering is not always ahead by a constant delay. This can be compensated for by not firing a new camera position every single frame. For that, increase the Accumulation Interval by 1 frame. This will now move to a new camera position every second frame, giving the rendering process one frame of sync error tolerance. Now try again to find an Accumulation Delay that produces a clean image. If that still yields no perfect results, keep increasing the Interval by 1 frame and then search for a good delay value. Eventually this process will yield a stable combination, it just depends on the game.
 
-![ParallaxDoFAccumulationControls](https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFAccumulationControls.webm)
+<ReactPlayer
+  url="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFAccumulationControls.webm"
+  playing={false}
+  muted={true}
+  controls={true}
+  loop={true}
+  width="100%"
+  height="100%"
+  style={{ width: "100%", margin: "0 auto" }}
+/>
 
 - Note that for an Interval of 1 frame, there is only one Delay value that is in sync. For an Interval of 2 frames, there are 2 Delays that are in sync and so on. So if for Interval of 1 frame a Delay of 4 frames worked, then for an Interval of 3 frames, Delay frames 4, 5 and 6 will work with Delay set to 4 frames, being blended as early, and Delay set to 6 frames, meaning being blended as late as possible.
