@@ -17,9 +17,9 @@ import ReactPlayer from 'react-player'
 
 # Load Order
 
-When you download a new ReShade preset or make your own, sometimes things don't always look like you'd expect them to. This is typically due to what is known as a load order.
+When downloading a new ReShade preset or creating your own, the final output may not match expectations. This discrepancy is typically caused by shader load order.
 
-Like in many mod managers and creative software, ReShade makes use of applying its effects in an ordered manner that is refered to as the shader load order. This system is what allows users to control what effect is rendered first and what comes after it.
+ReShade applies post-processing effects sequentially, with each shader processing the output from the previous shader in the list. This ordered system determines which effects are rendered first and which are applied subsequently, directly influencing the visual result.
 
 ---
 
@@ -27,29 +27,40 @@ Like in many mod managers and creative software, ReShade makes use of applying i
 
 ## Managing Load Order in ReShade
 
-In order to change a shader's position in the load order, you can drag and drop shaders in the shader list within ReShade's Home tab.
+In order to change a shader's position in the load order, you can simply drag and drop shaders in the shader list within ReShade's Home tab.
+
+<ReactPlayer
+  url="https://assets.martysmods.com/reshade/loadorder/LoadOrderMovingShaders.webm"
+  playing={true}
+  muted={true}
+  controls={false}
+  loop={true}
+  width="100%"
+  height="100%"
+  style={{ width: "100%", margin: "0 auto" }}
+/>
 
 ---
 
 ## Example 1: MXAO & PTVL Fog
 
-Let's take a look at this scene. In order to add some object shadowing, we'll go ahead and enable MXAO, an ambient occlusion shader. But afterwards, there's also the potential to add some atmosphere to the game through the means of fog, so we'll do that through PTVL, a volumetric fog shader.
+Consider a scene where ambient occlusion is desired to add object shadowing. MXAO, an ambient occlusion shader, is enabled for this purpose. Additionally, volumetric fog is added using PTVL to enhance atmospheric depth.
 
 ![BeforeMXAO&PTVL](https://assets.martysmods.com/reshade/loadorder/LoadOrderBeforeMXAOPTVL.webp)
 
-But, we've hit a problem. Here, we can see a strange artifact where it looks like the object shadowing are bleeding through the fog.
+However, a visual artifact appears where object shadowing appears to bleed through the fog, creating an incorrect layering effect.
 
 ![MXAO Bleeding Through Fog](https://assets.martysmods.com/reshade/loadorder/LoadOrderAfterMXAOPTVL.webp)
 
-In order to fix this, let's take a look at the shader load order. We can see PTVL being placed above MXAO -- effectively rendering PTVL first, and then MXAO. Which makes our object shadowing that should be hidden by fog instead awkwardly poke through.
+Examining the shader load order reveals PTVL positioned above MXAO, causing PTVL to render first, followed by MXAO. This order results in shadowing that should be occluded by fog instead appearing to penetrate through it.
 
 ![MXAO Bleeding Through Fog GUI](https://assets.martysmods.com/reshade/loadorder/LoadOrderAfterMXAOPTVLGUI.webp)
 
-We can fix this just by dragging and dropping MXAO so it's earlier in the shader load order than PTVL.
+This issue is resolved by repositioning MXAO earlier in the shader load order than PTVL, ensuring MXAO processes the scene first.
 
 ![Correct Load Order GUI](https://assets.martysmods.com/reshade/loadorder/LoadOrderAFterPTVLMXAOGUI.webp)
 
-Now, we can see that MXAO is being applied first, and PTVL is rendered after. Providing us with a proper shader output.
+With MXAO applied first and PTVL rendered subsequently, the fog correctly occludes the shadowing, producing the intended visual result.
 
 ![Correct Load Order](https://assets.martysmods.com/reshade/loadorder/LoadORderAFterPTVLMXAO.webp)
 
@@ -57,11 +68,11 @@ Now, we can see that MXAO is being applied first, and PTVL is rendered after. Pr
 
 ## General Rules for Shader Categories
 
-Being in charge of your load order gives you ultimate control over the quality of the final output. ReShade gives you a lot of creative freedom, but it helps to begin with a structure and some basic rules for a strong foundation.
+Load order management provides control over final output quality. While ReShade offers significant creative freedom, establishing a structured foundation with clear principles ensures optimal results.
 
-We can split different types of shaders into categories, or tiers.
+Shader types can be organized into categories, or tiers, based on their function and dependencies within the rendering pipeline.
 
-It's important to note here that each shader that's enabled will introduce an element of data loss, which accumulates leading to reduced image quality. So it's always best to use as few shaders as possible to create the look you want. Meaning that each shader should have a distinct role within the shader load order. So, rather than using three shaders to change the contrast -- it's best to use just one.
+Each enabled shader introduces a degree of data loss through quantization and processing artifacts, which accumulates across the pipeline and degrades image quality. Therefore, minimizing the number of active shaders while achieving the desired look you want is recommended. Each shader should serve a distinct purpose within the load order. For example, rather than using multiple shaders to adjust contrast, a single dedicated contrast adjustment shader should be employed.
 
 ## Shader Categories/Tiers
 
@@ -69,38 +80,38 @@ The categories that follow are organised both with what makes sense in terms of 
 
 ### Tier 1: Data Processing
 
-These are any shaders that generate or pass information to other effects, such as Launchpad. 
+This tier includes shaders that generate, process, or pass data to other effects in the pipeline. Examples include Launchpad, which processes depth buffers, normal maps, and optical flow vectors for use by subsequent shaders.
 
-In order to get the cleanest input from the game's screen they should go at the top of your load order, before anything else, as well as before the shaders that utilise them.
+These shaders must be positioned at the top of the load order to operate on the cleanest possible input from the game's rendered frame. They must also precede any shaders that depend on their output data.
 
 ### Tier 2: Depth-Based World Effects
 
-These are shaders such as MXAO, RTGI, volumetric fog, and ReLight. 
+This tier encompasses shaders that utilize the depth buffer to modify scene geometry and lighting characteristics. Examples include MXAO (ambient occlusion), RTGI (ray-traced global illumination), PTVL (volumetric fog), and ReLight (path-traced point lights).
 
-We can think of the shaders in this category as world based depth effects -- as they influence what the scene will look like, like where shadow and light falls. 
+These shaders function as world-space depth effects, directly influencing scene appearance by determining where shadows and light interact with geometry. They require access to the depth buffer and should be positioned early in the pipeline to operate on unmodified scene data.
 
-As well as keeping them near the top of your shader list, the order of the effects within this category also matters. For example, like we saw earlier in Example 1, MXAO should sit above volumetric fog, as should shaders like RTGI and ReLight.
+The relative order within this tier is critical. As demonstrated in Example 1, ambient occlusion and global illumination shaders (MXAO, RTGI, ReLight) must precede volumetric effects like fog (PTVL), as volumetric effects should occlude shadowing rather than be occluded by it.
 
 ### Tier 3: Camera Effects
 
-There are many effects within ReShade that attempt to simular what a camera lens does within the real world. These can be shaders that apply effects like bloom, chromatic aberration, or even a vignette.
+This tier includes shaders that simulate optical and sensor characteristics of real-world camera systems. Examples include chromatic aberration, vignette, bloom, and depth of field.
 
-Typically, we'd want these to be ordered within the operation that they'd happen within the real world. For instance, chromatic abberation and vignette happen within a camera at the level of the lens, so they should be first. Next, you'd have bloom, which happens at the level of the sensor.
+These effects should be ordered to mirror their physical occurrence in a camera system. Lens-level effects, such as chromatic aberration and vignette, occur first, as they result from light passing through the lens assembly. Sensor-level effects, such as bloom, which simulates light bleeding across sensor pixels—occur subsequently, as they result from the interaction between light and the imaging sensor.
 
 ### Tier 4: Color Grading
 
-Likely to be the most time consuming part of ReShade are shaders like qUINT Lightroom, and iMMERSE ReGrade as they allow the user to color grade the scene using functions such as: levels, vibrance, exposure, and contrast.
+Color grading shaders, such as iMMERSE ReGrade, provide control over color, tone, and luminance characteristics through operations including levels adjustment, vibrance, exposure, and contrast modification.
 
-In order to follow through with the filmography structure, we'll want to introduce these after our camera effects so their changes are applied to shaders such as bloom and the vignette.
+Positioning color grading after camera effects ensures that grading operations are applied to the complete scene, including camera effects such as bloom and vignette. Maintaining the photographic workflow structure where color correction occurs after optical effects have been applied.
 
 ### Tier 5: Anti-Aliasing and Sharpening
 
-Shaders that control sharpening and antialiasing should be placed here, as we'll want them after the color grading operations due to the additional edges and color changes that they can create. 
+Anti-aliasing and sharpening shaders should be positioned after color grading operations, as color grading can introduce aliasing artifacts, chroma subsampling errors, and additional edge artifacts that benefit from smoothing.
 
-The order within this tier should also be respected, as you'll always want antialiasing before sharpening -- otherwise you're bluring the edges of what you just sharpened.
+Within this tier, anti-aliasing must precede sharpening. Applying anti-aliasing after sharpening would blur the enhanced edges created by the sharpening process, counteracting the intended effect. Anti-aliasing should smooth existing aliasing artifacts, after which sharpening can enhance edge definition without reintroducing aliasing.
 
 ### Tier 6: Composition Helpers
 
-Our final tier includes all the shaders you can use to help compose your screenshots, like Sceneweaver. 
+The final tier includes utility shaders designed to assist with image composition, such as Sceneweaver, which provides overlay guides for framing and composition.
 
-Placing them at the very bottom of our shader list means the other effects won't interfere with any guides that they layer over the top.
+Positioning these shaders at the bottom of the load order ensures that all visual effects have been applied before composition overlays are rendered, preventing interference between post-processing effects and composition guides.
