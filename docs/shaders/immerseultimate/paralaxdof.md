@@ -34,17 +34,7 @@ Clicking **Start Session** opens the session control panel and displays a transp
 ## Configuration
 
 ### Set a Focal Point
-1. Set the blur radius to a high value to improve visibility of the focal point
-2. Adjust the focal point position until the subject is as sharp as possible. Use Insight's magnifying glass tool if finer adjustment is required
-3. Click **Start Render**
 
 ### Configure Frame Delay and Interval
-The initial render often produces a blurry or unstable result when the frame delay and interval parameters are not properly calibrated for the current scene.
-
-1. Increase the **Frame Delay** by one frame and observe whether the image stabilizes
-2. If the image remains unstable, increase the **Interval** by one unit and repeat the frame delay adjustment
-3. Continue iterating until a frame delay and interval combination yields a stable output
-4. Allow the render to complete once stabilization is achieved
-
 ---
 
