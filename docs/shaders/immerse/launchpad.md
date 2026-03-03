@@ -27,26 +27,37 @@ Launchpad is REQUIRED to be at the top of the shader load order in order to func
 
 ---
 
-## Video Breakdown:
+## Video Breakdown
+
 <YTConsentLaunchpad />
 
+---
+
 ## Motion Estimation / Optical Flow
+
 Optical Flow computes per-pixel motion vectors between consecutive frames using depth, normal, and color data in order to temporally reproject, accumulate, and denoise/filter shaders like RTGI and MXAO.
 
 ### Flow Quality
+
 Controls the quality settings of the generated Optical Flow. Higher quality settings yield more precise motion vectors, at the cost of a slight performance drop.
 
 ### Flow Optimizer
+
 Launchpad uses a novel, stochastic gradient descent-based algorithm for calculating optical flow. The optimizer you choose determines how that descent behaves:
+
 - **Sophia**: Common optimizer in AI-based language models. It converges more slowly but delivers higher quality results that are more ideal for complex motion.
 - **Newton**: Fast and efficient when flow is smooth and predictable. However, it can fail around fine or irregular details, such as thin geometry.
 
+---
+
 ## Normal Maps
+
 Due to the way ReShade handles normal maps, we can only access the normals that the game actually sends to the GPU. These "raw" normals are often very polygonal or blocky and can look jarring when used with shaders like RTGI and ReLight.
 
 To address this, Launchpad's normal processing generates Smoothed and Textured Normals to first soften the blocky input normals and then reintroduce high-frequency detail in order to create more accurate lighting relief and a more detailed appearance.
 
 ### Smoothed Normals
+
  <ImageComparisonSlider 
   beforeImage="https://assets.martysmods.com/shaders/launchpad/LaunchpadOriginalNormals3.webp" 
   afterImage="https://assets.martysmods.com/shaders/launchpad/LaunchpadSmoothedNormals3.webp"
@@ -55,6 +66,7 @@ To address this, Launchpad's normal processing generates Smoothed and Textured N
  />
 
 ### Textured Normals
+
  <ImageComparisonSlider 
   beforeImage="https://assets.martysmods.com/shaders/launchpad/LaunchpadSmoothedNormals3.webp"
   afterImage="https://assets.martysmods.com/shaders/launchpad/LaunchpadTexturedNormals3.webp"
@@ -63,6 +75,7 @@ To address this, Launchpad's normal processing generates Smoothed and Textured N
  />
 
 ### Textured Normals Sample Radius
+
 Controls how far around each pixel Launchpad samples to capture high-frequency detail from your game's textures. Because texture quality and art style vary between titles, this radius isn't fixed in the shader and requires the user to configure. Lower values will preserve sharp detail, while higher values can smooth noise but soften fine features.
 
 <ReactPlayer
@@ -77,6 +90,7 @@ Controls how far around each pixel Launchpad samples to capture high-frequency d
 />
 
 ### Textured Normals Intensity
+
 Controls how strongly the sampled texture details are applied to the smoothed normals. Lower values give a subtle bump effect, while higher values emphasize fine surface detail.
 
 <ReactPlayer
@@ -91,9 +105,12 @@ Controls how strongly the sampled texture details are applied to the smoothed no
 />
 
 ### Textured Normals Quality
+
 Controls the detail level of textured normals from 1 (low) to 3 (high). Level 3 delivers the best visuals but may impact performance, so lower it if you need extra speed.
 
-## Debug:
+---
+
+## Debug
 
 ### LAUNCHPAD_DEBUG_OUTPUT
 `LAUNCHPAD_DEBUG_OUTPUT` provides you with 5 different debug views to see what Launchpad is providing to other shaders. When set to `1`, you will be given a new option in your settings called "Debug Output Modes".

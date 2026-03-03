@@ -25,9 +25,10 @@ Launchpad is REQUIRED to be at the top of the shader load order for RTGI to func
 
 ---
 
-## Configuration:
+## Configuration
 
 ### Thickness
+
 The first step in configuring RTGI is setting the **Object Thickness** parameter. 
 
 ![shaderloadorder](https://assets.martysmods.com/shaders/rtgi/RTGIDiffuseObjectThicknessHighlight.webp)
@@ -54,6 +55,7 @@ Be cautious of overshooting the optimal value:
 />
 
 ### Intensity
+
 Once your **Object Thickness** is dialed in, the next step is setting the **Ambient Occlusion** and **Bounce Lighting** intensities.
 
 In order to see the light being blended into your scene, it's best to disable the "**Diffuse RTGI**" debug view and set "**Ambient Light**" to `1.00`.
@@ -75,19 +77,23 @@ These intensity values are largely based on personal preference and artistic int
 />
 
 ### Smoothed and Textured Normals
+
 The **Smoothed Normals** and **Textured Normals** options, available through the [iMMERSE Launchpad shader](/shaders/immerse/launchpad), help correct common visual issues that arise when using ReShade's generic depth buffer. These features address overly polygonal or blocky geometry by providing smoother surfaces with enhanced detail and depth.
 
 #### Smoothed Normals
+
 **Smoothed Normals** reduce the appearance of sharp, low-poly edges by averaging surface normals across adjacent geometry. This results in softer transitions and more natural lighting behavior, particularly beneficial for games with geometric limitations or stylized art directions.
 
 ![Smoothed Normal Comparison](https://assets.martysmods.com/shaders/rtgi/RTGINormalsComparisonSmoothed.webp)
 
 #### Textured Normals
+
 **Textured Normals** add fine surface detail by using the game's texture information to generate additional geometric relief for RTGI calculations. This creates the illusion of more complex surfaces, improving light interaction and visual depth without requiring access to the game's original normal maps.
 
 ![Textured Normal Comparison](https://assets.martysmods.com/shaders/rtgi/RTGINormalsComparisonTextured.webp)
 
 ### Fadeout
+
 The **Fadeout** controls allow you to set the maximum distance that RTGI will cast its ambient occlusion and bounce lighting. This is useful to avoid interference with distant fog or to gain back a small amount of performance.
 
 <ReactPlayer  
@@ -101,7 +107,10 @@ The **Fadeout** controls allow you to set the maximum distance that RTGI will ca
   style={{ width: "100%", margin: "0 auto" }}  
 />
 
-### DLSS/FSR/TAAU Compatibility
+---
+
+## DLSS/FSR/TAAU Compatibility
+
 `_MARTYSMODS_TAAU_SCALE` is a global preprocessor definition that must be manually configured to address depth buffer jitter introduced by upscaling technologies. This preprocessor is essential when using DLSS, FSR, or TAAU to ensure proper depth buffer alignment and prevent visual artifacts.
 
 :::important
@@ -118,7 +127,10 @@ The beginning underscore in `_MARTYSMODS_TAAU_SCALE` is mandatory. Without it, T
 | Performance       | `DLSS_PERFORMANCE`       | `FSR_PERFORMANCE`       |
 | Ultra Performance | `DLSS_ULTRA_PERFORMANCE` | `FSR_ULTRA_PERFORMANCE` |
 
-### Debug View Modes
+---
+
+## Debug View Modes
+
 RTGI provides several debug visualization modes to assist with parameter tuning and understanding the shader's behavior:
 
 - **Disabled**: Standard RTGI output with all effects applied

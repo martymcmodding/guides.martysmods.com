@@ -13,7 +13,7 @@ iMMERSE Pro: Exposure Fusion is an intelligent exposure optimization shader that
 
 ---
 
-## Core Parameters:
+## Parameters
 
 ### Target Brightness
 Sets the mid-gray "setpoint" that the image is optimized toward. This parameter determines the ideal brightness level for the scene, with the shader automatically adjusting local areas to match this target.

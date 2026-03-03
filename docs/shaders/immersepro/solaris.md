@@ -21,9 +21,10 @@ iMMERSE Pro: Solaris is a physically based exposure and bloom shader that replic
 
 ---
 
-## Core Parameters:
+## Parameters
 
 ### Log Exposure Bias
+
 Adjusts the reversed-tonemapped exposure using a logarithmic formula that preserves detail in extreme highlights and shadows. This parameter provides more realistic exposure control compared to linear adjustments, maintaining visual information in areas that would otherwise be clipped or lost.
 
 <ReactPlayer
@@ -38,6 +39,7 @@ Adjusts the reversed-tonemapped exposure using a logarithmic formula that preser
 />
 
 ### Log HDR Whitepoint
+
 Sets the highest brightness threshold that Solaris will consider for bloom generation. This parameter controls the distribution of bloom effects across the brightness range:
 - **Lower Values**: Create bloom in darker areas, producing atmospheric lighting effects
 - **Higher Values**: Shift bloom towards brighter areas, emphasizing highlight diffusion
@@ -54,11 +56,13 @@ Sets the highest brightness threshold that Solaris will consider for bloom gener
 />
 
 ### Bloom Intensity
+
 Controls the overall strength of the bloom effect. This parameter should be balanced to achieve natural-looking light diffusion without overwhelming the original image:
 - **Lower Values**: Provide subtle bloom that enhances atmosphere
 - **Higher Values**: Create dramatic bloom effects for artistic purposes
 
 ### Bloom Radius
+
 Determines the spatial extent of the bloom effect, controlling how light spreads from bright sources:
 - **Larger Radius**: Creates soft, atmospheric bloom that spreads over wider areas
 - **Smaller Radius**: Produces sharp, defined bloom with more concentrated light diffusion
@@ -75,11 +79,13 @@ Determines the spatial extent of the bloom effect, controlling how light spreads
 />
 
 ### Bloom Haziness
+
 Controls the atmospheric quality of the bloom effect, affecting detail preservation and visual clarity:
 - **Lower Values**: Maintain sharp detail within bloom areas, suitable for crisp, technical applications
 - **Higher Values**: Increase atmospheric haze, creating dreamy, cinematic effects
 
 ### High Resolution Input
+
 Enables high-resolution sampling for bloom calculations, essential for capturing fine details in small objects or intricate light sources. This feature is particularly useful when working with high-resolution textures or when precise bloom control is required.
 
 <ImageComparisonSlider 
@@ -90,19 +96,25 @@ Enables high-resolution sampling for bloom calculations, essential for capturing
 />
 
 ### Mask by Depth
+
 Enables depth-based masking in Solaris, allowing the bloom effect to be influenced by the scene's depth information. This feature prevents bloom from appearing inappropriately in distant areas, creating more realistic atmospheric effects.
 
 ### Depth Mask Strength
+
 Controls the intensity of depth-based masking, determining how strongly distance affects bloom visibility:
 - **Higher Values**: Apply stronger depth masking, reducing bloom in distant areas for realistic atmospheric perspective
 - **Lower Values**: Apply minimal depth masking, allowing bloom to appear more uniformly across the scene
 
-## Preprocessor Definitions:
+---
+
+## Preprocessor Definitions
 
 ### `ENABLE_SOLARIS_REGRADE_PARITY`
+
 Enables integration with the ReGrade shader, allowing ReGrade to receive HDR input from Solaris as a color buffer. This feature enables non-destructive HDR exposure, bloom, and color grading workflows by maintaining the full dynamic range throughout the processing pipeline.
 
 ### `SOLARIS_ARTISTIC_MODE`
+
 Activates artistic blending mode presets that deviate from physically accurate bloom for creative applications:
 
 1. **Energy Conserving**: Physically accurate bloom that maintains light energy conservation
@@ -113,4 +125,5 @@ Activates artistic blending mode presets that deviate from physically accurate b
 6. **Screen**: Classic screen blending for bright, vibrant bloom effects
 
 ### `SOLARIS_PERF_MODE`
+
 Activates performance optimization mode for Solaris, reducing GPU load at the cost of some visual quality. This mode is useful for maintaining performance on lower-end systems or when working with complex scenes.

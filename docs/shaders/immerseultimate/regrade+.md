@@ -18,16 +18,20 @@ ReGrade + requires the Addon Support build of ReShade to function properly, othe
 
 ---
 
-## Setup and Configuration:
+## Setup and Configuration
 
 ### Enabling ReGrade +
+
 Before adjusting parameters, move the "ReGrade +" tab to a separate window in the ReShade/Game UI. This controls the entire shader and lets you tweak other effects while viewing the results in real-time. Enabling the shader alone won't activate it. If any component is not running, the Addon/Shader Window will indicate it:
 
 ![ReGradePlus ReShade Window Alerts - All OFF](https://assets.martysmods.com/shaders/regradeplus/regradeplus_shaders_disabled.webp)
 
-## Analysis Tools:
+---
+
+## Analysis Tools
 
 ### Scopes
+
 The "Scopes" section provides graphical representations of various color statistics and balances. By default, it shows the "Histogram RGB," which displays exposure and color values of the current scene.
 
 **Available Scope Types:**
@@ -60,9 +64,12 @@ The "Scopes" section provides graphical representations of various color statist
 
     ![Vectorscope 2x Zoom](https://assets.martysmods.com/shaders/regradeplus/regradeplus_histogram_vectorscope2x.webp)
 
-## Color Adjustment Tools:
+---
+
+## Color Adjustment Tools
 
 ### Tweaks
+
 The "Tweaks" section offers quick adjustments for basic image properties without deep formatting changes.
 
 ![ReGradePlus Tweaks Section](https://assets.martysmods.com/shaders/regradeplus/regradeplus_tweaks.webp)
@@ -86,6 +93,7 @@ The "Tweaks" section offers quick adjustments for basic image properties without
 - **Highlights**: Adjusts highest light point brightness
 
 ### Tone Curves
+
 Interactive widget for creating custom tonemaps. You can adjust brightness and darkness for each color or luminance level using curve manipulation.
 
 **Default Mode**: RGB mode affects all three primary colors simultaneously

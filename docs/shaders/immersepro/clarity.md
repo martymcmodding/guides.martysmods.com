@@ -20,12 +20,14 @@ iMMERSE Pro: Clarity is a real-time image enhancement shader inspired by Adobe P
 
 ---
 
-## Blending Parameters:
+## Parameters
 
 ### Effect Radius
+
 Controls the spatial extent of Clarity's sampling radius when applying sharpening and contrast enhancement. Larger values capture broader features and produce more pronounced detail enhancement, though excessive values may introduce subtle haloing artifacts. Smaller values maintain tight, localized effects for subtle enhancement.
 
 ### Texture Intensity
+
 Determines the strength of sharpening and detail enhancement applied by the shader. Higher values emphasize surface textures and fine geometric elements, while lower values preserve the original soft aesthetic. For optimal results, begin with low values and gradually increase until achieving natural, crisp enhancement without over-processing artifacts.
 
 <ImageComparisonSlider  
@@ -36,6 +38,7 @@ Determines the strength of sharpening and detail enhancement applied by the shad
 />
 
 ### Local Contrast Intensity
+
 Adjusts the contrast relationship between adjacent pixels to reveal subtle surface textures and depth information. Increasing this parameter enhances perceived sharpness and counteracts flat lighting conditions, though excessive values can produce artificial-looking results that deviate from natural appearance.
 
 <ImageComparisonSlider  
