@@ -9,6 +9,7 @@ hide_title: True
 
 <!----------------------- IMPORTS ---------------------------->
 
+import ImageComparisonSlider from '@site/src/components/ImageComparisonSlider';
 import ReactPlayer from 'react-player'
 
 <!----------------------------------------------------------->
@@ -93,3 +94,42 @@ The process to find the correct value can be summarized as such:
 />
 
 - Note that for an Interval of 1 frame, there is only one Delay value that is in sync. For an Interval of 2 frames, there are 2 Delays that are in sync and so on. So if for Interval of 1 frame a Delay of 4 frames worked, then for an Interval of 3 frames, Delay frames 4, 5 and 6 will work with Delay set to 4 frames, being blended as early, and Delay set to 6 frames, meaning being blended as late as possible.
+
+---
+
+## Lens Effects
+
+### Chromatic Aberration
+
+Chromatic aberration occurs when a lens focuses different wavelengths of light at different points, producing color fringing and dispersion. The addon includes a physically based simulation that models real lens designs.
+
+Select a **Lens System** to define the type of aberration and blur character, then use the strength control to set the intensity. Each system corresponds to a different lens element configuration and level of correction:
+
+- **Chromat (Single)** - Single-element behavior. Strongest color fringing and dispersion; most pronounced at high strengths. Use for vintage or deliberately uncorrected looks.
+
+ <ImageComparisonSlider 
+  beforeImage="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFChromaticAberrationNone.webp" 
+  afterImage="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFChromaticAberrationChromat.webp"
+  beforeLabel="None"
+  afterLabel="Chromat"
+ />
+
+- **Achromat (Double)** - Two-element achromatic correction. Reduces secondary spectrum; fringing is milder and more controlled than a single element. A practical default for a subtle lens character.
+
+ <ImageComparisonSlider 
+  beforeImage="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFChromaticAberrationNone.webp" 
+  afterImage="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFChromaticAberrationAchromat.webp"
+  beforeLabel="None"
+  afterLabel="Achromat"
+ />
+
+- **Apochromat (Triplet)** - Three-element apochromatic correction. Minimal chromatic aberration and color fringing; the most neutral, modern-lens option. Use when you want a hint of lens character without obvious color separation.
+
+ <ImageComparisonSlider 
+  beforeImage="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFChromaticAberrationNone.webp" 
+  afterImage="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFChromaticAberrationApochromat.webp"
+  beforeLabel="None"
+  afterLabel="Apochromat"
+ />
+
+Each option also affects out-of-focus blur to match the chosen lens type. Choose the lens system first, then adjust the strength parameter to taste.
