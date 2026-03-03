@@ -71,6 +71,14 @@ html, body, h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea {
   justify-content: space-between;
 }
 
+.theme-layout-footer.footer.footer--dark {
+  border-top: 2px solid #ffffff40;
+}
+
+.menu.thin-scrollbar.menu_SIkG {
+  border-right: 2px solid #ffffff40;
+}
+
 code {
   border: 0.1rem solid #FFFFFFDD;
 }
@@ -167,7 +175,11 @@ code {
 .markdown h4,
 .markdown h5,
 .markdown h6 {
-  margin: var(--space-block) 0;
+  margin: 0 0 var(--space-block);
+}
+
+.markdown h1:first-child {
+  margin-bottom: 15px !important;
 }
 
 .markdown > pre,
@@ -199,4 +211,14 @@ code {
 
 .img {
   margin: var(--space-block) auto !important;
+}
+
+.markdown hr {
+  border: 0 !important;
+  border-top: 3px solid var(--ifm-font-color-base) !important;
+  height: 3px;
+}
+
+.docusaurus-mt-lg.pagination-nav {
+  display: none !important;
 }
