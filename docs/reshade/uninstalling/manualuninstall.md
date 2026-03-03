@@ -10,11 +10,11 @@ hide_title: true
 # Manually Uninstalling ReShade
 
 ## Navigate to your Application Folder
-Navigate your game or application's root folder where the primary executable is. To find this you can follow [our guide on finding your game or application's executable](../../additionalguides/findexecutable).
+Navigate your game or application's root folder where the primary executable is. To find this you can follow [our guide on finding your game or application's executable](/additionalguides/findexecutable).
 
 ## Delete The Following Files (If Applicable)
 :::important
-if you are not able to find `.dll`, `.ini`, or `.log` files, make sure that you have [Windows File Extenions enabled](../../additionalguides/fileextensions).
+if you are not able to find `.dll`, `.ini`, or `.log` files, make sure that you have [Windows File Extenions enabled](/additionalguides/fileextensions).
 :::
 
 | File Name       | Description                               |

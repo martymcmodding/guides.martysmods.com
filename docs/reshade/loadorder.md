@@ -66,13 +66,15 @@ With MXAO applied first and PTVL rendered subsequently, the fog correctly occlud
 
 ---
 
-## General Rules for Shader Categories
+## General Rules
 
 Load order management provides control over final output quality. While ReShade offers significant creative freedom, establishing a structured foundation with clear principles ensures optimal results.
 
 Shader types can be organized into categories, or tiers, based on their function and dependencies within the rendering pipeline.
 
 Each enabled shader introduces a degree of data loss through quantization and processing artifacts, which accumulates across the pipeline and degrades image quality. Therefore, minimizing the number of active shaders while achieving the desired look you want is recommended. Each shader should serve a distinct purpose within the load order. For example, rather than using multiple shaders to adjust contrast, a single dedicated contrast adjustment shader should be employed.
+
+---
 
 ## Shader Categories/Tiers
 

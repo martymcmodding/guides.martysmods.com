@@ -1,41 +1,48 @@
 ---
 title: "dgVoodoo2"
 sidebar_label: "dgVoodoo2"
-description: "Using dgVoodoo2 to translate games to DirectX 11/12 for ReShade"
+description: "Use dgVoodoo2 to translate older DirectX versions to DirectX 11/12 for improved ReShade compatibility."
 slug: /additionalguides/apiwrappers/dgvoodoo2
 sidebar_position: 2
 hide_title: true
 ---
 
 # dgVoodoo2
-dgVoodoo2 is a rendering API wrapper used to translate games that use older DirectX rendering APIs to newer DirectX Rendering APIs. This is highly useful for adapting older DirectX 8, 9, and 10 games so that they can benefit from ReShade's compute shaders.
+
+dgVoodoo2 is a rendering API wrapper that translates older DirectX rendering APIs to newer DirectX versions. This is useful for adapting DirectX 6/7/8/9 titles so that they can benefit from ReShade's features, including compute-based effects.
 
 ---
 
-## Downloading dgVoodoo2
-Download the latest version of dgVoodoo2 by visiting [the developer's website](https://dege.freeweb.hu/dgVoodoo2/dgVoodoo2/#latest-stable-version) and downloading the "Latest stable version" of dgVoodoo2.
+## Download dgVoodoo2
+
+Download the latest version of dgVoodoo2 from [the developer's website](https://dege.freeweb.hu/dgVoodoo2/dgVoodoo2/#latest-stable-version) by selecting the **Latest stable version**.
 
 ![dgVodooo2 Releases](https://assets.martysmods.com/additionalguides/apiwrapper/dgvoodoo2/dgVoodoo2Releases.webp)
 
-### Finding Your Game’s DirectX Version & Architecture
-Afterwards, go to [PCGamingWiki](https://pcgamingwiki.com/) and search for your game. You'll need to take note of:
-   - Which DirectX version it uses (e.g., DirectX 9, DirectX 10).
-   - Whether the game executable is 32‑bit or 64‑bit.
+---
+
+## Determine the Game’s DirectX Version and Architecture
+
+Go to [PCGamingWiki](https://pcgamingwiki.com/) and search for the game. Record the following information:
+
+- The DirectX version the game uses (for example, DirectX 9 or DirectX 10).
+- Whether the game executable is 32‑bit or 64‑bit.
 
 ---
 
-## Installing dgVoodoo2
-Once you've found the architecture and version of DirectX, open the dgVoodoo2 ZIP file you downloaded using [7-Zip](https://www.7-zip.org/) or [WinRAR](https://www.win-rar.com/). Inside the archive, you'll see several files and folders. For the time being, take note of the `dgVoodooCpl.exe` and `dgVoodoo.conf` files in the root of the archive, as you'll need to copy these to your game's directory later.
+## Install dgVoodoo2
 
-Then, navigate into the `MS` folder.
+After determining the game's architecture and DirectX version, open the dgVoodoo2 ZIP file using an archive manager such as [7-Zip](https://www.7-zip.org/) or [WinRAR](https://www.win-rar.com/). Inside the archive, several files and folders are present. Note the `dgVoodooCpl.exe` and `dgVoodoo.conf` files in the root of the archive; these will be copied to the game directory later.
+
+Then navigate into the `MS` folder.
 
 ![dgVoodoo2 Archive](https://assets.martysmods.com/additionalguides/apiwrapper/dgvoodoo2/dgVoodoo2Archive.webp)
 
-Within `MS`, you'll find several subfolders; however, the only two that matter to you are `x64` (64‑bit) and `x86` (32‑bit). You'll want to open the folder that matches your game's architecture.
+Within `MS`, several subfolders are available. For this workflow, only `x64` (64‑bit) and `x86` (32‑bit) are relevant. Open the folder that matches the game's architecture.
 
 ![dgVoodoo2 Arch](https://assets.martysmods.com/additionalguides/apiwrapper/dgvoodoo2/dgVoodoo2Arch.webp)
 
-Once you're inside the right architecture folder, locate the DLL that matches your game’s DirectX version:
+Inside the selected architecture folder, locate the DLL that matches the game's DirectX version:
 
 | **DLL Name**    | **DirectX Version**  |
 | --------------- | -------------------- |
@@ -46,37 +53,37 @@ Once you're inside the right architecture folder, locate the DLL that matches yo
 | `d3d9.dll`      | DirectX 9            |
 
 
-Copy the appropriate DLL, as well as the `dgVoodooCpl.exe` and `dgVoodoo.conf` files into the same directory as your game’s main executable. If you’re not sure where your game is installed, refer to [our guide on finding a game’s executable](../findexecutable) for more details.
+Copy the appropriate DLL, together with the `dgVoodooCpl.exe` and `dgVoodoo.conf` files, into the same directory as the game’s main executable. If the game installation directory is unknown, refer to the guide on [finding a game’s executable](/additionalguides/findexecutable) for details.
 
 ![dgVoodoo2 Install Finish Result](https://assets.martysmods.com/additionalguides/apiwrapper/dgvoodoo2/dgVooodo2Install.webp)
 
 ---
 
-## Configuring dgVoodoo2
+## Configure dgVoodoo2
 
-Navigate to your game's directory and double-click `dgVoodooCpl.exe`. This is the control panel application that allows you to configure dgVoodoo2's settings. You'll see dgVoodoo2's configuration interface with several tabs.
+In the game directory, double-click `dgVoodooCpl.exe`. This control panel application is used to configure dgVoodoo2 settings and exposes several configuration tabs.
 
 ![dgVoodoo2 Control Panel](https://assets.martysmods.com/additionalguides/apiwrapper/dgvoodoo2/dgVoodoo2CPGeneral.webp)
 
-Click on the `General` tab at the top of the window. Here, you'll find the "Output API" dropdown menu. This setting determines which DirectX version dgVoodoo2 will translate your game's API calls to.
+Click the `General` tab at the top of the window. The **Output API** dropdown menu determines which DirectX version dgVoodoo2 uses as the translation target for the game's rendering.
 
-For ReShade compatibility, you'll want to select either:
+For ReShade compatibility, select one of the following options:
 
 - **Direct3D 11 (feature level 11.0)** - Recommended for most systems
 - **Direct3D 12 (feature level 12.0)** - May offer better performance on newer systems
 
 ![dgVoodoo2 Output API Setting](https://assets.martysmods.com/additionalguides/apiwrapper/dgvoodoo2/dgVoodoo2OutputAPI.webp)
 
-Once you've selected your desired Output API, click the `Apply` button at the bottom of the window.
+After selecting the desired Output API, click **Apply** at the bottom of the window to save the configuration.
 
 ---
 
-## Installing ReShade
+## Install ReShade
 
-Now that dgVoodoo2 is installed and configured to translate your game's DirectX calls to DirectX 11 or 12, you can install ReShade. Since dgVoodoo2 is translating your game to a newer DirectX version, you'll need to install ReShade for **DirectX 10/11/12**, not the original DirectX version your game uses.
+After dgVoodoo2 is installed and configured to translate the game's DirectX calls to DirectX 11 or 12, ReShade can be installed. Because dgVoodoo2 presents the game as a newer DirectX version, ReShade must be installed for **DirectX 10/11/12**, not for the game's original DirectX version.
 
-Download and run the latest ReShade installer from [ReShade.me](https://reshade.me/). When prompted to select your game's Rendering API, choose **DirectX 10/11/12**. This is important because dgVoodoo2 is presenting your game as a DirectX 11 or 12 application to ReShade, even though the game originally uses an older DirectX version.
+Download and run the latest ReShade installer from [ReShade.me](https://reshade.me/). When prompted to select the game's rendering API, choose **DirectX 10/11/12**. dgVoodoo2 presents the game as a DirectX 11 or 12 application to ReShade even if the original game uses an older DirectX version.
 
-If you need detailed step-by-step instructions for installing ReShade, refer to [our ReShade installation guide](../../reshade/installing/setuptool).
+For detailed, step-by-step instructions on installing ReShade, refer to the [ReShade installation guide](/reshade/installing/setuptool).
 
 After installation is complete, launch your game to verify that both dgVoodoo2 and ReShade are working correctly. You should see the ReShade overlay appear when you press the default key (usually the Home key), confirming that everything has been set up successfully.

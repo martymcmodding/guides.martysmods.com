@@ -27,9 +27,11 @@ The ReShade Setup Tool is a handy application that guides you step-by-step throu
 
 Upon opening the ReShade Setup Tool, you'll be greeted with a selection of known applications detected on your machine that you can install ReShade to.
 
-If your game isn't listed here in the known applications list, you can click the "Browse..." button at the bottom right of the setup tool. If you don't know where your game is located, read through [our guide on finding your game’s executable and directory](../../additionalguides/findexecutable).
+If your game isn't listed here in the known applications list, you can click the "Browse..." button at the bottom right of the setup tool. If you don't know where your game is located, read through [our guide on finding your game’s executable and directory](/additionalguides/findexecutable).
 
 ![GameSelect](https://assets.martysmods.com/reshade/installing/SetupToolGameSelect.webp)
+
+---
 
 ## Selecting the Rendering API
 
@@ -41,6 +43,8 @@ Once you have identified the correct rendering API, select it in the ReShade Set
 
 ![APISelect](https://assets.martysmods.com/reshade/installing/SetupToolAPISelect.webp)
 
+---
+
 ## Installing Shaders & Presets
 
 Shaders are responsible for the visual enhancements you experience with ReShade. Without shaders, ReShade will not alter your game's appearance. During this step, you will be presented with a list of available shader repositories. Select the repositories you wish to install. If you are unsure about the contents of a repository, you can click its name to visit the corresponding GitHub page for more details.
@@ -48,6 +52,8 @@ Shaders are responsible for the visual enhancements you experience with ReShade.
 If you have downloaded a preset and want to install it, you can add it at this stage. Use the "Browse..." button at the bottom of the page to locate and select your preset file. The ReShade Setup Tool will then automatically detect which shaders are required for your preset and ensure they are installed. This makes it easy to get started with your preferred visual style without manually searching for each shader.
 
 ![ShaderSelect](https://assets.martysmods.com/reshade/installing/SetupToolShaderSelect.webp)
+
+---
 
 ## Installing Add-ons (Add-on Support Only)
 

@@ -16,8 +16,12 @@ Some games and applications are not compatible with the ReShade Setup Tool, or t
 Before manually installing ReShade, identify two key details about your game: its bit architecture (32-bit or 64-bit) and the Rendering API it uses (DirectX 9, 10, 11, 12, or OpenGL).  
 If you're not sure about either of these, you can usually find the information on [PCGamingWiki](https://www.pcgamingwiki.com/wiki/Home).
 
+---
+
 ## Download the ReShade Setup Tool
 Download the latest ReShade Setup Tool from the [ReShade website](https://reshade.me/#download).
+
+---
 
 ## Extract the ReShade Binary
 The ReShade Setup Tool is distributed as an executable, but its contents can be extracted using an archive manager such as 7-Zip or WinRAR. This guide uses [7-Zip](https://www.7-zip.org/download.html).
@@ -35,7 +39,9 @@ Inside, you will find two DLL files. Choose the one that matches your game's arc
 | 32-bit                      | ReShade32.dll |
 
 Drag the correct DLL to your game's folder. This is the same folder that contains the game's executable.  
-If you are unsure where that is, right-click your game in your launcher (Steam, GOG Galaxy, etc.), select **Manage** or **Browse local files**, and look for the folder containing the executable. Alternatively, see our guide for [finding your game's executable](../../additionalguides/findexecutable).
+If you are unsure where that is, right-click your game in your launcher (Steam, GOG Galaxy, etc.), select **Manage** or **Browse local files**, and look for the folder containing the executable. Alternatively, see our guide for [finding your game's executable](/additionalguides/findexecutable).
+
+---
 
 ## Rename the DLL File
 After placing the ReShade binary in your game folder, rename it according to the Rendering API your game uses:
@@ -48,9 +54,11 @@ After placing the ReShade binary in your game folder, rename it according to the
 | DirectX 12         | `d3d12.dll`    |
 | OpenGL             | `opengl32.dll` |
 
+---
+
 ## Install Shader Repositories and Add-ons
 ReShade requires shaders to have any visual effect. Without them, your game will appear unchanged.
 
-To install shaders manually, see our guide for [manually installing shaders](../manualshaderinstall). This will walk you through downloading, extracting, and placing shader repositories so ReShade can detect and use them.
+To install shaders manually, see our guide for [manually installing shaders](/reshade/installing/reshademanualshaderinstall). This will walk you through downloading, extracting, and placing shader repositories so ReShade can detect and use them.
 
-You can also add extra functionality through Add-ons. Step-by-step instructions are available in our guide for [manually installing Add-ons](../manualaddoninstall).
+You can also add extra functionality through Add-ons. Step-by-step instructions are available in our guide for [manually installing Add-ons](/reshade/installing/reshademanualaddoninstall).

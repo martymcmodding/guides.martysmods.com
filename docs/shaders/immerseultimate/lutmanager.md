@@ -25,7 +25,7 @@ LUTs are predefined color grading files, typically in PNG format. You can browse
 ### Installing LUTs
 1. Create a folder named "LUTs" in your game's root directory
 2. Place downloaded LUT textures inside this folder
-3. For help locating your game folder, see our guide on [how to locate your game's executable](../../additionalguides/findexecutable)
+3. For help locating your game folder, see our guide on [how to locate your game's executable](/additionalguides/findexecutable)
 
 ## Usage:
 

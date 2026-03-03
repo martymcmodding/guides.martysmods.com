@@ -19,7 +19,7 @@ import ReactPlayer from 'react-player'
 
 Not all shader repositories are avalible to be downloaded or installed through the ReShade Setup Tool - as so, users will sometimes have to manually install these repositories/archives through manual means.
 
-To follow along with this guide, ReShade **must** already be installed and working in your game. If ReShade is not active or installed to your game, you can follow our [guide for installing ReShade with the ReShade Setup Tool](./setuptool).
+To follow along with this guide, ReShade **must** already be installed and working in your game. If ReShade is not active or installed to your game, you can follow our [guide for installing ReShade with the ReShade Setup Tool](/reshade/installing/setuptool).
 
 :::warning
 If the shaders you are attempting to install were not obtained from GitHub (instead downloaded through Patreon, Discord, or via Direct Download), you can skip the GitHub download steps below and instead use the shader files provided to you directly (usually in a ZIP or folder format).
@@ -28,6 +28,8 @@ If the shaders you are attempting to install were not obtained from GitHub (inst
 ---
 
 <YTConsentManualShaderInstall />
+
+---
 
 ## Downloading the Shader Repository(s)
 

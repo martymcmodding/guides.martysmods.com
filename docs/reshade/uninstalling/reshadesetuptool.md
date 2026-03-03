@@ -18,7 +18,7 @@ If your game isn’t listed, click the "Browse..." button at the bottom-right co
 
 Executable files usually have the ".exe" extension and are often located in the main folder of the game’s installation directory.
 
-If you’re unsure where to find your game or application's executable, you can check [our guide on finding your game’s executable and directory](../../additionalguides/findexecutable) for a step-by-step walkthrough.
+If you’re unsure where to find your game or application's executable, you can check [our guide on finding your game’s executable and directory](/additionalguides/findexecutable) for a step-by-step walkthrough.
 
 ## Selecting the Rendering API
 If ReShade is installed, the Rendering API that had been previously selected will be ticked for you. If ReShade is not installed, or you've selected the wrong executable for your game/application, this will be blank.

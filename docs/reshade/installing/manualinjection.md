@@ -28,14 +28,20 @@ To get around this, Crosire created a small injection tool that lets you manuall
 Before manually installing ReShade, identify two key details about your game: its bit architecture (32-bit or 64-bit) and the Rendering API it uses (DirectX 9, 10, 11, 12, or OpenGL).  
 If you're not sure about either of these, you can usually find the information on [PCGamingWiki](https://www.pcgamingwiki.com/wiki/Home).
 
+---
+
 ## Download the ReShade Injector
 Choose the injector that matches your game's architecture:
 
 * [64-bit Injector](https://reshade.me/downloads/inject64.exe)  
 * [32-bit Injector](https://reshade.me/downloads/inject32.exe)  
 
+---
+
 ## Download the ReShade Setup Tool
 Download the latest ReShade Setup Tool from the [ReShade website](https://reshade.me/#download).
+
+---
 
 ## Extract the ReShade Binary
 The ReShade Setup Tool is distributed as an executable, but its contents can be extracted using an archive manager such as 7-Zip or WinRAR. This guide uses [7-Zip](https://www.7-zip.org/download.html).
@@ -53,12 +59,16 @@ Inside, you will find two DLL files. Choose the one that matches your game's arc
 | 32-bit                      | ReShade32.dll |
 
 Drag the correct DLL to your game's folder. This is the same folder that contains the game's executable.  
-If you are unsure where that is, right-click your game in your launcher (Steam, GOG Galaxy, etc.), select **Manage** or **Browse local files**, and look for the folder containing the executable. Alternatively, see our guide for [finding your game's executable](../../additionalguides/findexecutable).
+If you are unsure where that is, right-click your game in your launcher (Steam, GOG Galaxy, etc.), select **Manage** or **Browse local files**, and look for the folder containing the executable. Alternatively, see our guide for [finding your game's executable](/additionalguides/findexecutable).
+
+---
 
 ## Install Shader Repositories and Add-ons
-After injecting ReShade, you need shaders for it to have any visual effect. Without shaders, ReShade will not change the game’s appearance. See our guide for [manually installing shaders](./reshademanualshaderinstall) for instructions on downloading, extracting, and placing shader repositories in the correct folder.
+After injecting ReShade, you need shaders for it to have any visual effect. Without shaders, ReShade will not change the game’s appearance. See our guide for [manually installing shaders](/reshade/installing/reshademanualshaderinstall) for instructions on downloading, extracting, and placing shader repositories in the correct folder.
 
-You can also add functionality to ReShade through Add-ons. Step-by-step instructions are in our guide for [manually installing Add-ons](./reshademanualaddoninstall).
+You can also add functionality to ReShade through Add-ons. Step-by-step instructions are in our guide for [manually installing Add-ons](/reshade/installing/reshademanualaddoninstall).
+
+---
 
 ## Manually Inject ReShade
 1. Close your game.  

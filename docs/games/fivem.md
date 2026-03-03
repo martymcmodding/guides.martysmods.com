@@ -14,15 +14,19 @@ FiveM is a platform that lets you play on custom servers for Grand Theft Auto V 
 
 ## Step 1: Turn On Windows File Extensions
 
-To follow this guide properly, you need to be able to see file extensions in Windows. File extensions are the parts at the end of file names that indicate the file type, like `.exe` or `.dll`. Enabling these will help you find and move the right files. Follow our [guide for enabling Windows file extensions](../additionalguides/fileextensions) to complete this step.
+To follow this guide properly, you need to be able to see file extensions in Windows. File extensions are the parts at the end of file names that indicate the file type, like `.exe` or `.dll`. Enabling these will help you find and move the right files. Follow our [guide for enabling Windows file extensions](/additionalguides/fileextensions) to complete this step.
+
+---
 
 ## Step 2: Install ReShade to GTAV
 
-Download the latest Add-on Support Build of ReShade from the official ReShade website. Make sure to install it into your GTAV game folder and do not include any add-ons during the process. This is important to prevent issues later. If you need assistance, refer to our [ReShade installation guide](../reshade/installing/setuptool). Double-check that the installation was successful before moving forward.
+Download the latest Add-on Support Build of ReShade from the official ReShade website. Make sure to install it into your GTAV game folder and do not include any add-ons during the process. This is important to prevent issues later. If you need assistance, refer to our [ReShade installation guide](/reshade/installing/setuptool). Double-check that the installation was successful before moving forward.
+
+---
 
 ## Step 3: Navigate to your GTAV Folder
 
-Locate your GTAV game folder, where the main game files are stored. If you’re unsure how to find it, use our [guide for finding your game’s executable](../additionalguides/findexecutable). Ensure these files and folder are present:
+Locate your GTAV game folder, where the main game files are stored. If you’re unsure how to find it, use our [guide for finding your game’s executable](/additionalguides/findexecutable). Ensure these files and folder are present:
 
 - `dxgi.dll`
 - `reshade.ini`
@@ -32,11 +36,15 @@ These ReShade files will be needed later. Confirm they are in your GTAV director
 
 ![GTAV ReShade Install Files](https://assets.martysmods.com/additionalguides/games/fivem/FiveMGTAVReShadeFiles.webp)
 
+---
+
 ## Step 4: Navigate to your FiveM Installation
 
 Next, find the folder where FiveM is installed. This is important for transferring files in the next steps. Use the same method from Step 3 to locate your FiveM folder.
 
 ![FiveM File Location](https://assets.martysmods.com/additionalguides/games/fivem/FiveMFileLocation.webp)
+
+---
 
 ## Step 5: Navigate to FiveM's Plugins Directory
 
@@ -45,6 +53,8 @@ Open your FiveM folder and navigate to “FiveM Application Data.” Inside, fin
 ![FiveM appdata Location](https://assets.martysmods.com/additionalguides/games/fivem/FiveMAppdataLocation.webp)
 
 ![FiveM plugins Location](https://assets.martysmods.com/additionalguides/games/fivem/FiveMPluginLocation.webp)
+
+---
 
 ## Step 6: Transfer ReShade Files
 
@@ -57,6 +67,8 @@ Go back to your GTAV folder and cut the following files and folder:
 Paste these into the "plugins" folder in your FiveM directory. This ensures ReShade will work properly with FiveM.
 
 ![FiveM ReShade Install Location](https://assets.martysmods.com/additionalguides/games/fivem/FiveMReShadeInstallLocation.webp)
+
+---
 
 ## Step 7: Press F8 to Check FiveM's Log
 
@@ -72,6 +84,8 @@ ReShade5=ID:XXXXXX acknowledged that ReShade 5.x has a bug that will lead to gam
 ```
 
 **Important Note:** Ensure your ID matches the one in the FiveM log exactly. Even a small mistake can prevent this from working.
+
+---
 
 ## Step 8: Restart FiveM and Enable "Fix UI Lag"
 

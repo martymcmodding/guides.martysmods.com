@@ -75,7 +75,7 @@ These intensity values are largely based on personal preference and artistic int
 />
 
 ### Smoothed and Textured Normals
-The **Smoothed Normals** and **Textured Normals** options, available through the [iMMERSE Launchpad shader](../immerse/01launchpad.md), help correct common visual issues that arise when using ReShade's generic depth buffer. These features address overly polygonal or blocky geometry by providing smoother surfaces with enhanced detail and depth.
+The **Smoothed Normals** and **Textured Normals** options, available through the [iMMERSE Launchpad shader](/shaders/immerse/launchpad), help correct common visual issues that arise when using ReShade's generic depth buffer. These features address overly polygonal or blocky geometry by providing smoother surfaces with enhanced detail and depth.
 
 #### Smoothed Normals
 **Smoothed Normals** reduce the appearance of sharp, low-poly edges by averaging surface normals across adjacent geometry. This results in softer transitions and more natural lighting behavior, particularly beneficial for games with geometric limitations or stylized art directions.

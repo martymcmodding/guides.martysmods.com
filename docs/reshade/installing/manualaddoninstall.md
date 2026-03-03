@@ -9,9 +9,9 @@ hide_title: true
 
 # Manually Installing Add-ons
 
-Add-ons are programs built to make use of ReShade's "Add-on API". These can do several things to your game and ReShade install: from providing you a history list (like in Photoshop) to providing you with complete [color grading toolsets](../../../shaders/immerseultimate/regradeplus). However, not all add-ons are avaliable for install through the ReShade Setup Tool, so, users will have to manually install add-ons in order for them to load with ReShade when the game is launched.
+Add-ons are programs built to make use of ReShade's "Add-on API". These can do several things to your game and ReShade install: from providing you a history list (like in Photoshop) to providing you with complete [color grading toolsets](/shaders/immerseultimate/regradeplus). However, not all add-ons are avaliable for install through the ReShade Setup Tool, so, users will have to manually install add-ons in order for them to load with ReShade when the game is launched.
 
-To follow along with this guide, the **Add-on Support** build of ReShade **must** already be installed and working in your game. If ReShade is not active or installed to your game, you can follow our [guide for installing ReShade with the ReShade Setup Tool](./setuptool).
+To follow along with this guide, the **Add-on Support** build of ReShade **must** already be installed and working in your game. If ReShade is not active or installed to your game, you can follow our [guide for installing ReShade with the ReShade Setup Tool](/reshade/installing/setuptool).
 
 ---
 
@@ -25,9 +25,11 @@ To follow along with this guide, the **Add-on Support** build of ReShade **must*
 2. Loosely place your add-on files (denoted with extenions addon.32 or addon.64) into the folder where your ReShade binary exists. Make sure to not leave your add-ons in a folder, otherwise they will not load.
 3. Restart/Start your game.
 
+---
+
 ## Install for Vulkan
 
-1. Locate your game's executable location. Typically this is in the root folder of your game's installation, however, there are cases where the game's executable is outside of the root folder (All Unreal Engine Games). If you cannot find the location of your game executable, follow through our [guide on finding your game executable](../../additionalguides/findexecutable).
+1. Locate your game's executable location. Typically this is in the root folder of your game's installation, however, there are cases where the game's executable is outside of the root folder (All Unreal Engine Games). If you cannot find the location of your game executable, follow through our [guide on finding your game executable](/additionalguides/findexecutable).
 2. Loosely place your add-on files (denoted with extenions addon.32 or addon.64) into the folder where your game executable exists. Make sure to not leave your add-ons in a folder, otherwise they will not load.
 3. Restart/Start your game.
 

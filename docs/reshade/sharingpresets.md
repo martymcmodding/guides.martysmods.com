@@ -15,7 +15,9 @@ Creating a ReShade preset that looks great and sharing it with others can be a r
 
 ## Creating a Preset with Load Order in Mind
 
-When creating a preset, it's essential to follow the load order principles. For a complete understanding of load order and the tier system, refer to [our Load Order guide](./loadorder).
+When creating a preset, it's essential to follow the load order principles. For a complete understanding of load order and the tier system, refer to [our Load Order guide](/reshade/loadorder).
+
+---
 
 ### Start with a Clean Foundation
 
@@ -27,13 +29,13 @@ If you're looking to add **global illumination** you might consider iMMERSE Pro:
 
 For **sharpening** you might use iMMERSE: Sharpen.
 
-By understanding these graphics techniques and having a clear vision of what you want to achieve, you can make informed decisions about which shaders to use and how to configure them. When you need specifics about particular shaders, refer to the [iMMERSE shader documentation](../shaders/immerse/launchpad) for detailed information about each effect.
+By understanding these graphics techniques and having a clear vision of what you want to achieve, you can make informed decisions about which shaders to use and how to configure them. When you need specifics about particular shaders, refer to the [iMMERSE shader documentation](/shaders/immerse/launchpad) for detailed information about each effect.
 
 ---
 
 ## Avoiding Redundant Shaders
 
-One of the most important principles when creating a preset is to use as few shaders as possible. This concept is covered in detail in [our Load Order guide](./loadorder), which explains how each shader introduces data loss and why using multiple shaders to achieve a single effect is inefficient for both performance and the ending result of your preset.
+One of the most important principles when creating a preset is to use as few shaders as possible. This concept is covered in detail in [our Load Order guide](/reshade/loadorder), which explains how each shader introduces data loss and why using multiple shaders to achieve a single effect is inefficient for both performance and the ending result of your preset.
 
 ### One Shader, One Purpose
 

@@ -1,3 +1,4 @@
+/* Typography & base font faces */
 @font-face {
   font-family: 'Glober';
   src: url('/fonts/glober-regular-webfont.woff2') format('woff2');
@@ -19,6 +20,7 @@
   font-style: italic;
 }
 
+/* Base document styles */
 html, body {
   background-color: #191c20 !important;
 }
@@ -53,6 +55,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea {
 }
 
 
+/* Global layout: navbar & footer */
 .navbar {
   background-color: #191c20 !important;
   border-bottom: 2px solid #ffffff40;
@@ -141,6 +144,7 @@ code {
   }
 }
 
+/* Lazy image placeholder shimmer */
 .lazy-image-placeholder {
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.05) 75%);
   background-size: 200% 100%;
@@ -153,12 +157,14 @@ code {
   100% { background-position: -200% 0; }
 }
 
+/* Depth buffer helper tables */
 .depth-buffer-table table,
 .depth-buffer-table table th,
 .depth-buffer-table table td {
   text-align: center !important;
 }
 
+/* Image layout helpers */
 .image-side-by-side {
   display: flex;
   align-items: flex-start;
@@ -169,6 +175,7 @@ code {
   max-width: 50%;
 }
 
+/* Markdown content spacing */
 .markdown h1,
 .markdown h2,
 .markdown h3,
@@ -197,7 +204,7 @@ code {
 .markdown iframe,
 .markdown video {
   display: block;
-  margin: var(--space-block) auto;
+  margin: var(--space-block) 0;
 }
 
 .markdown li {
@@ -209,16 +216,14 @@ code {
   margin-bottom: var(--space-block);
 }
 
-.img {
-  margin: var(--space-block) auto !important;
-}
-
+/* Markdown horizontal rules */
 .markdown hr {
   border: 0 !important;
   border-top: 3px solid var(--ifm-font-color-base) !important;
   height: 3px;
 }
 
+/* Docusaurus pagination overrides */
 .docusaurus-mt-lg.pagination-nav {
   display: none !important;
 }
