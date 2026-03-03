@@ -30,11 +30,11 @@ Configure all shaders you want to use in a shot before beginning a render with P
 
 When IGCS's Camera Mode is enabled along with the Parallax DoF shader, the GUI controls will open in a window detached from the main ReShade interface.
 
-![ParllaxDoFGUI](https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFGUI.webp)
+![ParllaxDoFGUI](https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFGUI2.webp)
 
 Clicking **Start Session** opens the session control panel and displays a transparently shifted overlay used to calculate the focal plane position.
 
-![ParallaxDoFControls](https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFControls.webp)
+![ParallaxDoFControls](https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFControls2.webp)
 
 ---
 
