@@ -41,6 +41,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      image: 'https://assets.martysmods.com/MartysModsBanner16x9.webp',
       navbar: {
         title: "",
         logo: {
