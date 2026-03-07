@@ -30,7 +30,7 @@ Configure all shaders you want to use in a shot before beginning a render with P
 
 When IGCS's Camera Mode is enabled along with the Parallax DoF shader, the GUI controls will open in a window detached from the main ReShade interface.
 
-![ParllaxDoFGUI](https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFGUI2.webp)
+![ParallaxDoFGUI](https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFGUI2.webp)
 
 Clicking **Start Session** opens the session control panel and displays a transparently shifted overlay used to calculate the focal plane position.
 
@@ -101,11 +101,15 @@ The process to find the correct value can be summarized as such:
 
 ### Chromatic Aberration
 
-Chromatic aberration occurs when a lens focuses different wavelengths of light at different points, producing color fringing and dispersion. The addon includes a physically based simulation that models real lens designs.
+Chromatic aberration comes from refraction: lenses have different focal distances per wavelength, so if one color (e.g. red) is sharp at the focal plane, another (e.g. blue) can be slightly out of focus. That difference also means different blur radii per wavelength, which shows up as color fringing around bokeh discs. The addon simulates this with a physically based model of real lens designs.
 
-Select a **Lens System** to define the type of aberration and blur character, then use the strength control to set the intensity. Each system corresponds to a different lens element configuration and level of correction:
+Real camera lenses use multiple elements that partly cancel each other’s chromatic errors. A single element spreads the full spectrum (red through blue). A doublet folds the spectrum so red and blue meet, giving magenta–green fringing. An apochromat uses three elements and a three-way fold, so the fringe pattern is more complex and subdued.
 
-- **Chromat (Single)** - Single-element behavior. Strongest color fringing and dispersion; most pronounced at high strengths. Use for vintage or deliberately uncorrected looks.
+Select a **Lens System** to set the type of aberration and blur character, then use the strength control for intensity. Each option matches a different element count and correction:
+
+- **Chromat (Single)** - Single-element behavior: full spectrum (red → blue) fringing. Strongest dispersion; most pronounced at high strengths. Use for vintage or deliberately uncorrected looks.
+
+ ![CARenderChromat](https://assets.martysmods.com/shaders/parallaxdof/CARenderChromat.webp)
 
  <ImageComparisonSlider 
   beforeImage="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFChromaticAberrationNone.webp" 
@@ -114,7 +118,9 @@ Select a **Lens System** to define the type of aberration and blur character, th
   afterLabel="Chromat"
  />
 
-- **Achromat (Double)** - Two-element achromatic correction. Reduces secondary spectrum; fringing is milder and more controlled than a single element. A practical default for a subtle lens character.
+- **Achromat (Double)** - Two-element achromatic correction. Spectrum folds so red and blue meet; fringing appears as magenta–green rather than full spectrum. Milder and more controlled than a single element. A practical default for subtle lens character.
+
+ ![CARenderAchromat](https://assets.martysmods.com/shaders/parallaxdof/CARenderAchromat.webp)
 
  <ImageComparisonSlider 
   beforeImage="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFChromaticAberrationNone.webp" 
@@ -123,7 +129,9 @@ Select a **Lens System** to define the type of aberration and blur character, th
   afterLabel="Achromat"
  />
 
-- **Apochromat (Triplet)** - Three-element apochromatic correction. Minimal chromatic aberration and color fringing; the most neutral, modern-lens option. Use when you want a hint of lens character without obvious color separation.
+- **Apochromat (Triplet)** - Three-element apochromatic correction. Spectrum folds three ways, so the fringe is more complex and minimal. The most neutral, modern-lens option. Use when you want a hint of lens character without obvious color separation.
+
+ ![CARenderApochromat](https://assets.martysmods.com/shaders/parallaxdof/CARenderApochromat.webp)
 
  <ImageComparisonSlider 
   beforeImage="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFChromaticAberrationNone.webp" 
@@ -133,3 +141,49 @@ Select a **Lens System** to define the type of aberration and blur character, th
  />
 
 Each option also affects out-of-focus blur to match the chosen lens type. Choose the lens system first, then adjust the strength parameter to taste.
+
+### Spherical Aberration
+
+Spherical aberration occurs when light rays passing through the edges of a lens focus at a different point than those passing through the center, producing a soft focus character and affecting bokeh appearance. The addon simulates this to match real lens behavior.
+
+- Curve - Controls the shape of the aberration falloff from the center of the lens outward. Different curve values alter how the blur character transitions across the frame, matching single-element, doublet, or other lens configurations.
+
+- Strength - Sets the intensity of the spherical aberration effect. Higher values produce more pronounced soft-focus and bokeh character; lower values yield a cleaner, more corrected look.
+
+### Astigmatism
+
+Astigmatism causes the lens to focus differently along different axes (e.g., radial vs. tangential), which distorts bokeh shapes and can create elongated or directional blur. The addon models this for physically accurate lens character.
+
+- Strength - Controls how strong the astigmatic effect is. Higher values produce more visible elongation or directional blur in out-of-focus areas; set to zero to disable.
+
+### Optical Vignetting
+
+Optical vignetting darkens the corners of the frame as less light reaches the sensor at the edges—a characteristic of real lens systems. The addon provides controls to match this behavior.
+
+- Radius Scale - Controls how much of the frame is affected by the vignette. Larger values extend the effect toward the center; smaller values confine darkening to the corners.
+
+- Onset - Controls how abruptly the vignette transitions from the bright center to the darkened edges. Higher values create a sharper falloff; lower values produce a gentler, more gradual darkening.
+
+- Strength - Sets the intensity of corner darkening. Higher values make the vignette darker and more visible; lower values keep it subtle.
+
+- Disable Corner Darkening - When enabled, turns off the darkening component of optical vignetting while keeping other vignette behavior (if any). Use when you want vignette shape or falloff without reduced brightness at the edges.
+
+---
+
+## Aperture
+
+### Aspect Ratio
+
+Controls the width-to-height ratio of the bokeh shape. Values above 1.0 stretch the bokeh horizontally (anamorphic-style); values below 1.0 compress it. Use 1.0 for circular or symmetric bokeh.
+
+### Type
+
+Selects the aperture rendering method. Each type defines how samples are distributed and how the bokeh is shaped, affecting both visual style and render behavior.
+
+- Circular - Renders bokeh as a perfect circle. You can set the sample count to balance quality and render time. Best when you want classic, round bokeh with predictable convergence.
+
+- Circular (Progressive) - Continuously refines the circular bokeh without a fixed sample limit; rendering does not stop automatically. No extra controls are exposed and the render is stopped by the user when they've reached a quality they deem good enough. Use when you need maximum quality and can afford longer render times.
+
+- Polygonal - Uses a polygonal aperture shape for geometric bokeh. Exposes **Quality** (rings), **Aperture** (blades), **Aperture Roundness**, **Aperture Rotation**, and **Shuffle Samples**. Adjust these to design the polygonal bokeh; roundness and rotation fine-tune shape and orientation.
+
+- Linear - Renders bokeh as lines or streaks. Only the **Angle** control is provided to set the direction of the lines. Rendering runs continuously until you press stop; useful for streak-style or anamorphic looks.

@@ -185,7 +185,18 @@ code {
   margin: 0 0 var(--space-block);
 }
 
+.markdown h1 {
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-md);
+}
+
+.markdown h2 {
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-md);
+}
+
 .markdown h1:first-child {
+  margin-top: 0;
   margin-bottom: 15px !important;
 }
 
