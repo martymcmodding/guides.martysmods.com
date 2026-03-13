@@ -2,6 +2,7 @@
 title: Parallax Depth of Field
 sidebar_title: "Parallax Depth of Field (Addon)"
 description: "Parallax-based depth of field that calculates blur through camera rotation and positioning."
+image: "https://assets.martysmods.com/shaders/parallaxdof/ParalaxDoFHeader.webp"
 slug: /shaders/immerseultimate/parallaxdof
 sidebar_position: 5
 hide_title: True
