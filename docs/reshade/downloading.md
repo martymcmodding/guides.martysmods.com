@@ -17,7 +17,7 @@ import ReactPlayer from 'react-player'
 
 # Downloading ReShade
 
-ReShade is an open-sourced, generic, post-processing tool that allows users to currate the looks that they want in their game of choice. In order to reduce abuse from ReShade in online/multiplayer games, there are two builds that you can download at [ReShade's webpage](https://reshade.me/#download).
+ReShade is an open-source, generic post-processing injector for games and video software. It hooks into the rendering pipeline to apply custom shaders and effects (e.g. ambient occlusion, depth of field, color grading, antialiasing) without modifying game files. ReShade supports Direct3D 9/10/11/12, OpenGL, and Vulkan. Effects are written in ReShade FX (HLSL-based) and work across supported APIs. To limit abuse in online play, the project distributes two builds; both are available at [ReShade's webpage](https://reshade.me/#download).
 
 ---
 
@@ -25,12 +25,12 @@ ReShade is an open-sourced, generic, post-processing tool that allows users to c
 
 ## Standard ReShade Build (Download ReShade X.X.X)
 
-The Standard build of ReShade is the recommended choice for games that block the addon support build of ReShade or have anti-cheat systems that dislike graphics injections and mods. This build is specifically designed for online multiplayer games, as it has a hardcoded implementation to block access to the depth buffer (when internet connectivity is detected) and all external add-on based solutions. This intentional limitation helps prevent cheating and reduces the likelihood of anti-cheat systems blocking ReShade entirely.
+The Standard build has no add-on support and restricts depth-buffer access when internet connectivity is detected. It is the recommended build for online or multiplayer games and for titles with anti-cheat that disallows injectors or add-ons. Use this build unless you specifically need add-ons.
 
 ---
 
 ## Full Add-On Support ReShade Build (Download ReShade X.X.X with full add-on support)
 
-The Full Add-On Support Build of ReShade provides the complete ReShade experience with all features unlocked, as this build offers full access to external add-ons and an entirely unlocked depth buffer regardless of internet connectivity. However, it's highly likely to be disallowed in most online multiplayer games and is blocked by a considerable amount of anti-cheat solutions, so it is not recommended for games with strict anti-cheat protection.
+The Full Add-On Support build allows external add-ons (DLLs that extend ReShade or the host application) and full depth-buffer access at all times. It is intended for single-player or add-on use. Most anti-cheat systems disallow this build; do not use it in online or multiplayer games.
 
 ![WebsiteDownload](https://assets.martysmods.com/reshade/download/WebsiteDownload.webp)

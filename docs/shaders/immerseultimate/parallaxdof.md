@@ -95,6 +95,8 @@ The process to find the correct value can be summarized as such:
 
 - Note that for an Interval of 1 frame, there is only one Delay value that is in sync. For an Interval of 2 frames, there are 2 Delays that are in sync and so on. So if for Interval of 1 frame a Delay of 4 frames worked, then for an Interval of 3 frames, Delay frames 4, 5 and 6 will work with Delay set to 4 frames, being blended as early, and Delay set to 6 frames, meaning being blended as late as possible.
 
+- If you're having issues with finding a proper Accumluation Delay and Interval, make sure that V-Sync is disabled, your framerate is not capped, and NVIDIA Reflex is disabled in-game.
+
 ---
 
 ## Lens Effects

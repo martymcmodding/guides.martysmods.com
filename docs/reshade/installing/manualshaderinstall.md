@@ -1,7 +1,7 @@
 ---
 title: "Manually Installing Shaders"
 sidebar_label: "Manually Installing Shaders"
-description: "Not every shader repository is avalible through the ReShade Setup Tool - This guide will walk users through the manual installation process of shader repositories/archives."
+description: "Manual installation of shader repositories and archives not available in the ReShade Setup Tool."
 slug: /reshade/installing/reshademanualshaderinstall
 sidebar_position: 4
 hide_title: true
@@ -17,12 +17,10 @@ import ReactPlayer from 'react-player'
 
 # Manually Installing Shaders
 
-Not all shader repositories are avalible to be downloaded or installed through the ReShade Setup Tool - as so, users will sometimes have to manually install these repositories/archives through manual means.
-
-To follow along with this guide, ReShade **must** already be installed and working in your game. If ReShade is not active or installed to your game, you can follow our [guide for installing ReShade with the ReShade Setup Tool](/reshade/installing/setuptool).
+Many shader repositories are not listed in the ReShade Setup Tool and must be installed manually. Download the repository or archive and extract its contents into the game's `ReShade-Shaders` folder. ReShade must already be installed and working—see [ReShade Setup Tool](/reshade/installing/setuptool) if not. Paths in this guide are relative to the game executable's directory (where ReShade is installed).
 
 :::warning
-If the shaders you are attempting to install were not obtained from GitHub (instead downloaded through Patreon, Discord, or via Direct Download), you can skip the GitHub download steps below and instead use the shader files provided to you directly (usually in a ZIP or folder format).
+Shaders from Patreon, Discord, or direct download (ZIP or folder) skip the GitHub download steps. Use the provided files and extract or copy them into `ReShade-Shaders` as below.
 :::
 
 ---
@@ -33,22 +31,20 @@ If the shaders you are attempting to install were not obtained from GitHub (inst
 
 ## Downloading the Shader Repository(s)
 
-Most ReShade shader repositores are located on GitHub. So, you'll need to navigate to their repository - then click on the green "Code" button near the top right of the GitHub page.
+Most ReShade shader repositories are hosted on GitHub. Open the repository page, click the green **Code** button (top right), then **Download ZIP** in the dropdown.
 
-   ![GitHubRepoCodeButtonHighlight](https://assets.martysmods.com/reshade/installing/shaderinstall/GitHubRepoCodeButtonHighlight.webp)
+![GitHubRepoCodeButtonHighlight](https://assets.martysmods.com/reshade/installing/shaderinstall/GitHubRepoCodeButtonHighlight.webp)
 
-Once the download dropdown appears, click "Download ZIP".
-
-   ![GitHubDownloadZIPButtonHighlight](https://assets.martysmods.com/reshade/installing/shaderinstall/GitHubDownloadZIPButtonHighlight.webp)
+![GitHubDownloadZIPButtonHighlight](https://assets.martysmods.com/reshade/installing/shaderinstall/GitHubDownloadZIPButtonHighlight.webp)
 
 ---
 
 ## Installing the Shader Repository(s)
 
-Once your shader ZIP file has finished downloading, navigate to your game folder, find the `ReShade-Shaders` directory, and extract the contents of your ZIP file to this folder.
+The `ReShade-Shaders` folder is in the same directory as the game executable (the ReShade install location). Extract the contents of the shader ZIP into `ReShade-Shaders` and preserve the folder structure. Repository archives usually contain `Shaders` and optionally `Textures`. You'll want to merge these with the existing `ReShade-Shaders\Shaders` and `ReShade-Shaders\Textures` folders.
 
 :::warning
-If you're prompted by Windows about file conflicts, click **“Replace the files in the destination.”**
+On file conflicts, choose **“Replace the files in the destination.”**
 :::
 
 <ReactPlayer
@@ -66,7 +62,7 @@ If you're prompted by Windows about file conflicts, click **“Replace the files
 
 ## Setting the Effect and Texture Search Paths
 
-Depending on either the age or the setup of your ReShade install, sometimes new shaders & textures will not be recognized. To fix this, simply correct the Effect and Texture Search Paths in ReShade's `Settings` tab.
+New shaders or textures may not appear if ReShade's search paths are wrong or were changed. Open the ReShade overlay, go to the **Settings** tab, and set the paths below. These are relative to the game executable directory. Then clicking **Reload** at the bottom of ReShade's **Home** tab.
 
 | Setting                 | Correct Path                    |
 | ----------------------- | ------------------------------- |
