@@ -21,8 +21,6 @@ iMMERSE Ultimate: Parallax Depth of Field produces depth-of-field blur by comput
 
 :::warning
 Parallax DoF requires the IGCS Camera Tool to function. The IGCS Camera Tool must be purchased through [Otis Inf's Patreon](https://www.patreon.com/cw/Otis_Inf) and activated for the Parallax DoF GUI to appear in ReShade.
-
-Configure all shaders you want to use in a shot before beginning a render with Parallax DoF, as ReShade will reload if new shaders are enabled during the rendering process.
 :::
 
 ---
