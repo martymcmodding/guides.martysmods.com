@@ -125,7 +125,7 @@ Select a **Lens System** to set the type of aberration and blur character, then 
 
  <ImageComparisonSlider 
   beforeImage="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFChromaticAberrationNone.webp" 
-  afterImage="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFChromaticAberrationAchromat.webp"
+  afterImage="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFChromaticAberrationApochromat.webp"
   beforeLabel="None"
   afterLabel="Achromat"
  />
@@ -136,7 +136,7 @@ Select a **Lens System** to set the type of aberration and blur character, then 
 
  <ImageComparisonSlider 
   beforeImage="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFChromaticAberrationNone.webp" 
-  afterImage="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFChromaticAberrationApochromat.webp"
+  afterImage="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFChromaticAberrationAchromat.webp"
   beforeLabel="None"
   afterLabel="Apochromat"
  />
