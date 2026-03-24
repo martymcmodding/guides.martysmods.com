@@ -6,9 +6,19 @@ sidebar_position: 1
 hide_title: True
 ---
 
+<!----------------------- IMPORTS ---------------------------->
+
+import ImageComparisonSlider from '@site/src/components/ImageComparisonSlider';
+import { YTConsentFiveM } from '@site/src/components/YTConsent';
+import ReactPlayer from 'react-player'
+
+<!----------------------------------------------------------->
+
 # FiveM
 
 FiveM is a platform that lets you play on custom servers for Grand Theft Auto V (GTAV). To get ReShade working with FiveM, you need to follow specific steps. This guide will show you exactly what to do and provide all the details you need.
+
+<YTConsentFiveM />
 
 ---
 
