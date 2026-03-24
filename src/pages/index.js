@@ -3,9 +3,11 @@ import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import LazyImage from '../components/lazyimage';
+import HeroShaderCanvas from '../components/HeroShaderCanvas';
 
 const HeroSection = () => (
   <section className={styles.hero}>
+    <HeroShaderCanvas className={styles.heroShader} fragmentShaderUrl="/shaders/hero.frag" />
     <div className={styles.heroContainer}>
       <div className={styles.heroContent}>
         <h1 className={styles.heroTitle}>

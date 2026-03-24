@@ -5,22 +5,21 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 32vh;
+  min-height: 460px;
   overflow: hidden;
+  background: #060912;
 }
 
-.hero::before {
-  content: '';
+.heroShader {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('https://assets.martysmods.com/landingpage/HeroBanner.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  filter: blur(4px);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .heroContainer {
@@ -41,6 +40,7 @@
   line-height: 1.1;
   margin-bottom: 1rem;
   color: #ffffff;
+  text-shadow: 0 3px 16px rgba(0, 0, 0, 0.65);
 }
 
 .heroSubtitle {
@@ -48,6 +48,7 @@
   line-height: 1.4;
   margin-bottom: 2rem;
   color: #e0e0e0;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
 }
 
 .heroButtons {
