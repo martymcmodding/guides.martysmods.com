@@ -63,6 +63,8 @@ export default function HeroShaderCanvas({ className, fragmentShaderUrl }) {
     const start = performance.now();
     const frameIntervalMs = 1000 / 30;
     let lastFrameTime = 0;
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    const renderScale = isMobile ? 0.333 : 0.5;
 
     const cleanup = () => {
       running = false;
@@ -80,8 +82,8 @@ export default function HeroShaderCanvas({ className, fragmentShaderUrl }) {
       lastFrameTime = timestamp;
 
       const dpr = Math.max(1, window.devicePixelRatio || 1);
-      const width = Math.floor(canvas.clientWidth * dpr);
-      const height = Math.floor(canvas.clientHeight * dpr);
+      const width = Math.max(1, Math.floor(canvas.clientWidth * dpr * renderScale));
+      const height = Math.max(1, Math.floor(canvas.clientHeight * dpr * renderScale));
 
       if (canvas.width !== width || canvas.height !== height) {
         canvas.width = width;
