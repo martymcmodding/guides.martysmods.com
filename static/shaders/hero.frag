@@ -20,6 +20,7 @@ float fastatan2(float y, float x)
     bool a = abs(v.y) < abs(v.x);
     v = a ? v.yx : v.xy;
     float t = abs(v.x / v.y); 
+    t = fract(t * 0.01) * 100.0;
     float f = t * (c0 - c1 * t);
     f = x > 0.0 ? f : -f;        
     f = a ? (x < 0.0 ? 3.14159265 + f : f) : (3.14159265*0.5) - f;
