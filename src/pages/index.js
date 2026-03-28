@@ -61,7 +61,7 @@ const FeatureText = ({ title, description, buttonLink, buttonText }) => (
   </div>
 );
 
-const FeatureVisual = ({ title, subtitle, items }) => {
+const FeatureVisual = ({ title, items, visualFirst }) => {
   const getItemLink = (item) => {
     const linkMap = {
       "ReShade Setup Tool": "/reshade/installing/setuptool",
@@ -79,11 +79,17 @@ const FeatureVisual = ({ title, subtitle, items }) => {
   };
 
   return (
-    <div className={styles.featureVisual}>
+    <div
+      className={
+        visualFirst
+          ? `${styles.featureVisual} ${styles.featureVisualAlignStart}`
+          : styles.featureVisual
+      }
+    >
       {title === "ReShade" ? (
         <div className={styles.reshadeLogoContainer}>
           <img 
-            src="https://assets.martysmods.com/landingpage/ReShadeMainLogo.svg" 
+            src="/img/ReShadeMainLogo.svg"
             alt="ReShade Logo" 
             className={styles.reshadeLogo}
           />
@@ -92,7 +98,6 @@ const FeatureVisual = ({ title, subtitle, items }) => {
         <div className={styles.visualPanel}>
           <div className={styles.visualHeader}>
             <span className={styles.visualTitle}>{title}</span>
-            <span className={styles.visualSubtitle}>{subtitle}</span>
           </div>
           <div className={styles.visualContent}>
             {items.map((item, index) => (
@@ -113,18 +118,30 @@ const FeatureVisual = ({ title, subtitle, items }) => {
   );
 };
 
-const FeatureSection = ({ title, description, buttonLink, buttonText, visualTitle, visualSubtitle, visualItems, visualFirst = false }) => (
+const FeatureSection = ({
+  title,
+  description,
+  buttonLink,
+  buttonText,
+  visualTitle,
+  visualItems,
+  visualFirst = false,
+}) => (
   <section className={styles.featureSection}>
     <div className={styles.featureContainer}>
       {visualFirst ? (
         <>
-          <FeatureVisual title={visualTitle} subtitle={visualSubtitle} items={visualItems} />
+          <FeatureVisual
+            title={visualTitle}
+            items={visualItems}
+            visualFirst
+          />
           <FeatureText title={title} description={description} buttonLink={buttonLink} buttonText={buttonText} />
         </>
       ) : (
         <>
           <FeatureText title={title} description={description} buttonLink={buttonLink} buttonText={buttonText} />
-          <FeatureVisual title={visualTitle} subtitle={visualSubtitle} items={visualItems} />
+          <FeatureVisual title={visualTitle} items={visualItems} />
         </>
       )}
     </div>
@@ -141,9 +158,8 @@ const features = [
     buttonLink: "/reshade/downloading",
     buttonText: "Learn more",
     visualTitle: "ReShade",
-    visualSubtitle: "Post-Processing",
-    visualItems: ["Work In Progress", "Work In Progress", "Work In Progress", "Work In Progress"],
-    visualFirst: false
+    visualItems: [],
+    visualFirst: false,
   },
   {
     title: "Installing ReShade",
@@ -154,9 +170,8 @@ const features = [
     buttonLink: "/reshade/installing/setuptool",
     buttonText: "Learn more",
     visualTitle: "Installation",
-    visualSubtitle: "Setup Guide",
     visualItems: ["ReShade Setup Tool", "Manual Installation", "Shader Installation", "Addon Installation"],
-    visualFirst: false
+    visualFirst: true,
   },
   {
     title: "Shaders",
@@ -167,7 +182,6 @@ const features = [
     buttonLink: "/shaders/immerse/launchpad",
     buttonText: "Learn more",
     visualTitle: "Shader Collections",
-    visualSubtitle: "Premium Quality",
     visualItems: ["iMMERSE", "iMMERSE Pro", "iMMERSE Ultimate", "METEOR"],
     visualFirst: false
   }
@@ -182,9 +196,11 @@ export default function Home() {
       description="Your extensive guide site for all things ReShade."
     >
       <HeroSection />
-      {features.map((feature, index) => (
-        <FeatureSection key={index} {...feature} />
-      ))}
+      <div className={styles.featureSections}>
+        {features.map((feature, index) => (
+          <FeatureSection key={index} {...feature} />
+        ))}
+      </div>
     </Layout>
   );
 }

@@ -32,16 +32,11 @@ void mainImage(out vec4 O, vec2 vpos)
 {
     vec2 uv = vpos / iResolution.xy;
     
-    
-    //Animation time
     float t = iTime * 0.5;
-    //Raymarch depth
     float z;
-    //Step distance
     float d;
-    //Signed distance
     float s;
- 
+
     
     O = vec4(0);
     vec3 rd = normalize(vec3(2.0 * vpos,0)-iResolution.xyy);   
@@ -57,11 +52,9 @@ void mainImage(out vec4 O, vec2 vpos)
     {
         vec3 p = ro + z*rd;      
    
-        //Rotation axis
         vec3 axis = cos(vec3(1.619,0.619,1) * t - d);         
         vec3 rot = rotateAroundAxis(p, axis, 0.4*1.57);
         
-        //Turbulence loop
         rot-=sin(rot*scale.x + t).zxy*invscale.x;
         rot-=sin(rot*scale.y + t).zxy*invscale.y;
         rot-=sin(rot*scale.z + t).zxy*invscale.z;
@@ -85,5 +78,4 @@ void mainImage(out vec4 O, vec2 vpos)
     ret.z += (umagic.x + umagic.y) * 7u;
     O.rgb += (vec3(ret) * exp2(-32.0) - 0.5) / 255.0f;
     O = clamp(O, 0., 1.);
- 
 }

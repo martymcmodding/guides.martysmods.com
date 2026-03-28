@@ -22,7 +22,7 @@
 
 /* Base document styles */
 html, body {
-  background-color: #191c20 !important;
+  background-color: #111316 !important;
 }
 
 html, body, h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea {
@@ -46,9 +46,9 @@ html, body, h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea {
   --ifm-color-scheme: light;
   --ifm-color-primary: #0099fa;
   --ifm-color-secondary: #ebedf0;
-  --ifm-background-color: #191c20;
+  --ifm-background-color: #111316;
   --ifm-font-color-base: #FFFFFFDD !important;
-  --ifm-code-background: #191c20 !important;
+  --ifm-code-background: #111316 !important;
   --ifm-code-font-size: 95%;
   --ifm-button-color: #FFFFFFDD !important;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
@@ -57,12 +57,12 @@ html, body, h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea {
 
 /* Global layout: navbar & footer */
 .navbar {
-  background-color: #191c20 !important;
+  background-color: #111316 !important;
   border-bottom: 2px solid #ffffff40;
 }
 
 .footer {
-  background-color: #191c20 !important;
+  background-color: #111316 !important;
   --ifm-footer-color: #e2e8f0;
   --ifm-footer-link-color: #e2e8f0;
   width: 100%;
