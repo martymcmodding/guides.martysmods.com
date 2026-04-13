@@ -1,5 +1,6 @@
 import { themes as prismThemes } from 'prism-react-renderer';
 import clientRedirects from '@docusaurus/plugin-client-redirects';
+import rehypeImageDimensions from './plugins/rehype-image-dimensions.js';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -30,6 +31,7 @@ const config = {
         docs: {
           routeBasePath: '/',
           sidebarPath: './sidebars.js',
+          rehypePlugins: [rehypeImageDimensions],
         },
         theme: {
           customCss: './src/css/custom.css',

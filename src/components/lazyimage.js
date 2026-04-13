@@ -1,104 +1,56 @@
 import React, { useRef, useState, useEffect } from 'react';
 
-export default function LazyImage({
-  src,
-  alt,
-  className,
-  style,
-  width,
-  height,
-  ...props
-}) {
+export default function LazyImage({ src, alt, className, style, width, height, ...props }) {
   const imgRef = useRef(null);
-  const [isInView, setIsInView] = useState(false);
-  const [imageLoaded, setImageLoaded] = useState(false);
-  const [imageDimensions, setImageDimensions] = useState({ width: 0, height: 0 });
+  const [loaded, setLoaded] = useState(false);
+
+  const { maxWidth, ...imgStyle } = style || {};
+
+  const hasDimensions = !!(width && height);
+  const aspectRatio = hasDimensions ? `${width} / ${height}` : '16 / 9';
+  const wrapperWidth = width ? (typeof width === 'number' ? `${width}px` : width) : undefined;
+
+  const wrapperStyle = {
+    // aspectRatio is only applied while loading to reserve space (prevents CLS).
+    // Removed after load so the wrapper collapses to the image's natural height
+    // instead of maintaining a minimum 16:9 gap below short/wide images.
+    ...(!loaded && { aspectRatio }),
+    ...(wrapperWidth ? { width: wrapperWidth } : {}),
+    ...(maxWidth ? { maxWidth } : {}),
+  };
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            setIsInView(true);
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        rootMargin: '50px',
-        threshold: 0.1
-      }
-    );
-
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
+    if (imgRef.current?.complete) {
+      setLoaded(true);
     }
-
-    return () => {
-      if (imgRef.current) {
-        observer.unobserve(imgRef.current);
-      }
-    };
   }, []);
 
-  useEffect(() => {
-    if (!isInView) return;
-
-    const img = new Image();
-    img.onload = () => {
-      setImageDimensions({
-        width: img.naturalWidth,
-        height: img.naturalHeight
-      });
-      setImageLoaded(true);
-    };
-    img.src = src;
-  }, [src, isInView]);
-
-  const getPlaceholderDimensions = () => {
-    if (width && height) {
-      return { width, height };
-    }
-    
-    if (style?.width && style?.height) {
-      return { width: style.width, height: style.height };
-    }
-    
-    if (imageDimensions.width && imageDimensions.height) {
-      return { width: imageDimensions.width, height: imageDimensions.height };
-    }
-    
-    return { width: '32px', height: '32px' };
-  };
-
-  const placeholderStyle = {
-    ...style,
-    ...getPlaceholderDimensions(),
-    backgroundColor: 'transparent',
-    display: 'inline-block'
-  };
-
-  if (!isInView || !imageLoaded) {
-    return (
-      <div
-        ref={imgRef}
-        className={`${className} lazy-image-placeholder`}
-        style={placeholderStyle}
-        aria-label={`Loading ${alt || 'image'}`}
-      />
-    );
-  }
-
   return (
-    <img
-      ref={imgRef}
-      src={src}
-      alt={alt}
-      className={className}
-      style={style}
-      width={width}
-      height={height}
-      {...props}
-    />
+    <span
+      className={`lazy-image-wrapper${loaded ? ' lazy-image-loaded' : ' lazy-image-placeholder'}`}
+      style={wrapperStyle}
+    >
+      <img
+        ref={imgRef}
+        src={src}
+        alt={alt}
+        loading="lazy"
+        decoding="async"
+        className={className}
+        style={{
+          ...imgStyle,
+          display: 'block',
+          width: '100%',
+          height: hasDimensions ? '100%' : 'auto',
+          objectFit: hasDimensions ? 'contain' : undefined,
+          opacity: loaded ? 1 : 0,
+          transition: loaded ? 'opacity 0.25s ease' : 'none',
+        }}
+        width={width}
+        height={height}
+        onLoad={() => setLoaded(true)}
+        {...props}
+      />
+    </span>
   );
 }

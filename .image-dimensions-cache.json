@@ -1,0 +1,598 @@
+{
+  "https://assets.martysmods.com/additionalguides/gamelocation/FindGameFileExplorer.webp": {
+    "width": 975,
+    "height": 595
+  },
+  "https://assets.martysmods.com/additionalguides/gamelocation/FindGameTaskManager.webp": {
+    "width": 508,
+    "height": 508
+  },
+  "https://assets.martysmods.com/reshade/installing/addoninstall/ReShadeSettingsBaseFolderButtonHighlight.webp": {
+    "width": 929,
+    "height": 163
+  },
+  "https://assets.martysmods.com/reshade/installing/SetupToolShaderSelect.webp": {
+    "width": 479,
+    "height": 626
+  },
+  "https://assets.martysmods.com/reshade/installing/injectioninstall/GameDirectoryCMDAddressBar.webp": {
+    "width": 868,
+    "height": 325
+  },
+  "https://assets.martysmods.com/reshade/installing/Manual7ZipOpen.webp": {
+    "width": 756,
+    "height": 587
+  },
+  "https://assets.martysmods.com/reshade/installing/SetupToolAPISelect.webp": {
+    "width": 479,
+    "height": 625
+  },
+  "https://assets.martysmods.com/reshade/installing/SetupToolGameSelect.webp": {
+    "width": 479,
+    "height": 626
+  },
+  "https://assets.martysmods.com/reshade/installing/shaderinstall/GitHubRepoCodeButtonHighlight.webp": {
+    "width": 1600,
+    "height": 470
+  },
+  "https://assets.martysmods.com/reshade/installing/shaderinstall/GitHubDownloadZIPButtonHighlight.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "https://assets.martysmods.com/reshade/installing/addoninstall/ReShadeAddonsSearchPathHighlight.webp": {
+    "width": 926,
+    "height": 161
+  },
+  "https://assets.martysmods.com/reshade/installing/ReShadeInstalled.webp": {
+    "width": 835,
+    "height": 98
+  },
+  "https://assets.martysmods.com/reshade/installing/injectioninstall/InjectionParametersInject32.webp": {
+    "width": 647,
+    "height": 132
+  },
+  "https://assets.martysmods.com/reshade/installing/SetupToolAddonSelect.webp": {
+    "width": 479,
+    "height": 626
+  },
+  "https://assets.martysmods.com/additionalguides/fileextension/SearchFileExplorerOptions.webp": {
+    "width": 341,
+    "height": 163
+  },
+  "https://assets.martysmods.com/additionalguides/fileextension/FileExplorerOptionsViewTabHighlight.webp": {
+    "width": 598,
+    "height": 233
+  },
+  "https://assets.martysmods.com/additionalguides/permissions/AddPrincipalButton2.webp": {
+    "width": 765,
+    "height": 518
+  },
+  "https://assets.martysmods.com/additionalguides/permissions/UserFindNowButton.webp": {
+    "width": 513,
+    "height": 577
+  },
+  "https://assets.martysmods.com/additionalguides/permissions/UserHighlight.webp": {
+    "width": 513,
+    "height": 202
+  },
+  "https://assets.martysmods.com/additionalguides/permissions/UserAdvancedButton.webp": {
+    "width": 456,
+    "height": 250
+  },
+  "https://assets.martysmods.com/additionalguides/permissions/SelectPrincipal.webp": {
+    "width": 915,
+    "height": 591
+  },
+  "https://assets.martysmods.com/additionalguides/permissions/ReplaceDefinedPermissions.webp": {
+    "width": 407,
+    "height": 183
+  },
+  "https://assets.martysmods.com/additionalguides/permissions/UserListedPrincipal2.webp": {
+    "width": 765,
+    "height": 518
+  },
+  "https://assets.martysmods.com/additionalguides/permissions/TypeandAppliesTo2.webp": {
+    "width": 915,
+    "height": 591
+  },
+  "https://assets.martysmods.com/additionalguides/permissions/TypeandAppliesforAllApps.webp": {
+    "width": 915,
+    "height": 591
+  },
+  "https://assets.martysmods.com/additionalguides/permissions/FullControlAllApps.webp": {
+    "width": 915,
+    "height": 591
+  },
+  "https://assets.martysmods.com/additionalguides/permissions/DirectoryPropertiesButton.webp": {
+    "width": 529,
+    "height": 650
+  },
+  "https://assets.martysmods.com/additionalguides/gamearch/GameArch64Bit.webp": {
+    "width": 311,
+    "height": 89
+  },
+  "https://assets.martysmods.com/additionalguides/permissions/SecurityAdvancedButton2.webp": {
+    "width": 361,
+    "height": 453
+  },
+  "https://assets.martysmods.com/additionalguides/fileextension/FileExplorerOptionsKnownFileTypesHighlight.webp": {
+    "width": 542,
+    "height": 319
+  },
+  "https://assets.martysmods.com/additionalguides/permissions/PropertiesSecurityTab.webp": {
+    "width": 361,
+    "height": 453
+  },
+  "https://assets.martysmods.com/reshade/loadorder/LoadOrderAfterMXAOPTVLGUI.webp": {
+    "width": 1038,
+    "height": 212
+  },
+  "https://assets.martysmods.com/additionalguides/gamearch/GameArch32BitHighlight.webp": {
+    "width": 316,
+    "height": 68
+  },
+  "https://assets.martysmods.com/additionalguides/permissions/ReplaceSubContainer2.webp": {
+    "width": 765,
+    "height": 518
+  },
+  "https://assets.martysmods.com/additionalguides/permissions/UserorGroupSelect.webp": {
+    "width": 456,
+    "height": 250
+  },
+  "https://assets.martysmods.com/reshade/loadorder/LoadOrderAFterPTVLMXAOGUI.webp": {
+    "width": 1035,
+    "height": 211
+  },
+  "https://assets.martysmods.com/additionalguides/permissions/OwnerSettingShowUser2.webp": {
+    "width": 765,
+    "height": 518
+  },
+  "https://assets.martysmods.com/additionalguides/permissions/DisableInheritanceButton2.webp": {
+    "width": 765,
+    "height": 518
+  },
+  "https://assets.martysmods.com/additionalguides/permissions/ReplaceChildObject2.webp": {
+    "width": 765,
+    "height": 518
+  },
+  "https://assets.martysmods.com/additionalguides/permissions/RemoveIPButton.webp": {
+    "width": 520,
+    "height": 275
+  },
+  "https://assets.martysmods.com/reshade/gui/GUISettingsTab2.webp": {
+    "width": 1033,
+    "height": 1391
+  },
+  "https://assets.martysmods.com/additionalguides/apiwrapper/dxvk/DXVKGitHubRelease.webp": {
+    "width": 570,
+    "height": 236
+  },
+  "https://assets.martysmods.com/reshade/gui/GUIAddonsTab.webp": {
+    "width": 1033,
+    "height": 770
+  },
+  "https://assets.martysmods.com/additionalguides/permissions/OwnerSettingChange2.webp": {
+    "width": 765,
+    "height": 518
+  },
+  "https://assets.martysmods.com/additionalguides/apiwrapper/dgvoodoo2/dgVoodoo2OutputAPI.webp": {
+    "width": 192,
+    "height": 129
+  },
+  "https://assets.martysmods.com/additionalguides/apiwrapper/dxvk/DXVKArch.webp": {
+    "width": 386,
+    "height": 90
+  },
+  "https://assets.martysmods.com/additionalguides/apiwrapper/dgvoodoo2/dgVoodoo2Archive.webp": {
+    "width": 261,
+    "height": 185
+  },
+  "https://assets.martysmods.com/reshade/gui/GUIGlobalPreprocessorDefinitionsEditPanel.webp": {
+    "width": 676,
+    "height": 240
+  },
+  "https://assets.martysmods.com/reshade/download/WebsiteDownload.webp": {
+    "width": 2912,
+    "height": 1024
+  },
+  "https://assets.martysmods.com/additionalguides/apiwrapper/dgvoodoo2/dgVooodo2Install.webp": {
+    "width": 847,
+    "height": 250
+  },
+  "https://assets.martysmods.com/reshade/gui/GUIReloadButton.webp": {
+    "width": 787,
+    "height": 132
+  },
+  "https://assets.martysmods.com/additionalguides/apiwrapper/dgvoodoo2/dgVoodoo2Releases.webp": {
+    "width": 699,
+    "height": 164
+  },
+  "https://assets.martysmods.com/reshade/gui/GUILogTab.webp": {
+    "width": 1033,
+    "height": 1424
+  },
+  "https://assets.martysmods.com/reshade/gui/GUIStatisticsTab.webp": {
+    "width": 1033,
+    "height": 1124
+  },
+  "https://assets.martysmods.com/reshade/depth/DepthAutomaticHeuristics.webp": {
+    "width": 494,
+    "height": 102
+  },
+  "https://assets.martysmods.com/additionalguides/apiwrapper/dgvoodoo2/dgVoodoo2CPGeneral.webp": {
+    "width": 400,
+    "height": 494
+  },
+  "https://assets.martysmods.com/additionalguides/permissions/AllAppsGroup.webp": {
+    "width": 725,
+    "height": 196
+  },
+  "https://assets.martysmods.com/reshade/depth/DepthBuffersAvaliable.webp": {
+    "width": 856,
+    "height": 79
+  },
+  "https://assets.martysmods.com/reshade/gui/GUIShaderList.webp": {
+    "width": 788,
+    "height": 701
+  },
+  "https://assets.martysmods.com/additionalguides/apiwrapper/dgvoodoo2/dgVoodoo2Arch.webp": {
+    "width": 258,
+    "height": 129
+  },
+  "https://assets.martysmods.com/reshade/gui/GUIShaderParameters.webp": {
+    "width": 787,
+    "height": 870
+  },
+  "https://assets.martysmods.com/reshade/depth/EditGlobalPreprocessorDefinitionsButton.webp": {
+    "width": 672,
+    "height": 454
+  },
+  "https://assets.martysmods.com/reshade/gui/GUIPresetSelector.webp": {
+    "width": 789,
+    "height": 187
+  },
+  "https://assets.martysmods.com/reshade/gui/GUIShaderSearch.webp": {
+    "width": 789,
+    "height": 187
+  },
+  "https://assets.martysmods.com/reshade/depth/DepthReversed.webp": {
+    "width": 1920,
+    "height": 1080
+  },
+  "https://assets.martysmods.com/reshade/depth/DisplayDepthShader.webp": {
+    "width": 976,
+    "height": 108
+  },
+  "https://assets.martysmods.com/reshade/depth/DepthCorrect.webp": {
+    "width": 1920,
+    "height": 1080
+  },
+  "https://assets.martysmods.com/reshade/depth/DepthAddon.webp": {
+    "width": 670,
+    "height": 68
+  },
+  "https://assets.martysmods.com/reshade/depth/DepthUpsideDown.webp": {
+    "width": 1920,
+    "height": 1080
+  },
+  "https://assets.martysmods.com/reshade/gui/GUIGlobalPreprocessorDefinitions.webp": {
+    "width": 789,
+    "height": 204
+  },
+  "https://assets.martysmods.com/additionalguides/permissions/FullControlSelection2.webp": {
+    "width": 915,
+    "height": 591
+  },
+  "https://assets.martysmods.com/reshade/loadorder/LoadOrderAfterMXAOPTVL.webp": {
+    "width": 1920,
+    "height": 1080
+  },
+  "https://assets.martysmods.com/reshade/loadorder/LoadORderAFterPTVLMXAO.webp": {
+    "width": 1920,
+    "height": 1080
+  },
+  "https://assets.martysmods.com/reshade/loadorder/LoadOrderBeforeMXAOPTVL.webp": {
+    "width": 1920,
+    "height": 1080
+  },
+  "https://assets.martysmods.com/reshade/depth/DepthDLSSCheckerboarding.webp": {
+    "width": 2560,
+    "height": 1440
+  },
+  "https://assets.martysmods.com/additionalguides/games/fivem/FiveMGTAVReShadeFiles.webp": {
+    "width": 527,
+    "height": 213
+  },
+  "https://assets.martysmods.com/additionalguides/games/fivem/FiveMAppdataLocation.webp": {
+    "width": 616,
+    "height": 228
+  },
+  "https://assets.martysmods.com/additionalguides/games/fivem/FiveMSearchPath.webp": {
+    "width": 525,
+    "height": 48
+  },
+  "https://assets.martysmods.com/additionalguides/games/fivem/FiveMReShadeInstallLocation.webp": {
+    "width": 616,
+    "height": 201
+  },
+  "https://assets.martysmods.com/additionalguides/games/fivem/FiveMFileLocation.webp": {
+    "width": 616,
+    "height": 230
+  },
+  "https://assets.martysmods.com/additionalguides/games/fivem/FiveMPluginLocation.webp": {
+    "width": 612,
+    "height": 282
+  },
+  "https://assets.martysmods.com/shaders/mxao/mxaoloadorder.webp": {
+    "width": 835,
+    "height": 213
+  },
+  "https://assets.martysmods.com/shaders/mxao/taauscalepreprocessor2.webp": {
+    "width": 643,
+    "height": 261
+  },
+  "https://assets.martysmods.com/shaders/launchpad/launchpadloadorder3.webp": {
+    "width": 672,
+    "height": 198
+  },
+  "https://assets.martysmods.com/headers/launchpadheader.webp": {
+    "width": 1400,
+    "height": 600
+  },
+  "https://assets.martysmods.com/headers/mxaoheader.webp": {
+    "width": 1400,
+    "height": 600
+  },
+  "https://assets.martysmods.com/shaders/mxao/mxaopreprodef2.webp": {
+    "width": 759,
+    "height": 87
+  },
+  "https://assets.martysmods.com/shaders/launchpad/launchpaddebugpreprocessor.webp": {
+    "width": 675,
+    "height": 51
+  },
+  "https://assets.martysmods.com/headers/ConvolutionBloomHeader.webp": {
+    "width": 1400,
+    "height": 600
+  },
+  "https://assets.martysmods.com/reshade/uninstalling/setuptool/SetupToolGameList.webp": {
+    "width": 481,
+    "height": 628
+  },
+  "https://assets.martysmods.com/headers/smaaheader.webp": {
+    "width": 1400,
+    "height": 600
+  },
+  "https://assets.martysmods.com/reshade/uninstalling/setuptool/SetupToolUninstallEffects.webp": {
+    "width": 481,
+    "height": 628
+  },
+  "https://assets.martysmods.com/shaders/regradeplus/regradeplus_waveform_rgb.webp": {
+    "width": 454,
+    "height": 238
+  },
+  "https://assets.martysmods.com/shaders/regradeplus/regradeplus_tweaks.webp": {
+    "width": 422,
+    "height": 373
+  },
+  "https://assets.martysmods.com/shaders/insight/InsightLumaWaveform.webp": {
+    "width": 600,
+    "height": 300
+  },
+  "https://assets.martysmods.com/shaders/regradeplus/regradeplus_histogram_vectorscope.webp": {
+    "width": 454,
+    "height": 453
+  },
+  "https://assets.martysmods.com/headers/sharpenheader.webp": {
+    "width": 1400,
+    "height": 600
+  },
+  "https://assets.martysmods.com/shaders/insight/InsightColorGUI.webp": {
+    "width": 1090,
+    "height": 160
+  },
+  "https://assets.martysmods.com/headers/ReGradePlusHeader.webp": {
+    "width": 1400,
+    "height": 600
+  },
+  "https://assets.martysmods.com/shaders/rtgi/RTGIDiffuseLoadOrder3.webp": {
+    "width": 943,
+    "height": 330
+  },
+  "https://assets.martysmods.com/shaders/regradeplus/regradeplus_histogram_rgb.webp": {
+    "width": 454,
+    "height": 238
+  },
+  "https://assets.martysmods.com/headers/clarityheader.webp": {
+    "width": 1400,
+    "height": 600
+  },
+  "https://assets.martysmods.com/shaders/regradeplus/regradeplus_shaders_disabled.webp": {
+    "width": 714,
+    "height": 68
+  },
+  "https://assets.martysmods.com/additionalguides/games/fivem/FiveMReShadeError.webp": {
+    "width": 1458,
+    "height": 88
+  },
+  "https://assets.martysmods.com/headers/regradeheader.webp": {
+    "width": 1400,
+    "height": 600
+  },
+  "https://assets.martysmods.com/shaders/smaa/smaahometabenabled.webp": {
+    "width": 833,
+    "height": 290
+  },
+  "https://assets.martysmods.com/reshade/uninstalling/setuptool/SetupToolRenderingAPI.webp": {
+    "width": 481,
+    "height": 628
+  },
+  "https://assets.martysmods.com/reshade/uninstalling/setuptool/SetupToolUninstallSuccess.webp": {
+    "width": 481,
+    "height": 628
+  },
+  "https://assets.martysmods.com/shaders/smaa/configuresettingsguide.webp": {
+    "width": 835,
+    "height": 160
+  },
+  "https://assets.martysmods.com/headers/solarisheader.webp": {
+    "width": 1400,
+    "height": 600
+  },
+  "https://assets.martysmods.com/shaders/smaa/smaapreprodef.webp": {
+    "width": 830,
+    "height": 42
+  },
+  "https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFGUI2.webp": {
+    "width": 784,
+    "height": 443
+  },
+  "https://assets.martysmods.com/shaders/insight/InsightRGBWaveform.webp": {
+    "width": 600,
+    "height": 300
+  },
+  "https://assets.martysmods.com/shaders/regradeplus/regradeplus_histogram_vectorscope2x.webp": {
+    "width": 454,
+    "height": 453
+  },
+  "https://assets.martysmods.com/shaders/rtgi/RTGINormalsComparisonSmoothed.webp": {
+    "width": 2520,
+    "height": 1080
+  },
+  "https://assets.martysmods.com/shaders/insight/InsightLumaHistogram.webp": {
+    "width": 500,
+    "height": 300
+  },
+  "https://assets.martysmods.com/shaders/rtgi/taauscalepreprocessor2.webp": {
+    "width": 614,
+    "height": 254
+  },
+  "https://assets.martysmods.com/shaders/insight/InsightParadeWaveform.webp": {
+    "width": 720,
+    "height": 300
+  },
+  "https://assets.martysmods.com/headers/ReLightHeader.webp": {
+    "width": 1400,
+    "height": 600
+  },
+  "https://assets.martysmods.com/shaders/regradeplus/regradeplus_tonecurve.webp": {
+    "width": 495,
+    "height": 559
+  },
+  "https://assets.martysmods.com/shaders/insight/InsightRGBHistogram.webp": {
+    "width": 500,
+    "height": 300
+  },
+  "https://assets.martysmods.com/shaders/lutmanager/lutmanager_window.webp": {
+    "width": 540,
+    "height": 357
+  },
+  "https://assets.martysmods.com/shaders/rtgi/RTGIDiffuseObjectThicknessHighlight.webp": {
+    "width": 897,
+    "height": 256
+  },
+  "https://assets.martysmods.com/shaders/regradeplus/regradeplus_huevsluma.webp": {
+    "width": 498,
+    "height": 657
+  },
+  "https://assets.martysmods.com/headers/rtgiheader.webp": {
+    "width": 1400,
+    "height": 600
+  },
+  "https://assets.martysmods.com/shaders/lutmanager/lutmanager_fav.webp": {
+    "width": 434,
+    "height": 151
+  },
+  "https://assets.martysmods.com/shaders/regradeplus/regradeplus_histogram_y.webp": {
+    "width": 454,
+    "height": 238
+  },
+  "https://assets.martysmods.com/shaders/regradeplus/regradeplus_colorcorrection.webp": {
+    "width": 495,
+    "height": 287
+  },
+  "https://assets.martysmods.com/shaders/relight/relight-debug-menu.webp": {
+    "width": 642,
+    "height": 104
+  },
+  "https://assets.martysmods.com/shaders/regradeplus/regradeplus_waveform_y.webp": {
+    "width": 454,
+    "height": 238
+  },
+  "https://assets.martysmods.com/headers/dofheader.webp": {
+    "width": 1400,
+    "height": 600
+  },
+  "https://assets.martysmods.com/shaders/insight/InsightInspectorGUI.webp": {
+    "width": 1106,
+    "height": 241
+  },
+  "https://assets.martysmods.com/shaders/regradeplus/regradeplus_waveform_rgb_parade.webp": {
+    "width": 454,
+    "height": 238
+  },
+  "https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFControls2.webp": {
+    "width": 784,
+    "height": 1076
+  },
+  "https://assets.martysmods.com/shaders/relight/relightloadorder.webp": {
+    "width": 833,
+    "height": 214
+  },
+  "https://assets.martysmods.com/shaders/parallaxdof/CARenderChromat.webp": {
+    "width": 3440,
+    "height": 1440
+  },
+  "https://assets.martysmods.com/shaders/smaa/smaaviewedges.webp": {
+    "width": 3440,
+    "height": 1440
+  },
+  "https://assets.martysmods.com/shaders/parallaxdof/CARenderAchromat.webp": {
+    "width": 3440,
+    "height": 1440
+  },
+  "https://assets.martysmods.com/shaders/rtgi/RTGINormalsComparisonTextured.webp": {
+    "width": 2520,
+    "height": 1080
+  },
+  "https://assets.martysmods.com/shaders/parallaxdof/CARenderApochromat.webp": {
+    "width": 3440,
+    "height": 1440
+  },
+  "https://assets.martysmods.com/shaders/lutmanager/lutmanager_atlas.webp": {
+    "width": 1920,
+    "height": 810
+  },
+  "https://assets.martysmods.com/shaders/insight/InsightFFTInspector.webp": {
+    "width": 2520,
+    "height": 1080
+  },
+  "https://assets.martysmods.com/shaders/rtgi/RTGIDiffuseDebug.webp": {
+    "width": 2560,
+    "height": 1440
+  },
+  "https://assets.martysmods.com/shaders/insight/InsightMagnifyingInspector.webp": {
+    "width": 2520,
+    "height": 1080
+  },
+  "https://assets.martysmods.com/shaders/insight/InsightBWClip2.webp": {
+    "width": 2580,
+    "height": 1080
+  },
+  "https://assets.martysmods.com/shaders/insight/InsightRGBInspector.webp": {
+    "width": 2520,
+    "height": 1080
+  },
+  "https://assets.martysmods.com/shaders/rtgi/RTGIDiffuseValidationLayer.webp": {
+    "width": 2560,
+    "height": 1440
+  },
+  "https://assets.martysmods.com/shaders/insight/InsightColorClip2.webp": {
+    "width": 2580,
+    "height": 1080
+  },
+  "https://assets.martysmods.com/shaders/rtgi/RTGIDiffuseDebugOff.webp": {
+    "width": 2560,
+    "height": 1440
+  }
+}
