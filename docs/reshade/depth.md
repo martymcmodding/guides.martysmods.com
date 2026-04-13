@@ -10,7 +10,7 @@ hide_title: true
 <!----------------------- IMPORTS ---------------------------->
 
 import ImageComparisonSlider from '@site/src/components/ImageComparisonSlider';
-import { YTConsentDepth } from '@site/src/components/YTConsent';
+import YTConsent from '@site/src/components/YTConsent';
 import ReactPlayer from 'react-player'
 
 <!----------------------------------------------------------->
@@ -20,7 +20,7 @@ The depth buffer (sometimes referred to as the Z-buffer) is essential for most 3
 
 ---
 
-<YTConsentDepth />
+<YTConsent url="https://www.youtube.com/watch?v=6xOSzYLeJB0" />
 
 ## Generic Depth Addon
 Since games often use multiple depth buffers (for shadows, post-processing, etc.), finding the correct depth buffer in ReShade can be tricky. However, ReShade's included add-on "Generic Depth" comes with controls that allow us to control both automatic and manual selection of buffers for us to use.

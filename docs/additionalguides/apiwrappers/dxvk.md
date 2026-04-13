@@ -10,8 +10,7 @@ hide_title: true
 <!----------------------- IMPORTS ---------------------------->
 
 import ImageComparisonSlider from '@site/src/components/ImageComparisonSlider';
-import { YTConsentDXVK } from '@site/src/components/YTConsent';
-import ReactPlayer from 'react-player'
+import YTConsent from '@site/src/components/YTConsent';
 
 <!----------------------------------------------------------->
 
@@ -21,7 +20,7 @@ DXVK is a graphics API wrapper that translates DirectX calls into Vulkan. While 
 
 ---
 
-<YTConsentDXVK />
+<YTConsent url="https://www.youtube.com/watch?v=-GYe_JVffHE" />
 
 ---
 

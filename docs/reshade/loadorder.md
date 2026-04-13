@@ -10,7 +10,7 @@ hide_title: true
 <!----------------------- IMPORTS ---------------------------->
 
 import ImageComparisonSlider from '@site/src/components/ImageComparisonSlider';
-import { YTConsentLoadOrder } from '@site/src/components/YTConsent';
+import YTConsent from '@site/src/components/YTConsent';
 import ReactPlayer from 'react-player'
 
 <!----------------------------------------------------------->
@@ -23,7 +23,7 @@ ReShade applies post-processing effects sequentially, with each shader processin
 
 ---
 
-<YTConsentLoadOrder />
+<YTConsent url="https://www.youtube.com/watch?v=WG378hzcplo" />
 
 ## Managing Load Order in ReShade
 

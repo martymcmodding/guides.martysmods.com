@@ -10,8 +10,7 @@ hide_title: true
 <!----------------------- IMPORTS ---------------------------->
 
 import ImageComparisonSlider from '@site/src/components/ImageComparisonSlider';
-import { YTConsentInjectReshade } from '@site/src/components/YTConsent';
-import ReactPlayer from 'react-player'
+import YTConsent from '@site/src/components/YTConsent';
 
 <!----------------------------------------------------------->
 
@@ -22,7 +21,7 @@ To get around this, Crosire created a small injection tool that lets you manuall
 
 ---
 
-<YTConsentInjectReshade />
+<YTConsent url="https://www.youtube.com/watch?v=mVBLb-J_Hps" />
 
 ## Determine Game Architecture and Rendering API
 Before manually installing ReShade, identify two key details about your game: its bit architecture (32-bit or 64-bit) and the Rendering API it uses (DirectX 9, 10, 11, 12, or OpenGL).  

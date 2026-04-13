@@ -11,7 +11,7 @@ hide_title: true
 <!----------------------- IMPORTS ---------------------------->
 
 import ImageComparisonSlider from '@site/src/components/ImageComparisonSlider';
-import { YTConsentLaunchpad } from '@site/src/components/YTConsent';
+import YTConsent from '@site/src/components/YTConsent';
 import ReactPlayer from 'react-player'
 
 <!----------------------------------------------------------->
@@ -29,7 +29,7 @@ Launchpad is REQUIRED to be at the top of the shader load order in order to func
 
 ## Video Breakdown
 
-<YTConsentLaunchpad />
+<YTConsent url="https://www.youtube.com/watch?v=RhT4MFRQ5jo" />
 
 ---
 

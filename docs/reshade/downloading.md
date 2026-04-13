@@ -10,8 +10,7 @@ hide_title: true
 <!----------------------- IMPORTS ---------------------------->
 
 import ImageComparisonSlider from '@site/src/components/ImageComparisonSlider';
-import { YTConsentInstallingReShade } from '@site/src/components/YTConsent';
-import ReactPlayer from 'react-player'
+import YTConsent from '@site/src/components/YTConsent';
 
 <!----------------------------------------------------------->
 
@@ -21,7 +20,7 @@ ReShade is an open-source, generic post-processing injector for games and video 
 
 ---
 
-<YTConsentInstallingReShade />
+<YTConsent url="https://www.youtube.com/watch?v=FHcyIVYj55I" />
 
 ## Standard ReShade Build (Download ReShade X.X.X)
 

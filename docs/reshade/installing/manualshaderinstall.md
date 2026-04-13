@@ -10,7 +10,7 @@ hide_title: true
 <!----------------------- IMPORTS ---------------------------->
 
 import ImageComparisonSlider from '@site/src/components/ImageComparisonSlider';
-import { YTConsentManualShaderInstall } from '@site/src/components/YTConsent';
+import YTConsent from '@site/src/components/YTConsent';
 import ReactPlayer from 'react-player'
 
 <!----------------------------------------------------------->
@@ -25,7 +25,7 @@ Shaders from Patreon, Discord, or direct download (ZIP or folder) skip the GitHu
 
 ---
 
-<YTConsentManualShaderInstall />
+<YTConsent url="https://www.youtube.com/watch?v=vIc020i-6aM&t=84s" />
 
 ---
 
