@@ -14,7 +14,7 @@ const HeroSection = () => (
           Marty's Mods Guides
         </h1>
         <p className={styles.heroSubtitle}>
-          Your comprehensive guide to ReShade and shaders.
+          Everything you need to set up ReShade, install shaders, and get the most out of your visuals.
         </p>
         <div className={styles.heroButtons}>
           <a href="/reshade/downloading" className={styles.primaryButton}>
@@ -43,7 +43,7 @@ const HeroSection = () => (
   </section>
 );
 
-const FeatureText = ({ title, description, buttonLink, buttonText }) => (
+const FeatureText = ({ title, description }) => (
   <div className={styles.featureText}>
     <h2 className={styles.featureTitle}>{title}</h2>
     {Array.isArray(description) ? (
@@ -55,93 +55,137 @@ const FeatureText = ({ title, description, buttonLink, buttonText }) => (
     ) : (
       <p className={styles.featureDescription}>{description}</p>
     )}
-    <a href={buttonLink} className={styles.featureButton}>
-      {buttonText}
-    </a>
   </div>
 );
 
-const FeatureVisual = ({ title, items, visualFirst }) => {
-  const getItemLink = (item) => {
-    const linkMap = {
-      "ReShade Setup Tool": "/reshade/installing/setuptool",
-      "Manual Installation": "/reshade/installing/reshademanualinstall",
-      "Manual Injection": "/reshade/installing/reshademanualinjection",
-      "Shader Installation": "/reshade/installing/reshademanualshaderinstall",
-      "Addon Installation": "/reshade/installing/reshademanualaddoninstall",
-      "iMMERSE": "/shaders/immerse/launchpad",
-      "iMMERSE Pro": "/shaders/immersepro/clarity",
-      "iMMERSE Ultimate": "/shaders/immerseultimate/convolutionbloom",
-      "METEOR": "/shaders/meteor/chromaticabberation"
-    };
-    
-    return linkMap[item] || "#";
-  };
+const installMethods = [
+  {
+    name: "ReShade Setup Tool",
+    description: "Guided installer that handles everything automatically",
+    accent: "#22c55e",
+    link: "/reshade/installing/setuptool",
+  },
+  {
+    name: "Manual Installation",
+    description: "Place ReShade files yourself for full control over the setup",
+    accent: "#0099fa",
+    link: "/reshade/installing/reshademanualinstall",
+  },
+  {
+    name: "Shader Installation",
+    description: "Manually install shader packs without the Setup Tool",
+    accent: "#a855f7",
+    link: "/reshade/installing/reshademanualshaderinstall",
+  },
+  {
+    name: "Addon Installation",
+    description: "Extend ReShade by installing addons yourself",
+    accent: "#f59e0b",
+    link: "/reshade/installing/reshademanualaddoninstall",
+  },
+];
 
-  return (
-    <div
-      className={
-        visualFirst
-          ? `${styles.featureVisual} ${styles.featureVisualAlignStart}`
-          : styles.featureVisual
-      }
-    >
-      {title === "ReShade" ? (
-        <div className={styles.reshadeLogoContainer}>
-          <img 
-            src="/img/ReShadeMainLogo.svg"
-            alt="ReShade Logo" 
-            className={styles.reshadeLogo}
-          />
-        </div>
-      ) : (
-        <div className={styles.visualPanel}>
-          <div className={styles.visualHeader}>
-            <span className={styles.visualTitle}>{title}</span>
-          </div>
-          <div className={styles.visualContent}>
-            {items.map((item, index) => (
-              <a 
-                key={index} 
-                href={getItemLink(item)}
-                className={styles.visualItemLink}
-              >
-                <div className={styles.visualItem}>
-                  {item}
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-      )}
-    </div>
-  );
-};
+const shaderTiers = [
+  {
+    name: "iMMERSE",
+    description: "A foundational set of high-quality effects, available at no cost",
+    accent: "#0099fa",
+    link: "/shaders/immerse/launchpad",
+  },
+  {
+    name: "METEOR",
+    description: "Physically-based cinematic effects for dramatic in-game visuals",
+    accent: "#0099fa",
+    link: "/shaders/meteor/chromaticabberation",
+  },
+  {
+    name: "iMMERSE Pro",
+    description: "A deeper set of effects for users who want more control over their look",
+    accent: "#a855f7",
+    link: "/shaders/immersepro/clarity",
+  },
+  {
+    name: "iMMERSE Ultimate",
+    description: "The full suite combining iMMERSE Pro with exclusive advanced effects",
+    accent: "#f59e0b",
+    link: "/shaders/immerseultimate/convolutionbloom",
+  },
+];
 
-const FeatureSection = ({
-  title,
-  description,
-  buttonLink,
-  buttonText,
-  visualTitle,
-  visualItems,
-  visualFirst = false,
-}) => (
+const FeatureVisual = ({ title, visualFirst }) => (
+  <div
+    className={
+      visualFirst
+        ? `${styles.featureVisual} ${styles.featureVisualAlignStart}`
+        : styles.featureVisual
+    }
+  >
+    {title === "ReShade" ? (
+      <div className={styles.reshadeLogoContainer}>
+        <img
+          src="/img/ReShadeMainLogo.svg"
+          alt="ReShade Logo"
+          className={styles.reshadeLogo}
+        />
+      </div>
+    ) : title === "Shader Collections" ? (
+      <div className={styles.visualPanel}>
+        <div className={styles.visualHeader}>
+          <span className={styles.visualTitle}>{title}</span>
+        </div>
+        <div className={styles.tierGrid}>
+          {shaderTiers.map((tier) => (
+            <a
+              key={tier.name}
+              href={tier.link}
+              className={styles.tierCard}
+              style={{ '--tier-accent': tier.accent }}
+            >
+              <div className={styles.tierCardHeader}>
+                <span className={styles.tierName}>{tier.name}</span>
+              </div>
+              <p className={styles.tierDescription}>{tier.description}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    ) : (
+      <div className={styles.visualPanel}>
+        <div className={styles.visualHeader}>
+          <span className={styles.visualTitle}>{title}</span>
+        </div>
+        <div className={styles.tierGrid}>
+          {installMethods.map((method) => (
+            <a
+              key={method.name}
+              href={method.link}
+              className={styles.tierCard}
+              style={{ '--tier-accent': method.accent }}
+            >
+              <div className={styles.tierCardHeader}>
+                <span className={styles.tierName}>{method.name}</span>
+              </div>
+              <p className={styles.tierDescription}>{method.description}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
+);
+
+const FeatureSection = ({ title, description, visualTitle, visualFirst = false }) => (
   <section className={styles.featureSection}>
     <div className={styles.featureContainer}>
       {visualFirst ? (
         <>
-          <FeatureVisual
-            title={visualTitle}
-            items={visualItems}
-            visualFirst
-          />
-          <FeatureText title={title} description={description} buttonLink={buttonLink} buttonText={buttonText} />
+          <FeatureVisual title={visualTitle} visualFirst />
+          <FeatureText title={title} description={description} />
         </>
       ) : (
         <>
-          <FeatureText title={title} description={description} buttonLink={buttonLink} buttonText={buttonText} />
-          <FeatureVisual title={visualTitle} items={visualItems} />
+          <FeatureText title={title} description={description} />
+          <FeatureVisual title={visualTitle} />
         </>
       )}
     </div>
@@ -152,38 +196,27 @@ const features = [
   {
     title: "ReShade",
     description: [
-      "A powerful post-processing injector that enhances your games with real-time visual effects. Works seamlessly with DirectX, OpenGL, and Vulkan applications without modifying game files.",
-      "Enhance your games with advanced visual effects, improved depth, and customizable post-processing."
+      "ReShade hooks into your game's rendering API (DirectX, OpenGL, or Vulkan) and intercepts the final rendered frame before it reaches your monitor. From there, shaders can sample, manipulate, and recompose the image entirely in GPU memory, applying effects like depth of field, color grading, ambient occlusion, and more.",
+      "Because it operates after the game has already produced its output, ReShade works without touching any game files and is compatible with virtually any 3D application."
     ],
-    buttonLink: "/reshade/downloading",
-    buttonText: "Learn more",
     visualTitle: "ReShade",
-    visualItems: [],
-    visualFirst: false,
   },
   {
     title: "Installing ReShade",
     description: [
-      "Get ReShade up and running in minutes with our comprehensive step-by-step installation guides. From the ReShade Setup Tool to manual installation, we cover all methods.",
-      "Whether you're a beginner or advanced user, our guides walk you through every step of the installation process with detailed screenshots and troubleshooting tips."
+      "Whether you are installing ReShade for the first time or setting it up on a new game, our guides cover every method from start to finish.",
+      "From the automated Setup Tool to fully manual installs, shader packs, and addons, each guide walks you through exactly what to do with no guesswork required.",
     ],
-    buttonLink: "/reshade/installing/setuptool",
-    buttonText: "Learn more",
     visualTitle: "Installation",
-    visualItems: ["ReShade Setup Tool", "Manual Installation", "Shader Installation", "Addon Installation"],
     visualFirst: true,
   },
   {
     title: "Shaders",
     description: [
-      "Explore our collection of high-quality shaders including iMMERSE, iMMERSE Pro, iMMERSE Ultimate, and METEOR. Each shader is crafted for maximum visual impact.",
-      "Our shaders offer a range of visual improvements, from simple tweaks to more advanced effects like lighting, depth, and atmosphere."
+      "Marty's Mods produces some of the most widely used shader collections in the ReShade ecosystem, ranging from free foundational effects to advanced techniques built for enthusiasts and power users.",
+      "Whether you want a subtle visual lift or a complete overhaul of your game's look, there is a collection that fits your needs and budget.",
     ],
-    buttonLink: "/shaders/immerse/launchpad",
-    buttonText: "Learn more",
     visualTitle: "Shader Collections",
-    visualItems: ["iMMERSE", "iMMERSE Pro", "iMMERSE Ultimate", "METEOR"],
-    visualFirst: false
   }
 ];
 
@@ -192,7 +225,7 @@ export default function Home() {
   
   return (
     <Layout
-      title={`${siteConfig.title}`}
+      title={siteConfig.title}
       description="Your extensive guide site for all things ReShade."
     >
       <HeroSection />

@@ -156,28 +156,6 @@
   margin-bottom: 1.25rem;
 }
 
-.featureButton {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  cursor: pointer;
-}
-
-.featureButton:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.35);
-  transform: translateY(-2px);
-  text-decoration: none;
-  color: #fff;
-}
-
 .featureVisual {
   flex: 0 1 500px;
   max-width: 500px;
@@ -222,66 +200,51 @@
   letter-spacing: -0.02em;
 }
 
-.visualContent {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  text-align: left;
+
+.tierGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
 }
 
-.visualItemLink {
-  text-decoration: none;
-  color: inherit;
+.tierCard {
   display: block;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  padding: 0.85rem 1rem;
   border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 3px solid var(--tier-accent);
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.2s ease, transform 0.2s ease, background 0.2s ease;
 }
 
-.visualItemLink + .visualItemLink {
-  border-top: 1px solid rgba(255, 255, 255, 0.09);
-}
-
-.visualItemLink:hover {
+.tierCard:hover {
+  background: rgba(255, 255, 255, 0.09);
+  box-shadow: 0 0 14px color-mix(in srgb, var(--tier-accent) 25%, transparent);
+  transform: translateY(-2px);
   text-decoration: none;
   color: inherit;
 }
 
-.visualItemLink:hover .visualItem {
-  color: var(--ifm-color-primary, #0099fa);
-}
-
-.visualItem {
+.tierCardHeader {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  padding: 0.75rem 0;
+  margin-bottom: 0.3rem;
+}
+
+.tierName {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.tierDescription {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.55);
   margin: 0;
-  background: transparent;
-  border: none;
-  border-radius: 0;
-  color: rgba(255, 255, 255, 0.97);
-  font-weight: 500;
-  font-size: 0.92rem;
-  line-height: 1.35;
-  transition: color 0.2s ease;
-  cursor: pointer;
-  text-align: left;
-}
-
-.visualItem::after {
-  content: '›';
-  flex-shrink: 0;
-  font-size: 1.15rem;
-  font-weight: 400;
-  line-height: 1;
-  opacity: 0.52;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.visualItemLink:hover .visualItem::after {
-  opacity: 0.92;
-  transform: translateX(2px);
+  line-height: 1.4;
 }
 
 .reshadeLogoContainer {
