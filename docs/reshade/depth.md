@@ -124,6 +124,11 @@ Some games provide a dynamic resolution feature that constantly resizes and chan
   - Disable Dynamic Resolution Rendering
   - Disable DLSS/FSR/XESS
 
+### Depth Effects Showing Through Cutscenes or FMVs
+Some games freeze the depth buffer during cutscenes or FMVs, meaning the last in-game depth data stays locked in place while the video plays over it. This causes depth-based effects such as ambient occlusion, global illumination, or depth of field to incorrectly render on top of the cutscene.
+
+There is no way to fix this through ReShade or depth buffer configuration. The only reliable workaround is to bind a key to either disable the individual depth effects or toggle all effects off globally before a cutscene begins, then re-enable them after. Both options are available in the ReShade **Settings** tab under **Key Bindings**.
+
 ---
 
 ## Global Preprocessor Settings

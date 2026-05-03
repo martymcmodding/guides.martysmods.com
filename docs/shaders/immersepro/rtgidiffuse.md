@@ -59,7 +59,7 @@ Once your **Object Thickness** is dialed in, the next step is setting the **Ambi
 In order to see the light being blended into your scene, it's best to disable the "**Diffuse RTGI**" debug view and set "**Ambient Light**" to `1.00`.
 
 - **Bounce Lighting Intensity**: controls the strength of indirect lighting produced by RTGI, simulating how light bounces off surfaces in the environment.
-- **Ambient Occlusion Intensity**: controls the stregth of ambient occlusion produced by RTGI, providing you with shadowing between nearby surfaces.
+- **Ambient Occlusion Intensity**: controls the strength of ambient occlusion produced by RTGI, providing you with shadowing between nearby surfaces.
 
 These intensity values are largely based on personal preference and artistic intent, but a fundamental rule is that no propagated lighting should exceed the brightness of the original light source.
 
@@ -123,7 +123,39 @@ RTGI provides several debug visualization modes to assist with parameter tuning 
 
 - **Disabled**: Standard RTGI output with all effects applied
    ![Disabled](https://assets.martysmods.com/shaders/rtgi/RTGIDiffuseDebugOff.webp)
-- **Diffuse RTGI**: Shows only the diffuse lighting calculations, useful for `Obeject Thickness` adjustments.
+- **Diffuse RTGI**: Shows only the diffuse lighting calculations, useful for **Object Thickness** adjustments.
    ![DiffuseDebug](https://assets.martysmods.com/shaders/rtgi/RTGIDiffuseDebug.webp)
 - **Validation Layer**: Comprehensive debug output showing Depth, Diffuse, Normal Vectors, Optical Flow, and Albedo data
    ![ValidationLayer](https://assets.martysmods.com/shaders/rtgi/RTGIDiffuseValidationLayer.webp)
+
+---
+
+## Troubleshooting
+
+### Black Screen When Enabling Specular
+A black screen when enabling RTGI Specular has two common causes:
+
+- **Missing Launchpad**: [iMMERSE Launchpad](../immerse/launchpad.md) is not loaded or is not at the top of the shader load order.
+- **Missing texture files**: One or more required iMMERSE texture files are missing or not in the correct location. Ensure all iMMERSE texture files are present and up to date in your textures folder.
+
+### RTGI Not Making Any Visible Changes on Screen
+If RTGI appears to have no effect on the scene, there are two likely causes:
+
+- **Missing Launchpad**: [iMMERSE Launchpad](../immerse/launchpad.md) is not loaded or is not at the top of the shader load order.
+- **No depth buffer**: RTGI requires a working depth buffer. If depth is not available, RTGI cannot calculate lighting or occlusion. See the [Depth Buffer guide](../../reshade/depth.md) for help configuring depth and using the `DisplayDepth` shader to verify it is working correctly.
+
+### Failing to Compile
+RTGI failing to compile has two common causes:
+
+- **DirectX 9**: RTGI requires DirectX 10 or newer. If your game runs under DirectX 9, use [DXVK](../../additionalguides/apiwrappers/dxvk.md) or [DGVoodoo2](../../additionalguides/apiwrappers/dgvoodoo2.md) to translate the API to a supported version.
+- **Improper install**: Shader or texture files are missing or placed in the wrong directory. Verify that iMMERSE Pro is correctly installed with all files in their expected locations.
+
+![RTGICompileFailure](https://assets.martysmods.com/shaders/rtgi/RTGIFailedCompile.webp)
+
+### Weird Squares on the Screen
+Visible square artifacts on screen are caused by outdated iMMERSE headers or missing/outdated texture files.
+
+![WierdSquares](https://assets.martysmods.com/shaders/rtgi/RTGIMissingTextures.webp)
+
+- **Outdated headers**: Update your iMMERSE headers to the latest version.
+- **Missing or outdated textures**: Ensure all iMMERSE texture files are present and up to date in your textures folder.

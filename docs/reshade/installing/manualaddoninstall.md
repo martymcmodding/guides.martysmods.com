@@ -41,3 +41,19 @@ Newly installed add-ons may not show up if ReShade's add-on search path was chan
 | Setting               | Path |
 | --------------------- | ---- |
 | Default (base folder) | `.\` |
+
+---
+
+## Troubleshooting
+
+### Game Crashing After Installing Add-ons
+
+If your game starts crashing after installing one or more add-ons, the most likely cause is an incompatible or misbehaving add-on conflicting with the game or with another add-on already loaded by ReShade. This is more common than it might seem, as add-ons hook into the rendering pipeline at a low level and a poorly written or outdated add-on can destabilize the entire process.
+
+The most reliable way to identify the culprit is to remove add-ons one at a time and test the game after each removal until the crash stops occurring. To do this, navigate to the folder where your add-ons are installed and move them out one by one, restarting the game each time. Once the crash no longer occurs, the last add-on you removed is the one causing the problem.
+
+A few additional things worth checking:
+
+- **Outdated add-ons**: Add-ons built against an older version of the ReShade Add-on API may not be compatible with the version of ReShade you have installed. Check whether an updated version of the add-on is available.
+- **Conflicting add-ons**: Some add-ons perform similar hooks or modify the same parts of the rendering pipeline. Having two add-ons that do the same thing installed at the same time can cause crashes even if each one works fine on its own.
+- **Antivirus or anticheat interference**: Some antivirus software or anticheat systems flag add-on DLLs and forcibly terminate the process. If the game crashes immediately on launch with no clear cause, check whether your antivirus has quarantined any files from the add-on folder.

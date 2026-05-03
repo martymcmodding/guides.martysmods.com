@@ -194,6 +194,10 @@ code {
   max-width: 50%;
 }
 
+.img-half {
+  max-width: 50%;
+}
+
 /* Markdown content spacing */
 .markdown h1,
 .markdown h2,
@@ -210,6 +214,11 @@ code {
 }
 
 .markdown h2 {
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-md);
+}
+
+.markdown h3 {
   margin-top: var(--space-lg);
   margin-bottom: var(--space-md);
 }

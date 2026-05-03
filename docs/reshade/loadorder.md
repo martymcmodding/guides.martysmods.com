@@ -98,7 +98,7 @@ The relative order within this tier is critical. As demonstrated in Example 1, a
 
 This tier includes shaders that simulate optical and sensor characteristics of real-world camera systems. Examples include chromatic aberration, vignette, bloom, and depth of field.
 
-These effects should be ordered to mirror their physical occurrence in a camera system. Lens-level effects, such as chromatic aberration and vignette, occur first, as they result from light passing through the lens assembly. Sensor-level effects, such as bloom, which simulates light bleeding across sensor pixels—occur subsequently, as they result from the interaction between light and the imaging sensor.
+These effects should be ordered to mirror their physical occurrence in a camera system. Lens-level effects, such as chromatic aberration and vignette, occur first, as they result from light passing through the lens assembly. Sensor-level effects, such as bloom, which simulates light bleeding across sensor pixels, occur subsequently, as they result from the interaction between light and the imaging sensor.
 
 ### Tier 4: Color Grading
 

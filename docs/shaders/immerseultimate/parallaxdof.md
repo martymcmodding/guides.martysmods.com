@@ -159,7 +159,7 @@ Astigmatism causes the lens to focus differently along different axes (e.g., rad
 
 ### Optical Vignetting
 
-Optical vignetting darkens the corners of the frame as less light reaches the sensor at the edges—a characteristic of real lens systems. The addon provides controls to match this behavior.
+Optical vignetting darkens the corners of the frame as less light reaches the sensor at the edges, which is a characteristic of real lens systems. The addon provides controls to match this behavior.
 
 - Radius Scale - Controls how much of the frame is affected by the vignette. Larger values extend the effect toward the center; smaller values confine darkening to the corners.
 

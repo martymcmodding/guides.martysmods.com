@@ -594,5 +594,17 @@
   "https://assets.martysmods.com/shaders/rtgi/RTGIDiffuseDebugOff.webp": {
     "width": 2560,
     "height": 1440
+  },
+  "https://assets.martysmods.com/shaders/rtgi/RTGIMissingTextures.webp": {
+    "width": 1920,
+    "height": 1080
+  },
+  "https://assets.martysmods.com/shaders/rtgi/RTGIFailedCompile.webp": {
+    "width": 367,
+    "height": 53
+  },
+  "https://assets.martysmods.com/additionalguides/games/fivem/FiveMCrashScreen.webp": {
+    "width": 679,
+    "height": 586
   }
 }
