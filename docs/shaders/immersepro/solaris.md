@@ -17,7 +17,29 @@ import ImageComparisonSlider from '@site/src/components/ImageComparisonSlider';
 
 ![solarisheader](https://assets.martysmods.com/headers/solarisheader.webp)
 
-iMMERSE Pro: Solaris is a physically based exposure and bloom shader that replicates real-world light behavior as it travels to a camera sensor. Built around reverse-tonemapping technology, Solaris generates bloom effects that closely match authentic photography results, providing realistic light diffusion and exposure control within your games.
+iMMERSE Pro: Solaris is a physically based exposure and bloom shader. It works by reverse-tonemapping the scene back into HDR space before calculating bloom, which means bright areas produce bloom that behaves like real light rather than a simple screen-space blur. The result is bloom that scales naturally with scene brightness and responds to exposure the same way a real camera would.
+
+---
+
+## Preprocessor Definitions
+
+### ENABLE_SOLARIS_REGRADE_PARITY
+
+Default: `0`. Accepts `0` or `1`.
+
+When enabled, [ReGrade](../../shaders/immerse/launchpad.md) receives the HDR output from Solaris as its color input instead of the standard tonemapped frame. This allows ReGrade's exposure, tone, and color grading to work on the full HDR range that Solaris produces rather than the already-compressed image. The practical benefit is that color grading changes made in ReGrade will interact correctly with the bloom and exposure that Solaris applies, giving you a non-destructive pipeline where all three effects work together without clipping or compressing each other's contributions. If you are using both Solaris and ReGrade together, enabling this is recommended.
+
+### SOLARIS_PERF_MODE
+
+Default: `0`. Accepts `0` or `1`.
+
+Reduces GPU load at the cost of some visual quality. Useful on lower-end hardware or in demanding scenes where performance headroom is limited.
+
+### SOLARIS_ARTISTIC_MODE
+
+Default: `0`. Accepts `0` or `1`.
+
+Switches Solaris from its default physically accurate bloom model to an artistic mode that exposes a **Blend Mode** selector with several non-physical bloom compositing options. When this is disabled, the **Bloom Haziness** slider is shown instead. See the [Artistic Mode](#artistic-mode) section below for details on the available blend modes.
 
 ---
 
@@ -25,7 +47,9 @@ iMMERSE Pro: Solaris is a physically based exposure and bloom shader that replic
 
 ### Log Exposure Bias
 
-Adjusts the reversed-tonemapped exposure using a logarithmic formula that preserves detail in extreme highlights and shadows. This parameter provides more realistic exposure control compared to linear adjustments, maintaining visual information in areas that would otherwise be clipped or lost.
+Range: `-5.0` to `5.0`. Default: `0.0`.
+
+Adjusts the exposure of the scene before bloom is calculated. Because Solaris operates in HDR space, this adjustment is applied logarithmically, which matches how exposure works on a real camera. Raising the value makes the scene brighter, which causes more areas to exceed the bloom threshold and contribute to the bloom pass. Lowering it dims the scene input, restricting bloom to only the brightest areas. At `0.0`, no exposure adjustment is made and bloom is calculated from the scene as-is.
 
 <ReactPlayer
   url="https://assets.martysmods.com/shaders/solaris/LogExposureBiasControl.webm"
@@ -40,9 +64,9 @@ Adjusts the reversed-tonemapped exposure using a logarithmic formula that preser
 
 ### Log HDR Whitepoint
 
-Sets the highest brightness threshold that Solaris will consider for bloom generation. This parameter controls the distribution of bloom effects across the brightness range:
-- **Lower Values**: Create bloom in darker areas, producing atmospheric lighting effects
-- **Higher Values**: Shift bloom towards brighter areas, emphasizing highlight diffusion
+Range: `0.0` to `12.0`. Default: `7.0`.
+
+Sets the brightness level in HDR space that Solaris treats as the upper threshold for bloom generation. Lower values allow moderately bright areas to contribute to bloom, spreading the effect across more of the scene. Higher values restrict bloom to only the very brightest highlights, producing a tighter, more selective effect concentrated around the most intense light sources. This is one of the primary controls for defining which areas of a scene produce bloom and how broadly it spreads. Use it alongside **Log Exposure Bias** to dial in exactly which brightness range triggers the effect.
 
 <ReactPlayer
   url="https://assets.martysmods.com/shaders/solaris/LogHDRWhitepointControl.webm"
@@ -57,15 +81,15 @@ Sets the highest brightness threshold that Solaris will consider for bloom gener
 
 ### Bloom Intensity
 
-Controls the overall strength of the bloom effect. This parameter should be balanced to achieve natural-looking light diffusion without overwhelming the original image:
-- **Lower Values**: Provide subtle bloom that enhances atmosphere
-- **Higher Values**: Create dramatic bloom effects for artistic purposes
+Range: `0.0` to `1.0`. Default: `0.3`.
+
+Controls how strongly the bloom contribution is blended back into the scene. At `0.0`, bloom has no visible effect. At `1.0`, the bloom is at full strength. The default of `0.3` is intentionally conservative to avoid washing out the image. Raise this gradually rather than pushing it high all at once, as bloom stacks quickly and can overexpose the scene at high values.
 
 ### Bloom Radius
 
-Determines the spatial extent of the bloom effect, controlling how light spreads from bright sources:
-- **Larger Radius**: Creates soft, atmospheric bloom that spreads over wider areas
-- **Smaller Radius**: Produces sharp, defined bloom with more concentrated light diffusion
+Range: `0.0` to `1.0`. Default: `1.0`.
+
+Controls how far bloom spreads outward from bright sources. At higher values, bloom diffuses broadly across the screen with a soft, wide falloff. At lower values, bloom stays tighter and closer to the source. The default of `1.0` produces the widest possible spread.
 
 <ReactPlayer
   url="https://assets.martysmods.com/shaders/solaris/BloomRadiusControl.webm"
@@ -80,13 +104,19 @@ Determines the spatial extent of the bloom effect, controlling how light spreads
 
 ### Bloom Haziness
 
-Controls the atmospheric quality of the bloom effect, affecting detail preservation and visual clarity:
-- **Lower Values**: Maintain sharp detail within bloom areas, suitable for crisp, technical applications
-- **Higher Values**: Increase atmospheric haze, creating dreamy, cinematic effects
+Range: `0.0` to `1.0`. Default: `0.9`.
+
+:::note
+This parameter is only visible when `SOLARIS_ARTISTIC_MODE` is set to `0`.
+:::
+
+Controls how much the bloom contribution takes on the color of the light sources versus appearing as a neutral white haze. At lower values, bloom is more colorful and tinted by the source light, so a red neon sign will bloom red. At higher values, bloom shifts toward a white, washed-out haze regardless of source color. The high default of `0.9` leans toward the hazy, atmospheric look. Lower this if you want bloom to retain the color character of your scene's lights.
 
 ### High Resolution Input
 
-Enables high-resolution sampling for bloom calculations, essential for capturing fine details in small objects or intricate light sources. This feature is particularly useful when working with high-resolution textures or when precise bloom control is required.
+Default: **Disabled**.
+
+When enabled, Solaris uses a higher resolution buffer as the input to its bloom downsampling chain. By default, Solaris downsamples from a reduced resolution source to save performance. Enabling this uses the full resolution image as the starting point, which preserves finer detail in small or thin bright objects that might otherwise be lost during the initial downsample. The tradeoff is a higher performance cost. Enable this if small light sources or fine bright details are not producing bloom correctly at default settings.
 
 <ImageComparisonSlider 
   beforeImage="https://assets.martysmods.com/shaders/solaris/HighResolutionInputDisabled.webp" 
@@ -97,33 +127,33 @@ Enables high-resolution sampling for bloom calculations, essential for capturing
 
 ### Mask by Depth
 
-Enables depth-based masking in Solaris, allowing the bloom effect to be influenced by the scene's depth information. This feature prevents bloom from appearing inappropriately in distant areas, creating more realistic atmospheric effects.
+Default: **Enabled**.
+
+When enabled, Solaris uses the depth buffer to reduce bloom intensity on distant geometry. This prevents bloom from spreading uniformly across the entire scene and instead concentrates it on closer surfaces where it would be more physically expected. Disabling this allows bloom to appear at the same strength regardless of how far away a surface is.
 
 ### Depth Mask Strength
 
-Controls the intensity of depth-based masking, determining how strongly distance affects bloom visibility:
-- **Higher Values**: Apply stronger depth masking, reducing bloom in distant areas for realistic atmospheric perspective
-- **Lower Values**: Apply minimal depth masking, allowing bloom to appear more uniformly across the scene
+Range: `0.0` to `1.0`. Default: `0.5`.
+
+Controls how aggressively the depth mask reduces bloom on distant surfaces. At higher values, bloom falls off more strongly with distance, keeping it close to the camera. At lower values, the depth-based reduction is more gradual and distant surfaces still receive a meaningful bloom contribution. Only has an effect when **Mask by Depth** is enabled.
 
 ---
 
-## Preprocessor Definitions
+## Artistic Mode
 
-### `ENABLE_SOLARIS_REGRADE_PARITY`
+### Blend Mode
 
-Enables integration with the ReGrade shader, allowing ReGrade to receive HDR input from Solaris as a color buffer. This feature enables non-destructive HDR exposure, bloom, and color grading workflows by maintaining the full dynamic range throughout the processing pipeline.
+:::note
+This parameter is only visible when `SOLARIS_ARTISTIC_MODE` is set to `1`.
+:::
 
-### `SOLARIS_ARTISTIC_MODE`
+Default: **Energy Conserving**.
 
-Activates artistic blending mode presets that deviate from physically accurate bloom for creative applications:
+Selects how the bloom contribution is composited back onto the scene. These modes replace the physically accurate default compositing with alternative blending approaches for creative use.
 
-1. **Energy Conserving**: Physically accurate bloom that maintains light energy conservation
-2. **HDR Drama**: Enhanced contrast and saturation for dramatic visual impact
-3. **Orton**: Soft, dreamy bloom effect inspired by traditional photography techniques
-4. **Dreamy**: Ethereal, atmospheric bloom with enhanced light diffusion
-5. **Depth Blend**: Bloom that interacts with scene depth for enhanced atmospheric effects
-6. **Screen**: Classic screen blending for bright, vibrant bloom effects
-
-### `SOLARIS_PERF_MODE`
-
-Activates performance optimization mode for Solaris, reducing GPU load at the cost of some visual quality. This mode is useful for maintaining performance on lower-end systems or when working with complex scenes.
+- **Energy Conserving**: The default physically accurate mode. Bloom is blended in a way that conserves light energy, meaning the total brightness of the scene is not artificially inflated. This is the most natural-looking option.
+- **HDR Drama**: Exaggerates bloom contrast and saturation for a high-impact, cinematic look. Suited for dramatic scenes or stylized visuals.
+- **Orton**: Based on the Orton effect from film photography, where a sharp exposure and a heavily blurred, overexposed version of the same image are blended together. Produces a soft, glowing quality that wraps around subjects.
+- **Dreamy**: A more diffuse, softer bloom blend that gives the scene a hazy, ethereal quality.
+- **Depth Blend**: Composites the bloom with awareness of scene depth, creating separation between near and far bloom contributions.
+- **Screen**: Uses screen blending for the bloom composite. Screen blending brightens the image by combining pixel values in a way that always results in a lighter output, producing bright and vivid bloom without darkening any areas.

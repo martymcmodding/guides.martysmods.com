@@ -29,11 +29,11 @@ Parallax DoF requires the IGCS Camera Tool to function. The IGCS Camera Tool mus
 
 When IGCS's Camera Mode is enabled along with the Parallax DoF shader, the GUI controls will open in a window detached from the main ReShade interface.
 
-![ParallaxDoFGUI](https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFGUI2.webp)
+<img className="img-half" src="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFGUI2.webp" alt="Parallax DoF GUI" />
 
 Clicking **Start Session** opens the session control panel and displays a transparently shifted overlay used to calculate the focal plane position.
 
-![ParallaxDoFControls](https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFControls2.webp)
+<img className="img-half" src="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFControls2.webp" alt="Parallax DoF Controls" />
 
 ---
 

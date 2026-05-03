@@ -40,13 +40,13 @@ LUTs are predefined color grading files, typically in PNG format. You can browse
 3. Click on the addon to open the LUT list
 4. Select a LUT to apply color changes in real-time
 
-![LUT Manager Window](https://assets.martysmods.com/shaders/lutmanager/lutmanager_window.webp)
+<img className="img-half" src="https://assets.martysmods.com/shaders/lutmanager/lutmanager_window.webp" alt="LUT Manager Window" />
 
 ### Favorites System
 
 Right-click any LUT to add it to your favorites list for quick access later.
 
-![LUT Manager Favorites Window](https://assets.martysmods.com/shaders/lutmanager/lutmanager_fav.webp)
+<img className="img-half" src="https://assets.martysmods.com/shaders/lutmanager/lutmanager_fav.webp" alt="LUT Manager Favorites Window" />
 
 ---
 
@@ -60,7 +60,7 @@ Upsamples LUTs to provide higher quality color grading. This feature is particul
 
 Displays a grid view of all LUTs in the currently enabled atlas for easy comparison and selection.
 
-![LUT Atlas](https://assets.martysmods.com/shaders/lutmanager/lutmanager_atlas.webp)
+<img className="img-half" src="https://assets.martysmods.com/shaders/lutmanager/lutmanager_atlas.webp" alt="LUT Atlas" />
 
 ### Blend Intensity (Chroma)
 
