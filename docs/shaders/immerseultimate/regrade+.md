@@ -12,8 +12,8 @@ hide_title: True
 
 iMMERSE Ultimate: ReGrade + is a commercial-level color-correction suite for ReShade, inspired by industry-standard tools. It eliminates the need to leave the game for detailed adjustments, allowing real-time color correction with an intuitive UI. This makes it a seamless experience for users, especially those knowledgeable in Color Theory, Photography, and Image Post-Processing.
 
-:::warning
-ReGrade + requires the Addon Support build of ReShade to function properly, otherwise the screen will be black when the shader is enabled.
+:::info
+ReGrade + saves its configuration to the ReShade.ini file, not your preset file. To save, go to the **Home** tab in the ReShade GUI and click the floppy disk icon. This applies even if ReShade's auto save is enabled. Your ReGrade + settings will not be written until you click that button manually.
 :::
 
 ---
@@ -133,9 +133,6 @@ The Color Wheel lets you adjust the hue and saturation of specific color ranges:
 ---
 
 ## Troubleshooting
-
-### Settings Not Saving to Preset
-ReGrade + saves its settings to `ReShade.ini` rather than your active preset file, even when autosave is enabled in ReShade. To save your changes to the correct preset file, you must manually click the **Save** button in the ReShade UI after making adjustments.
 
 ### Black Screen When Enabling ReGrade +
 A black screen when enabling ReGrade + has two common causes:

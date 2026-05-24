@@ -43,7 +43,7 @@ const HeroSection = () => (
   </section>
 );
 
-const FeatureText = ({ title, description, buttonLink, buttonText }) => (
+const FeatureText = ({ title, description }) => (
   <div className={styles.featureText}>
     <h2 className={styles.featureTitle}>{title}</h2>
     {Array.isArray(description) ? (
@@ -55,9 +55,6 @@ const FeatureText = ({ title, description, buttonLink, buttonText }) => (
     ) : (
       <p className={styles.featureDescription}>{description}</p>
     )}
-    <a href={buttonLink} className={styles.featureButton}>
-      {buttonText}
-    </a>
   </div>
 );
 
@@ -95,23 +92,16 @@ const FeatureVisual = ({ title, items, visualFirst }) => {
           />
         </div>
       ) : (
-        <div className={styles.visualPanel}>
-          <div className={styles.visualHeader}>
-            <span className={styles.visualTitle}>{title}</span>
-          </div>
-          <div className={styles.visualContent}>
-            {items.map((item, index) => (
-              <a 
-                key={index} 
-                href={getItemLink(item)}
-                className={styles.visualItemLink}
-              >
-                <div className={styles.visualItem}>
-                  {item}
-                </div>
-              </a>
-            ))}
-          </div>
+        <div className={styles.installGrid}>
+          {items.map((item, index) => (
+            <a
+              key={index}
+              href={getItemLink(item)}
+              className={styles.installCard}
+            >
+              <span>{item}</span>
+            </a>
+          ))}
         </div>
       )}
     </div>
@@ -171,7 +161,7 @@ const features = [
     buttonText: "Learn more",
     visualTitle: "Installation",
     visualItems: ["ReShade Setup Tool", "Manual Installation", "Shader Installation", "Addon Installation"],
-    visualFirst: true,
+    visualFirst: false,
   },
   {
     title: "Shaders",

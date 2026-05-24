@@ -192,6 +192,58 @@
   justify-content: flex-start;
 }
 
+.installGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.installCard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 1.25rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 2px solid rgba(0, 153, 250, 0.35);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  text-decoration: none;
+  color: rgba(226, 232, 240, 0.92);
+  font-size: 1rem;
+  font-weight: 600;
+  min-height: 90px;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.installCard::after {
+  content: '›';
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  opacity: 0.35;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.installCard:hover {
+  background: rgba(0, 153, 250, 0.08);
+  border-color: rgba(0, 153, 250, 0.45);
+  border-top-color: rgba(0, 153, 250, 0.75);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35), inset 0 0 0 1px rgba(0, 153, 250, 0.1);
+  text-decoration: none;
+}
+
+.installCard:hover::after {
+  opacity: 0.85;
+  transform: translateX(3px);
+}
+
 .visualPanel {
   width: 100%;
   max-width: 100%;

@@ -1,7 +1,7 @@
 ---
-title: Chromatic Abberation
-sidebar_title: "Chromatic Abberation"
-description: "Physically Accurate Chromatic Abberation"
+title: Chromatic Aberration
+sidebar_title: "Chromatic Aberration"
+description: "Physically Accurate Chromatic Aberration"
 slug: /shaders/meteor/chromaticabberation
 sidebar_position: 1
 hide_title: True
@@ -9,7 +9,7 @@ hide_title: True
 
 # Chromatic Aberration
 
-METEOR: Chromatic Aberration simulates color fringing and dispersion effects seen in real camera lenses. Different wavelengths of light are refracted by varying amounts, causing colored edges and subtle color shifts, especially towards the image periphery.
+METEOR: Chromatic Aberration simulates the color fringing produced by real camera lenses. When light passes through glass, different wavelengths bend by slightly different amounts, with red bending least and blue bending most. Colors land at slightly different points on the sensor, producing colored fringing along high-contrast edges that is most visible toward the corners and periphery of the frame. METEOR models this based on three classes of real optical lens design.
 
 ---
 
@@ -17,34 +17,38 @@ METEOR: Chromatic Aberration simulates color fringing and dispersion effects see
 
 ### Lens Type
 
-Selects the optical design to emulate:
+Selects the optical lens design to emulate, which determines how much chromatic separation occurs and how it is distributed across the frame.
 
-- **Chromatic (Single Lens):** Strong color fringing and pronounced aberration
-- **Achromatic (Doublet):** Controlled effect with reduced aberration
-- **Apochromatic (Triplet):** Minimal aberration across a wide range of wavelengths
+- **Chromatic (single lens):** A bare, uncorrected lens element with no chromatic compensation. Produces the strongest color fringing, with visible red/cyan splits along edges that intensify toward the frame corners.
+- **Achromatic (doublet):** A two-element cemented lens that corrects aberration for two wavelengths. Fringing is reduced and constrained, giving a more subtle, realistic look for modern camera glass.
+- **Apochromatic (triplet):** A three-element design that brings three wavelengths into focus at the same plane. Produces minimal residual aberration, suitable for simulating high-end telephoto or cinema lenses.
 
 ### Curve
 
-Adjusts the curvature profile of the aberration effect. Higher values increase nonlinearity, intensifying color separation towards the edges.
+Controls how aberration strength falls off across the frame. At `0.0` the falloff follows a standard radial profile. Positive values concentrate the aberration toward the corners. Negative values spread it more evenly, bringing the effect closer to the center.
+
+Range: `-1.0` to `1.0`
 
 ### Amount
 
-Sets the overall strength of the chromatic aberration effect.
+Sets the overall intensity of the chromatic aberration. Positive values produce the natural red/cyan split seen in real lenses. Negative values invert the color separation so cyan leads on one side and red on the other, which can simulate certain corrective optical designs or flip the fringing direction for creative use.
+
+Range: `-1.0` to `1.0`
 
 ### Quality Preset
 
-Controls the number of samples used to calculate the effect:
+Controls how many spectral samples are used to compute the dispersion. Higher settings produce smoother color gradients across the fringe, reducing banding between color channels at the cost of GPU time.
 
-- **Low:** Minimal samples, best performance
-- **Medium:** Balanced quality and performance
-- **High:** Improved quality, moderate performance impact
-- **Very High:** High quality with increased sample count
-- **Ultra:** Maximum quality, highest performance cost
+- **Low:** Fewest samples. Fastest, and acceptable for subtle amounts.
+- **Medium:** Balanced quality and performance. Suitable for most use cases.
+- **High:** Noticeably smoother gradients with moderate cost.
+- **Very High:** High sample count for strong amounts or close inspection.
+- **Ultra:** Maximum quality. Use when Amount is pushed high and banding is visible at lower presets.
 
 ### Use HDR
 
-Enables HDR-based reverse tonemapping for more accurate color reproduction in high dynamic range scenes.
+When enabled, the shader applies reverse tonemapping before computing aberration and re-tonemaps afterward. This prevents color channels from clipping against the SDR ceiling during dispersion, preserving accurate color separation in bright areas like specular highlights and blown-out light sources. Enabled by default.
 
 ### Use Post Filtering
 
-Applies additional filtering to reduce artifacts and smooth color transitions.
+Applies a smoothing pass after aberration is computed to soften color fringing artifacts or aliasing at high-contrast edges. Disabled by default. Enable it if you see jagged or noisy fringe edges at higher Quality Presets or large Amount values.
