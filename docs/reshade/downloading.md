@@ -9,14 +9,13 @@ hide_title: true
 
 <!----------------------- IMPORTS ---------------------------->
 
-import ImageComparisonSlider from '@site/src/components/ImageComparisonSlider';
 import YTConsent from '@site/src/components/YTConsent';
 
 <!----------------------------------------------------------->
 
 # Downloading ReShade
 
-ReShade is an open-source, generic post-processing injector for games and video software. It hooks into the rendering pipeline to apply custom shaders and effects (e.g. ambient occlusion, depth of field, color grading, antialiasing) without modifying game files. ReShade supports Direct3D 9/10/11/12, OpenGL, and Vulkan. Effects are written in ReShade FX (HLSL-based) and work across supported APIs. To limit abuse in online play, the project distributes two builds; both are available at [ReShade's webpage](https://reshade.me/#download).
+ReShade is a free, open-source tool that allows you to customize how your game looks. It sits between the game and your screen and adds visual effects without changing any of the game's files. Working with major graphics systems that games rely on (Direct3D, OpenGL, and Vulkan), it is able to apply effects on top of just about any game that you can think of. However, since the tool can be so powerful in its user customizability, ReShade has branched out into two different versions that you can find for download on [ReShade's download page](https://reshade.me/#download).
 
 ---
 
@@ -24,12 +23,12 @@ ReShade is an open-source, generic post-processing injector for games and video 
 
 ## Standard ReShade Build (Download ReShade X.X.X)
 
-The Standard build has no add-on support and restricts depth-buffer access when internet connectivity is detected. It is the recommended build for online or multiplayer games and for titles with anti-cheat that disallows injectors or add-ons. Use this build unless you specifically need add-ons.
+The Standard build of ReShade doesn't support any add-ons outside of the included "Generic Depth", and it limits this when ReShade can detect any internet traffic from the game in order to prevent cheating in multiplayer titles. This is the version to get for online or multiplayer games, and for any game whose anti-cheat blocks the usual graphics injections or mods.
 
 ---
 
 ## Full Add-On Support ReShade Build (Download ReShade X.X.X with full add-on support)
 
-The Full Add-On Support build allows external add-ons (DLLs that extend ReShade or the host application) and full depth-buffer access at all times. It is intended for single-player or add-on use. Most anti-cheat systems disallow this build; do not use it in online or multiplayer games.
+The Full Add-On Support build lets you use any add-on that you desire, as well as keeps all of its features limitation free, meaning that you can have access to the depth buffer under any circumstance. It's meant for single-player games, as most anti-cheat systems will flag it, so it is best to avoid using in multiplayer or competitive titles.
 
-![WebsiteDownload](https://assets.martysmods.com/reshade/download/WebsiteDownload.webp)
+![ReShadeDownload](https://assets.martysmods.com/reshade/download/ReShadeDownload.webp)
