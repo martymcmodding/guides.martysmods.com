@@ -194,12 +194,16 @@ code {
   max-width: 50%;
 }
 
-.img-half {
+.markdown img.img-half {
   max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.img-quarter {
+.markdown img.img-quarter {
   max-width: 75%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Markdown content spacing */
