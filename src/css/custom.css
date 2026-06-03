@@ -198,6 +198,10 @@ code {
   max-width: 50%;
 }
 
+.img-quarter {
+  max-width: 75%;
+}
+
 /* Markdown content spacing */
 .markdown h1,
 .markdown h2,

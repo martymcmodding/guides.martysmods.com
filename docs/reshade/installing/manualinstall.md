@@ -29,7 +29,7 @@ The ReShade Setup Tool is distributed as an executable, but its contents can be 
 1. Right-click the ReShade Setup Tool executable and select **Open archive** with 7-Zip.  
 2. A window will open showing the files inside the installer.  
 
-![Open with 7-Zip](https://assets.martysmods.com/reshade/installing/Manual7ZipOpen.webp)
+<img className="img-quarter" src="https://assets.martysmods.com/reshade/installing/Manual7ZipOpen.webp" />
 
 Inside, you will find two DLL files. Choose the one that matches your game's architecture:
 
