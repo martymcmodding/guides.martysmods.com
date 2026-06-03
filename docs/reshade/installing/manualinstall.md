@@ -31,12 +31,7 @@ The ReShade Setup Tool is distributed as an executable, but its contents can be 
 
 <img className="img-quarter" src="https://assets.martysmods.com/reshade/installing/Manual7ZipOpen.webp" />
 
-Inside, you will find two DLL files. Choose the one that matches your game's architecture:
-
-| ReShade Binary Architecture | DLL Name      |
-| --------------------------- | ------------- |
-| 64-bit                      | ReShade64.dll |
-| 32-bit                      | ReShade32.dll |
+Inside, you will find two DLL files. Choose the one that matches your game's architecture.
 
 Drag the correct DLL to your game's folder. This is the same folder that contains the game's executable.  
 If you are unsure where that is, right-click your game in your launcher (Steam, GOG Galaxy, etc.), select **Manage** or **Browse local files**, and look for the folder containing the executable. Alternatively, see our guide for [finding your game's executable](/additionalguides/findexecutable).
