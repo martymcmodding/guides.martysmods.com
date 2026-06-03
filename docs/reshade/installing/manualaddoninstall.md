@@ -16,7 +16,7 @@ Add-ons are DLLs that use ReShade's Add-on API to extend ReShade or the game (e.
 ## Install for DirectX and OpenGL
 
 1. Locate the ReShade binary folder. This is usually the same folder as the game executable. Exceptions include some FiveM and Source engine setups, where the binary can live in an external folder. To find it, open the game, open ReShade's **Settings** tab, and click **Open base folder in explorer**.
-   ![ReShadeSettingsBaseFolderButtonHighlight](https://assets.martysmods.com/reshade/installing/addoninstall/ReShadeSettingsBaseFolderButtonHighlight.webp)
+   <img className="img-quarter" src="https://assets.martysmods.com/reshade/installing/addoninstall/ReShadeSettingsBaseFolderButtonHighlight.webp" />
 2. Place add-on files (`.addon.32` or `.addon.64`) directly in that folder. Do not put them inside a subfolder or they will not load.
 3. Restart or start the game.
 
@@ -36,11 +36,7 @@ Vulkan loads add-ons from the game executable folder, not the ReShade binary fol
 
 Newly installed add-ons may not show up if ReShade's add-on search path was changed or does not point to the folder where the add-ons were placed. Open the **Add-ons** tab in the ReShade overlay and set **Add-on search path** at the top to the correct folder. The default is `.\`, or the base location of the ReShade binary.
 
-![ReShadeAddonsSearchPathHighlight](https://assets.martysmods.com/reshade/installing/addoninstall/ReShadeAddonsSearchPathHighlight.webp)
-
-| Setting               | Path |
-| --------------------- | ---- |
-| Default (base folder) | `.\` |
+<img className="img-quarter" src="https://assets.martysmods.com/reshade/installing/addoninstall/ReShadeAddonsSearchPathHighlight.webp" />
 
 ---
 
