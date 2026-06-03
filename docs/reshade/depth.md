@@ -65,9 +65,8 @@ Every game is wildly different from the next. Developers often have to use diffe
 
 :::warning
 When configuring depth, do not toggle on or use any of the controls provided to you in the "**DisplayDepth**" shader. Instead, use the "Edit Global Preprocessor Definitions" button in the middle of ReShade's Home tab.
-<p align="center">
-![Edit Global Preprocessor Definitions Location](https://assets.martysmods.com/reshade/depth/EditGlobalPreprocessorDefinitionsButton.webp)
-</p>
+
+<img className="img-quarter" src="https://assets.martysmods.com/reshade/depth/EditGlobalPreprocessorDefinitionsButton.webp" />
 :::
 
 ### Upside Down
