@@ -48,7 +48,7 @@ The ReShade Setup Tool is distributed as an executable, but its contents can be 
 1. Right-click the ReShade Setup Tool executable and select **Open archive** with 7-Zip.  
 2. A window will open showing the files inside the installer.  
 
-![Open with 7-Zip](https://assets.martysmods.com/reshade/installing/Manual7ZipOpen.webp)
+<img className="img-quarter" src="https://assets.martysmods.com/reshade/installing/Manual7ZipOpen.webp" />
 
 Inside, you will find two DLL files. Choose the one that matches your game's architecture:
 
@@ -76,5 +76,5 @@ You can also add functionality to ReShade through Add-ons. Step-by-step instruct
     ![CMD Address Bar](https://assets.martysmods.com/reshade/installing/injectioninstall/GameDirectoryCMDAddressBar.webp)
 4. Type the injection command: `inject[32/64].exe "name_of_the_process.exe"`
     Replace `[32/64]` with your injector’s architecture and `"name_of_the_process.exe"` with your game's executable name. Press Enter.
-    ![Injection Parameters](https://assets.martysmods.com/reshade/installing/injectioninstall/InjectionParametersInject32.webp)
+    <img className="img-quarter" src="https://assets.martysmods.com/reshade/installing/injectioninstall/InjectionParametersInject32.webp" />
 5. Launch your game. If the injection succeeds, you will see the "ReShade is now installed successfully" banner at the top of your screen.    
