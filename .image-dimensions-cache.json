@@ -666,5 +666,13 @@
   "https://assets.martysmods.com/reshade/gui/GUIStatisticsTab2.webp": {
     "width": 1215,
     "height": 666
+  },
+  "https://assets.martysmods.com/reshade/installing/addoninstall/ReShadeSettingsBaseFolderButtonHighlight2.webp": {
+    "width": 1216,
+    "height": 231
+  },
+  "https://assets.martysmods.com/reshade/installing/addoninstall/ReShadeAddonsSearchPathHighlight2.webp": {
+    "width": 1216,
+    "height": 215
   }
 }
