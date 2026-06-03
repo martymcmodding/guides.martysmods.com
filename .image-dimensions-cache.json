@@ -606,5 +606,49 @@
   "https://assets.martysmods.com/additionalguides/games/fivem/FiveMCrashScreen.webp": {
     "width": 679,
     "height": 586
+  },
+  "https://assets.martysmods.com/reshade/download/ReShadeDownload.webp": {
+    "width": 2000,
+    "height": 796
+  },
+  "https://assets.martysmods.com/reshade/gui/GUIPresetSelector2.webp": {
+    "width": 1217,
+    "height": 252
+  },
+  "https://assets.martysmods.com/reshade/gui/GUIShaderSearch2.webp": {
+    "width": 1217,
+    "height": 252
+  },
+  "https://assets.martysmods.com/reshade/gui/GUIShaderList2.webp": {
+    "width": 1217,
+    "height": 1130
+  },
+  "https://assets.martysmods.com/reshade/gui/GUIGlobalPreprocessorDefinitions2.webp": {
+    "width": 1217,
+    "height": 284
+  },
+  "https://assets.martysmods.com/reshade/gui/GUIShaderParameters2.webp": {
+    "width": 1217,
+    "height": 1149
+  },
+  "https://assets.martysmods.com/reshade/gui/GUIReloadButton2.webp": {
+    "width": 1215,
+    "height": 57
+  },
+  "https://assets.martysmods.com/reshade/gui/GUIShaderParameters3.webp": {
+    "width": 1198,
+    "height": 721
+  },
+  "https://assets.martysmods.com/reshade/gui/GUIShaderList3.webp": {
+    "width": 1197,
+    "height": 829
+  },
+  "https://assets.martysmods.com/reshade/gui/GUIPresetSelector3.webp": {
+    "width": 1215,
+    "height": 57
+  },
+  "https://assets.martysmods.com/reshade/gui/GUIShaderSearch3.webp": {
+    "width": 1215,
+    "height": 56
   }
 }
