@@ -674,5 +674,17 @@
   "https://assets.martysmods.com/reshade/installing/addoninstall/ReShadeAddonsSearchPathHighlight2.webp": {
     "width": 1216,
     "height": 215
+  },
+  "https://assets.martysmods.com/reshade/depth/DepthAddon2.webp": {
+    "width": 1435,
+    "height": 151
+  },
+  "https://assets.martysmods.com/reshade/depth/DepthBuffersAvaliable2.webp": {
+    "width": 1423,
+    "height": 206
+  },
+  "https://assets.martysmods.com/reshade/depth/DepthAutomaticHeuristics2.webp": {
+    "width": 1067,
+    "height": 261
   }
 }

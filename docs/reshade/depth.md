@@ -27,22 +27,22 @@ Since games often use multiple depth buffers (for shadows, post-processing, etc.
 
 In order to configure or view Generic Depth's current settings, you'll need to open up ReShade's "**Add-ons**" tab and find the "**Generic Depth**" add-on. Once found, you can see the checkmark next to the name of the Add-on that allows you to enable or disable it after a game's restart.
 
-![ReShade Generic Depth](https://assets.martysmods.com/reshade/depth/DepthAddon.webp)
+![ReShade Generic Depth](https://assets.martysmods.com/reshade/depth/DepthAddon2.webp)
 
 A little further down in Generic Depth add-on panel, you'll find the controls for automatically selecting a depth buffer based on heuristics (draw calls, aspect ratio, and buffer type). Typically these are set to be a catch-all for most games, however, you might want to configure them if you find that ReShade isn't able to automatically switch to the proper buffers (if the game changes them frequently i.e. when loading or traversing through sections of a game world that require different buffers).
 
 Additionally, there is a toggle for "Copy depth before clear operations" which can be useful in games that frequently clear the depth buffer and resolve other issues.
 
-![ReShade Generic Depth Settings](https://assets.martysmods.com/reshade/depth/DepthAutomaticHeuristics.webp)
+![ReShade Generic Depth Settings](https://assets.martysmods.com/reshade/depth/DepthAutomaticHeuristics2.webp)
 
 Going even further down, you'll be able to see all of the buffers that ReShade is able to detect generically within your game. The automatic heuristics settings that were set above will determine which buffer is automatically selected as a depth buffer and those will be highlighted in blue.
 
-![ReShade Generic Depth Buffers Available](https://assets.martysmods.com/reshade/depth/DepthBuffersAvaliable.webp)
+![ReShade Generic Depth Buffers Available](https://assets.martysmods.com/reshade/depth/DepthBuffersAvaliable2.webp)
 
 <div class="depth-buffer-table">
 
 | Address           | Resolution | Type   | Draw calls                  | Vertices           | Reversed/Multisampled          |
-| ----------------- | ---------- | ------ | --------------------------- | ------------------- | ------------------------------ |
+| ----------------- | ---------- | ------ | --------------------------- | ------------------ | ------------------------------ |
 | 0x00001aa15ef7120 | 2560x1080  | DS32S8 | 215 draw calls (0 indirect) | 739482 vertices    | Reversed                       |
 
 </div>
