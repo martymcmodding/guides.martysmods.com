@@ -41,9 +41,9 @@ Going even further down, you'll be able to see all of the buffers that ReShade i
 
 <div class="depth-buffer-table">
 
-| Address           | Resolution | Type   | Draw calls                  | Vertices           | Reversed/Multisampled          |
-| ----------------- | ---------- | ------ | --------------------------- | ------------------ | ------------------------------ |
-| 0x00001aa15ef7120 | 2560x1080  | DS32S8 | 215 draw calls (0 indirect) | 739482 vertices    | Reversed                       |
+| Address            | Resolution | Type   | Draw calls                 | Vertices         |
+| ------------------ | ---------- | ------ | -------------------------  | ---------------- |
+| 0x000002d31247acf0 | 3840x2160  | DS32S8 | 12 draw calls (0 indirect) | 3466 vertices    |
 
 </div>
 
