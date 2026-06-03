@@ -12,4 +12,4 @@ The "Settings" tab allows you to configure ReShade options such as shader direct
 
 ---
 
-![Settings Tab](https://assets.martysmods.com/reshade/gui/GUISettingsTab2.webp)
+![Settings Tab](https://assets.martysmods.com/reshade/gui/GUISettingsTab3.webp)

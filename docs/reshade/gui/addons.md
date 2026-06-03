@@ -12,4 +12,4 @@ Add-ons for ReShade are extensions designed to integrate with your game and ReSh
 
 ---
 
-![Add-ons Tab](https://assets.martysmods.com/reshade/gui/GUIAddonsTab.webp)
+![Add-ons Tab](https://assets.martysmods.com/reshade/gui/GUIAddonsTab2.webp)

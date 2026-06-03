@@ -12,4 +12,4 @@ The "Log" tab records ReShade’s runtime messages, including errors, warnings, 
 
 ---
 
-![ReShade Log Tab](https://assets.martysmods.com/reshade/gui/GUILogTab.webp)
+![ReShade Log Tab](https://assets.martysmods.com/reshade/gui/GUILogTab2.webp)

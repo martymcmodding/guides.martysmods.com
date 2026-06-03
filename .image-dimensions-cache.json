@@ -650,5 +650,21 @@
   "https://assets.martysmods.com/reshade/gui/GUIShaderSearch3.webp": {
     "width": 1215,
     "height": 56
+  },
+  "https://assets.martysmods.com/reshade/gui/GUIAddonsTab2.webp": {
+    "width": 1216,
+    "height": 1576
+  },
+  "https://assets.martysmods.com/reshade/gui/GUISettingsTab3.webp": {
+    "width": 1216,
+    "height": 2144
+  },
+  "https://assets.martysmods.com/reshade/gui/GUILogTab2.webp": {
+    "width": 1216,
+    "height": 2144
+  },
+  "https://assets.martysmods.com/reshade/gui/GUIStatisticsTab2.webp": {
+    "width": 1215,
+    "height": 666
   }
 }

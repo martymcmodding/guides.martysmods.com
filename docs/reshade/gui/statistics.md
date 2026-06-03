@@ -12,4 +12,4 @@ The "Statistics" tab provides metrics for monitoring individual effect's perform
 
 ---
 
-![Statistics Tab](https://assets.martysmods.com/reshade/gui/GUIStatisticsTab.webp)
+![Statistics Tab](https://assets.martysmods.com/reshade/gui/GUIStatisticsTab2.webp)
