@@ -33,9 +33,9 @@ Shaders from Patreon, Discord, or direct download (ZIP or folder) skip the GitHu
 
 Most ReShade shader repositories are hosted on GitHub. Open the repository page, click the green **Code** button (top right), then **Download ZIP** in the dropdown.
 
-![GitHubRepoCodeButtonHighlight](https://assets.martysmods.com/reshade/installing/shaderinstall/GitHubRepoCodeButtonHighlight.webp)
+![GitHubRepoCodeButtonHighlight](https://assets.martysmods.com/reshade/installing/shaderinstall/GitHubRepoCodeButtonHighlight2.webp)
 
-![GitHubDownloadZIPButtonHighlight](https://assets.martysmods.com/reshade/installing/shaderinstall/GitHubDownloadZIPButtonHighlight.webp)
+![GitHubDownloadZIPButtonHighlight](https://assets.martysmods.com/reshade/installing/shaderinstall/GitHubDownloadZIPButtonHighlight2.webp)
 
 ---
 

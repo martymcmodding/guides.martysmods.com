@@ -686,5 +686,13 @@
   "https://assets.martysmods.com/reshade/depth/DepthAutomaticHeuristics2.webp": {
     "width": 1067,
     "height": 261
+  },
+  "https://assets.martysmods.com/reshade/installing/shaderinstall/GitHubRepoCodeButtonHighlight2.webp": {
+    "width": 3289,
+    "height": 790
+  },
+  "https://assets.martysmods.com/reshade/installing/shaderinstall/GitHubDownloadZIPButtonHighlight2.webp": {
+    "width": 3289,
+    "height": 1541
   }
 }
