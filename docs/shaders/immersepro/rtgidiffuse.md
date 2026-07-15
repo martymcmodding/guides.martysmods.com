@@ -1,5 +1,5 @@
 ---
-title: RTGI (Diffuse)
+title: "RTGI (Diffuse)"
 sidebar_label: "RTGI (Diffuse)"
 description: "State of the art ray traced global illumination for ReShade."
 image: "https://assets.martysmods.com/headers/rtgiheader.webp"
@@ -8,11 +8,11 @@ sidebar_position: 5
 hide_title: true
 ---
 
-<!------------------------IMPORTS ---------------------------->
+<!----------------------- IMPORTS ---------------------------->
 
 import ReactPlayer from 'react-player'
 
-<!------------------------IMPORTS ---------------------------->
+<!----------------------------------------------------------->
 
 ![rtgiheader](https://assets.martysmods.com/headers/rtgiheader.webp)
 
@@ -25,14 +25,14 @@ Launchpad is REQUIRED to be at the top of the shader load order for RTGI to func
 
 ---
 
-## Configuration:
+## Configuration
 
 ### Thickness
-The first step in configuring RTGI is setting the **Object Thickness** parameter. 
+The first step in configuring RTGI is setting the **Object Thickness** parameter.
 
 ![shaderloadorder](https://assets.martysmods.com/shaders/rtgi/RTGIDiffuseObjectThicknessHighlight.webp)
 
-RTGI can only directly observe surfaces currently facing the camera, so it must estimate how far objects extend on their occluded sides. 
+RTGI can only directly observe surfaces currently facing the camera, so it must estimate how far objects extend on their occluded sides.
 
 Typically, the default value of `0.250` should get you far enough in most cases, however, the optimal **Object Thickness** value varies significantly between games due to differences in object geometry, world scale, and depth buffer characteristics. Games with thin objects (like foliage) typically require lower values, while games with thick, solid objects may benefit from higher values.
 
@@ -63,19 +63,19 @@ In order to see the light being blended into your scene, it's best to disable th
 
 These intensity values are largely based on personal preference and artistic intent, but a fundamental rule is that no propagated lighting should exceed the brightness of the original light source.
 
-<ReactPlayer  
-  url="https://assets.martysmods.com/shaders/rtgi/RTGIDiffuseIntensity2.webm"  
-  playing={false}  
-  muted={true}  
-  controls={true}  
-  loop={true}  
-  width="100%"  
-  height="100%"  
-  style={{ width: "100%", margin: "0 auto" }}  
+<ReactPlayer
+  url="https://assets.martysmods.com/shaders/rtgi/RTGIDiffuseIntensity2.webm"
+  playing={false}
+  muted={true}
+  controls={true}
+  loop={true}
+  width="100%"
+  height="100%"
+  style={{ width: "100%", margin: "0 auto" }}
 />
 
 ### Smoothed and Textured Normals
-The **Smoothed Normals** and **Textured Normals** options, available through the [iMMERSE Launchpad shader](../immerse/01launchpad.md), help correct common visual issues that arise when using ReShade's generic depth buffer. These features address overly polygonal or blocky geometry by providing smoother surfaces with enhanced detail and depth.
+The **Smoothed Normals** and **Textured Normals** options, available through the [iMMERSE Launchpad shader](../immerse/launchpad.md), help correct common visual issues that arise when using ReShade's generic depth buffer. These features address overly polygonal or blocky geometry by providing smoother surfaces with enhanced detail and depth.
 
 #### Smoothed Normals
 **Smoothed Normals** reduce the appearance of sharp, low-poly edges by averaging surface normals across adjacent geometry. This results in softer transitions and more natural lighting behavior, particularly beneficial for games with geometric limitations or stylized art directions.
@@ -90,21 +90,21 @@ The **Smoothed Normals** and **Textured Normals** options, available through the
 ### Fadeout
 The **Fadeout** controls allow you to set the maximum distance that RTGI will cast its ambient occlusion and bounce lighting. This is useful to avoid interference with distant fog or to gain back a small amount of performance.
 
-<ReactPlayer  
-  url="https://assets.martysmods.com/shaders/rtgi/RTGIDiffuseFadeout2.webm"  
-  playing={false}  
-  muted={true}  
-  controls={true}  
-  loop={true}  
-  width="100%"  
-  height="100%"  
-  style={{ width: "100%", margin: "0 auto" }}  
+<ReactPlayer
+  url="https://assets.martysmods.com/shaders/rtgi/RTGIDiffuseFadeout2.webm"
+  playing={false}
+  muted={true}
+  controls={true}
+  loop={true}
+  width="100%"
+  height="100%"
+  style={{ width: "100%", margin: "0 auto" }}
 />
 
 ### DLSS/FSR/TAAU Compatibility
 `_MARTYSMODS_TAAU_SCALE` is a global preprocessor definition that must be manually configured to address depth buffer jitter introduced by upscaling technologies. This preprocessor is essential when using DLSS, FSR, or TAAU to ensure proper depth buffer alignment and prevent visual artifacts.
 
-:::important
+:::info
 The beginning underscore in `_MARTYSMODS_TAAU_SCALE` is mandatory. Without it, TAAU scaling compatibility will not function properly.
 :::
 

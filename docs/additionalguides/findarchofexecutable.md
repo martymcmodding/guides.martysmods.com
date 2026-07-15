@@ -4,12 +4,12 @@ sidebar_label: "Finding the Architecture of an Executable"
 description: "Determine whether a running game's executable is 32-bit or 64-bit using Task Manager."
 slug: /additionalguides/exearchitecture
 sidebar_position: 3
-hide_title: True
+hide_title: true
 ---
 
 # Finding the Architecture of an Executable
 
-When modding with graphics injections, accurately identifying the architecture of a game's executable is important. Knowing whether the executable is 32-bit or 64-bit ensures compatibility and proper operation of tools such as ReShade and other graphics modifications. This document describes how to determine the architecture of a running game executable using Task Manager.
+When modding with graphics injections, accurately identifying the architecture of a game's executable is important. Knowing whether the executable is 32-bit or 64-bit ensures compatibility and proper operation of tools such as ReShade and other graphics modifications. This guide shows you how to determine the architecture of a running game executable using Task Manager.
 
 ---
 

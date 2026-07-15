@@ -2,14 +2,13 @@
 title: "Manually Installing Shaders"
 sidebar_label: "Manually Installing Shaders"
 description: "Manual installation of shader repositories and archives not available in the ReShade Setup Tool."
-slug: /reshade/installing/reshademanualshaderinstall
+slug: /reshade/installing/manualshaderinstall
 sidebar_position: 4
 hide_title: true
 ---
 
 <!----------------------- IMPORTS ---------------------------->
 
-import ImageComparisonSlider from '@site/src/components/ImageComparisonSlider';
 import YTConsent from '@site/src/components/YTConsent';
 import ReactPlayer from 'react-player'
 
@@ -44,7 +43,7 @@ Most ReShade shader repositories are hosted on GitHub. Open the repository page,
 The `ReShade-Shaders` folder is in the same directory as the game executable (the ReShade install location). Extract the contents of the shader ZIP into `ReShade-Shaders` and preserve the folder structure. Repository archives usually contain `Shaders` and optionally `Textures`. You'll want to merge these with the existing `ReShade-Shaders\Shaders` and `ReShade-Shaders\Textures` folders.
 
 :::warning
-On file conflicts, choose **“Replace the files in the destination.”**
+On file conflicts, choose **"Replace the files in the destination."**
 :::
 
 <ReactPlayer

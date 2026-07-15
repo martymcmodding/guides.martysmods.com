@@ -1,7 +1,7 @@
 ---
-title: ReGrade
+title: "ReGrade"
 sidebar_label: "ReGrade"
-description: "A powerful real-time color grading suite within ReShade"
+description: "A powerful real-time color grading suite within ReShade."
 image: "https://assets.martysmods.com/headers/regradeheader.webp"
 slug: /shaders/immersepro/regrade
 sidebar_position: 4

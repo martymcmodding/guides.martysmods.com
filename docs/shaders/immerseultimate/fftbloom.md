@@ -1,11 +1,11 @@
 ---
-title: Convolution Bloom
-sidebar_title: "Convolution Bloom"
+title: "Convolution Bloom"
+sidebar_label: "Convolution Bloom"
 description: "FFT based bloom that can provide diffraction spikes in real-time."
-image: "https://www.martysmods.com/media/Conv-Bloom.webp"
+image: "https://assets.martysmods.com/headers/ConvolutionBloomHeader.webp"
 slug: /shaders/immerseultimate/convolutionbloom
 sidebar_position: 1
-hide_title: True
+hide_title: true
 ---
 
 ![FFTBloomHeader](https://assets.martysmods.com/headers/ConvolutionBloomHeader.webp)

@@ -1,5 +1,5 @@
 ---
-title: Clarity
+title: "Clarity"
 sidebar_label: "Clarity"
 description: "Enhances texture and image details by adjusting local contrast, similar to Photoshop's Clarity."
 image: "https://assets.martysmods.com/headers/clarityheader.webp"
@@ -30,20 +30,20 @@ Controls the spatial extent of Clarity's sampling radius when applying sharpenin
 
 Determines the strength of sharpening and detail enhancement applied by the shader. Higher values emphasize surface textures and fine geometric elements, while lower values preserve the original soft aesthetic. For optimal results, begin with low values and gradually increase until achieving natural, crisp enhancement without over-processing artifacts.
 
-<ImageComparisonSlider  
-  beforeImage="https://assets.martysmods.com/shaders/clarity/ClarityOriginal2.webp"  
-  afterImage="https://assets.martysmods.com/shaders/clarity/ClarityTextureSharpen2.webp"  
-  beforeLabel="0.000 Texture Sharpen"  
-  afterLabel="1.000 Texture Sharpen"  
+<ImageComparisonSlider
+  beforeImage="https://assets.martysmods.com/shaders/clarity/ClarityOriginal2.webp"
+  afterImage="https://assets.martysmods.com/shaders/clarity/ClarityTextureSharpen2.webp"
+  beforeLabel="0.000 Texture Sharpen"
+  afterLabel="1.000 Texture Sharpen"
 />
 
 ### Local Contrast Intensity
 
 Adjusts the contrast relationship between adjacent pixels to reveal subtle surface textures and depth information. Increasing this parameter enhances perceived sharpness and counteracts flat lighting conditions, though excessive values can produce artificial-looking results that deviate from natural appearance.
 
-<ImageComparisonSlider  
-  beforeImage="https://assets.martysmods.com/shaders/clarity/ClarityOriginal2.webp"  
-  afterImage="https://assets.martysmods.com/shaders/clarity/ClarityLocalContrast2.webp"  
-  beforeLabel="0.000 Local Contrast"  
-  afterLabel="1.000 Local Contrast"  
+<ImageComparisonSlider
+  beforeImage="https://assets.martysmods.com/shaders/clarity/ClarityOriginal2.webp"
+  afterImage="https://assets.martysmods.com/shaders/clarity/ClarityLocalContrast2.webp"
+  beforeLabel="0.000 Local Contrast"
+  afterLabel="1.000 Local Contrast"
 />

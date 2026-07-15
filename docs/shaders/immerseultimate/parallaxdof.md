@@ -1,11 +1,11 @@
 ---
-title: Parallax Depth of Field
-sidebar_title: "Parallax Depth of Field (Addon)"
+title: "Parallax Depth of Field"
+sidebar_label: "Parallax Depth of Field (Add-on)"
 description: "Parallax-based depth of field that calculates blur through camera rotation and positioning."
 image: "https://assets.martysmods.com/shaders/parallaxdof/ParalaxDoFHeader.webp"
 slug: /shaders/immerseultimate/parallaxdof
 sidebar_position: 5
-hide_title: True
+hide_title: true
 ---
 
 <!----------------------- IMPORTS ---------------------------->
@@ -29,11 +29,11 @@ Parallax DoF requires the IGCS Camera Tool to function. The IGCS Camera Tool mus
 
 When IGCS's Camera Mode is enabled along with the Parallax DoF shader, the GUI controls will open in a window detached from the main ReShade interface.
 
-<img className="img-half" src="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFGUI2.webp" alt="Parallax DoF GUI" />
+<img className="img-md" src="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFGUI2.webp" alt="Parallax DoF GUI" />
 
 Clicking **Start Session** opens the session control panel and displays a transparently shifted overlay used to calculate the focal plane position.
 
-<img className="img-half" src="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFControls2.webp" alt="Parallax DoF Controls" />
+<img className="img-md" src="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFControls2.webp" alt="Parallax DoF Controls" />
 
 ---
 
@@ -104,7 +104,7 @@ The process to find the correct value can be summarized as such:
 
 Chromatic aberration comes from refraction: lenses have different focal distances per wavelength, so if one color (e.g. red) is sharp at the focal plane, another (e.g. blue) can be slightly out of focus. That difference also means different blur radii per wavelength, which shows up as color fringing around bokeh discs. The addon simulates this with a physically based model of real lens designs.
 
-Real camera lenses use multiple elements that partly cancel each other’s chromatic errors. A single element spreads the full spectrum (red through blue). A doublet folds the spectrum so red and blue meet, giving magenta–green fringing. An apochromat uses three elements and a three-way fold, so the fringe pattern is more complex and subdued.
+Real camera lenses use multiple elements that partly cancel each other's chromatic errors. A single element spreads the full spectrum (red through blue). A doublet folds the spectrum so red and blue meet, giving magenta–green fringing. An apochromat uses three elements and a three-way fold, so the fringe pattern is more complex and subdued.
 
 Select a **Lens System** to set the type of aberration and blur character, then use the strength control for intensity. Each option matches a different element count and correction:
 
@@ -112,8 +112,8 @@ Select a **Lens System** to set the type of aberration and blur character, then 
 
  ![CARenderChromat](https://assets.martysmods.com/shaders/parallaxdof/CARenderChromat.webp)
 
- <ImageComparisonSlider 
-  beforeImage="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFChromaticAberrationNone.webp" 
+ <ImageComparisonSlider
+  beforeImage="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFChromaticAberrationNone.webp"
   afterImage="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFChromaticAberrationChromat.webp"
   beforeLabel="None"
   afterLabel="Chromat"
@@ -123,8 +123,8 @@ Select a **Lens System** to set the type of aberration and blur character, then 
 
  ![CARenderAchromat](https://assets.martysmods.com/shaders/parallaxdof/CARenderAchromat.webp)
 
- <ImageComparisonSlider 
-  beforeImage="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFChromaticAberrationNone.webp" 
+ <ImageComparisonSlider
+  beforeImage="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFChromaticAberrationNone.webp"
   afterImage="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFChromaticAberrationApochromat.webp"
   beforeLabel="None"
   afterLabel="Achromat"
@@ -134,8 +134,8 @@ Select a **Lens System** to set the type of aberration and blur character, then 
 
  ![CARenderApochromat](https://assets.martysmods.com/shaders/parallaxdof/CARenderApochromat.webp)
 
- <ImageComparisonSlider 
-  beforeImage="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFChromaticAberrationNone.webp" 
+ <ImageComparisonSlider
+  beforeImage="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFChromaticAberrationNone.webp"
   afterImage="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFChromaticAberrationAchromat.webp"
   beforeLabel="None"
   afterLabel="Apochromat"

@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import ReactPlayer from 'react-player/youtube';
 
 function getVideoId(url) {
-  const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\s]+)/);
+  // Stop at &, ?, # so a trailing query/fragment (e.g. youtu.be/ID?t=30) doesn't
+  // get baked into the id and produce a malformed thumbnail URL.
+  const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&?#\s]+)/);
   return match ? match[1] : null;
 }
 

@@ -1,5 +1,5 @@
 ---
-title: RTGI (Specular)
+title: "RTGI (Specular)"
 sidebar_label: "RTGI (Specular)"
 description: "Ray traced specular global illumination for ReShade."
 image: "https://assets.martysmods.com/headers/rtgiheader.webp"

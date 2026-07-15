@@ -1,7 +1,7 @@
 ---
-title: Sharpen
+title: "Sharpen"
 sidebar_label: "Sharpen"
-description: "'It sharpens.'"
+description: "A fast, high-quality sharpening shader for ReShade."
 image: "https://assets.martysmods.com/headers/sharpenheader.webp"
 slug: /shaders/immerse/sharpen
 sidebar_position: 3
@@ -25,8 +25,8 @@ iMMERSE: Sharpen is a simple but effective sharpening shader that enhances image
 ### Sharpen Intensity
 Adjusts the sharpness applied to the screen. Start with a value of `0.000` and slowly increase it until you achieve a clear enhancement in in-game details without causing over-sharpening.
 
- <ImageComparisonSlider 
-  beforeImage="https://assets.martysmods.com/shaders/sharpen/sharpenoriginal.webp" 
+ <ImageComparisonSlider
+  beforeImage="https://assets.martysmods.com/shaders/sharpen/sharpenoriginal.webp"
   afterImage="https://assets.martysmods.com/shaders/sharpen/sharpen.webp"
   beforeLabel="0.000 Sharpness"
   afterLabel="1.000 Sharpness"

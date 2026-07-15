@@ -9,7 +9,6 @@ hide_title: true
 
 <!----------------------- IMPORTS ---------------------------->
 
-import ImageComparisonSlider from '@site/src/components/ImageComparisonSlider';
 import YTConsent from '@site/src/components/YTConsent';
 import ReactPlayer from 'react-player'
 
@@ -78,7 +77,7 @@ Each enabled shader introduces a degree of data loss through quantization and pr
 
 ## Shader Categories/Tiers
 
-The categories that follow are organised both with what makes sense in terms of ReShade's rendering pipeline, and how traditional photography works.
+The categories that follow are organized both with what makes sense in terms of ReShade's rendering pipeline, and how traditional photography works.
 
 ### Tier 1: Data Processing
 

@@ -1,10 +1,10 @@
 ---
-title: Chromatic Aberration
-sidebar_title: "Chromatic Aberration"
-description: "Physically Accurate Chromatic Aberration"
-slug: /shaders/meteor/chromaticabberation
+title: "Chromatic Aberration"
+sidebar_label: "Chromatic Aberration"
+description: "Physically accurate chromatic aberration for ReShade."
+slug: /shaders/meteor/chromaticaberration
 sidebar_position: 1
-hide_title: True
+hide_title: true
 ---
 
 # Chromatic Aberration

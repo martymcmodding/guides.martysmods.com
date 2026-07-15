@@ -1,11 +1,11 @@
 ---
-title: ReLight
-sidebar_title: "ReLight"
+title: "ReLight"
+sidebar_label: "ReLight"
 description: "A path-traced point light shader that allows you to place a point of light arbitrarily within the screenspace."
-image: "https://www.martysmods.com/media/ReLight.webp"
+image: "https://assets.martysmods.com/headers/ReLightHeader.webp"
 slug: /shaders/immerseultimate/relight
 sidebar_position: 4
-hide_title: True
+hide_title: true
 ---
 
 ![ReLightHeader](https://assets.martysmods.com/headers/ReLightHeader.webp)

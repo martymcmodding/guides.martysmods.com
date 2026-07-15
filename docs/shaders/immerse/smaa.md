@@ -1,5 +1,5 @@
 ---
-title: SMAA
+title: "SMAA"
 sidebar_label: "Anti Aliasing (SMAA)"
 description: "ReShade's fastest SMAA shader available."
 image: "https://assets.martysmods.com/headers/smaaheader.webp"

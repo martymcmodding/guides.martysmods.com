@@ -1,9 +1,9 @@
 ---
-title: "Creating and Sharing Presets"
+title: "Creating and Sharing ReShade Presets"
 sidebar_label: "Creating and Sharing Presets"
-description: "How to Create and Share Presets"
+description: "How to create a ReShade preset with proper load order and share it while respecting shader licenses."
 slug: /reshade/creatingandsharingpresets
-sidebar_position: 5
+sidebar_position: 6
 hide_title: true
 ---
 

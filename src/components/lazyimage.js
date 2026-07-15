@@ -31,6 +31,7 @@ export default function LazyImage({ src, alt, className, style, width, height, .
       style={wrapperStyle}
     >
       <img
+        {...props}
         ref={imgRef}
         src={src}
         alt={alt}
@@ -49,7 +50,6 @@ export default function LazyImage({ src, alt, className, style, width, height, .
         width={width}
         height={height}
         onLoad={() => setLoaded(true)}
-        {...props}
       />
     </span>
   );

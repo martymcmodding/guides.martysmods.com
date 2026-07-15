@@ -1,11 +1,11 @@
 ---
-title: ReGrade + (Addon)
-sidebar_title: "ReGrade + (Addon)"
+title: "ReGrade + (Add-on)"
+sidebar_label: "ReGrade + (Add-on)"
 description: "Provides a real-time heuristic of the image and color grading GUI native to ReShade."
-image: "https://www.martysmods.com/media/ReGradePlus.webp"
+image: "https://assets.martysmods.com/headers/ReGradePlusHeader.webp"
 slug: /shaders/immerseultimate/regradeplus
 sidebar_position: 3
-hide_title: True
+hide_title: true
 ---
 
 ![ReGradePlusHeader](https://assets.martysmods.com/headers/ReGradePlusHeader.webp)
@@ -24,7 +24,7 @@ ReGrade + saves its configuration to the ReShade.ini file, not your preset file.
 
 ReGrade + requires both the addon and the shader to be active at the same time. Enabling only the shader in the ReShade shader list will not activate it. Once both are running, the ReGrade + addon window will open inside ReShade. You can pop it out into a floating window to keep it accessible while adjusting other effects. If either component is inactive, the ReGrade + window will indicate which one is missing:
 
-<img className="img-half" src="https://assets.martysmods.com/shaders/regradeplus/regradeplus_shaders_disabled.webp" alt="ReGradePlus ReShade Window Alerts - All OFF" />
+<img className="img-md" src="https://assets.martysmods.com/shaders/regradeplus/regradeplus_shaders_disabled.webp" alt="ReGradePlus ReShade Window Alerts - All OFF" />
 
 ---
 
@@ -38,31 +38,31 @@ The "Scopes" section provides graphical representations of various color statist
 
 - **Histogram Y**: Displays luminance levels, showing brightness distribution across the scene
 
-    <img className="img-half" src="https://assets.martysmods.com/shaders/regradeplus/regradeplus_histogram_y.webp" alt="Histogram Y" />
+    <img className="img-md" src="https://assets.martysmods.com/shaders/regradeplus/regradeplus_histogram_y.webp" alt="Histogram Y" />
 
 - **Histogram RGB**: Shows color levels separated into Red, Green, and Blue channels
 
-    <img className="img-half" src="https://assets.martysmods.com/shaders/regradeplus/regradeplus_histogram_rgb.webp" alt="Histogram RGB" />
+    <img className="img-md" src="https://assets.martysmods.com/shaders/regradeplus/regradeplus_histogram_rgb.webp" alt="Histogram RGB" />
 
 - **Waveform Y**: Visualizes luminance in waveform format for detailed brightness analysis
 
-    <img className="img-half" src="https://assets.martysmods.com/shaders/regradeplus/regradeplus_waveform_y.webp" alt="Waveform Y" />
+    <img className="img-md" src="https://assets.martysmods.com/shaders/regradeplus/regradeplus_waveform_y.webp" alt="Waveform Y" />
 
 - **Waveform RGB**: Displays RGB channels independently in waveform format
 
-    <img className="img-half" src="https://assets.martysmods.com/shaders/regradeplus/regradeplus_waveform_rgb.webp" alt="Waveform RGB" />
+    <img className="img-md" src="https://assets.martysmods.com/shaders/regradeplus/regradeplus_waveform_rgb.webp" alt="Waveform RGB" />
 
 - **Waveform RGB Parade**: Separates color channels in parade format for individual analysis
 
-    <img className="img-half" src="https://assets.martysmods.com/shaders/regradeplus/regradeplus_waveform_rgb_parade.webp" alt="Waveform RGB Parade" />
+    <img className="img-md" src="https://assets.martysmods.com/shaders/regradeplus/regradeplus_waveform_rgb_parade.webp" alt="Waveform RGB Parade" />
 
 - **Vectorscope**: Shows chroma distribution for color saturation and hue analysis
 
-    <img className="img-half" src="https://assets.martysmods.com/shaders/regradeplus/regradeplus_histogram_vectorscope.webp" alt="Vectorscope" />
+    <img className="img-md" src="https://assets.martysmods.com/shaders/regradeplus/regradeplus_histogram_vectorscope.webp" alt="Vectorscope" />
 
 - **Vectorscope 2x Zoom**: Zoomed-in view for finer chroma data analysis
 
-    <img className="img-half" src="https://assets.martysmods.com/shaders/regradeplus/regradeplus_histogram_vectorscope2x.webp" alt="Vectorscope 2x Zoom" />
+    <img className="img-md" src="https://assets.martysmods.com/shaders/regradeplus/regradeplus_histogram_vectorscope2x.webp" alt="Vectorscope 2x Zoom" />
 
 ---
 
@@ -72,7 +72,7 @@ The "Scopes" section provides graphical representations of various color statist
 
 The "Tweaks" section offers quick adjustments for common image properties without the depth of the curve or color correction tools.
 
-<img className="img-half" src="https://assets.martysmods.com/shaders/regradeplus/regradeplus_tweaks.webp" alt="ReGradePlus Tweaks Section" />
+<img className="img-md" src="https://assets.martysmods.com/shaders/regradeplus/regradeplus_tweaks.webp" alt="ReGradePlus Tweaks Section" />
 
 **White Balance:**
 - **Temperature**: Adjusts color temperature (warm/cool tones)
@@ -99,7 +99,7 @@ The Tone Curves tool lets you remap tonal values across the image by placing and
 **Default Mode**: Edits the RGB composite curve, affecting all three color channels simultaneously
 **Per-Channel Mode**: Click a colored square to isolate and edit individual Red, Green, or Blue channels
 
-<img className="img-half" src="https://assets.martysmods.com/shaders/regradeplus/regradeplus_tonecurve.webp" alt="ReGradePlus Tone Curve Points Example" />
+<img className="img-md" src="https://assets.martysmods.com/shaders/regradeplus/regradeplus_tonecurve.webp" alt="ReGradePlus Tone Curve Points Example" />
 
 **Controls:**
 1. Click anywhere on the curve to create a new control point
@@ -111,7 +111,7 @@ The Tone Curves tool lets you remap tonal values across the image by placing and
 **Split Toning:**
 Split Toning applies a color tint independently to the Shadows, Midtones, and Highlights of the image. This is useful for adding stylized color casts, such as warm highlights and cool shadows, without affecting the entire image uniformly.
 
-<img className="img-half" src="https://assets.martysmods.com/shaders/regradeplus/regradeplus_colorcorrection.webp" alt="ReGradePlus Split Toning Wheel Example" />
+<img className="img-md" src="https://assets.martysmods.com/shaders/regradeplus/regradeplus_colorcorrection.webp" alt="ReGradePlus Split Toning Wheel Example" />
 
 **Controls:**
 1. Click and drag the center point of a wheel to select a hue and set its intensity
@@ -123,7 +123,7 @@ The Color Wheel lets you adjust the hue and saturation of specific color ranges:
 - **Hue vs Luma**: Shifts the hue of a color range based on its luminance value
 - **Hue vs Saturation**: Shifts the hue of a color range based on its saturation level
 
-<img className="img-half" src="https://assets.martysmods.com/shaders/regradeplus/regradeplus_huevsluma.webp" alt="ReGradePlus Color Wheel Example" />
+<img className="img-md" src="https://assets.martysmods.com/shaders/regradeplus/regradeplus_huevsluma.webp" alt="ReGradePlus Color Wheel Example" />
 
 **Controls:**
 1. Click and drag a color segment to adjust its hue and saturation
@@ -137,5 +137,5 @@ The Color Wheel lets you adjust the hue and saturation of specific color ranges:
 ### Black Screen When Enabling ReGrade +
 A black screen when enabling ReGrade + has two common causes:
 
-- **Addon not loaded**: ReGrade + requires the Addon Support build of ReShade. Ensure you have installed the correct build and that the ReGrade + addon is listed and enabled under the **Add-ons** tab in ReShade.
+- **Addon not loaded**: ReGrade + requires the Add-on Support build of ReShade. Ensure you have installed the correct build and that the ReGrade + addon is listed and enabled under the **Add-ons** tab in ReShade.
 - **Outdated addon**: An old version of the ReGrade + addon may not be compatible with the current shader. Update to the latest version of iMMERSE Ultimate to resolve this.

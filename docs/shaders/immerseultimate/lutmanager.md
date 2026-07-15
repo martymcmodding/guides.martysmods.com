@@ -1,10 +1,10 @@
 ---
-title: LUT Manager (Addon)
-sidebar_title: "LUT Manager (Addon)"
-description: "Addon and Shader combo designed to organize and display your LUTs with ease."
+title: "LUT Manager (Add-on)"
+sidebar_label: "LUT Manager (Add-on)"
+description: "Add-on and shader combo designed to organize and display your LUTs with ease."
 slug: /shaders/immerseultimate/lutmanager
 sidebar_position: 2
-hide_title: True
+hide_title: true
 ---
 
 # LUT Manager
@@ -12,7 +12,7 @@ hide_title: True
 iMMERSE Ultimate: LUT Manager combines a Look-Up-Table addon and shader in ReShade to manage LUT textures dynamically. It allows users to easily switch between different LUTs and mark commonly used LUTs without creating individual shaders for each LUT image.
 
 :::warning
-LUT Manager requires the Addon Support build of ReShade to function properly.
+LUT Manager requires the Add-on Support build of ReShade to function properly.
 :::
 
 ---
@@ -40,13 +40,13 @@ LUTs are predefined color grading files, typically in PNG format. You can browse
 3. Click on the addon to open the LUT list
 4. Select a LUT to apply color changes in real-time
 
-<img className="img-half" src="https://assets.martysmods.com/shaders/lutmanager/lutmanager_window.webp" alt="LUT Manager Window" />
+<img className="img-md" src="https://assets.martysmods.com/shaders/lutmanager/lutmanager_window.webp" alt="LUT Manager Window" />
 
 ### Favorites System
 
 Right-click any LUT to add it to your favorites list for quick access later.
 
-<img className="img-half" src="https://assets.martysmods.com/shaders/lutmanager/lutmanager_fav.webp" alt="LUT Manager Favorites Window" />
+<img className="img-md" src="https://assets.martysmods.com/shaders/lutmanager/lutmanager_fav.webp" alt="LUT Manager Favorites Window" />
 
 ---
 
@@ -60,7 +60,7 @@ Upsamples LUTs to provide higher quality color grading. This feature is particul
 
 Displays a grid view of all LUTs in the currently enabled atlas for easy comparison and selection.
 
-<img className="img-half" src="https://assets.martysmods.com/shaders/lutmanager/lutmanager_atlas.webp" alt="LUT Atlas" />
+<img className="img-md" src="https://assets.martysmods.com/shaders/lutmanager/lutmanager_atlas.webp" alt="LUT Atlas" />
 
 ### Blend Intensity (Chroma)
 

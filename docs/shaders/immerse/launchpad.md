@@ -1,5 +1,5 @@
 ---
-title: Launchpad
+title: "Launchpad"
 sidebar_label: "Launchpad"
 description: "Processes depth and motion vectors for shaders like RTGI, MXAO, and ReLight."
 image: "https://assets.martysmods.com/headers/launchpadheader.webp"
@@ -58,8 +58,8 @@ To address this, Launchpad's normal processing generates Smoothed and Textured N
 
 ### Smoothed Normals
 
- <ImageComparisonSlider 
-  beforeImage="https://assets.martysmods.com/shaders/launchpad/LaunchpadOriginalNormals3.webp" 
+ <ImageComparisonSlider
+  beforeImage="https://assets.martysmods.com/shaders/launchpad/LaunchpadOriginalNormals3.webp"
   afterImage="https://assets.martysmods.com/shaders/launchpad/LaunchpadSmoothedNormals3.webp"
   beforeLabel="Original"
   afterLabel="Smoothed"
@@ -67,7 +67,7 @@ To address this, Launchpad's normal processing generates Smoothed and Textured N
 
 ### Textured Normals
 
- <ImageComparisonSlider 
+ <ImageComparisonSlider
   beforeImage="https://assets.martysmods.com/shaders/launchpad/LaunchpadSmoothedNormals3.webp"
   afterImage="https://assets.martysmods.com/shaders/launchpad/LaunchpadTexturedNormals3.webp"
   beforeLabel="Smoothed"

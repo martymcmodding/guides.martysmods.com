@@ -1,6 +1,6 @@
 ---
-title: Exposure Fusion
-sidebar_title: "Exposure Fusion"
+title: "Exposure Fusion"
+sidebar_label: "Exposure Fusion"
 description: "Exposure Fusion improves visibility by selectively adjusting brightness across the frame."
 slug: /shaders/immersepro/exposurefusion
 sidebar_position: 8
@@ -30,7 +30,7 @@ Controls how strongly individual pixels are adjusted toward the target brightnes
 ### Equalization Strength
 Controls how much local contrast is flattened as exposure is evened out across neighboring areas. This parameter affects the balance between exposure optimization and detail preservation.
 
-**Higher Values**: 
+**Higher Values**:
 - Smooth patchy lighting (bright exits, sun shafts, inconsistent illumination)
 - Create more uniform exposure across the scene
 - May amplify existing noise and create artificial-looking surfaces

@@ -1,5 +1,5 @@
 ---
-title: Insight
+title: "Insight"
 sidebar_label: "Insight"
 description: "Displays a histogram, chroma/luma clipping map, and magnification tool within ReShade."
 slug: /shaders/immersepro/insight
@@ -23,41 +23,41 @@ Most games utilize 8-bit SDR color encoding, limiting each red, green, blue, and
 
 Insight's analytical tools enable you to identify these issues through clipping overlays and examine the complete color distribution via histograms, making it easy to detect and correct clipping artifacts.
 
-<img className="img-half" src="https://assets.martysmods.com/shaders/insight/InsightColorGUI.webp" alt="Color Parameters" />
+<img className="img-md" src="https://assets.martysmods.com/shaders/insight/InsightColorGUI.webp" alt="Color Parameters" />
 
 ### Color Clipping Overlay
 
 - **Disabled**: Disables the color clipping overlay for normal gameplay.
 - **Black/White Clipping**: Highlights clipping in the darkest and brightest regions of the image. Black-level clipping appears as white overlays, while white-level clipping appears as black overlays, providing clear visual indicators of dynamic range issues.
 
-   <img className="img-half" src="https://assets.martysmods.com/shaders/insight/InsightBWClip2.webp" alt="B/W Clipping" />
+   <img className="img-md" src="https://assets.martysmods.com/shaders/insight/InsightBWClip2.webp" alt="B/W Clipping" />
 
 - **RGB Clipping**: Highlights clipping specifically in the red, green, and blue color channels, allowing you to identify which color components are exceeding the available range.
 
-   <img className="img-half" src="https://assets.martysmods.com/shaders/insight/InsightColorClip2.webp" alt="RGB Clipping" />
+   <img className="img-md" src="https://assets.martysmods.com/shaders/insight/InsightColorClip2.webp" alt="RGB Clipping" />
 
 ### Histogram Mode
 
 - **Disabled**: Hides all histogram and waveform overlays to minimize visual clutter.
 - **Luminance Histogram**: Displays the brightness distribution across the entire image, helping you fine-tune exposure and contrast settings for optimal visual balance.
-   
-   <img className="img-half" src="https://assets.martysmods.com/shaders/insight/InsightLumaHistogram.webp" alt="Luma Histogram" />
+
+   <img className="img-md" src="https://assets.martysmods.com/shaders/insight/InsightLumaHistogram.webp" alt="Luma Histogram" />
 
 - **RGB Histogram**: Shows the distribution of red, green, and blue channels independently, making it easy to identify color imbalances and ensure proper color reproduction.
 
-   <img className="img-half" src="https://assets.martysmods.com/shaders/insight/InsightRGBHistogram.webp" alt="RGB Histogram" />
+   <img className="img-md" src="https://assets.martysmods.com/shaders/insight/InsightRGBHistogram.webp" alt="RGB Histogram" />
 
 - **Luminance Waveform**: Plots image brightness along the horizontal axis, which is particularly useful for ensuring consistent exposure across the frame and identifying areas of over or under-exposure.
 
-   <img className="img-half" src="https://assets.martysmods.com/shaders/insight/InsightLumaWaveform.webp" alt="Luma Waveform" />
+   <img className="img-md" src="https://assets.martysmods.com/shaders/insight/InsightLumaWaveform.webp" alt="Luma Waveform" />
 
 - **RGB Waveform**: Breaks down the waveform into individual red, green, and blue components, allowing you to balance each channel's brightness and identify color-specific exposure issues.
 
-   <img className="img-half" src="https://assets.martysmods.com/shaders/insight/InsightRGBWaveform.webp" alt="RGB Waveform" />
+   <img className="img-md" src="https://assets.martysmods.com/shaders/insight/InsightRGBWaveform.webp" alt="RGB Waveform" />
 
 - **RGB Waveform Parade**: Displays the red, green, and blue waveforms side by side for direct comparison, enabling precise color correction and ensuring proper color balance across all channels.
-   
-   <img className="img-half" src="https://assets.martysmods.com/shaders/insight/InsightParadeWaveform.webp" alt="RGB Parade Waveform" />
+
+   <img className="img-md" src="https://assets.martysmods.com/shaders/insight/InsightParadeWaveform.webp" alt="RGB Parade Waveform" />
 
 ### Compact Mode
 
@@ -69,21 +69,21 @@ Enables a condensed display format for histograms and waveforms, reducing screen
 
 Insight's Inspectors provide precise, in-game access to pixel-level data, enabling you to examine individual pixels or small regions within ReShade. This functionality makes it easy to capture exact RGB component values, examine fine textures and edges at high magnification, and reveal frequency details to diagnose color shifts, texture artifacts, or noise patterns.
 
-<img className="img-half" src="https://assets.martysmods.com/shaders/insight/InsightInspectorGUI.webp" alt="Inspector Parameters" />
+<img className="img-md" src="https://assets.martysmods.com/shaders/insight/InsightInspectorGUI.webp" alt="Inspector Parameters" />
 
 ### Inspector Types
 
 - **RGB**: Reports the exact red, green, and blue channel values at a selected pixel, offering precise color analysis for color-critical applications.
 
-   <img className="img-half" src="https://assets.martysmods.com/shaders/insight/InsightRGBInspector.webp" alt="RGB Inspector" />
+   <img className="img-md" src="https://assets.martysmods.com/shaders/insight/InsightRGBInspector.webp" alt="RGB Inspector" />
 
 - **Magnifying Glass**: Provides a zoomed-in view of the chosen pixel and its surrounding area for close examination of textures, edges, and fine detail structures.
 
-   <img className="img-half" src="https://assets.martysmods.com/shaders/insight/InsightMagnifyingInspector.webp" alt="Magnifying Inspector" />
+   <img className="img-md" src="https://assets.martysmods.com/shaders/insight/InsightMagnifyingInspector.webp" alt="Magnifying Inspector" />
 
 - **FFT**: Performs a Fast Fourier Transform on the selected region to expose its frequency components, aiding in noise analysis, texture evaluation, and artifact identification.
 
-   <img className="img-half" src="https://assets.martysmods.com/shaders/insight/InsightFFTInspector.webp" alt="FFT Inspector" />
+   <img className="img-md" src="https://assets.martysmods.com/shaders/insight/InsightFFTInspector.webp" alt="FFT Inspector" />
 
 ### Inspector Configuration
 

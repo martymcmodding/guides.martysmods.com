@@ -1,5 +1,5 @@
 ---
-title: Depth of Field
+title: "Depth of Field"
 sidebar_label: "Depth of Field"
 description: "Designed to emulate how physical cameras work in the real world."
 image: "https://assets.martysmods.com/headers/dofheader.webp"

@@ -1,3 +1,21 @@
+/* =============================================================================
+   Homepage (src/pages/index.js)
+   Tokens come from src/css/custom.css (:root).
+
+   Contents:
+     1. Hero
+     2. Hero buttons
+     3. Home sections (shared)
+     4. Quick-nav grid ("Start Here")
+     5. Before/after comparison ("See the Difference")
+     6. Shader showcase grid ("Our Shaders")
+     7. Section action button
+     8. Community CTA band ("Join the community")
+     9. Responsive
+    10. Reduced motion
+   ============================================================================= */
+
+/* 1. Hero ------------------------------------------------------------------ */
 .hero {
   position: relative;
   display: flex;
@@ -6,16 +24,12 @@
   width: 100%;
   min-height: 460px;
   overflow: hidden;
-  background: #111316;
-  margin-bottom: 0;
+  background: var(--ifm-background-color);
 }
 
 .heroShader {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -23,6 +37,8 @@
 }
 
 .heroContainer {
+  position: relative;
+  z-index: 3;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,8 +47,6 @@
   padding: 0 clamp(1rem, 4vw, 2rem);
   box-sizing: border-box;
   text-align: center;
-  position: relative;
-  z-index: 3;
 }
 
 .heroContent {
@@ -40,13 +54,12 @@
 }
 
 .heroTitle {
-  font-family: var(--ff-base);
   font-size: clamp(2.75rem, 2.5rem + 1.25vw, 4rem);
   font-weight: 600;
   line-height: 1.1;
   margin-bottom: 1rem;
-  color: #ffffff;
-  text-shadow: 0 3px 16px rgba(0, 0, 0, 0.65);
+  color: #fff;
+  text-shadow: var(--mm-text-halo);
 }
 
 .heroSubtitle {
@@ -54,9 +67,10 @@
   line-height: 1.4;
   margin-bottom: 2rem;
   color: rgba(226, 232, 240, 0.95);
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+  text-shadow: var(--mm-text-halo);
 }
 
+/* 2. Hero buttons ---------------------------------------------------------- */
 .heroButtons {
   display: flex;
   gap: 1.5rem;
@@ -70,104 +84,243 @@
   align-items: center;
   gap: 1rem;
   padding: 1.25rem 2.5rem;
-  background: rgba(255, 255, 255, 0.125);
+  background: #0003;
   color: #fff;
   text-decoration: none;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-radius: 8px;
+  border: 2px solid var(--mm-border-strong);
+  border-radius: var(--mm-radius);
   font-weight: 600;
   font-size: 1.25rem;
-  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
 .primaryButton:hover,
 .secondaryButton:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: #0005;
   border-color: rgba(255, 255, 255, 0.5);
   transform: translateY(-2px);
   text-decoration: none;
-  color: white;
+  color: #fff;
 }
 
 .buttonLogo {
   width: 40px;
   height: 40px;
   object-fit: contain;
-  filter: drop-shadow(0 0 10px rgb(0, 0, 0, 0.8));
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8));
 }
 
-.featureSections {
+/* 3. Home sections (shared) ------------------------------------------------ */
+.homeMain {
+  display: block;
+  padding: 3.75rem 0 4rem;
+}
+
+.homeSection + .homeSection {
+  margin-top: 4rem;
+}
+
+.sectionInner {
+  width: 100%;
+  max-width: var(--ifm-container-width-xl);
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 1rem + 3vw, 3.5rem);
+  box-sizing: border-box;
+}
+
+.sectionTitle {
+  font-size: clamp(1.9rem, 1.6rem + 1.5vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 0.5rem;
+  color: #fff;
+  text-align: center;
+}
+
+.sectionSubtitle {
+  max-width: 620px;
+  margin: 0 auto 2.25rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--mm-text-muted);
+  text-align: center;
+}
+
+/* 4. Quick-nav grid ("Start Here") ----------------------------------------- */
+/* Flex + centered wrapping so a trailing partial row (e.g. 4 + 3) stays
+   centered instead of left-aligning against an empty column. */
+.linkGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.linkCard {
+  /* Mobile/tablet: grow to fill the row. Desktop override below pins 4-up. */
+  flex: 1 1 240px;
   display: flex;
   flex-direction: column;
-  gap: 0;
-  padding: 3.75rem 0 3rem;
+  gap: 0.35rem;
+  padding: 1.25rem 1.35rem;
+  border-radius: var(--mm-radius-lg);
+  background: var(--mm-surface);
+  border: 1px solid var(--mm-border);
+  border-top: 2px solid rgba(var(--mm-accent-rgb), 0.4);
+  box-shadow: var(--mm-shadow);
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
 }
 
-.featureSection {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  overflow: hidden;
+.linkCard:hover {
+  background: var(--mm-surface-hover);
+  border-color: rgba(var(--mm-accent-rgb), 0.45);
+  border-top-color: rgba(var(--mm-accent-rgb), 0.8);
+  transform: translateY(-2px);
+  box-shadow: var(--mm-shadow-lg);
+  text-decoration: none;
 }
 
-.featureSections > .featureSection + .featureSection {
-  margin-top: 3.5rem;
-}
-
-.featureContainer {
+.linkCardTitle {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
-  max-width: var(--ifm-container-width-xl) !important;
-  margin: 0 auto;
-  padding: 0 clamp(2rem, 1rem + 3vw, 3.5rem);
-  row-gap: 2rem;
-}
-
-.featureText {
-  flex: 0 1 500px;
-  max-width: 500px;
-  min-width: 0;
-  width: 100%;
-}
-
-.featureTitle {
-  font-size: 2.75rem;
+  gap: 0.4rem;
+  font-size: 1.05rem;
   font-weight: 700;
-  margin: 0 0 1.5rem 0;
   color: #fff;
-  line-height: 1.1;
 }
 
-.featureDescription {
+.linkCardTitle::after {
+  content: '›';
+  opacity: 0.4;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.linkCard:hover .linkCardTitle::after {
+  opacity: 0.9;
+  transform: translateX(3px);
+}
+
+.linkCardDesc {
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: rgba(226, 232, 240, 0.75);
+}
+
+/* 5. Before/after comparison ("See the Difference") ------------------------ */
+.compareWrap {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: var(--mm-radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--mm-border);
+  box-shadow: var(--mm-shadow);
+}
+
+/* The slider carries a bottom margin for in-article use; drop it here so the
+   image sits flush against the rounded container. */
+.compareWrap :global(.image-comparison-slider) {
+  margin-bottom: 0;
+}
+
+/* The slider's height is computed from the image aspect and is often fractional
+   (e.g. 375.9px), which leaves a sub-pixel rasterization seam ("lip") under the
+   image. Let the images bleed a couple pixels; the slider's overflow:hidden
+   clips them so they always cover the full height with no gap. */
+.compareWrap :global(.image-comparison-slider) > img {
+  height: calc(100% + 2px);
+}
+
+/* 6. Shader showcase grid ("Our Shaders") ---------------------------------- */
+.shaderGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+
+.shaderCard {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--mm-radius-lg);
+  background: var(--mm-surface);
+  border: 1px solid var(--mm-border);
+  box-shadow: var(--mm-shadow);
+  text-decoration: none;
+  transition: border-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.shaderCard:hover {
+  border-color: rgba(var(--mm-accent-rgb), 0.5);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+}
+
+.shaderThumb {
+  /* Match the native header ratio (1400x600) so the full banner shows uncropped. */
+  aspect-ratio: 1400 / 600;
+  overflow: hidden;
+  background: #0c0e10;
+}
+
+.shaderThumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.shaderCard:hover .shaderThumb img {
+  transform: scale(1.05);
+}
+
+.shaderMeta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.9rem 1.1rem;
+}
+
+.shaderName {
   font-size: 1.1rem;
-  line-height: 1.7;
-  color: rgba(226, 232, 240, 0.92);
-  margin: 0 0 1.5rem 0;
+  font-weight: 700;
+  color: #fff;
 }
 
-.featureDescription:last-of-type {
-  margin-bottom: 1.25rem;
+.shaderCollection {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(var(--mm-accent-rgb), 0.9);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+/* 7. Section action button ------------------------------------------------- */
+.sectionActions {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
 .featureButton {
   display: inline-block;
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
   padding: 1rem 2rem;
-  border-radius: 8px;
-  text-decoration: none;
+  border-radius: var(--mm-radius);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
   font-weight: 600;
   font-size: 1rem;
-  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-decoration: none;
   cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
 .featureButton:hover {
@@ -178,211 +331,86 @@
   color: #fff;
 }
 
-.featureVisual {
-  flex: 0 1 500px;
-  max-width: 500px;
+/* 8. Community CTA band ("Join the community") ----------------------------- */
+.communityCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem 2rem;
+  padding: 2.25rem 2.5rem;
+  border-radius: var(--mm-radius-lg);
+  /* Dark glass with a faint accent tint so it fits the page rather than
+     shouting with a full brand gradient. */
+  background: linear-gradient(120deg, rgba(var(--mm-accent-rgb), 0.12), rgba(255, 255, 255, 0.04));
+  border: 1px solid var(--mm-border);
+  box-shadow: var(--mm-shadow);
+}
+
+.communityMain {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
   min-width: 0;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
 }
 
-.featureVisualAlignStart {
-  justify-content: flex-start;
-}
-
-.installGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.75rem;
-  width: 100%;
-}
-
-.installCard {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
-  padding: 1.25rem;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-top: 2px solid rgba(0, 153, 250, 0.35);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  text-decoration: none;
-  color: rgba(226, 232, 240, 0.92);
-  font-size: 1rem;
-  font-weight: 600;
-  min-height: 90px;
-  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
-}
-
-.installCard::after {
-  content: '›';
-  font-size: 1.2rem;
+.communityLogo {
+  width: 56px;
+  height: 56px;
   flex-shrink: 0;
-  opacity: 0.35;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.installCard:hover {
-  background: rgba(0, 153, 250, 0.08);
-  border-color: rgba(0, 153, 250, 0.45);
-  border-top-color: rgba(0, 153, 250, 0.75);
-  color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35), inset 0 0 0 1px rgba(0, 153, 250, 0.1);
-  text-decoration: none;
-}
-
-.installCard:hover::after {
-  opacity: 0.85;
-  transform: translateX(3px);
-}
-
-.visualPanel {
-  width: 100%;
-  max-width: 100%;
-  padding: 1.35rem 1.25rem;
-  box-sizing: border-box;
-  border-radius: 12px;
-  position: relative;
-  overflow: hidden;
-  text-align: left;
-  background: rgba(255, 255, 255, 0.095);
-  border: 1px solid rgba(255, 255, 255, 0.17);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.28);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-}
-
-.visualHeader {
-  margin-bottom: 0.75rem;
-  text-align: center;
-}
-
-.visualTitle {
-  display: block;
-  font-size: clamp(1.55rem, 3.5vw, 1.9rem);
-  font-weight: 700;
-  color: #ffffff;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-}
-
-.visualContent {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  text-align: left;
-}
-
-.visualItemLink {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-  transition: background-color 0.2s ease, color 0.2s ease;
-  border-radius: 8px;
-}
-
-.visualItemLink + .visualItemLink {
-  border-top: 1px solid rgba(255, 255, 255, 0.09);
-}
-
-.visualItemLink:hover {
-  text-decoration: none;
-  color: inherit;
-}
-
-.visualItemLink:hover .visualItem {
-  color: var(--ifm-color-primary, #0099fa);
-}
-
-.visualItem {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  padding: 0.75rem 0;
-  margin: 0;
-  background: transparent;
-  border: none;
-  border-radius: 0;
-  color: rgba(255, 255, 255, 0.97);
-  font-weight: 500;
-  font-size: 0.92rem;
-  line-height: 1.35;
-  transition: color 0.2s ease;
-  cursor: pointer;
-  text-align: left;
-}
-
-.visualItem::after {
-  content: '›';
-  flex-shrink: 0;
-  font-size: 1.15rem;
-  font-weight: 400;
-  line-height: 1;
-  opacity: 0.52;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.visualItemLink:hover .visualItem::after {
-  opacity: 0.92;
-  transform: translateX(2px);
-}
-
-.reshadeLogoContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 100%;
-  min-height: 0;
-  background: transparent;
-  border: none;
-  padding: 0;
-}
-
-.reshadeLogo {
-  display: block;
-  width: 100%;
-  max-width: min(420px, 100%);
-  height: auto;
-  margin: 0 auto;
   object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.35));
 }
 
-@media (max-width: 1200px) {
-  .featureContainer {
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 1.5rem;
-    row-gap: 1.5rem;
-    text-align: center;
-  }
+.communityTitle {
+  margin: 0 0 0.25rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+}
 
-  .featureText {
-    flex: 0 1 auto;
-    max-width: min(500px, 100%);
-    order: 1;
-  }
+.communityDesc {
+  margin: 0;
+  max-width: 48ch;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--mm-text-muted);
+}
 
-  .featureVisual {
-    flex: 0 1 auto;
-    max-width: 100%;
-    justify-content: center;
-    order: 2;
-  }
+.communityActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
 
-  .visualPanel {
-    width: 100%;
-    max-width: min(500px, 100%);
+.communityBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--mm-radius);
+  background: var(--mm-surface-strong);
+  border: 1px solid var(--mm-border-strong);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.communityBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.45);
+  transform: translateY(-2px);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* 9. Responsive ------------------------------------------------------------ */
+@media (min-width: 997px) {
+  /* Pin quick-nav to 4-up so a 7th/8th card wraps into a centered trailing row. */
+  .linkCard {
+    flex: 0 1 calc(25% - 0.75rem);
   }
 }
 
@@ -391,26 +419,46 @@
     flex-direction: column;
     align-items: center;
   }
-  
-  .featureSections {
-    padding: 2.75rem 0 2.5rem;
+
+  .homeMain {
+    padding: 2.75rem 0 3rem;
   }
 
-  .featureSections > .featureSection + .featureSection {
+  .homeSection + .homeSection {
     margin-top: 3rem;
   }
 
-  .featureContainer {
-    padding: 0 1rem;
-    gap: 1.5rem;
-    row-gap: 1.5rem;
-  }
-  
-  .visualPanel {
-    padding: 1.5rem 1.35rem;
+  .communityCard {
+    padding: 1.75rem;
   }
 
-  .featureTitle {
-    font-size: 2.5rem;
+  .communityMain {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* 10. Reduced motion ------------------------------------------------------- */
+/* Disable hover lifts and the shader-card zoom for users who prefer less
+   motion. (The hero shader canvas checks this too — see HeroShaderCanvas.js.) */
+@media (prefers-reduced-motion: reduce) {
+  .primaryButton,
+  .secondaryButton,
+  .linkCard,
+  .shaderCard,
+  .featureButton,
+  .communityBtn,
+  .shaderThumb img {
+    transition: none;
+  }
+
+  .primaryButton:hover,
+  .secondaryButton:hover,
+  .linkCard:hover,
+  .shaderCard:hover,
+  .featureButton:hover,
+  .communityBtn:hover,
+  .shaderCard:hover .shaderThumb img {
+    transform: none;
   }
 }

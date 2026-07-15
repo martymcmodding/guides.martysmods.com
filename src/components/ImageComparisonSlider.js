@@ -1,6 +1,16 @@
 import React, { useRef, useState, useEffect, useMemo } from 'react';
 import './ImageComparisonSlider.css';
 
+// Mouse and touch events expose the cursor position differently. A mouse event
+// at the extreme left edge of the viewport has clientX === 0 (falsy), so we must
+// test for `touches` explicitly instead of relying on clientX truthiness — the
+// old `e.clientX ? … : e.touches[0].clientX` form threw on mouse events there,
+// because mouse events have no `touches` array.
+function getEventClientX(e) {
+  if (e.touches && e.touches.length > 0) return e.touches[0].clientX;
+  return e.clientX;
+}
+
 export default function ImageComparisonSlider({
   beforeImage,
   afterImage,
@@ -60,27 +70,32 @@ export default function ImageComparisonSlider({
     const beforeImg = new Image();
     const afterImg = new Image();
     
-    let loadedCount = 0;
-    const checkAllLoaded = () => {
-      loadedCount++;
-      if (loadedCount === 2) {
-        setImagesLoaded(true);
-        if (sliderRef.current) {
-          const calculatedHeight = beforeImg.naturalHeight * (sliderRef.current.offsetWidth / beforeImg.naturalWidth);
-          const minHeight = 300;
-          const finalHeight = Math.max(calculatedHeight, minHeight);
-          setContainerHeight(finalHeight);
-          setImageDimensions({
-            width: beforeImg.naturalWidth,
-            height: beforeImg.naturalHeight
-          });
-        }
+    // Count images that have *settled* (loaded or errored), not just loaded, so a
+    // single failed request can't leave the slider stuck on "Preparing images…".
+    let settledCount = 0;
+    const checkAllSettled = () => {
+      settledCount++;
+      if (settledCount < 2) return;
+      setImagesLoaded(true);
+      // Size the container from the "before" image only when it actually loaded;
+      // a failed load has naturalWidth === 0, which would make the height NaN.
+      if (sliderRef.current && beforeImg.naturalWidth && beforeImg.naturalHeight) {
+        const calculatedHeight = beforeImg.naturalHeight * (sliderRef.current.offsetWidth / beforeImg.naturalWidth);
+        const minHeight = 300;
+        const finalHeight = Math.max(calculatedHeight, minHeight);
+        setContainerHeight(finalHeight);
+        setImageDimensions({
+          width: beforeImg.naturalWidth,
+          height: beforeImg.naturalHeight
+        });
       }
     };
 
-    beforeImg.onload = checkAllLoaded;
-    afterImg.onload = checkAllLoaded;
-    
+    beforeImg.onload = checkAllSettled;
+    afterImg.onload = checkAllSettled;
+    beforeImg.onerror = checkAllSettled;
+    afterImg.onerror = checkAllSettled;
+
     beforeImg.src = beforeImage;
     afterImg.src = afterImage;
 
@@ -108,7 +123,7 @@ export default function ImageComparisonSlider({
     if (!container || !isDragging) return;
 
     const rect = container.getBoundingClientRect();
-    const offsetX = e.clientX ? e.clientX - rect.left : e.touches[0].clientX - rect.left;
+    const offsetX = getEventClientX(e) - rect.left;
     const position = (offsetX / rect.width) * 100;
     moveSlider(position);
   };
@@ -131,7 +146,7 @@ export default function ImageComparisonSlider({
     const container = getActiveContainer();
     if (!container) return;
     const rect = container.getBoundingClientRect();
-    const offsetX = e.clientX ? e.clientX - rect.left : e.touches[0].clientX - rect.left;
+    const offsetX = getEventClientX(e) - rect.left;
     const position = (offsetX / rect.width) * 100;
     moveSlider(position);
   };

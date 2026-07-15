@@ -4,12 +4,12 @@ sidebar_label: "Enabling Windows File Extensions"
 description: "Configure Windows to display file name extensions for known file types using File Explorer Options."
 slug: /additionalguides/fileextensions
 sidebar_position: 2
-hide_title: True
+hide_title: true
 ---
 
 # Enabling Windows File Extensions
 
-By default, Windows hides file name extensions for known file types. This means that common file types such as `.txt`, `.ini`, or `.exe` do not display their extensions in the file name column. While this behavior can simplify the appearance of folders, it can make it more difficult to identify specific files or change file types. This document describes how to configure Windows to display file name extensions for all known file types.
+By default, Windows hides file name extensions for known file types. This means that common file types such as `.txt`, `.ini`, or `.exe` do not display their extensions in the file name column. While this behavior can simplify the appearance of folders, it can make it more difficult to identify specific files or change file types. This guide shows you how to configure Windows to display file name extensions for all known file types.
 
 ---
 
@@ -32,11 +32,11 @@ Open **File Explorer Options** using the Windows search function:
 In the **File Explorer Options** window, three tabs are available at the top: **General**, **View**, and **Search**.
 
 1. Click on the **View** tab. This is where you can control how files and folders are displayed.
-   
+
     ![File Options View Tab Image](https://assets.martysmods.com/additionalguides/fileextension/FileExplorerOptionsViewTabHighlight.webp)
 
 2. Under the **Advanced settings** section, scroll through the list until you find an option labeled **"Hide extensions for known file types"**. By default, this box is checked, which means file extensions are hidden.
-   
+
 3. To show file name extensions, **clear** the **Hide extensions for known file types** check box.
 
    ![File Options Untick Option Image](https://assets.martysmods.com/additionalguides/fileextension/FileExplorerOptionsKnownFileTypesHighlight.webp)

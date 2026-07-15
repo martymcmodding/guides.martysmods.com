@@ -1,10 +1,10 @@
 ---
-title: Sceneweaver
-sidebar_title: "Sceneweaver"
-description: "Advanced Screenshot Composition and Hotsampling Tools"
+title: "SceneWeaver"
+sidebar_label: "SceneWeaver"
+description: "Screenshot composition and hotsampling tools for ReShade."
 slug: /shaders/meteor/sceneweaver
 sidebar_position: 6
-hide_title: True
+hide_title: true
 ---
 
 # SceneWeaver

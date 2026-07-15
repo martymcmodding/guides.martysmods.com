@@ -1,10 +1,10 @@
 ---
-title: Long Exposure
-sidebar_title: "Long Exposure"
-description: "Temporal Frame Accumulation for Motion Blur Effects"
+title: "Long Exposure"
+sidebar_label: "Long Exposure"
+description: "Temporal frame accumulation for long-exposure motion blur in ReShade."
 slug: /shaders/meteor/longexposure
 sidebar_position: 4
-hide_title: True
+hide_title: true
 ---
 
 # Long Exposure

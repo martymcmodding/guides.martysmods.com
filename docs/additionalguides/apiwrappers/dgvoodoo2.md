@@ -21,7 +21,7 @@ Download the latest version of dgVoodoo2 from [the developer's website](https://
 
 ---
 
-## Determine the Game’s DirectX Version and Architecture
+## Determine the Game's DirectX Version and Architecture
 
 Go to [PCGamingWiki](https://pcgamingwiki.com/) and search for the game. Record the following information:
 
@@ -53,7 +53,7 @@ Inside the selected architecture folder, locate the DLL that matches the game's 
 | `d3d9.dll`      | DirectX 9            |
 
 
-Copy the appropriate DLL, together with the `dgVoodooCpl.exe` and `dgVoodoo.conf` files, into the same directory as the game’s main executable. If the game installation directory is unknown, refer to the guide on [finding a game’s executable](/additionalguides/findexecutable) for details.
+Copy the appropriate DLL, together with the `dgVoodooCpl.exe` and `dgVoodoo.conf` files, into the same directory as the game's main executable. If the game installation directory is unknown, refer to the guide on [finding a game's executable](/additionalguides/findexecutable) for details.
 
 ![dgVoodoo2 Install Finish Result](https://assets.martysmods.com/additionalguides/apiwrapper/dgvoodoo2/dgVooodo2Install.webp)
 

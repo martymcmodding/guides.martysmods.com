@@ -1,4 +1,18 @@
-/* Typography & base font faces */
+/* =============================================================================
+   Marty's Mods Guides — global styles
+   Dark-only theme (colorMode.disableSwitch in docusaurus.config.js).
+
+   Contents:
+     1. Fonts
+     2. Design tokens (:root)
+     3. Infima theme variables (dark)
+     4. Base document
+     5. Layout chrome (navbar, footer, sidebar, container)
+     6. Components (code, buttons, cards, lazy images)
+     7. Markdown content (images, spacing, tables, rules)
+   ============================================================================= */
+
+/* 1. Fonts ----------------------------------------------------------------- */
 @font-face {
   font-family: 'Glober';
   src: url('/fonts/glober-regular-webfont.woff2') format('woff2');
@@ -20,54 +34,90 @@
   font-style: italic;
 }
 
-/* Base document styles */
-html, body {
-  background-color: #111316 !important;
-}
-
-html, body, h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea {
-  font-family: 'Glober', sans-serif !important;
-}
-
+/* 2. Design tokens --------------------------------------------------------- */
+/* Shared by custom.css and the CSS modules (custom properties are global). */
 :root {
   --ff-base: 'Glober', sans-serif;
-  --fs-h1: 3rem;
-  --lh-h1: 1.1;
-  --fs-h2: 2.25rem;
-  --lh-h2: 1.2;
-  --fs-body: 1rem;
-  --lh-body: 1.6;
-  --fs-small: 0.875rem;
-  --lh-small: 1.4;
-  --space-sm: 0.5rem;
+
+  /* Brand accent */
+  --mm-accent: #0099fa;
+  --mm-accent-rgb: 0, 153, 250;
+
+  /* Surfaces & borders layered over the dark base */
+  --mm-surface: rgba(255, 255, 255, 0.055);
+  --mm-surface-strong: rgba(255, 255, 255, 0.125);
+  --mm-surface-hover: rgba(var(--mm-accent-rgb), 0.08);
+  --mm-border: rgba(255, 255, 255, 0.12);
+  --mm-border-strong: rgba(255, 255, 255, 0.3);
+  --mm-hairline: #ffffff40;
+
+  /* Text */
+  --mm-text: #ffffffdd;
+  --mm-text-muted: rgba(226, 232, 240, 0.8);
+
+  /* Soft dark halo to lift text off the animated hero shader — legible over
+     bright colors but softer/more pleasant than a hard outline. */
+  --mm-text-halo:
+    0 0 4px rgba(0, 0, 0, 0.6),
+    0 0 10px rgba(0, 0, 0, 0.45),
+    0 3px 16px rgba(0, 0, 0, 0.5);
+
+  /* Radii & elevation */
+  --mm-radius: 8px;
+  --mm-radius-lg: 12px;
+  --mm-shadow: 0 8px 32px rgba(0, 0, 0, 0.28);
+  --mm-shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.35);
+
+  /* Markdown content spacing */
   --space-md: 1rem;
   --space-lg: 2rem;
   --space-block: 10px;
-  --ifm-color-scheme: light;
-  --ifm-color-primary: #0099fa;
+
+  /* Infima overrides */
+  --ifm-color-primary: var(--mm-accent);
   --ifm-color-secondary: #ebedf0;
-  --ifm-background-color: #111316;
-  --ifm-font-color-base: #FFFFFFDD !important;
-  --ifm-code-background: #111316 !important;
   --ifm-code-font-size: 95%;
-  --ifm-button-color: #FFFFFFDD !important;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+/* 3. Infima theme (dark only) ---------------------------------------------- */
+/* Setting Infima's variables on the theme root lets component backgrounds
+   resolve to these values without needing !important overrides. */
+html[data-theme='dark'] {
+  --ifm-background-color: #111316;
+  --ifm-navbar-background-color: #111316;
+  --ifm-font-color-base: var(--mm-text);
+  --ifm-code-background: #111316;
+  --ifm-button-color: var(--mm-text);
+}
 
-/* Global layout: navbar & footer */
+/* 4. Base document --------------------------------------------------------- */
+html, body {
+  background-color: var(--ifm-background-color);
+}
+
+html, body, h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea {
+  font-family: var(--ff-base) !important;
+}
+
+/* 5. Layout chrome --------------------------------------------------------- */
 .navbar {
-  background-color: #111316 !important;
-  border-bottom: 2px solid #ffffff40;
+  border-bottom: 2px solid var(--mm-hairline);
+}
+
+.navbar__brand {
+  padding: 0.25rem 0.75rem 0.5rem !important;
+  margin-right: 0 !important;
 }
 
 .footer {
-  background-color: #111316 !important;
+  /* .footer--dark sets --ifm-footer-background-color on the footer itself, which
+     wins over the html-level var, so set the background here directly. */
+  background-color: var(--ifm-background-color);
   --ifm-footer-color: #e2e8f0;
   --ifm-footer-link-color: #e2e8f0;
   width: 100%;
   margin: 0 auto;
-  padding: auto;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
@@ -75,28 +125,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea {
 }
 
 .theme-layout-footer.footer.footer--dark {
-  border-top: 2px solid #ffffff40;
-}
-
-.menu.thin-scrollbar.menu_SIkG {
-  border-right: 2px solid #ffffff40;
-}
-
-code {
-  border: 0.1rem solid #FFFFFFDD;
-}
-
-.text--truncate {
-  white-space: normal !important;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
-}
-
-.card {
-  min-height: 150px !important;
+  border-top: 2px solid var(--mm-hairline);
 }
 
 .footer__item {
@@ -107,7 +136,7 @@ code {
 .footer__title {
   font-size: 1.25rem;
   margin-bottom: 0.75rem;
-  padding-bottom: 0.50rem;
+  padding-bottom: 0.5rem;
   position: relative;
 }
 
@@ -122,16 +151,8 @@ code {
   background: linear-gradient(to right, transparent, #ffffff83, transparent);
 }
 
-.navbar__brand {
-  padding: 0.25rem 0.75rem 0.5rem 0.75rem !important;
-  margin-right: 0 !important;
-}
-
-.button {
-  background: linear-gradient(90deg, #0099fa, #f900cb) !important;
-  color: white !important;
-  border-color: #FFFFFFDD !important;
-  border-width: 3px;
+.menu.thin-scrollbar.menu_SIkG {
+  border-right: 2px solid var(--mm-hairline);
 }
 
 .container {
@@ -144,6 +165,33 @@ code {
   }
 }
 
+/* 6. Components ------------------------------------------------------------ */
+code {
+  border: 0.1rem solid var(--mm-text);
+}
+
+.button {
+  background: linear-gradient(90deg, var(--mm-accent), #f900cb) !important;
+  color: #fff !important;
+  border-color: var(--mm-text) !important;
+  border-width: 3px;
+}
+
+.card {
+  min-height: 150px !important;
+}
+
+/* Sidebar labels wrap instead of truncating to a single line */
+.text--truncate {
+  white-space: normal !important;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+/* Lazy image placeholder (see src/components/lazyimage.js) */
 .lazy-image-wrapper {
   display: block;
   position: relative;
@@ -153,7 +201,7 @@ code {
   background: linear-gradient(
     90deg,
     rgba(255, 255, 255, 0.04) 25%,
-    rgba(255, 255, 255, 0.10) 50%,
+    rgba(255, 255, 255, 0.1) 50%,
     rgba(255, 255, 255, 0.04) 75%
   );
   background-size: 200% 100%;
@@ -175,14 +223,15 @@ code {
   }
 }
 
-/* Depth buffer helper tables */
+/* 7. Markdown content ------------------------------------------------------ */
+/* Depth-buffer helper table (docs/reshade/depth.md) */
 .depth-buffer-table table,
 .depth-buffer-table table th,
 .depth-buffer-table table td {
   text-align: center !important;
 }
 
-/* Image layout helpers */
+/* Side-by-side images */
 .image-side-by-side {
   display: flex;
   align-items: flex-start;
@@ -194,19 +243,19 @@ code {
   max-width: 50%;
 }
 
-.markdown img.img-half {
-  max-width: 50%;
-  margin-left: auto;
-  margin-right: auto;
+/* Image size caps (centered, always responsive) */
+.markdown img.img-sm,
+.markdown img.img-md,
+.markdown img.img-lg {
+  display: block;
+  margin-inline: auto;
 }
 
-.markdown img.img-quarter {
-  max-width: 75%;
-  margin-left: auto;
-  margin-right: auto;
-}
+.markdown img.img-sm { max-width: min(100%, 360px); }
+.markdown img.img-md { max-width: min(100%, 600px); }
+.markdown img.img-lg { max-width: min(100%, 860px); }
 
-/* Markdown content spacing */
+/* Heading and block spacing */
 .markdown h1,
 .markdown h2,
 .markdown h3,
@@ -216,16 +265,8 @@ code {
   margin: 0 0 var(--space-block);
 }
 
-.markdown h1 {
-  margin-top: var(--space-lg);
-  margin-bottom: var(--space-md);
-}
-
-.markdown h2 {
-  margin-top: var(--space-lg);
-  margin-bottom: var(--space-md);
-}
-
+.markdown h1,
+.markdown h2,
 .markdown h3 {
   margin-top: var(--space-lg);
   margin-bottom: var(--space-md);
@@ -264,14 +305,14 @@ code {
   margin-bottom: var(--space-block);
 }
 
-/* Markdown horizontal rules */
+/* Thick horizontal rule between sections */
 .markdown hr {
   border: 0 !important;
   border-top: 3px solid var(--ifm-font-color-base) !important;
   height: 3px;
 }
 
-/* Docusaurus pagination overrides */
+/* Prev/next pagination is intentionally hidden */
 .docusaurus-mt-lg.pagination-nav {
   display: none !important;
 }

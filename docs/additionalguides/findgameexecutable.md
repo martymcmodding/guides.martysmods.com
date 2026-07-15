@@ -1,15 +1,15 @@
 ---
 title: "Finding Your Game's Executable"
 sidebar_label: "Finding Your Game's Executable"
-description: "Installation requirements vary by user, platform, and game. As a result, games can be installed in different locations, making it tedious to locate the executable and game directory."
+description: "Locate a running game's executable and install folder using Task Manager and File Explorer."
 slug: /additionalguides/findexecutable
 sidebar_position: 4
-hide_title: True
+hide_title: true
 ---
 
 # Finding Your Game's Executable
 
-Installation requirements vary by user, platform, and game. As a result, games can be installed in different locations, making it difficult to locate the executable and corresponding game directory. This document describes a consistent method for locating a running game's executable file using Task Manager and File Explorer.
+Installation requirements vary by user, platform, and game. As a result, games can be installed in different locations, making it difficult to locate the executable and corresponding game directory. This guide shows you a consistent way to locate a running game's executable using Task Manager and File Explorer.
 
 ---
 

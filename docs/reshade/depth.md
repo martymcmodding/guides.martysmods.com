@@ -9,7 +9,6 @@ hide_title: true
 
 <!----------------------- IMPORTS ---------------------------->
 
-import ImageComparisonSlider from '@site/src/components/ImageComparisonSlider';
 import YTConsent from '@site/src/components/YTConsent';
 import ReactPlayer from 'react-player'
 
@@ -22,7 +21,7 @@ The depth buffer (sometimes referred to as the Z-buffer) is essential for most 3
 
 <YTConsent url="https://www.youtube.com/watch?v=6xOSzYLeJB0" />
 
-## Generic Depth Addon
+## Generic Depth Add-on
 Since games often use multiple depth buffers (for shadows, post-processing, etc.), finding the correct depth buffer in ReShade can be tricky. However, ReShade's included add-on "Generic Depth" comes with controls that allow us to control both automatic and manual selection of buffers for us to use.
 
 In order to configure or view Generic Depth's current settings, you'll need to open up ReShade's "**Add-ons**" tab and find the "**Generic Depth**" add-on. Once found, you can see the checkmark next to the name of the Add-on that allows you to enable or disable it after a game's restart.
@@ -66,7 +65,7 @@ Every game is wildly different from the next. Developers often have to use diffe
 :::warning
 When configuring depth, do not toggle on or use any of the controls provided to you in the "**DisplayDepth**" shader. Instead, use the "Edit Global Preprocessor Definitions" button in the middle of ReShade's Home tab.
 
-<img className="img-quarter" src="https://assets.martysmods.com/reshade/depth/EditGlobalPreprocessorDefinitionsButton.webp" />
+<img className="img-lg" src="https://assets.martysmods.com/reshade/depth/EditGlobalPreprocessorDefinitionsButton.webp" />
 :::
 
 ### Upside Down
@@ -91,7 +90,7 @@ When ReShade is configured to not have the proper depth buffer, the shader Displ
 <img src="https://assets.martysmods.com/reshade/depth/DepthNoDataReversed.webp" alt="Depth Buffer No Data - Reversed" />
 </div>
 
-#### Solutions:
+#### Solutions
   - Toggle "Copy depth buffer before clear operations" and "Copy depth buffer before fullscreen draw calls".
   - Select the depth buffer with the closest resolution to your game resolution.
   - Select the depth buffer with the highest amount of draw calls and vertices.
@@ -101,7 +100,7 @@ When a game uses DLSS/FSR/XESS, it can often result in issues where the depth bu
 
 ![DLSS/FSR/XESS Checkerboarding](https://assets.martysmods.com/reshade/depth/DepthDLSSCheckerboarding.webp)
 
-#### Solutions:
+#### Solutions
   - Toggle on "Copy depth buffer before clear operations" and "Copy depth buffer before fullscreen draw calls".
   - Disable DLSS/FSR/XESS
 
@@ -119,7 +118,7 @@ Some games provide a dynamic resolution feature that constantly resizes and chan
   style={{ width: "100%", margin: "0 auto" }}
 />
 
-#### Solutions:
+#### Solutions
   - Disable Dynamic Resolution Rendering
   - Disable DLSS/FSR/XESS
 

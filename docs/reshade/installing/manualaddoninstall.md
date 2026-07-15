@@ -1,8 +1,8 @@
 ---
-title: "Manually Installing Addons"
-sidebar_label: "Manually Installing Addons"
+title: "Manually Installing Add-ons"
+sidebar_label: "Manually Installing Add-ons"
 description: "Manual installation of add-ons not available through the ReShade Setup Tool."
-slug: /reshade/installing/reshademanualaddoninstall
+slug: /reshade/installing/manualaddoninstall
 sidebar_position: 5
 hide_title: true
 ---

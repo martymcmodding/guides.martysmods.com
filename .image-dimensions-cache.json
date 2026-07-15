@@ -694,5 +694,41 @@
   "https://assets.martysmods.com/reshade/installing/shaderinstall/GitHubDownloadZIPButtonHighlight2.webp": {
     "width": 3289,
     "height": 1541
+  },
+  "https://assets.martysmods.com/reshade/depth/DepthNoDataReversed.webp": {
+    "width": 1121,
+    "height": 630
+  },
+  "https://assets.martysmods.com/reshade/depth/DepthNoData.webp": {
+    "width": 1111,
+    "height": 625
+  },
+  "https://assets.martysmods.com/additionalguides/patreon/PatreonSettingsButton.webp": {
+    "width": 269,
+    "height": 384
+  },
+  "https://assets.martysmods.com/additionalguides/patreon/PatreonSettingsConnectedApps.webp": {
+    "width": 259,
+    "height": 201
+  },
+  "https://assets.martysmods.com/additionalguides/patreon/PatreonSettingsMoreDropdown.webp": {
+    "width": 833,
+    "height": 489
+  },
+  "https://assets.martysmods.com/additionalguides/patreon/ConnectPatreonDiscordConnectedApp.webp": {
+    "width": 716,
+    "height": 290
+  },
+  "https://assets.martysmods.com/additionalguides/patreon/ConnectPatreonDiscordConnectButton.webp": {
+    "width": 682,
+    "height": 171
+  },
+  "https://assets.martysmods.com/additionalguides/patreon/ConnectPatreonDiscordAuthorize.webp": {
+    "width": 756,
+    "height": 810
+  },
+  "https://assets.martysmods.com/additionalguides/patreon/ConnectPatreonDiscordLogin.webp": {
+    "width": 811,
+    "height": 663
   }
 }

@@ -65,6 +65,7 @@ export default function HeroShaderCanvas({ className, fragmentShaderUrl }) {
     let lastFrameTime = 0;
     const isMobile = window.matchMedia('(max-width: 768px)').matches;
     const renderScale = isMobile ? 0.333 : 0.5;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     const cleanup = () => {
       running = false;
@@ -76,7 +77,7 @@ export default function HeroShaderCanvas({ className, fragmentShaderUrl }) {
     const render = (timestamp) => {
       if (!gl || !program || !running) return;
       if (lastFrameTime && timestamp - lastFrameTime < frameIntervalMs) {
-        animationFrameId = requestAnimationFrame(render);
+        if (!reducedMotion) animationFrameId = requestAnimationFrame(render);
         return;
       }
       lastFrameTime = timestamp;
@@ -103,7 +104,8 @@ export default function HeroShaderCanvas({ className, fragmentShaderUrl }) {
       if (iResolutionUniform) gl.uniform3f(iResolutionUniform, width, height, 1.0);
 
       gl.drawArrays(gl.TRIANGLES, 0, 6);
-      animationFrameId = requestAnimationFrame(render);
+      // Draw a single static frame when the user prefers reduced motion.
+      if (!reducedMotion) animationFrameId = requestAnimationFrame(render);
     };
 
     const init = async () => {
@@ -163,7 +165,9 @@ export default function HeroShaderCanvas({ className, fragmentShaderUrl }) {
         gl.enableVertexAttribArray(positionLocation);
         gl.vertexAttribPointer(positionLocation, 2, gl.FLOAT, false, 0, 0);
 
-        render();
+        // Kick off via rAF so the first frame gets a valid timestamp (needed for
+        // the reduced-motion single-frame path to compute a real elapsed time).
+        animationFrameId = requestAnimationFrame(render);
       } catch (error) {
         console.error('Hero shader failed to initialize:', error);
       }

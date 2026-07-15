@@ -16,7 +16,7 @@ import YTConsent from '@site/src/components/YTConsent';
 
 # ReShade Setup Tool
 
-The ReShade Setup Tool is the official installer from [reshade.me](https://reshade.me). Running you through a step-by-step process in order to get ReShade, known shader repositories, and Addon's working in your game.
+The ReShade Setup Tool is the official installer from [reshade.me](https://reshade.me). Running you through a step-by-step process in order to get ReShade, known shader repositories, and add-ons working in your game.
 
 ---
 
@@ -24,9 +24,9 @@ The ReShade Setup Tool is the official installer from [reshade.me](https://resha
 
 ## Selecting Your Game
 
-The tool lists detected applications to install ReShade to. Select the game's main executable (e.g. `game.exe`). ReShade installs into that executable's directory. For unlisted games, use **Browse...** to select the executable. If the game folder is protected (e.g. Program Files), run the setup tool as administrator. See [finding your game’s executable and directory](/additionalguides/findexecutable).
+The tool lists detected applications to install ReShade to. Select the game's main executable (e.g. `game.exe`). ReShade installs into that executable's directory. For unlisted games, use **Browse...** to select the executable. If the game folder is protected (e.g. Program Files), run the setup tool as administrator. See [finding your game's executable and directory](/additionalguides/findexecutable).
 
-<img className="img-half" src="https://assets.martysmods.com/reshade/installing/SetupToolGameSelect.webp" />
+<img className="img-md" src="https://assets.martysmods.com/reshade/installing/SetupToolGameSelect.webp" />
 
 ---
 
@@ -34,7 +34,7 @@ The tool lists detected applications to install ReShade to. Select the game's ma
 
 ReShade must use the same rendering API as the game. Options are Direct3D 9, 10, 11, 12, OpenGL, or Vulkan. The wrong API can prevent injection. Check the game's graphics settings, documentation, or [PCGamingWiki](https://pcgamingwiki.com) for the API.
 
-<img className="img-half" src="https://assets.martysmods.com/reshade/installing/SetupToolAPISelect.webp" />
+<img className="img-md" src="https://assets.martysmods.com/reshade/installing/SetupToolAPISelect.webp" />
 
 ---
 
@@ -42,7 +42,7 @@ ReShade must use the same rendering API as the game. Options are Direct3D 9, 10,
 
 ReShade only changes the image if shaders are installed. Select one or more shader repositories to install (clicking a repository name opens its GitHub page). To install a preset (e.g. a `.ini` file), use **Browse...** to select it - and the ReShade Setup Tool will install it and the required shader packages that preset references.
 
-<img className="img-half" src="https://assets.martysmods.com/reshade/installing/SetupToolShaderSelect.webp" />
+<img className="img-md" src="https://assets.martysmods.com/reshade/installing/SetupToolShaderSelect.webp" />
 
 ---
 
@@ -50,7 +50,7 @@ ReShade only changes the image if shaders are installed. Select one or more shad
 
 Only the full add-on support build and its matching setup tool show the add-on step. Add-ons are optional DLLs that extend ReShade or the host application (e.g. extra overlays, capture tools, or game-specific hooks). The tool lists available add-ons with descriptions. Review each add-on before installing as some can cause compatibility issues, launch failures, or installation problems. Install only add-ons you trust and need.
 
-<img className="img-half" src="https://assets.martysmods.com/reshade/installing/SetupToolAddonSelect.webp" />
+<img className="img-md" src="https://assets.martysmods.com/reshade/installing/SetupToolAddonSelect.webp" />
 
 ---
 

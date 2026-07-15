@@ -4,16 +4,16 @@ import rehypeImageDimensions from './plugins/rehype-image-dimensions.js';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Marty's Mods Guides",
-  tagline: 'Your extensive guide site for all things ReShade.',
+  tagline: 'Your comprehensive guide to ReShade and shaders.',
   favicon: 'img/favicon.ico',
   url: 'https://guides.martysmods.com',
   baseUrl: '/',
   organizationName: 'MartysMods',
   projectName: 'guides.martysmods.com',
-  onBrokenLinks: 'ignore',
+  onBrokenLinks: 'throw',
   markdown: {
     hooks: {
-      onBrokenMarkdownLinks: 'ignore',
+      onBrokenMarkdownLinks: 'warn',
     },
   },
 
@@ -36,6 +36,23 @@ const config = {
           customCss: './src/css/custom.css',
         },
       }),
+    ],
+  ],
+
+  plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        // When a page's slug changes, add the old URL here (from: old, to: new)
+        // so external inbound links keep working.
+        redirects: [
+          { from: '/reshade/installing/reshademanualinstall', to: '/reshade/installing/manualinstall' },
+          { from: '/reshade/installing/reshademanualinjection', to: '/reshade/installing/manualinjection' },
+          { from: '/reshade/installing/reshademanualshaderinstall', to: '/reshade/installing/manualshaderinstall' },
+          { from: '/reshade/installing/reshademanualaddoninstall', to: '/reshade/installing/manualaddoninstall' },
+          { from: '/shaders/meteor/chromaticabberation', to: '/shaders/meteor/chromaticaberration' },
+        ],
+      },
     ],
   ],
 

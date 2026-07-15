@@ -1,71 +1,85 @@
 ---
 title: "FiveM"
 sidebar_label: "FiveM"
+description: "Get ReShade working with FiveM, including the plugins-folder move and common crash fixes."
 slug: /games/fivem
 sidebar_position: 1
-hide_title: True
+hide_title: true
 ---
 
 <!----------------------- IMPORTS ---------------------------->
 
-import ImageComparisonSlider from '@site/src/components/ImageComparisonSlider';
 import YTConsent from '@site/src/components/YTConsent';
 
 <!----------------------------------------------------------->
 
 # FiveM
 
-FiveM is a platform that lets you play on custom servers for Grand Theft Auto V (GTAV). To get ReShade working with FiveM, you need to follow specific steps. This guide will show you exactly what to do and provide all the details you need.
+FiveM is a platform that lets you play on custom servers for Grand Theft Auto V (GTAV). Getting ReShade working with FiveM takes a few extra steps, since ReShade has to be moved into FiveM's own plugins folder. This guide walks you through the whole process.
+
+---
 
 <YTConsent url="https://www.youtube.com/watch?v=JaT_Fjv7-2o" />
 
 ---
 
-## Step 1: Enable Windows File Extensions
+## Enable Windows File Extensions
 
-To follow this guide properly, you need to be able to see file extensions in Windows. File extensions are the parts at the end of file names that indicate the file type, like `.exe` or `.dll`. Enabling these will help you find and move the right files. Follow our [guide for enabling Windows file extensions](/additionalguides/fileextensions) to complete this step.
+You need to be able to see file extensions in Windows to follow this guide. Extensions are the parts at the end of file names that indicate the file type, like `.exe` or `.dll`. Follow our [guide for enabling Windows file extensions](/additionalguides/fileextensions) first.
 
-## Step 2: Install ReShade to GTAV
+---
 
-Download the latest Add-on Support Build of ReShade from the official ReShade website. Make sure to install it into your GTAV game folder and do not include any add-ons during the process. If you need assistance, refer to our [ReShade installation guide](/reshade/installing/setuptool).
+## Install ReShade to GTAV
 
-## Step 3: Locate your GTAV Folder
+Download the latest Add-on Support build of ReShade from the official ReShade website. Install it into your GTAV game folder and do not include any add-ons during setup. If you need help, see our [ReShade installation guide](/reshade/installing/setuptool).
 
-Locate your GTAV game folder, where the main game files are stored. If you’re unsure how to find it, use our [guide for finding your game’s executable](/additionalguides/findexecutable). Confirm that these files and folder are present before continuing:
+---
+
+## Locate your GTAV Folder
+
+Find your GTAV game folder, where the main game files are stored. If you're unsure how to find it, use our [guide for finding your game's executable](/additionalguides/findexecutable). Confirm these files and folder are present before continuing:
 
 - `dxgi.dll`
-- `reshade.ini`
-- `reshade-shaders`
+- `ReShade.ini`
+- `ReShade-Shaders`
 
-<img className="img-half" src="https://assets.martysmods.com/additionalguides/games/fivem/FiveMGTAVReShadeFiles.webp" alt="GTAV ReShade Install Files" />
+<img className="img-md" src="https://assets.martysmods.com/additionalguides/games/fivem/FiveMGTAVReShadeFiles.webp" alt="GTAV ReShade Install Files" />
 
-## Step 4: Locate your FiveM Installation
+---
 
-Find the folder where FiveM is installed. Use the same method from Step 3 to locate it.
+## Locate your FiveM Installation
 
-<img className="img-half" src="https://assets.martysmods.com/additionalguides/games/fivem/FiveMFileLocation.webp" alt="FiveM File Location" />
+Find the folder where FiveM is installed, using the same method as the previous step.
 
-## Step 5: Navigate to FiveM’s Plugins Folder
+<img className="img-md" src="https://assets.martysmods.com/additionalguides/games/fivem/FiveMFileLocation.webp" alt="FiveM File Location" />
 
-Open your FiveM folder and navigate to “FiveM Application Data.” Inside, find and open the “plugins” folder. This is where the ReShade files will go.
+---
 
-<img className="img-half" src="https://assets.martysmods.com/additionalguides/games/fivem/FiveMAppdataLocation.webp" alt="FiveM appdata Location" />
+## Navigate to FiveM's Plugins Folder
 
-<img className="img-half" src="https://assets.martysmods.com/additionalguides/games/fivem/FiveMPluginLocation.webp" alt="FiveM plugins Location" />
+Open your FiveM folder and navigate to `FiveM Application Data`. Inside, find and open the `plugins` folder. This is where the ReShade files will go.
 
-## Step 6: Move ReShade Files into FiveM
+<img className="img-md" src="https://assets.martysmods.com/additionalguides/games/fivem/FiveMAppdataLocation.webp" alt="FiveM appdata Location" />
+
+<img className="img-md" src="https://assets.martysmods.com/additionalguides/games/fivem/FiveMPluginLocation.webp" alt="FiveM plugins Location" />
+
+---
+
+## Move ReShade Files into FiveM
 
 Go back to your GTAV folder and cut the following files and folder:
 
 - `dxgi.dll`
-- `reshade.ini`
-- `reshade-shaders`
+- `ReShade.ini`
+- `ReShade-Shaders`
 
-Paste them into the “plugins” folder inside your FiveM directory.
+Paste them into the `plugins` folder inside your FiveM directory.
 
-<img className="img-half" src="https://assets.martysmods.com/additionalguides/games/fivem/FiveMReShadeInstallLocation.webp" alt="FiveM ReShade Install Location" />
+<img className="img-md" src="https://assets.martysmods.com/additionalguides/games/fivem/FiveMReShadeInstallLocation.webp" alt="FiveM ReShade Install Location" />
 
-## Step 7: Check FiveM’s Console Log
+---
+
+## Check FiveM's Console Log
 
 Start FiveM and press `F8` to open the console log. You should see an error message related to ReShade that looks something like this:
 
@@ -80,29 +94,31 @@ ReShade5=ID:XXXXXX acknowledged that ReShade 5.x has a bug that will lead to gam
 
 Make sure the ID matches your log exactly.
 
-## Step 8: Restart FiveM and Enable “Fix UI Lag”
+---
 
-After saving `CitizenFX.ini`, restart FiveM. Go to the settings menu, enable the “Fix UI Lag” option, then restart FiveM one more time.
+## Restart FiveM and Enable Fix UI Lag
+
+After saving `CitizenFX.ini`, restart FiveM. Go to the settings menu, enable the **Fix UI Lag** option, then restart FiveM one more time.
 
 ---
 
 ## Troubleshooting
 
-### ReShade “No Effect Files” Error
+### ReShade "No Effect Files" Error
 
-If ReShade reports “No effect files found,” your `reshade.ini` search paths are likely missing or incorrect. Go to the **Settings** tab in ReShade and set the paths as follows:
+If ReShade reports "No effect files found," your `ReShade.ini` search paths are likely missing or incorrect. Go to the **Settings** tab in ReShade and set the paths as follows:
 
-| Search Path                    | Description          |
-|--------------------------------|----------------------|
-| .\reshade-shaders\Shaders\\**  | Effect Search Path   |
-| .\reshade-shaders\Textures\\** | Texture Search Path  |
+| Setting             | Search Path                       |
+| ------------------- | --------------------------------- |
+| Effect Search Path  | `.\ReShade-Shaders\Shaders\**`    |
+| Texture Search Path | `.\ReShade-Shaders\Textures\**`   |
 
-<img className="img-half" src="https://assets.martysmods.com/additionalguides/games/fivem/FiveMSearchPath.webp" alt="Effect search path FiveM" />
+<img className="img-md" src="https://assets.martysmods.com/additionalguides/games/fivem/FiveMSearchPath.webp" alt="Effect search path FiveM" />
 
 ### FiveM Crash Dump Screen
 
-If FiveM presents a crash dump screen while ReShade is installed, there is very little that can be done on your end. This type of crash is handled entirely by FiveM’s own crash reporting system and is outside the scope of ReShade or any shader configuration.
+If FiveM presents a crash dump screen while ReShade is installed, there is very little that can be done on your end. This type of crash is handled entirely by FiveM's own crash reporting system and is outside the scope of ReShade or any shader configuration.
 
-<img className="img-half" src="https://assets.martysmods.com/additionalguides/games/fivem/FiveMCrashScreen.webp" alt="FiveM Crash Dump Screen" />
+<img className="img-md" src="https://assets.martysmods.com/additionalguides/games/fivem/FiveMCrashScreen.webp" alt="FiveM Crash Dump Screen" />
 
-Resolving this is up to the FiveM development team. You can report the crash through FiveM’s official channels, but ReShade-related crashes in FiveM have historically received little attention from the team and are unlikely to be addressed.
+Resolving this is up to the FiveM development team. You can report the crash through FiveM's official channels, but ReShade-related crashes in FiveM have historically received little attention and are unlikely to be addressed.

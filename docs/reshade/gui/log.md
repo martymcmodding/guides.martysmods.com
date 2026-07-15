@@ -4,11 +4,11 @@ sidebar_label: "Log"
 description: "ReShade's Log Tab"
 slug: /reshade/gui/log
 sidebar_position: 4
-hide_tittle: true
+hide_title: true
 ---
 
 # Log
-The "Log" tab records ReShade’s runtime messages, including errors, warnings, and informational events.
+The "Log" tab records ReShade's runtime messages, including errors, warnings, and informational events.
 
 ---
 

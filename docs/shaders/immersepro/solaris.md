@@ -1,6 +1,6 @@
 ---
-title: Solaris
-sidebar_title: "Solaris"
+title: "Solaris"
+sidebar_label: "Solaris"
 description: "A physically based exposure and bloom solution."
 image: "https://assets.martysmods.com/headers/solarisheader.webp"
 slug: /shaders/immersepro/solaris
@@ -118,8 +118,8 @@ Default: **Disabled**.
 
 When enabled, Solaris uses a higher resolution buffer as the input to its bloom downsampling chain. By default, Solaris downsamples from a reduced resolution source to save performance. Enabling this uses the full resolution image as the starting point, which preserves finer detail in small or thin bright objects that might otherwise be lost during the initial downsample. The tradeoff is a higher performance cost. Enable this if small light sources or fine bright details are not producing bloom correctly at default settings.
 
-<ImageComparisonSlider 
-  beforeImage="https://assets.martysmods.com/shaders/solaris/HighResolutionInputDisabled.webp" 
+<ImageComparisonSlider
+  beforeImage="https://assets.martysmods.com/shaders/solaris/HighResolutionInputDisabled.webp"
   afterImage="https://assets.martysmods.com/shaders/solaris/HighResolutionInputEnabled.webp"
   beforeLabel="Disabled"
   afterLabel="Enabled"

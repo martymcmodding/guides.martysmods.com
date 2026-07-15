@@ -1,10 +1,10 @@
 ---
-title: Film Grain
-sidebar_title: "Film Grain"
-description: "Physically Accurate Film Grain"
+title: "Film Grain"
+sidebar_label: "Film Grain"
+description: "Physically accurate film grain and digital sensor noise for ReShade."
 slug: /shaders/meteor/filmgrain
 sidebar_position: 2
-hide_title: True
+hide_title: true
 ---
 
 # Film Grain

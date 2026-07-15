@@ -1,3 +1,7 @@
+/* =============================================================================
+   ImageComparisonSlider (src/components/ImageComparisonSlider.js)
+   ============================================================================= */
+
 .image-comparison-slider {
   position: relative;
   width: 100%;
@@ -34,51 +38,41 @@
   top: 0;
   bottom: 0;
   width: 8px;
-  background: white;
-  border: 1px solid black;
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 4px;
   z-index: 3;
   cursor: ew-resize;
   transform: translateX(-50%);
-  border-radius: 4px;
 }
 
+/* Before / after labels */
 .image-comparison-header {
   position: absolute;
   top: 10px;
   padding: 5px 10px;
-  color: #ffffff;
+  color: #fff;
   font-weight: bold;
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 4px;
   z-index: 4;
 }
 
-.before-label {
-  left: 10px;
-}
-
-.after-label {
-  right: 10px;
-}
+.before-label { left: 10px; }
+.after-label { right: 10px; }
 
 .image-comparison-overlay-content .image-comparison-header {
   top: auto;
   bottom: 10px;
 }
-.image-comparison-overlay-content .before-label {
-  left: 10px;
-}
-.image-comparison-overlay-content .after-label {
-  right: 10px;
-}
+.image-comparison-overlay-content .before-label { left: 10px; }
+.image-comparison-overlay-content .after-label { right: 10px; }
 
-.image-comparison-expand-btn {
+/* Expand / close control buttons (shared base + per-button specifics) */
+.image-comparison-expand-btn,
+.image-comparison-close-btn {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
   z-index: 5;
-  width: 36px;
-  height: 36px;
   padding: 0;
   display: flex;
   align-items: center;
@@ -91,11 +85,32 @@
   transition: background 0.15s, border-color 0.15s;
 }
 
+.image-comparison-expand-btn {
+  bottom: 10px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+}
+
 .image-comparison-expand-btn:hover {
   background: rgba(0, 0, 0, 0.75);
   border-color: rgba(255, 255, 255, 0.8);
 }
 
+.image-comparison-close-btn {
+  top: 12px;
+  right: 12px;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+}
+
+.image-comparison-close-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Fullscreen overlay */
 .image-comparison-overlay {
   position: fixed;
   inset: 0;
@@ -121,30 +136,6 @@
   cursor: ew-resize;
   user-select: none;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: var(--mm-radius);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-}
-
-.image-comparison-close-btn {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  z-index: 10;
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 6px;
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  cursor: pointer;
-  transition: background 0.15s, border-color 0.15s;
-}
-
-.image-comparison-close-btn:hover {
-  background: rgba(0, 0, 0, 0.8);
-  border-color: rgba(255, 255, 255, 0.9);
 }

@@ -1,7 +1,7 @@
 ---
-title: "Addons"
-sidebar_label: "Addons"
-description: "ReShade's Addon's Tab"
+title: "Add-ons"
+sidebar_label: "Add-ons"
+description: "ReShade's Add-ons tab."
 slug: /reshade/gui/addons
 sidebar_position: 2
 hide_title: true

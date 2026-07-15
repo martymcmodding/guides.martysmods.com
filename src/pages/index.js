@@ -4,38 +4,37 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import LazyImage from '../components/lazyimage';
 import HeroShaderCanvas from '../components/HeroShaderCanvas';
+import ImageComparisonSlider from '../components/ImageComparisonSlider';
 
 const HeroSection = () => (
   <section className={styles.hero}>
     <HeroShaderCanvas className={styles.heroShader} fragmentShaderUrl="/shaders/hero.frag" />
     <div className={styles.heroContainer}>
       <div className={styles.heroContent}>
-        <h1 className={styles.heroTitle}>
-          Marty's Mods Guides
-        </h1>
+        <h1 className={styles.heroTitle}>Marty's Mods Guides</h1>
         <p className={styles.heroSubtitle}>
           Your comprehensive guide to ReShade and shaders.
         </p>
         <div className={styles.heroButtons}>
           <a href="/reshade/downloading" className={styles.primaryButton}>
-            <LazyImage 
-              src="https://assets.martysmods.com/landingpage/ReShadeColorWheel.svg" 
-              alt="ReShade Logo" 
+            <LazyImage
+              src="https://assets.martysmods.com/landingpage/ReShadeColorWheel.svg"
+              alt="ReShade Logo"
               className={styles.buttonLogo}
               width={40}
               height={40}
             />
-            <span>ReShade</span>
+            <span>Get Started</span>
           </a>
           <a href="/shaders/immerse/launchpad" className={styles.secondaryButton}>
-            <LazyImage 
-              src="https://assets.martysmods.com/landingpage/MartysModsLogoSmall.webp" 
-              alt="Marty's Mods Logo" 
+            <LazyImage
+              src="https://assets.martysmods.com/landingpage/MartysModsLogoSmall.webp"
+              alt="Marty's Mods Logo"
               className={styles.buttonLogo}
               width={40}
               height={40}
             />
-            <span>Our Shaders</span>
+            <span>Explore Shaders</span>
           </a>
         </div>
       </div>
@@ -43,154 +42,145 @@ const HeroSection = () => (
   </section>
 );
 
-const FeatureText = ({ title, description }) => (
-  <div className={styles.featureText}>
-    <h2 className={styles.featureTitle}>{title}</h2>
-    {Array.isArray(description) ? (
-      description.map((desc, index) => (
-        <p key={index} className={styles.featureDescription}>
-          {desc}
-        </p>
-      ))
-    ) : (
-      <p className={styles.featureDescription}>{description}</p>
-    )}
-  </div>
-);
+const quickLinks = [
+  { label: 'Download ReShade', desc: 'Pick the right build and grab it from the source.', href: '/reshade/downloading' },
+  { label: 'Install with the Setup Tool', desc: 'The official, step-by-step installer.', href: '/reshade/installing/setuptool' },
+  { label: 'The ReShade GUI', desc: 'Every tab and control, explained.', href: '/reshade/gui/home' },
+  { label: 'Depth Buffer', desc: 'Configure depth so 3D effects work.', href: '/reshade/depth' },
+  { label: 'Load Order', desc: 'Order your shaders for the best result.', href: '/reshade/loadorder' },
+  { label: 'Additional Guides', desc: 'API wrappers, file permissions, and more.', href: '/additionalguides/apiwrappers/dxvk' },
+];
 
-const FeatureVisual = ({ title, items, visualFirst }) => {
-  const getItemLink = (item) => {
-    const linkMap = {
-      "ReShade Setup Tool": "/reshade/installing/setuptool",
-      "Manual Installation": "/reshade/installing/reshademanualinstall",
-      "Manual Injection": "/reshade/installing/reshademanualinjection",
-      "Shader Installation": "/reshade/installing/reshademanualshaderinstall",
-      "Addon Installation": "/reshade/installing/reshademanualaddoninstall",
-      "iMMERSE": "/shaders/immerse/launchpad",
-      "iMMERSE Pro": "/shaders/immersepro/clarity",
-      "iMMERSE Ultimate": "/shaders/immerseultimate/convolutionbloom",
-      "METEOR": "/shaders/meteor/chromaticabberation"
-    };
-    
-    return linkMap[item] || "#";
-  };
+const HEADERS = 'https://assets.martysmods.com/headers/';
+const featuredShaders = [
+  { name: 'Launchpad', collection: 'iMMERSE', href: '/shaders/immerse/launchpad', img: HEADERS + 'launchpadheader.webp' },
+  { name: 'MXAO', collection: 'iMMERSE', href: '/shaders/immerse/mxao', img: HEADERS + 'mxaoheader.webp' },
+  { name: 'RTGI', collection: 'iMMERSE Pro', href: '/shaders/immersepro/rtgidiffuse', img: HEADERS + 'rtgiheader.webp' },
+  { name: 'Solaris', collection: 'iMMERSE Pro', href: '/shaders/immersepro/solaris', img: HEADERS + 'solarisheader.webp' },
+  { name: 'Convolution Bloom', collection: 'iMMERSE Ultimate', href: '/shaders/immerseultimate/convolutionbloom', img: HEADERS + 'ConvolutionBloomHeader.webp' },
+  { name: 'ReLight', collection: 'iMMERSE Ultimate', href: '/shaders/immerseultimate/relight', img: HEADERS + 'ReLightHeader.webp' },
+];
 
-  return (
-    <div
-      className={
-        visualFirst
-          ? `${styles.featureVisual} ${styles.featureVisualAlignStart}`
-          : styles.featureVisual
-      }
-    >
-      {title === "ReShade" ? (
-        <div className={styles.reshadeLogoContainer}>
-          <img 
-            src="/img/ReShadeMainLogo.svg"
-            alt="ReShade Logo" 
-            className={styles.reshadeLogo}
-          />
-        </div>
-      ) : (
-        <div className={styles.installGrid}>
-          {items.map((item, index) => (
-            <a
-              key={index}
-              href={getItemLink(item)}
-              className={styles.installCard}
-            >
-              <span>{item}</span>
-            </a>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-};
-
-const FeatureSection = ({
-  title,
-  description,
-  buttonLink,
-  buttonText,
-  visualTitle,
-  visualItems,
-  visualFirst = false,
-}) => (
-  <section className={styles.featureSection}>
-    <div className={styles.featureContainer}>
-      {visualFirst ? (
-        <>
-          <FeatureVisual
-            title={visualTitle}
-            items={visualItems}
-            visualFirst
-          />
-          <FeatureText title={title} description={description} buttonLink={buttonLink} buttonText={buttonText} />
-        </>
-      ) : (
-        <>
-          <FeatureText title={title} description={description} buttonLink={buttonLink} buttonText={buttonText} />
-          <FeatureVisual title={visualTitle} items={visualItems} />
-        </>
-      )}
+const QuickNav = () => (
+  <section className={styles.homeSection}>
+    <div className={styles.sectionInner}>
+      <h2 className={styles.sectionTitle}>Start Here</h2>
+      <p className={styles.sectionSubtitle}>
+        Everything you need to get ReShade installed, configured, and dialed in.
+      </p>
+      <div className={styles.linkGrid}>
+        {quickLinks.map((link) => (
+          <a key={link.href} href={link.href} className={styles.linkCard}>
+            <span className={styles.linkCardTitle}>{link.label}</span>
+            <span className={styles.linkCardDesc}>{link.desc}</span>
+          </a>
+        ))}
+      </div>
     </div>
   </section>
 );
 
-const features = [
-  {
-    title: "ReShade",
-    description: [
-      "A powerful post-processing injector that enhances your games with real-time visual effects. Works seamlessly with DirectX, OpenGL, and Vulkan applications without modifying game files.",
-      "Enhance your games with advanced visual effects, improved depth, and customizable post-processing."
-    ],
-    buttonLink: "/reshade/downloading",
-    buttonText: "Learn more",
-    visualTitle: "ReShade",
-    visualItems: [],
-    visualFirst: false,
-  },
-  {
-    title: "Installing ReShade",
-    description: [
-      "Get ReShade up and running in minutes with our comprehensive step-by-step installation guides. From the ReShade Setup Tool to manual installation, we cover all methods.",
-      "Whether you're a beginner or advanced user, our guides walk you through every step of the installation process with detailed screenshots and troubleshooting tips."
-    ],
-    buttonLink: "/reshade/installing/setuptool",
-    buttonText: "Learn more",
-    visualTitle: "Installation",
-    visualItems: ["ReShade Setup Tool", "Manual Installation", "Shader Installation", "Addon Installation"],
-    visualFirst: false,
-  },
-  {
-    title: "Shaders",
-    description: [
-      "Explore our collection of high-quality shaders including iMMERSE, iMMERSE Pro, iMMERSE Ultimate, and METEOR. Each shader is crafted for maximum visual impact.",
-      "Our shaders offer a range of visual improvements, from simple tweaks to more advanced effects like lighting, depth, and atmosphere."
-    ],
-    buttonLink: "/shaders/immerse/launchpad",
-    buttonText: "Learn more",
-    visualTitle: "Shader Collections",
-    visualItems: ["iMMERSE", "iMMERSE Pro", "iMMERSE Ultimate", "METEOR"],
-    visualFirst: false
-  }
-];
+const CompareSection = () => (
+  <section className={styles.homeSection}>
+    <div className={styles.sectionInner}>
+      <h2 className={styles.sectionTitle}>See the Difference</h2>
+      <p className={styles.sectionSubtitle}>
+        Drag the slider to compare a scene before and after ReShade.
+      </p>
+      <div className={styles.compareWrap}>
+        <ImageComparisonSlider
+          beforeImage="https://assets.martysmods.com/landingpage/landingPageShaderShowcaseOriginal.webp"
+          afterImage="https://assets.martysmods.com/landingpage/landingPageShaderShowcaseReShade.webp"
+          beforeLabel="Original"
+          afterLabel="ReShade"
+        />
+      </div>
+    </div>
+  </section>
+);
+
+const ShaderShowcase = () => (
+  <section className={styles.homeSection}>
+    <div className={styles.sectionInner}>
+      <h2 className={styles.sectionTitle}>Our Shaders</h2>
+      <p className={styles.sectionSubtitle}>
+        High-quality shaders from the iMMERSE and METEOR collections, each documented in full.
+      </p>
+      <div className={styles.shaderGrid}>
+        {featuredShaders.map((shader) => (
+          <a key={shader.href} href={shader.href} className={styles.shaderCard}>
+            <div className={styles.shaderThumb}>
+              <img src={shader.img} alt={shader.name} loading="lazy" />
+            </div>
+            <div className={styles.shaderMeta}>
+              <span className={styles.shaderName}>{shader.name}</span>
+              <span className={styles.shaderCollection}>{shader.collection}</span>
+            </div>
+          </a>
+        ))}
+      </div>
+      <div className={styles.sectionActions}>
+        <a href="/shaders/immerse/launchpad" className={styles.featureButton}>Browse all shaders</a>
+      </div>
+    </div>
+  </section>
+);
+
+const CommunityBand = () => (
+  <section className={styles.homeSection}>
+    <div className={styles.sectionInner}>
+      <div className={styles.communityCard}>
+        <div className={styles.communityMain}>
+          <img
+            className={styles.communityLogo}
+            src="https://assets.martysmods.com/landingpage/MartysModsLogoSmall.webp"
+            alt="Marty's Mods"
+          />
+          <div>
+            <h2 className={styles.communityTitle}>Join the community</h2>
+            <p className={styles.communityDesc}>
+              Get help, talk shop, and stay up to date with the latest shaders.
+            </p>
+          </div>
+        </div>
+        <div className={styles.communityActions}>
+          <a
+            className={styles.communityBtn}
+            href="https://discord.gg/wY49KMxjHT"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Join the Discord
+          </a>
+          <a
+            className={styles.communityBtn}
+            href="https://www.patreon.com/c/mcflypg/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Support on Patreon
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+);
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
-  
+
   return (
     <Layout
-      title={`${siteConfig.title}`}
-      description="Your extensive guide site for all things ReShade."
+      title={siteConfig.title}
+      description="Your comprehensive guide to ReShade and shaders."
     >
       <HeroSection />
-      <div className={styles.featureSections}>
-        {features.map((feature, index) => (
-          <FeatureSection key={index} {...feature} />
-        ))}
-      </div>
+      <main className={styles.homeMain}>
+        <QuickNav />
+        <ShaderShowcase />
+        <CompareSection />
+        <CommunityBand />
+      </main>
     </Layout>
   );
 }
