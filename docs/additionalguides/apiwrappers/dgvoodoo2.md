@@ -17,7 +17,7 @@ dgVoodoo2 is a rendering API wrapper that translates older DirectX rendering API
 
 Download the latest version of dgVoodoo2 from [the developer's website](https://dege.freeweb.hu/dgVoodoo2/dgVoodoo2/#latest-stable-version) by selecting the **Latest stable version**.
 
-![dgVodooo2 Releases](https://assets.martysmods.com/additionalguides/apiwrapper/dgvoodoo2/dgVoodoo2Releases.webp)
+![dgVoodoo2 Releases](https://assets.martysmods.com/additionalguides/apiwrapper/dgvoodoo2/dgVoodoo2Releases.webp)
 
 ---
 

@@ -9,7 +9,7 @@ hide_title: true
 
 # Manually Installing Add-ons
 
-Add-ons are DLLs that use ReShade's Add-on API to extend ReShade or the game (e.g. history lists, [color grading toolsets](/shaders/immerseultimate/regradeplus)). Not all add-ons are offered in the ReShade Setup Tool and must be installed manually. This guide requires the **Add-on Support** build of ReShade already installed and working, if you need help setting that up, see [ReShade Setup Tool](/reshade/installing/setuptool). Add-on files use the extensions `.addon.32` or `.addon.64` and must sit in the correct folder with no subfolder, or ReShade will not load them.
+Add-ons are DLLs that use ReShade's Add-on API to extend ReShade or the game (e.g. history lists, [color grading toolsets](/shaders/immerseultimate/regradeplus)). Not all add-ons are offered in the ReShade Setup Tool and must be installed manually. This guide requires the **Add-on Support** build of ReShade already installed and working. If you need help setting that up, see [ReShade Setup Tool](/reshade/installing/setuptool). Add-on files use the extensions `.addon.32` or `.addon.64` and must sit in the correct folder with no subfolder, or ReShade will not load them.
 
 ---
 

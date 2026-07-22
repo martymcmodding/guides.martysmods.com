@@ -58,21 +58,21 @@ To address this, Launchpad's normal processing generates Smoothed and Textured N
 
 ### Smoothed Normals
 
- <ImageComparisonSlider
+<ImageComparisonSlider
   beforeImage="https://assets.martysmods.com/shaders/launchpad/LaunchpadOriginalNormals3.webp"
   afterImage="https://assets.martysmods.com/shaders/launchpad/LaunchpadSmoothedNormals3.webp"
   beforeLabel="Original"
   afterLabel="Smoothed"
- />
+/>
 
 ### Textured Normals
 
- <ImageComparisonSlider
+<ImageComparisonSlider
   beforeImage="https://assets.martysmods.com/shaders/launchpad/LaunchpadSmoothedNormals3.webp"
   afterImage="https://assets.martysmods.com/shaders/launchpad/LaunchpadTexturedNormals3.webp"
   beforeLabel="Smoothed"
   afterLabel="Textured"
- />
+/>
 
 ### Textured Normals Sample Radius
 

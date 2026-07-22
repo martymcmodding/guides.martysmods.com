@@ -1,7 +1,7 @@
 ---
 title: "Connecting Discord and Patreon"
 sidebar_label: "Connecting Discord and Patreon"
-description: "Connecting your Discord account to Patreon to access Discord servers linked to your Patreon subscriptions"
+description: "Connecting your Discord account to Patreon to access Discord servers linked to your Patreon subscriptions."
 slug: /additionalguides/patreon/connectdiscpatr
 sidebar_position: 6
 hide_title: true

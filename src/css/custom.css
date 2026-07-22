@@ -244,14 +244,17 @@ code {
 }
 
 /* Image size caps (centered, always responsive) */
-.markdown img.img-sm,
 .markdown img.img-md,
 .markdown img.img-lg {
   display: block;
   margin-inline: auto;
+  /* height:auto keeps the aspect ratio when max-width caps the width. These are
+     raw <img> tags (not LazyImage-wrapped), and the build-time image-dimensions
+     plugin injects width/height attributes; without this the height stays pinned
+     to the injected value while the width shrinks, stretching the image. */
+  height: auto;
 }
 
-.markdown img.img-sm { max-width: min(100%, 360px); }
 .markdown img.img-md { max-width: min(100%, 600px); }
 .markdown img.img-lg { max-width: min(100%, 860px); }
 

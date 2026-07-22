@@ -132,8 +132,8 @@ RTGI provides several debug visualization modes to assist with parameter tuning 
 
 ## Troubleshooting
 
-### Black Screen When Enabling Specular
-A black screen when enabling RTGI Specular has two common causes:
+### Black Screen When Enabling RTGI
+A black screen when enabling RTGI has two common causes:
 
 - **Missing Launchpad**: [iMMERSE Launchpad](../immerse/launchpad.md) is not loaded or is not at the top of the shader load order.
 - **Missing texture files**: One or more required iMMERSE texture files are missing or not in the correct location. Ensure all iMMERSE texture files are present and up to date in your textures folder.

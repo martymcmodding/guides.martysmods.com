@@ -16,7 +16,7 @@ import YTConsent from '@site/src/components/YTConsent';
 
 # ReShade Setup Tool
 
-The ReShade Setup Tool is the official installer from [reshade.me](https://reshade.me). Running you through a step-by-step process in order to get ReShade, known shader repositories, and add-ons working in your game.
+The ReShade Setup Tool is the official installer from [reshade.me](https://reshade.me). It runs you through a step-by-step process to get ReShade, known shader repositories, and add-ons working in your game.
 
 ---
 
@@ -40,7 +40,7 @@ ReShade must use the same rendering API as the game. Options are Direct3D 9, 10,
 
 ## Installing Shaders & Presets
 
-ReShade only changes the image if shaders are installed. Select one or more shader repositories to install (clicking a repository name opens its GitHub page). To install a preset (e.g. a `.ini` file), use **Browse...** to select it - and the ReShade Setup Tool will install it and the required shader packages that preset references.
+ReShade only changes the image if shaders are installed. Select one or more shader repositories to install (clicking a repository name opens its GitHub page). To install a preset (e.g. a `.ini` file), use **Browse...** to select it - and the ReShade Setup Tool will install it and the required shader packages that the preset references.
 
 <img className="img-md" src="https://assets.martysmods.com/reshade/installing/SetupToolShaderSelect.webp" />
 

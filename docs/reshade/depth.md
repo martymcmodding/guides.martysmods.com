@@ -22,15 +22,15 @@ The depth buffer (sometimes referred to as the Z-buffer) is essential for most 3
 <YTConsent url="https://www.youtube.com/watch?v=6xOSzYLeJB0" />
 
 ## Generic Depth Add-on
-Since games often use multiple depth buffers (for shadows, post-processing, etc.), finding the correct depth buffer in ReShade can be tricky. However, ReShade's included add-on "Generic Depth" comes with controls that allow us to control both automatic and manual selection of buffers for us to use.
+Since games often use multiple depth buffers (for shadows, post-processing, etc.), finding the correct depth buffer in ReShade can be tricky. However, ReShade's included add-on "Generic Depth" comes with controls for both automatic and manual selection of the buffers we use.
 
 In order to configure or view Generic Depth's current settings, you'll need to open up ReShade's "**Add-ons**" tab and find the "**Generic Depth**" add-on. Once found, you can see the checkmark next to the name of the Add-on that allows you to enable or disable it after a game's restart.
 
 ![ReShade Generic Depth](https://assets.martysmods.com/reshade/depth/DepthAddon2.webp)
 
-A little further down in Generic Depth add-on panel, you'll find the controls for automatically selecting a depth buffer based on heuristics (draw calls, aspect ratio, and buffer type). Typically these are set to be a catch-all for most games, however, you might want to configure them if you find that ReShade isn't able to automatically switch to the proper buffers (if the game changes them frequently i.e. when loading or traversing through sections of a game world that require different buffers).
+A little further down in the Generic Depth add-on panel, you'll find the controls for automatically selecting a depth buffer based on heuristics (draw calls, aspect ratio, and buffer type). Typically these are set to be a catch-all for most games, however, you might want to configure them if you find that ReShade isn't able to automatically switch to the proper buffers (if the game changes them frequently i.e. when loading or traversing through sections of a game world that require different buffers).
 
-Additionally, there is a toggle for "Copy depth before clear operations" which can be useful in games that frequently clear the depth buffer and resolve other issues.
+Additionally, there is a toggle for "Copy depth buffer before clear operations" which can be useful in games that frequently clear the depth buffer, and can resolve other issues.
 
 ![ReShade Generic Depth Settings](https://assets.martysmods.com/reshade/depth/DepthAutomaticHeuristics2.webp)
 
@@ -60,7 +60,7 @@ When enabled, it allows you to see the current selected buffer from "Generic Dep
 ---
 
 ## Depth Orientations
-Every game is wildly different from the next. Developers often have to use different strategies for how they store and maintain their buffers. This is called orientation, and it can wildly affect how depth effects perceive the game world and need to be fixed manually per game, as ReShade isn't able to automatically detect the orientation that the selected depth buffer should be in.
+Every game is wildly different from the next. Developers often have to use different strategies for how they store and maintain their buffers. This is called orientation, and it can dramatically affect how depth effects perceive the game world. It must be fixed manually per game, as ReShade isn't able to automatically detect the orientation that the selected depth buffer should be in.
 
 :::warning
 When configuring depth, do not toggle on or use any of the controls provided to you in the "**DisplayDepth**" shader. Instead, use the "Edit Global Preprocessor Definitions" button in the middle of ReShade's Home tab.
@@ -131,23 +131,23 @@ There is no way to fix this through ReShade or depth buffer configuration. The o
 
 ## Global Preprocessor Settings
 
-#### `RESHADE_DEPTH_LINEARIZATION_FAR_PLANE`
+### `RESHADE_DEPTH_LINEARIZATION_FAR_PLANE`
 Used to modify the far plane value of the depth buffer, affecting how depth is interpreted across the visible range. Default value is `1000`. Smaller numbers can be used to pull the far plane closer to the camera's origin and larger numbers to push the far plane further from the camera's origin.
 
-#### `RESHADE_DEPTH_INPUT_IS_REVERSED`
+### `RESHADE_DEPTH_INPUT_IS_REVERSED`
 Used when normals look to be oriented properly, but the depth is improper or in the opposite configuration. Can be either `1` or `0`.
 
-#### `RESHADE_DEPTH_INPUT_IS_UPSIDE_DOWN`
+### `RESHADE_DEPTH_INPUT_IS_UPSIDE_DOWN`
 Used when normals and depth appear to be turned upside down. Can be either `1` or `0`.
 
-#### `RESHADE_DEPTH_INPUT_IS_LOGARITHMIC`
+### `RESHADE_DEPTH_INPUT_IS_LOGARITHMIC`
 Used when the normals and depth appear with waves or "stripes." Not very common, however, the setting can be either `1` or `0`.
 
-#### `RESHADE_DEPTH_INPUT_X_SCALE` and `RESHADE_DEPTH_INPUT_Y_SCALE`
+### `RESHADE_DEPTH_INPUT_X_SCALE` and `RESHADE_DEPTH_INPUT_Y_SCALE`
 Allows you to configure the scaling of the depth buffer along the X and Y axes. The values you input will multiply the current depth buffer dimensions.
 
-#### `RESHADE_DEPTH_INPUT_X_OFFSET` and `RESHADE_DEPTH_INPUT_Y_OFFSET`
+### `RESHADE_DEPTH_INPUT_X_OFFSET` and `RESHADE_DEPTH_INPUT_Y_OFFSET`
 Allow you to offset the depth buffer in the X and Y directions.
 
-#### `RESHADE_DEPTH_INPUT_X_PIXEL_OFFSET` and `RESHADE_DEPTH_INPUT_Y_PIXEL_OFFSET`
+### `RESHADE_DEPTH_INPUT_X_PIXEL_OFFSET` and `RESHADE_DEPTH_INPUT_Y_PIXEL_OFFSET`
 Similar to the previous setting, but on a per-pixel basis.

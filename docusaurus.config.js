@@ -51,6 +51,8 @@ const config = {
           { from: '/reshade/installing/reshademanualshaderinstall', to: '/reshade/installing/manualshaderinstall' },
           { from: '/reshade/installing/reshademanualaddoninstall', to: '/reshade/installing/manualaddoninstall' },
           { from: '/shaders/meteor/chromaticabberation', to: '/shaders/meteor/chromaticaberration' },
+          { from: '/shaders/immersepro/solaris', to: '/shaders/immerse/solaris' },
+          { from: '/shaders/meteor/filmgrain', to: '/shaders/immerse/filmgrain' },
         ],
       },
     ],

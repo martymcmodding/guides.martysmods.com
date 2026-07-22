@@ -28,7 +28,7 @@ Shaders from Patreon, Discord, or direct download (ZIP or folder) skip the GitHu
 
 ---
 
-## Downloading the Shader Repository(s)
+## Downloading the Shader Repositories
 
 Most ReShade shader repositories are hosted on GitHub. Open the repository page, click the green **Code** button (top right), then **Download ZIP** in the dropdown.
 
@@ -38,7 +38,7 @@ Most ReShade shader repositories are hosted on GitHub. Open the repository page,
 
 ---
 
-## Installing the Shader Repository(s)
+## Installing the Shader Repositories
 
 The `ReShade-Shaders` folder is in the same directory as the game executable (the ReShade install location). Extract the contents of the shader ZIP into `ReShade-Shaders` and preserve the folder structure. Repository archives usually contain `Shaders` and optionally `Textures`. You'll want to merge these with the existing `ReShade-Shaders\Shaders` and `ReShade-Shaders\Textures` folders.
 
@@ -61,7 +61,7 @@ On file conflicts, choose **"Replace the files in the destination."**
 
 ## Setting the Effect and Texture Search Paths
 
-New shaders or textures may not appear if ReShade's search paths are wrong or were changed. Open the ReShade overlay, go to the **Settings** tab, and set the paths below. These are relative to the game executable directory. Then clicking **Reload** at the bottom of ReShade's **Home** tab.
+New shaders or textures may not appear if ReShade's search paths are wrong or were changed. Open the ReShade overlay, go to the **Settings** tab, and set the paths below. These are relative to the game executable directory. Then click **Reload** at the bottom of ReShade's **Home** tab.
 
 | Setting                 | Correct Path                    |
 | ----------------------- | ------------------------------- |

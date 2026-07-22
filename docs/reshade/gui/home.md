@@ -15,7 +15,7 @@ The Home tab is the hub of ReShade's interface, where you enable, disable, and t
 
 ## Preset Selection
 
-At the top of the Home tab is the Preset Selection Bar. Use this to load, save, create, and rename your presets. Presets store your shader configurations in an INI file, for example the default file is `ReShadePreset.ini`. Click the dropdown to pick a preset, hit the save icon to overwrite it, or click the plus icon to make a new one.
+At the top of the Home tab is the Preset Selection Bar. Use this to load, save, create, and rename your presets. Presets store your shader configurations in an INI file; the default is `ReShadePreset.ini`. Click the dropdown to pick a preset, hit the save icon to overwrite it, or click the plus icon to make a new one.
 
 ![Preset](https://assets.martysmods.com/reshade/gui/GUIPresetSelector3.webp)
 
@@ -59,6 +59,6 @@ The Shader Parameters panel appears below the preprocessor definitions. When you
 
 When you add or remove effects, click the Reload button to recompile shaders and apply your changes. Reloading can also fix compile errors and restore shader functionality.
 
-To the right of Reload is the Performance Mode toggle. Turning on Performance Mode skips compiling disabled shaders and applies compiler optimizations. This can yield a small performance boost, though some shaders may not work correctly when enabled.
+To the right of Reload is the Performance Mode toggle. Turning on Performance Mode skips compiling disabled shaders and applies compiler optimizations. This can yield a small performance boost, though some shaders may not work correctly with it enabled.
 
 ![Reload & Performance Mode](https://assets.martysmods.com/reshade/gui/GUIReloadButton2.webp)

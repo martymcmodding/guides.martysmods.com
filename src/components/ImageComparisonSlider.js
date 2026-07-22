@@ -163,28 +163,7 @@ export default function ImageComparisonSlider({
   }, [isExpanded, imageDimensions.width, imageDimensions.height, windowSize.w, windowSize.h]);
 
   const getLoadingStyle = () => {
-    if (imageDimensions.width && imageDimensions.height) {
-      const aspectRatio = imageDimensions.height / imageDimensions.width;
-      const containerWidth = sliderRef.current ? sliderRef.current.offsetWidth : window.innerWidth;
-      const calculatedHeight = containerWidth * aspectRatio;
-      const minHeight = 300;
-      const finalHeight = Math.max(calculatedHeight, minHeight);
-      
-      return {
-        height: `${finalHeight}px`,
-        maxWidth: '100%',
-        backgroundColor: 'rgba(0, 0, 0, 0.1)',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        color: '#666',
-        fontSize: '14px',
-        position: 'relative'
-      };
-    }
-    
-    return {
-      height: '300px',
+    const base = {
       maxWidth: '100%',
       backgroundColor: 'rgba(0, 0, 0, 0.1)',
       display: 'flex',
@@ -192,8 +171,17 @@ export default function ImageComparisonSlider({
       justifyContent: 'center',
       color: '#666',
       fontSize: '14px',
-      position: 'relative'
+      position: 'relative',
     };
+
+    if (imageDimensions.width && imageDimensions.height) {
+      const aspectRatio = imageDimensions.height / imageDimensions.width;
+      const containerWidth = sliderRef.current ? sliderRef.current.offsetWidth : window.innerWidth;
+      const finalHeight = Math.max(containerWidth * aspectRatio, 300);
+      return { ...base, height: `${finalHeight}px` };
+    }
+
+    return { ...base, height: '300px' };
   };
 
   if (!isInView || !imagesLoaded) {

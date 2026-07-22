@@ -71,7 +71,7 @@ Load order management provides control over final output quality. While ReShade 
 
 Shader types can be organized into categories, or tiers, based on their function and dependencies within the rendering pipeline.
 
-Each enabled shader introduces a degree of data loss through quantization and processing artifacts, which accumulates across the pipeline and degrades image quality. Therefore, minimizing the number of active shaders while achieving the desired look you want is recommended. Each shader should serve a distinct purpose within the load order. For example, rather than using multiple shaders to adjust contrast, a single dedicated contrast adjustment shader should be employed.
+Each enabled shader introduces a degree of data loss through quantization and processing artifacts, which accumulates across the pipeline and degrades image quality. Therefore, minimizing the number of active shaders while achieving the look you want is recommended. Each shader should serve a distinct purpose within the load order. For example, rather than using multiple shaders to adjust contrast, a single dedicated contrast adjustment shader should be employed.
 
 ---
 
@@ -103,7 +103,7 @@ These effects should be ordered to mirror their physical occurrence in a camera 
 
 Color grading shaders, such as iMMERSE ReGrade, provide control over color, tone, and luminance characteristics through operations including levels adjustment, vibrance, exposure, and contrast modification.
 
-Positioning color grading after camera effects ensures that grading operations are applied to the complete scene, including camera effects such as bloom and vignette. Maintaining the photographic workflow structure where color correction occurs after optical effects have been applied.
+Positioning color grading after camera effects ensures that grading operations are applied to the complete scene, including camera effects such as bloom and vignette, maintaining the photographic workflow where color correction occurs after optical effects have been applied.
 
 ### Tier 5: Anti-Aliasing and Sharpening
 

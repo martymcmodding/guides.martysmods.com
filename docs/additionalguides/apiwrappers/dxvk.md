@@ -9,7 +9,6 @@ hide_title: true
 
 <!----------------------- IMPORTS ---------------------------->
 
-import ImageComparisonSlider from '@site/src/components/ImageComparisonSlider';
 import YTConsent from '@site/src/components/YTConsent';
 
 <!----------------------------------------------------------->

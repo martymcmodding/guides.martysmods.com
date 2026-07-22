@@ -6,7 +6,7 @@ export default function NotFoundContent({ className }) {
   return (
     <main className={clsx('container margin-vert--xl', className)}>
       <div className="row">
-        <div className="col col--12"> { }
+        <div className="col col--12">
           <Heading as="h1" className="hero__title text--center">
             Page Not Found
           </Heading>

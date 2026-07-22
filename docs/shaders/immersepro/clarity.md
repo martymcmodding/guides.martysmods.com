@@ -8,11 +8,11 @@ sidebar_position: 1
 hide_title: true
 ---
 
-<!------------------------IMPORTS ---------------------------->
+<!----------------------- IMPORTS ---------------------------->
 
 import ImageComparisonSlider from '@site/src/components/ImageComparisonSlider';
 
-<!------------------------------------------------------------>
+<!---------------------------------------------------------->
 
 ![ClarityHeader](https://assets.martysmods.com/headers/clarityheader.webp)
 

@@ -8,7 +8,7 @@ sidebar_position: 3
 hide_title: true
 ---
 
-<!------------------------IMPORTS ---------------------------->
+<!----------------------- IMPORTS ---------------------------->
 
 import ImageComparisonSlider from '@site/src/components/ImageComparisonSlider';
 
@@ -23,14 +23,14 @@ iMMERSE: Sharpen is a simple but effective sharpening shader that enhances image
 ## Arguments
 
 ### Sharpen Intensity
-Adjusts the sharpness applied to the screen. Start with a value of `0.000` and slowly increase it until you achieve a clear enhancement in in-game details without causing over-sharpening.
+Adjusts the sharpness applied to the screen. Start with a value of `0.000` and slowly increase it until you achieve a clear enhancement to in-game details without causing over-sharpening.
 
- <ImageComparisonSlider
+<ImageComparisonSlider
   beforeImage="https://assets.martysmods.com/shaders/sharpen/sharpenoriginal.webp"
   afterImage="https://assets.martysmods.com/shaders/sharpen/sharpen.webp"
   beforeLabel="0.000 Sharpness"
   afterLabel="1.000 Sharpness"
- />
+/>
 
 ### Sharpen Preset
 The Sharpen Preset determines how the shader samples the screen to enhance sharpness. Each pattern offers unique results, balancing visual quality and performance.

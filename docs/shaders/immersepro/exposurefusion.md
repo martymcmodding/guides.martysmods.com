@@ -3,7 +3,7 @@ title: "Exposure Fusion"
 sidebar_label: "Exposure Fusion"
 description: "Exposure Fusion improves visibility by selectively adjusting brightness across the frame."
 slug: /shaders/immersepro/exposurefusion
-sidebar_position: 8
+sidebar_position: 7
 hide_title: true
 ---
 
@@ -24,8 +24,8 @@ Sets the mid-gray "setpoint" that the image is optimized toward. This parameter 
 ### Intensity
 Controls how strongly individual pixels are adjusted toward the target brightness. This parameter determines the aggressiveness of the exposure correction.
 
-**Positive Values**: Lift dark areas and tone down bright areas, creating a more balanced exposure across the frame
-**Negative Values**: Perform the opposite effect, darkening bright areas and reducing shadow detail
+- **Positive Values**: Lift dark areas and tone down bright areas, creating a more balanced exposure across the frame
+- **Negative Values**: Perform the opposite effect, darkening bright areas and reducing shadow detail
 
 ### Equalization Strength
 Controls how much local contrast is flattened as exposure is evened out across neighboring areas. This parameter affects the balance between exposure optimization and detail preservation.

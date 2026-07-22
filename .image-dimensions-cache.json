@@ -730,5 +730,9 @@
   "https://assets.martysmods.com/additionalguides/patreon/ConnectPatreonDiscordLogin.webp": {
     "width": 811,
     "height": 663
+  },
+  "https://assets.martysmods.com/shaders/parallaxdof/ParalaxDoFHeader.webp": {
+    "width": 1536,
+    "height": 648
   }
 }

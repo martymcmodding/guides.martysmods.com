@@ -20,7 +20,7 @@ iMMERSE Pro: ReGrade is a modular color grading shader built around a slot-based
 
 Default: `0`. Accepts `0` or `1`.
 
-When enabled, ReGrade receives the HDR output from [Solaris](../immersepro/solaris.md) as its color input instead of the standard tonemapped frame. This allows ReGrade's color grading to work on the full HDR range that Solaris produces, so exposure, bloom, and color corrections all interact correctly without clipping or flattening each other. If you are using both Solaris and ReGrade together, enabling this is recommended.
+When enabled, ReGrade receives the HDR output from [Solaris](../immerse/solaris.md) as its color input instead of the standard tonemapped frame. This allows ReGrade's color grading to work on the full HDR range that Solaris produces, so exposure, bloom, and color corrections all interact correctly without clipping or flattening each other. If you are using both Solaris and ReGrade together, enabling this is recommended.
 
 ---
 

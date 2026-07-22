@@ -3,7 +3,7 @@ title: "Long Exposure"
 sidebar_label: "Long Exposure"
 description: "Temporal frame accumulation for long-exposure motion blur in ReShade."
 slug: /shaders/meteor/longexposure
-sidebar_position: 4
+sidebar_position: 3
 hide_title: true
 ---
 
@@ -30,7 +30,7 @@ Range: `0.05` to `50.0` seconds
 
 ### Highlight Intensity
 
-Controls how bright pixels are treated during accumulation. The shader applies inverse tonemapping before blending frames, and this setting sets the log2 whitepoint for that operation. At low values, highlights clip quickly and bright objects leave shorter, dimmer trails. Higher values raise the ceiling, allowing bright pixels like specular reflections, light sources, and emissive surfaces to continue accumulating strongly across frames, producing vivid, high-intensity streaks.
+Controls how bright pixels are treated during accumulation. The shader applies inverse tonemapping before blending frames, and this control sets the log2 whitepoint for that operation. At low values, highlights clip quickly and bright objects leave shorter, dimmer trails. Higher values raise the ceiling, allowing bright pixels like specular reflections, light sources, and emissive surfaces to continue accumulating strongly across frames, producing vivid, high-intensity streaks.
 
 Range: `0.0` to `12.0`
 

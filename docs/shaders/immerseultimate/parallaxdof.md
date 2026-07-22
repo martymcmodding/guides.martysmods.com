@@ -1,5 +1,5 @@
 ---
-title: "Parallax Depth of Field"
+title: "Parallax Depth of Field (Add-on)"
 sidebar_label: "Parallax Depth of Field (Add-on)"
 description: "Parallax-based depth of field that calculates blur through camera rotation and positioning."
 image: "https://assets.martysmods.com/shaders/parallaxdof/ParalaxDoFHeader.webp"
@@ -15,7 +15,7 @@ import ReactPlayer from 'react-player'
 
 <!----------------------------------------------------------->
 
-# Parallax Depth of Field
+![ParalaxDoFHeader](https://assets.martysmods.com/shaders/parallaxdof/ParalaxDoFHeader.webp)
 
 iMMERSE Ultimate: Parallax Depth of Field produces depth-of-field blur by computing parallax information through camera rotation and positional shifts across multiple frames. This method yields physically accurate focal plane separation and bokeh characteristics.
 
@@ -92,9 +92,9 @@ The process to find the correct value can be summarized as such:
   style={{ width: "100%", margin: "10px auto 0px auto",}}
 />
 
-- Note that for an Interval of 1 frame, there is only one Delay value that is in sync. For an Interval of 2 frames, there are 2 Delays that are in sync and so on. So if for Interval of 1 frame a Delay of 4 frames worked, then for an Interval of 3 frames, Delay frames 4, 5 and 6 will work with Delay set to 4 frames, being blended as early, and Delay set to 6 frames, meaning being blended as late as possible.
+- Note that for an Interval of 1 frame, there is only one Delay value that is in sync. For an Interval of 2 frames, there are 2 Delays that are in sync and so on. So if a Delay of 4 frames worked at an Interval of 1 frame, then at an Interval of 3 frames, Delays of 4, 5, and 6 frames all work — Delay 4 blends as early as possible and Delay 6 blends as late as possible.
 
-- If you're having issues with finding a proper Accumluation Delay and Interval, make sure that V-Sync is disabled, your framerate is not capped, and NVIDIA Reflex is disabled in-game.
+- If you're having issues with finding a proper Accumulation Delay and Interval, make sure that V-Sync is disabled, your framerate is not capped, and NVIDIA Reflex is disabled in-game.
 
 ---
 
@@ -125,7 +125,7 @@ Select a **Lens System** to set the type of aberration and blur character, then 
 
  <ImageComparisonSlider
   beforeImage="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFChromaticAberrationNone.webp"
-  afterImage="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFChromaticAberrationApochromat.webp"
+  afterImage="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFChromaticAberrationAchromat.webp"
   beforeLabel="None"
   afterLabel="Achromat"
  />
@@ -136,7 +136,7 @@ Select a **Lens System** to set the type of aberration and blur character, then 
 
  <ImageComparisonSlider
   beforeImage="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFChromaticAberrationNone.webp"
-  afterImage="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFChromaticAberrationAchromat.webp"
+  afterImage="https://assets.martysmods.com/shaders/parallaxdof/ParallaxDoFChromaticAberrationApochromat.webp"
   beforeLabel="None"
   afterLabel="Apochromat"
  />

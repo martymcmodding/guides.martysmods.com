@@ -3,21 +3,21 @@ title: "Solaris"
 sidebar_label: "Solaris"
 description: "A physically based exposure and bloom solution."
 image: "https://assets.martysmods.com/headers/solarisheader.webp"
-slug: /shaders/immersepro/solaris
-sidebar_position: 7
+slug: /shaders/immerse/solaris
+sidebar_position: 5
 hide_title: true
 ---
 
-<!------------------------IMPORTS ---------------------------->
+<!----------------------- IMPORTS ---------------------------->
 
 import ReactPlayer from 'react-player'
 import ImageComparisonSlider from '@site/src/components/ImageComparisonSlider';
 
-<!------------------------IMPORTS ---------------------------->
+<!----------------------------------------------------------->
 
 ![solarisheader](https://assets.martysmods.com/headers/solarisheader.webp)
 
-iMMERSE Pro: Solaris is a physically based exposure and bloom shader. It works by reverse-tonemapping the scene back into HDR space before calculating bloom, which means bright areas produce bloom that behaves like real light rather than a simple screen-space blur. The result is bloom that scales naturally with scene brightness and responds to exposure the same way a real camera would.
+iMMERSE: Solaris is a physically based exposure and bloom shader. It works by reverse-tonemapping the scene back into HDR space before calculating bloom, which means bright areas produce bloom that behaves like real light rather than a simple screen-space blur. The result is bloom that scales naturally with scene brightness and responds to exposure the same way a real camera would.
 
 ---
 
@@ -27,7 +27,7 @@ iMMERSE Pro: Solaris is a physically based exposure and bloom shader. It works b
 
 Default: `0`. Accepts `0` or `1`.
 
-When enabled, [ReGrade](../../shaders/immerse/launchpad.md) receives the HDR output from Solaris as its color input instead of the standard tonemapped frame. This allows ReGrade's exposure, tone, and color grading to work on the full HDR range that Solaris produces rather than the already-compressed image. The practical benefit is that color grading changes made in ReGrade will interact correctly with the bloom and exposure that Solaris applies, giving you a non-destructive pipeline where all three effects work together without clipping or compressing each other's contributions. If you are using both Solaris and ReGrade together, enabling this is recommended.
+When enabled, [ReGrade](../immersepro/regrade.md) receives the HDR output from Solaris as its color input instead of the standard tonemapped frame. This allows ReGrade's exposure, tone, and color grading to work on the full HDR range that Solaris produces rather than the already-compressed image. The practical benefit is that color grading changes made in ReGrade will interact correctly with the bloom and exposure that Solaris applies, giving you a non-destructive pipeline where all three effects work together without clipping or compressing each other's contributions. If you are using both Solaris and ReGrade together, enabling this is recommended.
 
 ### SOLARIS_PERF_MODE
 

@@ -17,6 +17,8 @@ ReShade is a free, open-source tool that adds customizable visual effects to you
 
 The **Download ReShade X.X.X** button. It supports only the built-in "Generic Depth" add-on, and disables even that when it detects network traffic from the game. This makes it the right choice for online or multiplayer games, and any title whose anti-cheat blocks graphics injections.
 
+---
+
 ## Full Add-On Support Build
 
 The **Download ReShade X.X.X with full add-on support** button. It removes those limits, letting you install any add-on and keep depth buffer access at all times. Most anti-cheat systems flag it, so use it only for single-player games.

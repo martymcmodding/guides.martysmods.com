@@ -120,7 +120,7 @@ Range: `0.0` to `1.0`. Default: `0.25`.
 Rotates the aperture polygon shape. The value is normalized, where `0.0` and `1.0` represent the same angle after a full rotation. This only affects the orientation of the polygon shape and has no visual effect when **Aperture Roundness** is set to `1.0` since a circle has no rotational orientation. Use this to orient hexagonal or other polygonal bokeh in a specific direction if the default angle is not desirable.
 
 :::note
-The **Lens and Aperture - Advanced** category containing Tangential Bokeh Scale, Sagittal Bokeh Scale, and Anamorphic Bokeh Ratio is currently disabled in this version of the shader and will not appear in the ReShade UI. These controls simulated optical aberrations such as astigmatism and anamorphic lens squeeze. They may return in a future update.
+The **Lens and Aperture - Advanced** category containing Tangential Bokeh Scale, Sagittal Bokeh Scale, and Anamorphic Bokeh Ratio is currently disabled in this version of the shader and will not appear in the ReShade UI. These controls simulate optical aberrations such as astigmatism and anamorphic lens squeeze. They may return in a future update.
 :::
 
 ---
@@ -183,7 +183,7 @@ Controls how aggressively the shader reduces the shading rate in blurred areas. 
 
 Range: `0.0` to `1.0`. Default: `0.0`.
 
-Overlays a color-coded visualization on the image showing which shading rate is being applieds. This is a diagnostic tool for understanding how VRS is distributing shading work across the frame. Raising this value toward `1.0` makes the visualization more opaque and visible. The color coding is as follows:
+Overlays a color-coded visualization on the image showing which shading rate is being applied. This is a diagnostic tool for understanding how VRS is distributing shading work across the frame. Raising this value toward `1.0` makes the visualization more opaque and visible.
 
 ---
 

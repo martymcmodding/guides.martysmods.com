@@ -23,7 +23,7 @@ When creating a preset, it's essential to follow the load order principles. For 
 
 Before diving into ReShade, it's important to have a clear understanding of what you want to achieve with your preset. Familiarize yourself with graphics techniques used in photography, film, and modern games, and identify specific visual improvements you want to add to your game.
 
-For example, if you want to add **bloom** you might choose a shader like iMMERSE Pro: Solaris, which provides physically based exposure and bloom that replicates real-world sensor behavior like you'd see in a camera.
+For example, if you want to add **bloom** you might choose a shader like iMMERSE: Solaris, which provides physically based exposure and bloom that replicates real-world sensor behavior like you'd see in a camera.
 
 If you're looking to add **global illumination** you might consider iMMERSE Pro: RTGI for ray-traced global illumination, as it provides the effect of all objects within the game world bouncing light as they would in real life.
 

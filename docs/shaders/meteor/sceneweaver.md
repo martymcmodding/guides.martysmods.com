@@ -3,7 +3,7 @@ title: "SceneWeaver"
 sidebar_label: "SceneWeaver"
 description: "Screenshot composition and hotsampling tools for ReShade."
 slug: /shaders/meteor/sceneweaver
-sidebar_position: 6
+sidebar_position: 4
 hide_title: true
 ---
 
@@ -39,7 +39,7 @@ Selects a predefined aspect ratio for the letterbox bars. Choose a ratio that ma
 
 - **Custom:** Use the Custom Ratio slider to define your own ratio.
 - **1:1:** Square format.
-- **5:4:** Slightly tall widescreen, common in older monitors and medium format photography.
+- **5:4:** A nearly square, slightly tall ratio, common on older computer monitors and in large-format photography.
 - **4:3:** Classic television and early photography ratio.
 - **3:2:** Standard 35mm film frame ratio, used by most DSLRs.
 - **16:10:** Widescreen computer monitor ratio.

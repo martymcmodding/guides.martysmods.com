@@ -6,7 +6,7 @@
   position: relative;
   width: 100%;
   height: auto;
-  min-height: 300px;
+  min-height: 300px; /* height floor; keep in sync with minHeight in ImageComparisonSlider.js */
   max-width: 100%;
   overflow: hidden;
   cursor: ew-resize;
@@ -65,8 +65,6 @@
   top: auto;
   bottom: 10px;
 }
-.image-comparison-overlay-content .before-label { left: 10px; }
-.image-comparison-overlay-content .after-label { right: 10px; }
 
 /* Expand / close control buttons (shared base + per-button specifics) */
 .image-comparison-expand-btn,

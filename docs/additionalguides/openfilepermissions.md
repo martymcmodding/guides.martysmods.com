@@ -88,6 +88,7 @@ Set the current user account as the owner of the folder to enable permission man
 8. Click **OK** again to close the **Select User or Group** window
 
 The Owner field now shows the selected user account.
+
 ![ShowOwnership](https://assets.martysmods.com/additionalguides/permissions/OwnerSettingShowUser2.webp)
 
 ---
@@ -157,7 +158,7 @@ Grant the current user account permission to read, write, and modify all items i
 
 The current user account now appears in the permissions list with Full Control.
 
-![UserListedPrinciple](https://assets.martysmods.com/additionalguides/permissions/UserListedPrincipal2.webp)
+![UserListedPrincipal](https://assets.martysmods.com/additionalguides/permissions/UserListedPrincipal2.webp)
 
 ---
 

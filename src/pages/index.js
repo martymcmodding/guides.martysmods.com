@@ -56,7 +56,7 @@ const featuredShaders = [
   { name: 'Launchpad', collection: 'iMMERSE', href: '/shaders/immerse/launchpad', img: HEADERS + 'launchpadheader.webp' },
   { name: 'MXAO', collection: 'iMMERSE', href: '/shaders/immerse/mxao', img: HEADERS + 'mxaoheader.webp' },
   { name: 'RTGI', collection: 'iMMERSE Pro', href: '/shaders/immersepro/rtgidiffuse', img: HEADERS + 'rtgiheader.webp' },
-  { name: 'Solaris', collection: 'iMMERSE Pro', href: '/shaders/immersepro/solaris', img: HEADERS + 'solarisheader.webp' },
+  { name: 'Solaris', collection: 'iMMERSE', href: '/shaders/immerse/solaris', img: HEADERS + 'solarisheader.webp' },
   { name: 'Convolution Bloom', collection: 'iMMERSE Ultimate', href: '/shaders/immerseultimate/convolutionbloom', img: HEADERS + 'ConvolutionBloomHeader.webp' },
   { name: 'ReLight', collection: 'iMMERSE Ultimate', href: '/shaders/immerseultimate/relight', img: HEADERS + 'ReLightHeader.webp' },
 ];

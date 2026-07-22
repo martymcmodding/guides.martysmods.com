@@ -3,7 +3,7 @@ title: "Local Laplacian"
 sidebar_label: "Local Laplacian"
 description: "Advanced local contrast enhancement for ReShade."
 slug: /shaders/meteor/locallaplacian
-sidebar_position: 3
+sidebar_position: 2
 hide_title: true
 ---
 
