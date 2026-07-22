@@ -150,8 +150,8 @@
 }
 
 /* 4. Quick-nav grid ("Start Here") ----------------------------------------- */
-/* Flex + centered wrapping so a trailing partial row (e.g. 4 + 3) stays
-   centered instead of left-aligning against an empty column. */
+/* Flex + centered wrapping so a trailing partial row stays centered instead of
+   left-aligning against an empty column. */
 .linkGrid {
   display: flex;
   flex-wrap: wrap;
@@ -160,7 +160,7 @@
 }
 
 .linkCard {
-  /* Mobile/tablet: grow to fill the row. Desktop override below pins 4-up. */
+  /* Mobile/tablet: grow to fill the row. Desktop override below pins 3-up. */
   flex: 1 1 240px;
   display: flex;
   flex-direction: column;
@@ -408,9 +408,10 @@
 
 /* 9. Responsive ------------------------------------------------------------ */
 @media (min-width: 997px) {
-  /* Pin quick-nav to 4-up so a 7th/8th card wraps into a centered trailing row. */
+  /* Pin quick-nav to 3-up so six cards form a tidy 2x3 (and any extras wrap
+     into a centered trailing row). Gap is 1rem, so subtract 2/3 of it per card. */
   .linkCard {
-    flex: 0 1 calc(25% - 0.75rem);
+    flex: 0 1 calc(33.333% - 0.667rem);
   }
 }
 
